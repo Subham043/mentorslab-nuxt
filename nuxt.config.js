@@ -26,7 +26,8 @@ export default {
     '@/plugins/element-ui',
     '~/plugins/validation-provider.js',
     '~/plugins/vuefullscreen.js',
-    '~/plugins/publicApi.js'
+    '~/plugins/publicApi.js',
+    '~/plugins/privateApi.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

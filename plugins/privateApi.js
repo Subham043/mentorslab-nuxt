@@ -16,7 +16,7 @@ export default function ({ $axios, app, $config: {apiURL} }, inject) {
     (config) => {
       if (!config.headers.authorization) {
         if (app.$auth.loggedIn) {
-          config.headers.authorization = `${app.$auth.strategy.token.get()}`
+          config.headers.Authorization = `${app.$auth.strategy.token.get()}`
         }
       }
       return config
@@ -34,7 +34,7 @@ export default function ({ $axios, app, $config: {apiURL} }, inject) {
       ) {
         prevRequest.sent = true
         await app.$auth.refreshTokens('refresh')
-        prevRequest.headers.authorization = `${app.$auth.strategy.token.get()}`
+        prevRequest.headers.Authorization = `${app.$auth.strategy.token.get()}`
         return privateApi(prevRequest)
       }
       return Promise.reject(error)

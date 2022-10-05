@@ -89,7 +89,7 @@ export default {
         return {
             count:0,
             tableData: [],
-            currentPage: 1
+            currentPage: null
         }
     },
     watch: {
@@ -110,6 +110,7 @@ export default {
                 const response = await this.$privateApi.get('/user/paginate?skip='+page); // eslint-disable-line
                 this.tableData = response?.data?.data?.data
                 this.count = response?.data?.data?.count
+                this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
                 if (err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
@@ -140,7 +141,7 @@ export default {
             }
         },
         handlePaginationChnage(page){
-            this.$router.replace({query:{page}});
+            this.$router.push({query:{page}});
         },
         handlePageChnage(){
             this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;

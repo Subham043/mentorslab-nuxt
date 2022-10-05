@@ -114,10 +114,11 @@ export default {
         });
         try {
             const response = await this.$auth.loginWith('local', { data: {email:this.email, password:this.password} }); // eslint-disable-line
+            this.$auth.$storage.setState('access_token', response.data.data.access_token)
             this.$toast.success('Logged in successfully')
-            // console.log(response);// eslint-disable-line
+            // console.log(this.$store.state.auth);// eslint-disable-line
         } catch (err) {
-            // console.log(err.response);// eslint-disable-line
+            console.log(err.response);// eslint-disable-line
             this.$refs.form.setErrors({
               email: err?.response?.data?.form_error?.email,
               password: err?.response?.data?.form_error?.password,

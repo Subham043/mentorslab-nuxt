@@ -65,7 +65,7 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: process.env.API_BASE_URL,
-    credentials: false
+    credentials: true
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -94,19 +94,22 @@ export default {
       local: {
         scheme: 'refresh',
         token: {
-          property: 'access_token',
+          property: 'data.access_token',
           global: true,
           required: true,
           type: 'Bearer',
           name: 'Authorization'
         },
         refreshToken: {
-          property: 'refresh_token',
+          property: 'data.refresh_token',
           data: 'refresh_token',
           maxAge: 24 * 60 * 60 * 1000,
+          required: true,
+          type: 'Bearer',
+          name: 'Authorization'
         },
         user: {
-          property: 'user',
+          property: 'data.user',
           autoFetch: true
         },
         endpoints: {

@@ -24,6 +24,7 @@ import ProfileComponent from '~/components/ProfileComponent.vue';
 export default {
   name: 'DashboardLayout',
   components: { HeaderComponent, SideBarComponent, ProfileComponent },
+  middleware: 'auth',
   computed: {
 		dark () {
 		return this.$store.state.dark.class

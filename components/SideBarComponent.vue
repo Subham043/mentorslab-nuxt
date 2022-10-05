@@ -1,58 +1,76 @@
 <!-- eslint-disable vue/valid-template-root -->
 <template>
-	<aside class="main-sidebar">
-    <!-- sidebar-->
-    <section class="sidebar position-relative"> 
-	  	<div class="multinav">
-		  <div class="multinav-scroll">	
-			  <!-- sidebar menu-->
-			  <ul class="sidebar-menu" data-widget="tree">	
-				<li>
-				  <a href="index.html"><font-awesome-icon :icon="['fa', 'home']" /><span>Dashboard</span></a>
-				</li>
-				<li>
-				  <a href="mailbox.html"><font-awesome-icon :icon="['fa', 'home']" /><span>Mailbox</span></a>
-				</li>
-				<li>
-				  <a href="extra_calendar.html"><font-awesome-icon :icon="['fa', 'home']" /><span>Calendar</span></a>
-				</li>
-				<li>
-				  <a href="contact_app_chat.html"><font-awesome-icon :icon="['fa', 'home']" /><span>Group chats</span></a>
-				</li>				  
-				<li class="header">Components</li>
-				<li class="treeview">
-				  <a href="#" @click="toggleDropDownMenu('featuresSubMenu')">
-					<font-awesome-icon :icon="['fa', 'home']" />
-					<span>Features</span>
-					<span class="pull-right-container">
-					  <i class="fa fa-angle-right pull-right"></i>
-					</span>
-				  </a>
-				  <ul ref="featuresSubMenu" class="treeview-menu">											
+	<el-drawer
+:visible.sync="activeSidebar" direction="ltr" size="19.29rem" :show-close="false" :with-header="false"
+		:before-close="toogleSideBar">
+		<aside class="main-sidebar">
+			<!-- sidebar-->
+			<section class="sidebar position-relative">
+				<div class="d-flex align-items-center logo-box justify-content-start">
+					<!-- Logo -->
+					<a href="index.html" class="logo">
+						<!-- logo-->
+						<div class="logo-mini w-30">
+							<span class="light-logo"><img src="/images/logo-letter.png" alt="logo"></span>
+							<span class="dark-logo"><img src="/images/logo-letter-white.png" alt="logo"></span>
+						</div>
+						<div class="logo-lg">
+							<span class="light-logo"><img src="/images/logo-dark-text.png" alt="logo"></span>
+							<span class="dark-logo"><img src="/images/logo-light-text.png" alt="logo"></span>
+						</div>
+					</a>
+				</div>
+				<div class="multinav">
+					<div class="multinav-scroll">
+						<!-- sidebar menu-->
+						<el-menu default-active="2" class="el-menu-vertical-demo">
+							<el-submenu index="1">
+								<template slot="title">
+									<i class="el-icon-location"></i>
+									<span>Navigator One</span>
+								</template>
+								<el-menu-item-group title="Group One">
+									<el-menu-item index="1-1"><i class="el-icon-location"></i> item one</el-menu-item>
+									<el-menu-item index="1-2">item one</el-menu-item>
+								</el-menu-item-group>
+								<el-menu-item-group title="Group Two">
+									<el-menu-item index="1-3">item three</el-menu-item>
+								</el-menu-item-group>
+								<el-submenu index="1-4">
+									<template slot="title">item four</template>
+									<el-menu-item index="1-4-1">item one</el-menu-item>
+								</el-submenu>
+							</el-submenu>
+							<el-menu-item index="2">
+								<i class="el-icon-menu"></i>
+								<span>Navigator Two</span>
+							</el-menu-item>
+							<el-menu-item index="3" disabled>
+								<i class="el-icon-document"></i>
+								<span>Navigator Three</span>
+							</el-menu-item>
+							<el-menu-item index="4">
+								<i class="el-icon-setting"></i>
+								<span>Navigator Four</span>
+							</el-menu-item>
+						</el-menu>
+						<!-- sidebar menu-->
 
-                    <li><a href="box_cards.html"><font-awesome-icon :icon="['fa', 'home']" />User Card</a></li>
-                    <li><a href="box_advanced.html"><font-awesome-icon :icon="['fa', 'home']" />Advanced Card</a></li>
-                    <li><a href="box_basic.html"><font-awesome-icon :icon="['fa', 'home']" />Basic Card</a></li>
-                    <li><a href="box_color.html"><font-awesome-icon :icon="['fa', 'home']" />Card Color</a></li>
-                    <li><a href="box_group.html"><font-awesome-icon :icon="['fa', 'home']" />Card Group</a></li>
-						  
-				  </ul>
-				</li>		
-					 	     
-			  </ul>
-			  
-			  <div class="sidebar-widgets">
-				  <div class="mx-25 mb-30 pb-20 side-bx bg-primary-light rounded20">
-					<div class="text-center">
-						<img src="http://edulearn-lms-admin-template.multipurposethemes.com/images/svg-icon/color-svg/custom-24.svg" class="sideimg p-5" alt="">
-						<h4 class="title-bx text-primary">Best Education Admin</h4>
+						<div class="sidebar-widgets mt-100">
+							<div class="mx-25 mb-30 pb-20 side-bx bg-primary-light rounded20">
+								<div class="text-center">
+									<img
+src="http://edulearn-lms-admin-template.multipurposethemes.com/images/svg-icon/color-svg/custom-24.svg"
+										class="sideimg p-5" alt="">
+									<h4 class="title-bx text-primary">Best Education Admin</h4>
+								</div>
+							</div>
+						</div>
 					</div>
-				  </div>
-			  </div>
-		  </div>
-		</div>
-    </section>
-  </aside>
+				</div>
+			</section>
+		</aside>
+	</el-drawer>
 </template>
 
 <script>
@@ -64,14 +82,13 @@ export default {
 		}
 	},
 	computed: {
-		activeSidebar () {
-		return this.$store.state.sidebar.sidebar
+		activeSidebar() {
+			return this.$store.state.sidebar.sidebar
 		}
 	},
 	methods: {
-		toggleDropDownMenu(ref) {
-			// eslint-disable-next-line dot-notation
-			this.$refs[ref].classList.contains("treeview-anim") ? this.$refs[ref].classList.remove("treeview-anim") : this.$refs[ref].classList.add("treeview-anim");
+		toogleSideBar() {
+			this.$store.commit('sidebar/toggle')
 		}
 	}
 }

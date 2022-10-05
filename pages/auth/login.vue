@@ -108,7 +108,10 @@ export default {
   },
   methods: {
     async formHandler(){
-      // this.$vs.loading()
+        const loading = this.$loading({
+          lock: true,
+          fullscreen: true,
+        });
         try {
             const response = await this.$auth.loginWith('local', { data: {email:this.email, password:this.password} }); // eslint-disable-line
             this.$toast.success('Logged in successfully')
@@ -123,7 +126,7 @@ export default {
             if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
             
         } finally{
-          // this.$vs.loading().close()
+          loading.close()
         }
     }
   },

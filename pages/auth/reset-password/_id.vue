@@ -83,7 +83,10 @@ export default {
     },
     methods: {
         async formHandler() {
-            this.$store.commit('loader/show')
+            const loading = this.$loading({
+            lock: true,
+            fullscreen: true,
+            });
             try {
                 // eslint-disable-next-line no-unused-vars
                 const response = await this.$publicApi.post(
@@ -104,16 +107,19 @@ export default {
                 if (err?.response?.data?.error)
                     this.$toast.error(err?.response?.data?.error)
             } finally {
-                this.$store.commit('loader/hide')
+                loading.close()
             }
         },
         checkId() {
-            this.$store.commit('loader/show')
+            const loading = this.$loading({
+            lock: true,
+            fullscreen: true,
+            });
             if (!this.$route.params.id) {
                 this.$toast.error('Invalid ID')
                 this.$router.push('/auth/login')
             }
-            this.$store.commit('loader/hide')
+            loading.close()
         },
     },
 }

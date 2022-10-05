@@ -75,7 +75,10 @@
     },
     methods: {
       async formHandler(){
-          
+          const loading = this.$loading({
+            lock: true,
+            fullscreen: true,
+          });
           try {
               const response = await this.$publicApi.post('/auth/forgot-password', {email:this.email}); // eslint-disable-line
               this.$toast.info('We have shared you an otp via email. kindly enter that in order to reset your password.')
@@ -87,6 +90,8 @@
                 email: err?.response?.data?.form_error?.email,
               });
               
+          } finally{
+            loading.close();
           }
       }
     },

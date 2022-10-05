@@ -143,7 +143,10 @@ export default {
   },
   methods: {
     async formHandler(){
-      this.$store.commit('loader/show')
+        const loading = this.$loading({
+          lock: true,
+          fullscreen: true,
+        });
         try {
             const response = await this.$publicApi.post('/auth/sign-up', {email:this.email, password:this.password, name:this.name, phone:this.phone}); // eslint-disable-line
             this.$toast.info('We have shared you an otp via email. kindly enter that in order to verify your email.')
@@ -161,7 +164,7 @@ export default {
             if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
             
         }finally{
-          this.$store.commit('loader/hide')
+          loading.close()
         }
     }
   },

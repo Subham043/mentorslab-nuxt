@@ -60,7 +60,7 @@
 			
 			<!-- User Account-->
 			<li class="dropdown user user-menu">
-				<a href="#" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle">
+				<a href="#" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle" @click="toogleProfileBar">
 					<div class="d-flex pt-1 align-items-center">
 						<div class="text-end me-10">
 							<p class="pt-5 fs-14 mb-0 fw-700">Nil Yeager</p>
@@ -104,6 +104,9 @@ export default {
         },
 		toogleSideBar(){
 			this.$store.commit('sidebar/toggle')
+		},
+		toogleProfileBar() {
+			this.$store.commit('profilebar/toggle')
 		}
     }
 }

@@ -13,13 +13,13 @@ import BreadcrumbComponent from '../components/BreadcrumbComponent.vue';
 export default {
     name: "IndexPage",
     components: { BreadcrumbComponent },
-    layout: "DashboardLayout",
+    layout: "UserLayout",
     methods:{
       check(){
         // eslint-disable-next-line no-console
         // console.log(this.$auth)
         // Refresh tokens
-        this.$auth.refreshTokens()
+        // console.log(this.$auth.user)
       }
     }
 }

@@ -20716,7 +20716,7 @@ Height property
     -moz-transition: -moz-transform .3s ease-in-out, width .3s ease-in-out;
     -o-transition: -o-transform .3s ease-in-out, width .3s ease-in-out;
     transition: transform .3s ease-in-out, width .3s ease-in-out;
-    background: #ffffff; }
+    background: transparent; }
   .main-header .push-btn, .main-header .full-screen, .main-header .svg-bt-icon, .main-header .skin-toggle {
     height: 45px;
     width: 45px;

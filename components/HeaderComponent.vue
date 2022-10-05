@@ -1,44 +1,31 @@
 <template>
-    <header class="main-header">
-	<div class="d-flex align-items-center logo-box justify-content-start">	
-		<!-- Logo -->
-		<a href="index.html" class="logo">
-		  <!-- logo-->
-		  <div class="logo-mini w-30">
-			  <span class="light-logo"><img src="/images/logo-letter.png" alt="logo"></span>
-			  <span class="dark-logo"><img src="/images/logo-letter-white.png" alt="logo"></span>
-		  </div>
-		  <div class="logo-lg">
-			  <span class="light-logo"><img src="/images/logo-dark-text.png" alt="logo"></span>
-			  <span class="dark-logo"><img src="/images/logo-light-text.png" alt="logo"></span>
-		  </div>
-		</a>	
-	</div>   
+    <header class="main-header box">
+	  
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-	  <div class="app-menu">
+	  <div class="app-menu d-flex align-items-center">
 		<ul class="header-megamenu nav">
 			<li class="btn-group nav-item">
 				<a href="#"  class="waves-effect waves-light nav-link push-btn btn-primary-light ms-0" data-toggle="push-menu" role="button" @click="toogleSideBar">
                     <font-awesome-icon :icon="activeSidebar ? ['fa', 'xmark'] : ['fa', 'bars']" />
 			    </a>
 			</li>
-			<li class="btn-group d-lg-inline-flex d-none">
-				<div class="app-menu">
-					<div class="search-bx mx-5">
-						<form>
-							<div class="input-group">
-							  <input type="search" class="form-control" placeholder="Search">
-							  <div class="input-group-append">
-								<button id="button-addon3" class="btn" type="submit"><font-awesome-icon :icon="['fa', 'search']" /></button>
-							  </div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</li>
 		</ul> 
+		<div class="d-flex align-items-center logo-box justify-content-start">	
+		  <!-- Logo -->
+		  <a href="index.html" class="logo">
+			<!-- logo-->
+			<div class="logo-mini w-30">
+				<span class="light-logo"><img src="/images/logo-letter.png" alt="logo"></span>
+				<span class="dark-logo"><img src="/images/logo-letter-white.png" alt="logo"></span>
+			</div>
+			<div class="logo-lg">
+				<span class="light-logo"><img src="/images/logo-dark-text.png" alt="logo"></span>
+				<span class="dark-logo"><img src="/images/logo-light-text.png" alt="logo"></span>
+			</div>
+		  </a>	
+	  </div> 
 	  </div>
 		
       <div class="navbar-custom-menu r-side">
@@ -63,8 +50,8 @@
 				<a href="#" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle" @click="toogleProfileBar">
 					<div class="d-flex pt-1 align-items-center">
 						<div class="text-end me-10">
-							<p class="pt-5 fs-14 mb-0 fw-700">Nil Yeager</p>
-							<small class="fs-10 mb-0 text-uppercase text-mute">Admin</small>
+							<p class="pt-5 fs-14 mb-0 fw-700">{{$auth.user.name ? $auth.user.name : "Anonymous"}}</p>
+							<small class="fs-10 mb-0 text-uppercase text-mute">{{$auth.user.role}}</small>
 						</div>
 						<img src="/images/avatar/avatar-13.png" class="avatar rounded-circle bg-primary-light h-40 w-40" alt="" />
 					</div>

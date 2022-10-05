@@ -93,7 +93,7 @@ import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
     name: "CreateUserPage",
     components: { BreadcrumbComponent },
-    layout: "DashboardLayout",
+    layout: "AdminLayout",
     data() {
         return {
         name: '',

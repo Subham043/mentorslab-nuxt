@@ -20,18 +20,18 @@
                                 </el-table-column>
                                 <el-table-column prop="email" label="Email" width="250">
                                 </el-table-column>
-                                <el-table-column label="Role" width="250">
+                                <el-table-column label="Role" width="100">
                                     <template slot-scope="scope">
                                         <span class="badge badge-info">{{scope.row.role}}</span>
                                     </template>
                                 </el-table-column>
-                                <el-table-column label="Verified" width="250">
+                                <el-table-column label="Verified" width="100">
                                     <template slot-scope="scope">
                                         <span v-if="scope.row.verified==1" class="badge badge-success">Yes</span>
                                         <span v-else class="badge badge-danger">No</span>
                                     </template>
                                 </el-table-column>
-                                <el-table-column label="Blocked" width="250">
+                                <el-table-column label="Blocked" width="100">
                                     <template slot-scope="scope">
                                         <span v-if="scope.row.blocked==1" class="badge badge-success">Yes</span>
                                         <span v-else class="badge badge-danger">No</span>
@@ -84,7 +84,7 @@ import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
     name: "CreateUserPage",
     components: { BreadcrumbComponent },
-    layout: "DashboardLayout",
+    layout: "AdminLayout",
     data() {
         return {
             count:0,

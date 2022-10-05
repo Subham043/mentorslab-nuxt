@@ -27,11 +27,11 @@
           />
         </div>
         <div class="ps-20 text-left">
-          <h5 class="mb-0">Nil Yeager</h5>
-          <p class="my-5 text-fade">Manager</p>
+          <h5 class="mb-0">{{$auth.user.name ? $auth.user.name : "Anonymous"}}</h5>
+          <p class="my-5 text-fade">{{$auth.user.role}}</p>
           <a href="mailto:dummy@gmail.com"
           >
-            dummy@gmail.com</a
+          {{$auth.user.email}}</a
           >
         </div>
       </div>

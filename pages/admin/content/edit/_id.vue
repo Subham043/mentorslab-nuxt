@@ -1,12 +1,12 @@
 <template>
     <div>
-        <BreadcrumbComponent main-page="User" current-page="Create" />
+        <BreadcrumbComponent main-page="User" current-page="Edit" />
         <section class="content">
             <div class="row">
                 <div class="col-lg-12 col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h4 class="box-title">Create User</h4>
+                            <h4 class="box-title">Edit User</h4>
                         </div>
                         <!-- /.box-header -->
                         <ValidationObserver ref="form" v-slot="{ handleSubmit }">
@@ -19,7 +19,7 @@
                                         <ValidationProvider v-slot="{ classes, errors }" rules="alpha_spaces" name="name">
                                         <div class="form-group">
                                             <label class="form-label">First Name</label>
-                                            <el-input v-model="name" style="width: 100%;" placeholder="Enter Name"></el-input>
+                                            <input v-model="name" type="text" class="form-control">
                                         </div>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
@@ -28,7 +28,7 @@
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required|email" name="email">
                                         <div class="form-group">
                                             <label class="form-label">E-mail</label>
-                                            <el-input v-model="email" type="email" style="width: 100%;" placeholder="Enter Email"></el-input>
+                                            <input v-model="email" type="email" class="form-control">
                                         </div>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
@@ -37,33 +37,20 @@
                                         <ValidationProvider v-slot="{ classes, errors }" rules="phone" name="phone">
                                         <div class="form-group">
                                             <label class="form-label">Phone Number</label>
-                                            <el-input v-model="phone" style="width: 100%;" placeholder="Enter Phone"></el-input>
+                                            <input v-model="phone" type="text" class="form-control">
                                         </div>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
-                                </div>
-                                <h4 class="box-title text-primary mb-0 mt-20"><i class="el-icon-lock"></i> Security
-                                </h4>
-                                <hr class="my-15">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" vid="password" name="password">
-                                        <div class="form-group">
-                                            <label class="form-label">Password</label>
-                                            <el-input v-model="password" style="width: 100%;" placeholder="Enter Password" show-password></el-input>
-                                        </div>
-                                        <span :class="classes">{{ errors[0] }}</span>
-                                        </ValidationProvider>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required|confirmed:password" name="confirm password">
-                                        <div class="form-group">
-                                            <label class="form-label">Confirm Password</label>
-                                            <el-input v-model="cpassword" style="width: 100%;" placeholder="Enter Confirm Password" show-password></el-input>
-                                        </div>
-                                        <span :class="classes">{{ errors[0] }}</span>
-                                        </ValidationProvider>
+                                    <div class="col-md-12 mt-10">
+                                        <el-switch
+                                            v-model="blocked"
+                                            style="display: block"
+                                            active-color="#13ce66"
+                                            inactive-color="#ff4949"
+                                            active-text="Unblocked"
+                                            inactive-text="Blocked">
+                                        </el-switch>
                                     </div>
                                 </div>
                             </div>
@@ -99,9 +86,11 @@ export default {
         name: '',
         email: '',
         phone: '',
-        password: '',
-        cpassword: '',
+        blocked: false
         }
+    },
+    beforeMount(){
+        this.checkId()
     },
     methods: {
         async formHandler() {
@@ -110,13 +99,12 @@ export default {
             fullscreen: true,
             });
             try {
-                const response = await this.$privateApi.post('/user', {email:this.email, password:this.password, name:this.name, phone:this.phone}); // eslint-disable-line
-                this.$toast.success('User created successfully')
+                const response = await this.$privateApi.patch('/user/'+this.$route.params.id, {email:this.email, name:this.name, phone:this.phone, blocked:this.blocked}); // eslint-disable-line
+                this.$toast.success('User updated successfully')
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
                 this.$refs.form.setErrors({
                 email: err?.response?.data?.form_error?.email,
-                password: err?.response?.data?.form_error?.password,
                 name: err?.response?.data?.form_error?.name,
                 phone: err?.response?.data?.form_error?.phone,
                 });
@@ -125,6 +113,29 @@ export default {
                 
             }finally{
             loading.close()
+            }
+        },
+        async checkId(){
+            const loading = this.$loading({
+            lock: true,
+            fullscreen: true,
+            });
+            if(!this.$route.params.id){
+                this.$toast.error('Invalid ID')
+                this.$router.push('/admin/user/list');
+            }
+            try {
+                const response = await this.$privateApi.get('/user/'+this.$route.params.id); // eslint-disable-line
+                this.name = response.data.data.name;
+                this.phone = response.data.data.phone;
+                this.email = response.data.data.email;
+                this.blocked = response.data.data.blocked;
+            } catch (err) {
+                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+                this.$router.push('/admin/user/list');
+            } finally{
+                loading.close()
             }
         }
     }

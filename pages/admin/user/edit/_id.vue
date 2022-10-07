@@ -19,7 +19,7 @@
                                         <ValidationProvider v-slot="{ classes, errors }" rules="alpha_spaces" name="name">
                                         <div class="form-group">
                                             <label class="form-label">First Name</label>
-                                            <input v-model="name" type="text" class="form-control">
+                                            <el-input v-model="name" style="width: 100%;" placeholder="Enter Name"></el-input>
                                         </div>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
@@ -28,7 +28,7 @@
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required|email" name="email">
                                         <div class="form-group">
                                             <label class="form-label">E-mail</label>
-                                            <input v-model="email" type="email" class="form-control">
+                                            <el-input v-model="email" type="email" style="width: 100%;" placeholder="Enter Email"></el-input>
                                         </div>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
@@ -37,7 +37,7 @@
                                         <ValidationProvider v-slot="{ classes, errors }" rules="phone" name="phone">
                                         <div class="form-group">
                                             <label class="form-label">Phone Number</label>
-                                            <input v-model="phone" type="text" class="form-control">
+                                            <el-input v-model="phone" style="width: 100%;" placeholder="Enter Phone"></el-input>
                                         </div>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
@@ -48,8 +48,8 @@
                                             style="display: block"
                                             active-color="#13ce66"
                                             inactive-color="#ff4949"
-                                            active-text="Unblocked"
-                                            inactive-text="Blocked">
+                                            active-text="Blocked"
+                                            inactive-text="Unblocked">
                                         </el-switch>
                                     </div>
                                 </div>

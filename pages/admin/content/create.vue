@@ -18,7 +18,7 @@
                                     <div class="col-md-12">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="heading">
                                         <div class="form-group">
-                                            <label class="form-label">Heading</label>
+                                            <label class="form-label">Heading *</label>
                                             <el-input v-model="heading" style="width: 100%;" placeholder="Enter Heading"></el-input>
                                         </div>
                                         <span :class="classes">{{ errors[0] }}</span>
@@ -41,7 +41,7 @@
                                     <div class="col-md-6">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="type">
                                         <div class="form-group">
-                                            <label class="form-label">File Type</label>
+                                            <label class="form-label">File Type *</label>
                                             <el-select v-model="type" placeholder="Select" style="width:100%">
                                                 <el-option
                                                 v-for="item in fileType"
@@ -59,7 +59,7 @@
                                     <div v-if="type=='PDF'" class="col-md-6">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required|ext:pdf" name="file">
                                         <div class="form-group">
-                                            <label class="form-label">File</label>
+                                            <label class="form-label">File *</label>
                                             <input v-model="file" type="hidden" />
                                             <input class="form-control" type="file" @change="handleFileChnage" />
                                         </div>
@@ -69,7 +69,7 @@
                                     <div v-else class="col-md-6">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="Video Url">
                                             <div class="form-group">
-                                                <label class="form-label">Video Url</label>
+                                                <label class="form-label">Video Url *</label>
                                                 <el-input v-model="file_path" style="width: 100%;" placeholder="Enter Video URL"></el-input>
                                             </div>
                                             <span :class="classes">{{ errors[0] }}</span>
@@ -114,6 +114,34 @@
                                         </ValidationProvider>
                                     </div>
                                 </div>
+                                <h4 class="box-title text-primary mb-0 mt-20"><i class="el-icon-user"></i> Assign Content
+                                </h4>
+                                <hr class="my-15">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="" name="user">
+                                        <div class="form-group">
+                                            <label class="form-label">User</label>
+                                            <el-select
+                                                v-model="selectedUsers"
+                                                filterable
+                                                multiple
+                                                style="width:100%"
+                                                placeholder="Assign user to this content">
+                                                <el-option
+                                                v-for="item in users"
+                                                :key="item.id"
+                                                :label="item.email"
+                                                :value="item.id">
+                                                <span style="float: left; color: #8492a6; font-size: 13px">{{item.email}}</span>
+                                                <span style="float: right">{{ item.name||item.email }}</span>
+                                                </el-option>
+                                            </el-select>
+                                        </div>
+                                        <span :class="classes">{{ errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
@@ -150,17 +178,22 @@ export default {
             draft: false,
             restricted: false,
             fileType: [{
-            value: 'VIDEO',
-            label: 'VIDEO',
-            icon: 'el-icon-video-camera'
-            }, {
-            value: 'PDF',
-            label: 'PDF',
-            icon: 'el-icon-notebook-2'
+                value: 'VIDEO',
+                label: 'VIDEO',
+                icon: 'el-icon-video-camera'
+                }, {
+                value: 'PDF',
+                label: 'PDF',
+                icon: 'el-icon-notebook-2'
             }],
             type: "VIDEO",
             file: [],
+            users: [],
+            selectedUsers: [],
         }
+    },
+    mounted() {
+        this.getUsers();
     },
     methods: {
         async formHandler() {
@@ -181,6 +214,7 @@ export default {
                     formData.append('file', this.file);
                 }
                 const response = await this.$privateApi.post('/content', formData); // eslint-disable-line
+                await this.assignContentToUser(response.data.data.id);
                 this.$toast.success('Content created successfully')
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
@@ -201,6 +235,47 @@ export default {
         },
         handleFileChnage(event){
             this.file = event.target.files[0];
+        },
+        async getUsers(){
+            const loading = this.$loading({
+            lock: true,
+            fullscreen: true,
+            });
+            try {
+                const response = await this.$privateApi.get('/user');
+                this.users = response.data.data;
+            } catch (err) {
+                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+            }finally{
+                loading.close()
+            }
+        },
+        async assignContentToUser(contentId){
+            const loading = this.$loading({
+            lock: true,
+            fullscreen: true,
+            });
+            try {
+
+                // eslint-disable-next-line camelcase
+                const assigned_content_array = [];
+                for (let index = 0; index < this.selectedUsers.length; index++) {
+                    // eslint-disable-next-line camelcase
+                    assigned_content_array.push(
+                        {assignedToId:this.selectedUsers[index]}
+                    );
+                }
+                // eslint-disable-next-line no-console
+                console.log(assigned_content_array);
+                // eslint-disable-next-line no-unused-vars, object-shorthand, camelcase
+                const response = await this.$privateApi.post('/assign/content-to-user-multiple/'+contentId, {assigned_content_array:assigned_content_array})
+            } catch (err) {
+                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+            }finally{
+                loading.close()
+            }
         }
     }
 }

@@ -254,9 +254,11 @@ export default {
                 if(response.data.data.AssignedContent.length>0){
                     for (let index = 0; index < response.data.data.AssignedContent.length; index++) {
                         // eslint-disable-next-line camelcase
-                        this.selectedUsers.push(
-                            response.data.data.AssignedContent[index].assignedTo.id
-                        );
+                        if(response.data.data.AssignedContent[index].assignedTo){
+                            this.selectedUsers.push(
+                                response.data.data.AssignedContent[index].assignedTo.id
+                            );
+                        }
                     }
                 }
             } catch (err) {

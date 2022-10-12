@@ -18,7 +18,7 @@
                                     <div class="col-md-4">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="alpha_spaces" name="name">
                                         <div class="form-group">
-                                            <label class="form-label">First Name</label>
+                                            <label class="form-label">Name</label>
                                             <el-input v-model="name" style="width: 100%;" placeholder="Enter Name"></el-input>
                                         </div>
                                         <span :class="classes">{{ errors[0] }}</span>

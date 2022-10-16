@@ -7,7 +7,7 @@
 	  <div class="app-menu d-flex align-items-center">
 		<ul class="header-megamenu nav">
 			<li class="btn-group nav-item">
-				<a href="#"  class="waves-effect waves-light nav-link push-btn btn-primary-light ms-0" data-toggle="push-menu" role="button" @click="toogleSideBar">
+				<a href="javascript:void(0)"  class="waves-effect waves-light nav-link push-btn btn-primary-light ms-0" data-toggle="push-menu" role="button" @click="toogleSideBar">
                     <font-awesome-icon :icon="activeSidebar ? ['fa', 'xmark'] : ['fa', 'bars']" />
 			    </a>
 			</li>
@@ -40,14 +40,14 @@
             </li>
 			
 			<li class="btn-group nav-item d-xl-inline-flex d-none">
-				<a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="Full Screen" @click="toggleFullScreen">
+				<a href="javascript:void(0)" data-provide="fullscreen" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="Full Screen" @click="toggleFullScreen">
 					<font-awesome-icon :icon="fullScreen ? ['fa', 'expand'] : ['fa', 'compress']" />
 			    </a>
 			</li>
 			
 			<!-- User Account-->
 			<li class="dropdown user user-menu">
-				<a href="#" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle" @click="toogleProfileBar">
+				<a href="javascript:void(0)" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle" @click="toogleProfileBar">
 					<div class="d-flex pt-1 align-items-center">
 						<div class="text-end me-10">
 							<p class="pt-5 fs-14 mb-0 fw-700">{{$auth.user.name ? $auth.user.name : "Anonymous"}}</p>

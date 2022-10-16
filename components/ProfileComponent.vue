@@ -6,7 +6,7 @@
   <div class="p-30 bg-white">
     <div class="d-flex align-items-center justify-content-between pb-30">
       <a
-      href="#"
+      href="javascript:void(0)"
       class="btn btn-icon btn-danger-light btn-sm no-shadow"
       @click="toogleProfileBar"
       >

@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/valid-template-root -->
 <template>
     <!-- Content Header (Page header) -->	  
-		<div class="content-header">
+		<div class="content-header content-header-user">
 			<div class="d-flex align-items-center">
 				<div class="me-auto d-flex align-items-center">
 					<h4 class="page-title">{{mainPage}}</h4>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'BreadcrumbComponent',
+  name: 'UserCrumbComponent',
   props:{
 	mainPage:{
 		type: String,
@@ -35,3 +35,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.content-header-user{
+	padding: 1.5rem 0 0;
+}
+</style>

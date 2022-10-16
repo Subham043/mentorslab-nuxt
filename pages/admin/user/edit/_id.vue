@@ -53,34 +53,6 @@
                                         </el-switch>
                                     </div>
                                 </div>
-                                <h4 class="box-title text-primary mb-0 mt-20"><i class="el-icon-user"></i> Assign Content
-                                </h4>
-                                <hr class="my-15">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="" name="user">
-                                        <div class="form-group">
-                                            <label class="form-label">Content</label>
-                                            <el-select
-                                                v-model="selectedContents"
-                                                filterable
-                                                multiple
-                                                style="width:100%"
-                                                placeholder="Assign user to this content">
-                                                <el-option
-                                                v-for="item in contents"
-                                                :key="item.id"
-                                                :label="item.heading"
-                                                :value="item.id">
-                                                <span style="float: left; color: #8492a6; font-size: 13px">{{item.heading}}</span>
-                                                <span style="float: right">{{ item.type }}</span>
-                                                </el-option>
-                                            </el-select>
-                                        </div>
-                                        <span :class="classes">{{ errors[0] }}</span>
-                                        </ValidationProvider>
-                                    </div>
-                                </div>
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
@@ -115,13 +87,10 @@ export default {
         email: '',
         phone: '',
         blocked: false,
-        contents: [],
-        selectedContents: [],
         }
     },
     beforeMount(){
         this.checkId()
-        this.getContents();
     },
     methods: {
         async formHandler() {
@@ -131,7 +100,6 @@ export default {
             });
             try {
                 const response = await this.$privateApi.patch('/user/'+this.$route.params.id, {email:this.email, name:this.name, phone:this.phone, blocked:this.blocked}); // eslint-disable-line
-                await this.assignUserToContent(response.data.data.id);
                 this.$toast.success('User updated successfully')
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
@@ -162,16 +130,6 @@ export default {
                 this.phone = response.data.data.phone;
                 this.email = response.data.data.email;
                 this.blocked = response.data.data.blocked;
-                if(response.data.data.ContentAssignedTo.length>0){
-                    for (let index = 0; index < response.data.data.ContentAssignedTo.length; index++) {
-                        // eslint-disable-next-line camelcase
-                        if(response.data.data.ContentAssignedTo[index].assignedContent){
-                            this.selectedContents.push(
-                                response.data.data.ContentAssignedTo[index].assignedContent.id
-                            );
-                        }
-                    }
-                }
             } catch (err) {
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
@@ -180,47 +138,6 @@ export default {
                 loading.close()
             }
         },
-        async getContents(){
-            const loading = this.$loading({
-            lock: true,
-            fullscreen: true,
-            });
-            try {
-                const response = await this.$privateApi.get('/content');
-                this.contents = response.data.data;
-            } catch (err) {
-                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
-                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-            }finally{
-                loading.close()
-            }
-        },
-        async assignUserToContent(userId){
-            const loading = this.$loading({
-            lock: true,
-            fullscreen: true,
-            });
-            try {
-
-                // eslint-disable-next-line camelcase
-                const assigned_content_array = [];
-                for (let index = 0; index < this.selectedContents.length; index++) {
-                    // eslint-disable-next-line camelcase
-                    assigned_content_array.push(
-                        {assignedContentId:this.selectedContents[index]}
-                    );
-                }
-                // eslint-disable-next-line no-console
-                console.log(assigned_content_array);
-                // eslint-disable-next-line no-unused-vars, object-shorthand, camelcase
-                const response = await this.$privateApi.post('/assign/user-to-content-multiple/'+userId, {assigned_content_array:assigned_content_array})
-            } catch (err) {
-                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
-                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-            }finally{
-                loading.close()
-            }
-        }
     }
 }
 </script>

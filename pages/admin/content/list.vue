@@ -14,21 +14,35 @@
                             <el-table :data="tableData" style="width: 100%" max-height="100%">
                                 <el-table-column fixed prop="id" label="ID" width="150">
                                 </el-table-column>
-                                <el-table-column prop="heading" label="Heading">
+                                <el-table-column prop="name" label="Name" width="250">
                                 </el-table-column>
-                                <el-table-column label="File Type">
+                                <el-table-column prop="heading" label="Heading" width="250">
+                                </el-table-column>
+                                <el-table-column label="File Type" width="150">
                                     <template slot-scope="scope">
                                         <span v-if="scope.row.type=='VIDEO'" class="badge badge-warning">VIDEO</span>
                                         <span v-else class="badge badge-info">PDF</span>
                                     </template>
                                 </el-table-column>
-                                <el-table-column label="Restricted">
+                                <el-table-column label="Restricted" width="150">
                                     <template slot-scope="scope">
                                         <span v-if="scope.row.restricted==1" class="badge badge-success">Yes</span>
                                         <span v-else class="badge badge-danger">No</span>
                                     </template>
                                 </el-table-column>
-                                <el-table-column prop="createdAt" label="CreatedAt">
+                                <el-table-column label="Paid" width="150">
+                                    <template slot-scope="scope">
+                                        <span v-if="scope.row.paid==1" class="badge badge-success">Yes</span>
+                                        <span v-else class="badge badge-danger">No</span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column label="Draft" width="150">
+                                    <template slot-scope="scope">
+                                        <span v-if="scope.row.draft==1" class="badge badge-success">Yes</span>
+                                        <span v-else class="badge badge-danger">No</span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="createdAt" label="CreatedAt" width="250">
                                 </el-table-column>
                                 <el-table-column fixed="right" label="Operations" width="120">
                                     <template slot-scope="scope">

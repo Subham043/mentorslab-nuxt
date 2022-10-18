@@ -15,7 +15,16 @@
                                 <h4 class="box-title text-primary mb-0"><i class="el-icon-reading"></i> Content Info</h4>
                                 <hr class="my-15">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="name">
+                                        <div class="form-group">
+                                            <label class="form-label">Name *</label>
+                                            <el-input v-model="name" style="width: 100%;" placeholder="Enter Name"></el-input>
+                                        </div>
+                                        <span :class="classes">{{ errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                    <div class="col-md-6">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="heading">
                                         <div class="form-group">
                                             <label class="form-label">Heading *</label>
@@ -81,7 +90,7 @@
                                 </h4>
                                 <hr class="my-15">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="draft">
                                         <div class="form-group">
                                             <label class="form-label">Draft</label>
@@ -97,17 +106,35 @@
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="restricted">
                                             <div class="form-group">
                                                 <label class="form-label">Restricted</label>
                                                 <el-switch
                                                     v-model="restricted"
+                                                    :disabled="paid"
                                                     style="display: block"
                                                     active-color="#13ce66"
                                                     inactive-color="#ff4949"
                                                     active-text="Yes"
                                                     inactive-text="No">
+                                                </el-switch>
+                                            </div>
+                                            <span :class="classes">{{ errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="paid">
+                                            <div class="form-group">
+                                                <label class="form-label">Paid</label>
+                                                <el-switch
+                                                    v-model="paid"
+                                                    style="display: block"
+                                                    active-color="#13ce66"
+                                                    inactive-color="#ff4949"
+                                                    active-text="Yes"
+                                                    inactive-text="No"
+                                                    @change="paidChange">
                                                 </el-switch>
                                             </div>
                                             <span :class="classes">{{ errors[0] }}</span>
@@ -172,11 +199,13 @@ export default {
     layout: "AdminLayout",
     data() {
         return {
+            name: '',
             heading: '',
             description: '',
             file_path: '',
             draft: false,
             restricted: false,
+            paid: false,
             fileType: [{
                 value: 'VIDEO',
                 label: 'VIDEO',
@@ -196,6 +225,9 @@ export default {
         this.getUsers();
     },
     methods: {
+        paidChange(){
+            this.paid ? this.restricted = true : this.restricted = false;
+        },
         async formHandler() {
             const loading = this.$loading({
             lock: true,
@@ -203,10 +235,12 @@ export default {
             });
             try {
                 const formData = new FormData;
+                formData.append('name', this.name);
                 formData.append('heading', this.heading);
                 formData.append('description', this.description);
                 formData.append('draft', !!this.draft);
                 formData.append('restricted', !!this.restricted);
+                formData.append('paid', !!this.paid);
                 formData.append('type', this.type);
                 if(this.type==='VIDEO'){
                     formData.append('file_path', this.file_path);

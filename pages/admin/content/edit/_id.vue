@@ -37,8 +37,10 @@
                                         <ValidationProvider v-slot="{ classes, errors }" rules="" name="description">
                                         <div class="form-group">
                                             <label class="form-label">Description</label>
-                                            <el-input v-model="description" style="width: 100%;" placeholder="Enter Description"></el-input>
                                         </div>
+                                        <client-only>
+                                          <VueEditor v-model="description" :editor-toolbar="customToolbar" />
+                                        </client-only>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -168,6 +170,20 @@
                                         </ValidationProvider>
                                     </div>
                                 </div>
+                                <h4 v-if="paid" class="box-title text-primary mb-0 mt-20"><i class="el-icon-price-tag"></i> Content Price
+                                </h4>
+                                <hr v-if="paid" class="my-15">
+                                <div v-if="paid" class="row">
+                                    <div class="col-md-4">
+                                        <ValidationProvider v-slot="{ classes, errors }" :rules="paid ? 'required' : ''" name="amount">
+                                        <div class="form-group">
+                                            <label class="form-label">Amount *</label>
+                                            <el-input v-model="amount" style="width: 100%;" placeholder="Enter Amount"></el-input>
+                                        </div>
+                                        <span :class="classes">{{ errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
@@ -193,7 +209,7 @@
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
-    name: "CreateUserPage",
+    name: "EditContentPage",
     components: { BreadcrumbComponent },
     layout: "AdminLayout",
     data() {
@@ -202,6 +218,7 @@ export default {
             heading: '',
             description: '',
             file_path: '',
+            amount: '',
             draft: false,
             restricted: false,
             paid: false,
@@ -218,6 +235,22 @@ export default {
             file: [],
             users: [],
             selectedUsers: [],
+            customToolbar: [
+                [{ header: [false, 1, 2, 3, 4, 5, 6] }],
+                ["bold", "italic", "underline", "strike"], // toggled buttons
+                [
+                    { align: "" },
+                    { align: "center" },
+                    { align: "right" },
+                    { align: "justify" }
+                ],
+                ["blockquote", "code-block"],
+                [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
+                [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+                [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+                ["link"],
+                ["clean"] // remove formatting button
+            ]
         }
     },
     beforeMount(){
@@ -238,6 +271,7 @@ export default {
                 formData.append('name', this.name);
                 formData.append('heading', this.heading);
                 formData.append('description', this.description);
+                formData.append('amount', this.amount);
                 formData.append('draft', !!this.draft);
                 formData.append('restricted', !!this.restricted);
                 formData.append('paid', !!this.paid);
@@ -286,6 +320,7 @@ export default {
                 this.draft = response.data.data.draft;
                 this.restricted = response.data.data.restricted;
                 this.paid = response.data.data.paid;
+                this.amount = response.data.data.amount;
                 if(response.data.data.AssignedContent.length>0){
                     for (let index = 0; index < response.data.data.AssignedContent.length; index++) {
                         // eslint-disable-next-line camelcase

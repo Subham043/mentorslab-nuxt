@@ -1,14 +1,14 @@
 <template>
     <div>
-        <BreadcrumbComponent main-page="Content" current-page="List" />
+        <BreadcrumbComponent main-page="Live Session Content" current-page="List" />
         <section class="content">
             <div class="row">
 
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header d-flex justify-content-between align-items-center">
-                            <h4 class="box-title">Content</h4>
-                            <NuxtLink to="/admin/content/create"><el-button type="warning">Create</el-button></NuxtLink>
+                            <h4 class="box-title">Live Session Content</h4>
+                            <NuxtLink to="/admin/live-session-content/create"><el-button type="warning">Create</el-button></NuxtLink>
                         </div>
                         <div class="box-body">
                             <el-table :data="tableData" style="width: 100%" max-height="100%">
@@ -19,18 +19,6 @@
                                 <el-table-column prop="heading" label="Heading" width="250">
                                 </el-table-column>
                                 <el-table-column prop="amount" label="Amount" width="250">
-                                </el-table-column>
-                                <el-table-column label="File Type" width="150">
-                                    <template slot-scope="scope">
-                                        <span v-if="scope.row.type=='VIDEO'" class="badge badge-warning">VIDEO</span>
-                                        <span v-else class="badge badge-info">PDF</span>
-                                    </template>
-                                </el-table-column>
-                                <el-table-column label="Restricted" width="150">
-                                    <template slot-scope="scope">
-                                        <span v-if="scope.row.restricted==1" class="badge badge-success">Yes</span>
-                                        <span v-else class="badge badge-danger">No</span>
-                                    </template>
                                 </el-table-column>
                                 <el-table-column label="Paid" width="150">
                                     <template slot-scope="scope">
@@ -48,7 +36,7 @@
                                 </el-table-column>
                                 <el-table-column fixed="right" label="Operations" width="120">
                                     <template slot-scope="scope">
-                                        <NuxtLink :to="`/admin/content/edit/${scope.row.id}`"><el-button type="primary" icon="el-icon-edit" circle></el-button></NuxtLink>
+                                        <NuxtLink :to="`/admin/live-session-content/edit/${scope.row.id}`"><el-button type="primary" icon="el-icon-edit" circle></el-button></NuxtLink>
                                         <el-popconfirm
                                         confirm-button-text='OK'
                                         cancel-button-text='No, Thanks'
@@ -81,12 +69,12 @@
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
-    name: "ListContentPage",
+    name: "ListLiveSessionContentPage",
     components: { BreadcrumbComponent },
     layout: "AdminLayout",
     data() {
         return {
-            count:1,
+            count:0,
             tableData: [],
             currentPage: 1
         }
@@ -106,7 +94,7 @@ export default {
                 fullscreen: true,
             });
             try {
-                const response = await this.$privateApi.get('/content/paginate?skip='+page); // eslint-disable-line
+                const response = await this.$privateApi.get('/live-session-content/paginate?skip='+page); // eslint-disable-line
                 this.tableData = response?.data?.data?.data
                 this.count = response?.data?.data?.count
                 this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;
@@ -126,12 +114,12 @@ export default {
             });
             try {
                 // eslint-disable-next-line no-unused-vars
-                const response = await this.$privateApi.delete('/content/'+id);
+                const response = await this.$privateApi.delete('/live-session-content/'+id);
                 const newTableData = this.tableData.filter((item)=>{
                     return item.id!==id;
                 })
                 this.tableData = newTableData;
-                this.$toast.success('Content deleted successfully')
+                this.$toast.success('Live session content deleted successfully')
             } catch (err) {
                 if (err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if (err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)

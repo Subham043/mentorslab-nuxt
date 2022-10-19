@@ -78,7 +78,7 @@
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
-    name: "CreateUserPage",
+    name: "EditUserPage",
     components: { BreadcrumbComponent },
     layout: "AdminLayout",
     data() {

@@ -28,6 +28,7 @@ export default {
     '~/plugins/vuefullscreen.js',
     '~/plugins/publicApi.js',
     '~/plugins/privateApi.js',
+    '~/plugins/pagination.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -49,6 +50,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/auth-next',
+    "vue2-editor/nuxt",
     ["vue-toastification/nuxt", {
       timeout: 8000,
       position: "bottom-center"

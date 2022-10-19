@@ -33911,3 +33911,7 @@ img.away, img.busy, img.offline, img.online {
 .text-left{
   text-align: left !important;
 }
+
+.pagination {
+  justify-content: center;
+}

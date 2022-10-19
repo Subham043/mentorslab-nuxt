@@ -58,16 +58,8 @@
                                 </el-table-column>
                             </el-table>
                         </div>
-                        <div class="box-footer">
-                            <el-pagination
-                            background
-                            style="text-align:center"
-                            layout="prev, pager, next"
-                            :page-size="10"
-                            :current-page.sync="currentPage"
-                            :total="count"
-                            @current-change="handlePaginationChnage">
-                            </el-pagination>
+                        <div class="box-footer text-center">
+                            <pagination v-model="currentPage" :records="count" :per-page="10" @paginate="handlePaginationChnage"/>
                         </div>
                     </div>
                 </div>
@@ -82,14 +74,14 @@
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
-    name: "CreateUserPage",
+    name: "ListUserPage",
     components: { BreadcrumbComponent },
     layout: "AdminLayout",
     data() {
         return {
             count:0,
             tableData: [],
-            currentPage: null
+            currentPage: 1
         }
     },
     watch: {

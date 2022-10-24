@@ -2,8 +2,7 @@
     <div>
     <section class="content">
         <div class="box-header d-flex justify-content-between align-items-center box-header-user">
-            <UserCrumbComponent main-page="Content" current-page="List" />
-            <NuxtLink to="/admin/content/create"><el-button type="warning">Create</el-button></NuxtLink>
+            <UserCrumbComponent main-page="Content" current-page="All" />
         </div>
         <div v-if="loading" class="row">
             <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-3">
@@ -36,11 +35,11 @@
   </template>
   
   <script>
-  import UserCrumbComponent from '../../components/UserCrumbComponent.vue'
-  import ContentCardSkeletonComponent from '../../components/ContentCardSkeletonComponent.vue';
+  import UserCrumbComponent from '~/components/UserCrumbComponent.vue'
+  import ContentCardSkeletonComponent from '~/components/ContentCardSkeletonComponent.vue';
   import ContentCardComponent from '~/components/ContentCardComponent.vue';
   export default {
-    name: "UserContentPage",
+    name: "UserContentAllPage",
     components: { UserCrumbComponent, ContentCardComponent, ContentCardSkeletonComponent },
     layout: "UserLayout",
     data() {
@@ -64,7 +63,7 @@
     async getTableData(page=0) {
         this.loading=true
         try {
-            const response = await this.$privateApi.get('/content/paginate?skip='+page); // eslint-disable-line
+            const response = await this.$privateApi.get('/content-user/paginate-all?skip='+page); // eslint-disable-line
             this.tableData = response?.data?.data?.data
             this.count = response?.data?.data?.count
             this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;

@@ -189,6 +189,7 @@ export default {
                     image: err?.response?.data?.form_error?.image,
                     draft: err?.response?.data?.form_error?.draft,
                     paid: err?.response?.data?.form_error?.paid,
+                    amount: err?.response?.data?.form_error?.amount,
                 });
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)

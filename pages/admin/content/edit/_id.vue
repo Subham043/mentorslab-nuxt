@@ -324,7 +324,7 @@ export default {
                 if(response.data.data.AssignedContent.length>0){
                     for (let index = 0; index < response.data.data.AssignedContent.length; index++) {
                         // eslint-disable-next-line camelcase
-                        if(response.data.data.AssignedContent[index].assignedTo){
+                        if(response.data.data.AssignedContent[index].assignedTo && response.data.data.AssignedContent[index].assignedRole==="ASSIGNED"){
                             this.selectedUsers.push(
                                 response.data.data.AssignedContent[index].assignedTo.id
                             );
@@ -348,8 +348,11 @@ export default {
             fullscreen: true,
             });
             try {
-                const response = await this.$privateApi.get('/user');
-                this.users = response.data.data;
+                const response = await this.$privateApi.get('/user/without-content-assigned/'+this.$route.params.id);
+                const data = response.data.data.filter((item)=>{
+                    return item.ContentAssignedTo.length!==0
+                })
+                this.users = data;
             } catch (err) {
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)

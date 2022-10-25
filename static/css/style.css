@@ -554,12 +554,6 @@ img {
   padding: 20px;
   background-color: #ffffff; }
 
-code {
-  border: 1px solid #f0f3f6;
-  background-color: #ffffff;
-  border-radius: .25rem;
-  padding: .2rem .4rem; }
-
 .d3-line {
   fill: rgba(255, 255, 255, 0); }
 

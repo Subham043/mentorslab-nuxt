@@ -13,7 +13,12 @@
             <div class="row">
                 <div v-for="item in tableData" :key="item.id" class="col-md-6 col-lg-3">
                     <ContentCardComponent
-                    :title="item.heading" 
+                    :id="item.id" 
+                    :title="item.name" 
+                    :heading="item.heading" 
+                    :type="item.type" 
+                    :paid="item.paid" 
+                    :purchased="item.AssignedContent.length>0" 
                     :paragraph="item.description" />
                 </div><!-- end col -->
             </div>

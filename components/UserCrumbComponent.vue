@@ -1,9 +1,9 @@
 <!-- eslint-disable vue/valid-template-root -->
 <template>
     <!-- Content Header (Page header) -->	  
-		<div class="content-header content-header-user">
-			<div class="d-flex align-items-center">
-				<div class="me-auto d-flex align-items-center">
+		<div class="content-header content-header-user col-sm-12">
+			<div class="d-flex align-items-center col-sm-12">
+				<div class="me-auto d-flex justify-content-between align-items-center col-sm-12">
 					<h4 class="page-title">{{mainPage}}</h4>
 					<div class="d-inline-block align-items-center">
 						<nav>

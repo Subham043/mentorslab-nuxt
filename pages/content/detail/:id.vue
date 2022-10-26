@@ -12,6 +12,7 @@
         <div v-else class="row">
             <ContentDetailComponent
             :id="id" 
+            :uuid="uuid" 
             :name="name" 
             :heading="heading" 
             :type="type" 
@@ -21,6 +22,7 @@
             :paragraph="description"
             :file="file"
             :video-link="videoLink"
+            @payment-click="makePayment"
             />
         </div>
     
@@ -39,6 +41,7 @@ import ContentDetailComponent from '~/components/ContentDetailComponent.vue';
     data() {
         return {
             id: 0,
+            uuid: '',
             name: '',
             heading: '',
             description: '',
@@ -53,6 +56,11 @@ import ContentDetailComponent from '~/components/ContentDetailComponent.vue';
             videoLink:''
         }
     },
+    head: {
+        script: [
+        { src: 'https://checkout.razorpay.com/v1/checkout.js' },
+        ],
+    },
     mounted(){
         this.checkId()
     },
@@ -66,6 +74,7 @@ import ContentDetailComponent from '~/components/ContentDetailComponent.vue';
             try {
                 const response = await this.$privateApi.get('/content-user/'+this.$route.params.id); // eslint-disable-line
                 this.id = response.data.data.id;
+                this.uuid = response.data.data.uuid;
                 this.name = response.data.data.name;
                 this.heading = response.data.data.heading;
                 this.description = response.data.data.description;
@@ -100,6 +109,68 @@ import ContentDetailComponent from '~/components/ContentDetailComponent.vue';
                 this.loading=false
             }
         },
+        async makePayment(){
+            const loading = this.$loading({
+                lock: true,
+                fullscreen: true,
+            });
+            try {
+                const response = await this.$privateApi.get('/content-user/generate-payment-order/'+this.$route.params.id); // eslint-disable-line
+                this.loadRazorpay(response.data.data)
+            } catch (err) {
+                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+            } finally{
+                loading.close()
+            }
+        },
+        loadRazorpay(data){
+            const options = {
+                key: this.$config.RAZORPAY_KEY_ID,
+                amount: data.amount,
+                currency: data.currency,
+                description: "Payment description",
+                order_id: data.id,
+                prefill: {
+                name: this.$auth.user.name,
+                email: this.$auth.user.email,
+                contact: this.$auth.user.phone
+                },
+                theme: {
+                color: "#000000" // Set your website theme color
+                },
+                handler: async (response) => {
+                // this.verifySignature(response);
+                // eslint-disable-next-line no-console
+                // console.log(response);
+                await this.verifyPayment(response)
+                }
+            };
+
+            // eslint-disable-next-line no-undef
+            const rzp = new Razorpay(options);
+            rzp.open();
+        },
+        async verifyPayment(data){
+            const loading = this.$loading({
+                lock: true,
+                fullscreen: true,
+            });
+            try {
+                const response = await this.$privateApi.post('/content-user/verify-payment/',{
+                    razorpayOrderId: data.razorpay_order_id,
+                    razorpayPaymentId: data.razorpay_payment_id,
+                    signature: data.razorpay_signature,
+                }); // eslint-disable-line
+                this.$toast.success(response.data.data.message)
+                this.checkId()
+            } catch (err) {
+                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+            } finally{
+                loading.close()
+            }
+        }
     }
   }
   </script>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000" height="1000" viewBox="0 0 1000 1000" xml:space="preserve">
+<desc>Created with Fabric.js 3.5.0</desc>
+<defs>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
+<g transform="matrix(-5.6818 0 0 5.6818 409.0896 454.544)" id="612606">
+<g style="" vector-effect="non-scaling-stroke">
+		<g transform="matrix(1 0 0 1 9 16.9956)">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(246,247,249); fill-rule: nonzero; opacity: 1;" transform=" translate(-81, -96.9956)" d="M 35.9992 33.9911 H 18.001 C 18.001 103.581 74.4093 160 143.999 160 V 141.999 C 84.3482 141.999 35.9992 93.6421 35.9992 33.9911 Z" stroke-linecap="round"/>
+</g>
+		<g transform="matrix(1 0 0 1 26.9995 -45.9995)">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(246,247,249); fill-rule: nonzero; opacity: 1;" transform=" translate(-98.9995, -34.0005)" d="M 143.999 -37.9991 V -56 C 94.2896 -56 54 -15.7104 54 33.9912 C 54 83.7007 94.2896 124.001 143.999 124.001 V 106 C 104.231 106 72.0009 73.7619 72.0009 33.9938 C 72.0009 -5.76102 104.231 -37.9991 143.999 -37.9991 Z" stroke-linecap="round"/>
+</g>
+		<g transform="matrix(1 0 0 1 71.999 -46.0012)">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(246,247,249); fill-rule: nonzero; opacity: 1;" transform=" translate(-143.999, -33.9988)" d="M 143.999 -20.0012 C 114.169 -20.0012 89.999 4.16904 89.999 33.9909 C 89.999 63.8206 114.169 87.9988 143.999 87.9988 V 33.9988 L 197.999 33.9909 C 197.999 4.16904 173.831 -20.0012 143.999 -20.0012 Z" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</svg>

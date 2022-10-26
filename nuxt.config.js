@@ -58,10 +58,12 @@ export default {
   ],
 
   publicRuntimeConfig: {
-    apiURL: process.env.API_BASE_URL
+    apiURL: process.env.API_BASE_URL,
+    RAZORPAY_KEY_ID: process.env.RAZORPAY_KEY_ID,
   },
   privateRuntimeConfig: {
-    apiURL: process.env.API_BASE_URL
+    apiURL: process.env.API_BASE_URL,
+    RAZORPAY_KEY_ID: process.env.RAZORPAY_KEY_ID,
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

@@ -83,6 +83,12 @@
                                                 <label class="form-label">Video Url *</label>
                                                 <el-input v-model="file_path" style="width: 100%;" placeholder="Enter Video URL"></el-input>
                                             </div>
+                                            <div class="form-text">
+                                                <code>youtube url format : </code>https://www.youtube.com/embed/3QPp_DlcZpM
+                                            </div>
+                                            <div class="form-text">
+                                                <code>vimeo url format : </code>https://player.vimeo.com/video/291685166
+                                            </div>
                                             <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>

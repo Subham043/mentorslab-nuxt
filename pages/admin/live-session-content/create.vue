@@ -34,7 +34,7 @@
                                         </ValidationProvider>
                                     </div>
                                     <div class="col-md-4">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required|ext:jpg,jpeg,png,webp" name="imagev">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="required|ext:jpg,jpeg,png,webp" name="image">
                                         <div class="form-group">
                                             <label class="form-label">Image *</label>
                                             <input v-model="file" type="hidden" />

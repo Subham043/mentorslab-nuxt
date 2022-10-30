@@ -9,6 +9,13 @@
                 <ContentCardSkeletonComponent />
             </div>
         </div>
+        <div v-else-if="tableData.length===0">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-sm-12">
+                    <NoUserDataComponent />
+                </div>
+            </div>
+        </div>
         <div v-else>
             <div class="row">
                 <div v-for="item in tableData" :key="item.id" class="col-md-6 col-lg-3">

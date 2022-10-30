@@ -12,19 +12,10 @@
 			    </a>
 			</li>
 		</ul> 
-		<div class="d-flex align-items-center logo-box justify-content-start">	
-		  <!-- Logo -->
-		  <a href="index.html" class="logo">
-			<!-- logo-->
-			<div class="logo-mini w-30">
-				<span class="light-logo"><img src="/images/logo-letter.png" alt="logo"></span>
-				<span class="dark-logo"><img src="/images/logo-letter-white.png" alt="logo"></span>
-			</div>
-			<div class="logo-lg">
-				<span class="light-logo"><img src="/images/logo-dark-text.png" alt="logo"></span>
-				<span class="dark-logo"><img src="/images/logo-light-text.png" alt="logo"></span>
-			</div>
-		  </a>	
+		<div class="d-flex align-items-center logo-box justify-content-start">		
+		<div class="logo-lg">
+			<span class="light-logo"><img class="header-logo" src="/images/logo.png" alt="logo"></span>
+		</div>
 	  </div> 
 	  </div>
 		
@@ -90,11 +81,17 @@ export default {
 			this.fullScreen= this.$fullscreen.isFullscreen
         },
 		toogleSideBar(){
-			this.$store.commit('sidebar/toggle')
+			this.$store.commit('sidebar/toggle', {status: !this.$store.state.sidebar.sidebar})
 		},
 		toogleProfileBar() {
-			this.$store.commit('profilebar/toggle')
+			this.$store.commit('profilebar/toggle', {status: !this.$store.state.profilebar.profilebar})
 		}
     }
 }
 </script>
+<style scoped>
+.header-logo{
+	height: 70px;
+    object-fit: contain;
+}
+</style>

@@ -2,11 +2,11 @@
     <div>
     <section class="content">
         <div class="box-header d-flex justify-content-between align-items-center box-header-user">
-            <UserCrumbComponent main-page="Content" current-page="Free" />
+            <UserCrumbComponent main-page="Live Session Content" current-page="All" />
         </div>
         <div v-if="loading" class="row">
             <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-3">
-                <ContentCardSkeletonComponent />
+                <LiveContentCardSkeletonComponent />
             </div>
         </div>
         <div v-else-if="tableData.length===0">
@@ -19,15 +19,14 @@
         <div v-else>
             <div class="row">
                 <div v-for="item in tableData" :key="item.id" class="col-md-6 col-lg-3">
-                    <ContentCardComponent
+                    <LiveContentCardComponent
                     :id="item.id" 
                     :uuid="item.uuid" 
                     :title="item.name" 
-                    :heading="item.heading"
-                    :type="item.type" 
+                    :heading="item.heading" 
                     :paid="item.paid" 
-                    :amount="item.amount"
-                    :purchased="item.AssignedContent.length>0" 
+                    :amount="item.amount" 
+                    :purchased="item.LiveSessionContentAssigned.length>0" 
                     :paragraph="item.description" />
                 </div><!-- end col -->
             </div>
@@ -50,11 +49,12 @@
   
   <script>
   import UserCrumbComponent from '~/components/UserCrumbComponent.vue'
-  import ContentCardSkeletonComponent from '~/components/ContentCardSkeletonComponent.vue';
-  import ContentCardComponent from '~/components/ContentCardComponent.vue';
+  import LiveContentCardSkeletonComponent from '~/components/LiveContentCardSkeletonComponent.vue';
+  import LiveContentCardComponent from '~/components/LiveContentCardComponent.vue';
+import NoUserDataComponent from '~/components/NoUserDataComponent.vue';
   export default {
-    name: "UserContentFreePage",
-    components: { UserCrumbComponent, ContentCardComponent, ContentCardSkeletonComponent },
+    name: "UserLiveSessionContentAllPage",
+    components: { UserCrumbComponent, LiveContentCardComponent, LiveContentCardSkeletonComponent, NoUserDataComponent },
     layout: "UserLayout",
     data() {
         return {
@@ -77,7 +77,7 @@
     async getTableData(page=0) {
         this.loading=true
         try {
-            const response = await this.$privateApi.get('/content-user/paginate-free?skip='+page); // eslint-disable-line
+            const response = await this.$privateApi.get('/live-session-content-user/paginate-paid?skip='+page); // eslint-disable-line
             this.tableData = response?.data?.data?.data
             this.count = response?.data?.data?.count
             this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;

@@ -7,18 +7,9 @@
 			<!-- sidebar-->
 			<section class="sidebar position-relative">
 				<div class="d-flex align-items-center logo-box justify-content-start">
-					<!-- Logo -->
-					<a href="index.html" class="logo">
-						<!-- logo-->
-						<div class="logo-mini w-30">
-							<span class="light-logo"><img src="/images/logo-letter.png" alt="logo"></span>
-							<span class="dark-logo"><img src="/images/logo-letter-white.png" alt="logo"></span>
-						</div>
-						<div class="logo-lg">
-							<span class="light-logo"><img src="/images/logo-dark-text.png" alt="logo"></span>
-							<span class="dark-logo"><img src="/images/logo-light-text.png" alt="logo"></span>
-						</div>
-					</a>
+					<div class="logo-lg">
+						<span class="light-logo"><img src="/images/logo.png" alt="logo"></span>
+					</div>
 				</div>
 				<div class="multinav">
 					<div class="multinav-scroll">
@@ -26,33 +17,55 @@
 						<el-menu default-active="2" class="el-menu-vertical-demo">
 							<el-submenu index="1">
 								<template slot="title">
-									<i class="el-icon-location"></i>
-									<span>Navigator One</span>
+									<i class="el-icon-reading"></i>
+									<span>Content</span>
 								</template>
-								<el-menu-item-group title="Group One">
-									<el-menu-item index="1-1"><i class="el-icon-location"></i> item one</el-menu-item>
-									<el-menu-item index="1-2">item one</el-menu-item>
-								</el-menu-item-group>
-								<el-menu-item-group title="Group Two">
-									<el-menu-item index="1-3">item three</el-menu-item>
-								</el-menu-item-group>
-								<el-submenu index="1-4">
-									<template slot="title">item four</template>
-									<el-menu-item index="1-4-1">item one</el-menu-item>
-								</el-submenu>
+								<NuxtLink to="/content/all">
+									<el-menu-item index="1-1">All Content</el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/content/free">
+									<el-menu-item index="1-2">Free Content</el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/content/paid">
+									<el-menu-item index="1-3">Paid Content</el-menu-item>
+								</NuxtLink>
 							</el-submenu>
-							<el-menu-item index="2">
-								<i class="el-icon-menu"></i>
-								<span>Navigator Two</span>
-							</el-menu-item>
-							<el-menu-item index="3" disabled>
-								<i class="el-icon-document"></i>
-								<span>Navigator Three</span>
-							</el-menu-item>
-							<el-menu-item index="4">
-								<i class="el-icon-setting"></i>
-								<span>Navigator Four</span>
-							</el-menu-item>
+							<el-submenu index="2">
+								<template slot="title">
+									<i class="el-icon-service"></i>
+									<span>Live Session Content</span>
+								</template>
+								<NuxtLink to="/live-session-content/all">
+									<el-menu-item index="2-1">All Live Session </el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/live-session-content/free">
+									<el-menu-item index="2-2">Free Live Session </el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/live-session-content/paid">
+									<el-menu-item index="2-3">Paid Live Session </el-menu-item>
+								</NuxtLink>
+							</el-submenu>
+							<template v-if="$auth.user.role=='ADMIN'">
+								<el-divider content-position="left">Admin Menu</el-divider>
+								<NuxtLink to="/admin/user/list">
+									<el-menu-item index="3">
+										<i class="el-icon-user"></i>
+										<span>User</span>
+									</el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/admin/content/list">
+									<el-menu-item index="4">
+										<i class="el-icon-reading"></i>
+										<span>Content</span>
+									</el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/admin/live-session-content/list">
+									<el-menu-item index="5">
+										<i class="el-icon-service"></i>
+										<span>Live Session Content</span>
+									</el-menu-item>
+								</NuxtLink>
+							</template>
 						</el-menu>
 						<!-- sidebar menu-->
 
@@ -62,7 +75,7 @@
 									<img
 src="http://edulearn-lms-admin-template.multipurposethemes.com/images/svg-icon/color-svg/custom-24.svg"
 										class="sideimg p-5" alt="">
-									<h4 class="title-bx text-primary">Best Education Admin</h4>
+									<h4 class="title-bx text-primary">Mentorslab</h4>
 								</div>
 							</div>
 						</div>
@@ -88,7 +101,7 @@ export default {
 	},
 	methods: {
 		toogleSideBar() {
-			this.$store.commit('sidebar/toggle')
+			this.$store.commit('sidebar/toggle', {status: !this.$store.state.sidebar.sidebar})
 		}
 	}
 }

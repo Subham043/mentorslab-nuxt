@@ -30,6 +30,16 @@ export default {
 		return this.$store.state.dark.class
 		}
 	},
+  watch: {
+    $route(to) {
+    this.$store.commit('sidebar/toggle', {status: false})
+    this.$store.commit('profilebar/toggle', {status: false})
+    }
+  },
+  created() {
+    this.$store.commit('sidebar/toggle', {status: false})
+    this.$store.commit('profilebar/toggle', {status: false})
+  }
 }
 </script>
 

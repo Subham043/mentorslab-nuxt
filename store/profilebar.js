@@ -3,7 +3,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-    toggle(state) {
-        state.profilebar = !state.profilebar;
+    toggle(state, payload) {
+        state.profilebar = payload.status;
     },
 }

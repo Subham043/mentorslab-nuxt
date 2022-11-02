@@ -65,6 +65,18 @@
 										<span>Live Session Content</span>
 									</el-menu-item>
 								</NuxtLink>
+								<el-submenu index="6">
+									<template slot="title">
+										<i class="el-icon-price-tag"></i>
+										<span>Payment</span>
+									</template>
+									<NuxtLink to="/admin/payment/content">
+										<el-menu-item index="6-1">Content </el-menu-item>
+									</NuxtLink>
+									<NuxtLink to="/admin/payment/live-session-content">
+										<el-menu-item index="6-2">Live Session Content </el-menu-item>
+									</NuxtLink>
+								</el-submenu>
 							</template>
 						</el-menu>
 						<!-- sidebar menu-->

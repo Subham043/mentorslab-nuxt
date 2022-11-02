@@ -29,6 +29,7 @@ export default {
     '~/plugins/publicApi.js',
     '~/plugins/privateApi.js',
     '~/plugins/pagination.js',
+    '~/plugins/zoom.client.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

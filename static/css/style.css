@@ -33909,3 +33909,11 @@ img.away, img.busy, img.offline, img.online {
 .pagination {
   justify-content: center;
 }
+
+#zmmtg-root {
+  display: none;
+}
+
+#zmmtg-root .controls{
+  text-align: center;
+}

@@ -26,6 +26,8 @@
                     :heading="item.heading" 
                     :paid="item.paid" 
                     :amount="item.amount" 
+                    :status="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].status : ''" 
+                    :assigned-role="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].assignedRole : ''" 
                     :purchased="item.LiveSessionContentAssigned.length>0" 
                     :paragraph="item.description" />
                 </div><!-- end col -->

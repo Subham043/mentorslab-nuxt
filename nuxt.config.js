@@ -1,3 +1,4 @@
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -29,7 +30,8 @@ export default {
     '~/plugins/publicApi.js',
     '~/plugins/privateApi.js',
     '~/plugins/pagination.js',
-    '~/plugins/zoom.client.js'
+    // '~/plugins/zoom.client.js',
+    { src: '~/plugins/zoom.client.js', mode: "client" }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

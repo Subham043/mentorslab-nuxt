@@ -21,7 +21,7 @@ export default {
             alert('yes')
         },
         
-    }
+    },
 }
 </script>
   

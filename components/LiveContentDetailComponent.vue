@@ -16,7 +16,17 @@
                                         <img id="product-image" :src="`${apiUrl}/live-session-content-user/image/${uuid}`" class="img-responsive bg-light rounded img-fluid card-img-top" alt="" />
                                     </div>
                                     <button v-if="paid && !purchased" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Buy Now @ Rs. {{amount}}</button>
-                                    <button v-else-if="!paid && !purchased" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Schedule Now </button>
+                                    <template v-else-if="paid && purchased">
+                                        <button v-if="status==='PENDING' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
+                                        <button v-else-if="status==='USER_REQUESTED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Requested </button>
+                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Scheduled </button>
+                                    </template>
+                                    <button v-else-if="!paid && !purchased" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
+                                    <template v-else-if="!paid && purchased">
+                                        <button v-if="status==='PENDING' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
+                                        <button v-else-if="status==='USER_REQUESTED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Requested </button>
+                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Scheduled </button>
+                                    </template>
                                 </div>
                             </div>
                             <hr class="mt-10 mb-20">
@@ -59,6 +69,14 @@ export default {
             default: ""
         },
         amount: {
+            type: String,
+            default: ""
+        },
+        status: {
+            type: String,
+            default: ""
+        },
+        assignedRole: {
             type: String,
             default: ""
         },

@@ -1,6 +1,8 @@
 import Vue from 'vue'
 
-import { ZoomMtg } from '@zoomus/websdk';
+// import { ZoomMtg } from '@zoomus/websdk';
+const { ZoomMtg } = require("@zoomus/websdk");
+
 
 // CDN version default
 

@@ -6,7 +6,20 @@
             <div v-if="paid && !purchased" class="ribbon ribbon-info float-end"><i class="mdi mdi-access-point me-1"></i> Rs. &nbsp;{{amount}}</div>
             <h5 class="card-title fw-600">{{title}}</h5>
             <p class="card-text text-gray-600 truncate">{{heading}}</p>
-            <NuxtLink :to="`/live-session-content/detail/${uuid}`" class="btn btn-primary-light">{{paid && !purchased ? 'Buy Now' : 'Schedule Now'}}</NuxtLink>
+            <NuxtLink :to="`/live-session-content/detail/${uuid}`" class="btn btn-primary-light">
+                <span v-if="paid && !purchased"> Buy Now @ Rs. {{amount}}</span>
+                <template v-else-if="paid && purchased">
+                    <span v-if="status==='PENDING' && assignedRole==='PURCHASED'"> Request Session </span>
+                    <span v-else-if="status==='USER_REQUESTED' && assignedRole==='PURCHASED'"> Requested </span>
+                    <span v-else-if="status==='SCHEDULED' && assignedRole==='PURCHASED'"> Scheduled </span>
+                </template>
+                <span v-else-if="!paid && !purchased"> Request Session </span>
+                <template v-else-if="!paid && purchased">
+                    <span v-if="status==='PENDING' && assignedRole==='ASSIGNED'"> Request Session </span>
+                    <span v-else-if="status==='USER_REQUESTED' && assignedRole==='ASSIGNED'"> Requested </span>
+                    <span v-else-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'"> Scheduled </span>
+                </template>
+            </NuxtLink>
         </div> <!-- end card-body-->
     </div> <!-- end card-->
 </template>
@@ -36,6 +49,14 @@ export default {
             default: ''
         },
         amount:{
+            type: String,
+            default: ''
+        },
+        status:{
+            type: String,
+            default: ''
+        },
+        assignedRole:{
             type: String,
             default: ''
         },

@@ -19,6 +19,8 @@
             :purchased="purchased" 
             :amount="amount" 
             :paragraph="description"
+            :status="status"
+            :assigned-role="assignedRole"
             @payment-click="makePayment"
             />
         </div>
@@ -45,6 +47,8 @@ import LiveContentDetailComponent from '~/components/LiveContentDetailComponent.
             amount: '',
             paid: false,
             purchased: false,
+            status: '',
+            assignedRole: '',
             loading:false,
             skeletonCount:4,
         }
@@ -75,6 +79,8 @@ import LiveContentDetailComponent from '~/components/LiveContentDetailComponent.
                 this.amount = response.data.data.amount;
                 if(response.data.data.LiveSessionContentAssigned && response.data.data.LiveSessionContentAssigned.length>0){
                     this.purchased = true;
+                    this.status = response.data.data.LiveSessionContentAssigned[0].status
+                    this.assignedRole = response.data.data.LiveSessionContentAssigned[0].assignedRole
                 }
             } catch (err) {
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)

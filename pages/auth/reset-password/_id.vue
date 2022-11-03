@@ -21,6 +21,15 @@ v-model="otp" type="password" class="form-control ps-15 bg-transparent"
                             <span :class="classes">{{ errors[0] }}</span>
                         </ValidationProvider>
                     </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="fog-pwd text-end">
+                                <button type="button" class="btn text-primary fw-500 hover-primary" @click="resendOtp">Resend OTP</button>
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <ValidationProvider
 v-slot="{ classes, errors }" rules="required" vid="password"
@@ -121,6 +130,29 @@ export default {
             }
             loading.close()
         },
+        async resendOtp() {
+            const loading = this.$loading({
+            lock: true,
+            fullscreen: true,
+            });
+            try {
+                // eslint-disable-next-line no-unused-vars
+                const response = await this.$publicApi.get(
+                    '/auth/resend-otp/' + this.$route.params.id,
+                    { otp: this.otp, password: this.password }
+                ) // eslint-disable-line
+                this.$toast.info('We have shared you an otp via email. kindly enter that in order to reset your password.')
+                // console.log(response);// eslint-disable-line
+            } catch (err) {
+                // console.log(err.response);// eslint-disable-line
+                if (err?.response?.data?.message)
+                    this.$toast.error(err?.response?.data?.message)
+                if (err?.response?.data?.error)
+                    this.$toast.error(err?.response?.data?.error)
+            } finally {
+                loading.close()
+            }
+        }
     },
 }
 </script>

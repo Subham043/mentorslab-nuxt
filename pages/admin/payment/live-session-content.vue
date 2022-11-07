@@ -94,26 +94,6 @@ export default {
                 loading.close()
             }
         },
-        async deleteRow(id){
-            const loading = this.$loading({
-                lock: true,
-                fullscreen: true,
-            });
-            try {
-                // eslint-disable-next-line no-unused-vars
-                const response = await this.$privateApi.delete('/content/'+id);
-                const newTableData = this.tableData.filter((item)=>{
-                    return item.id!==id;
-                })
-                this.tableData = newTableData;
-                this.$toast.success('Content deleted successfully')
-            } catch (err) {
-                if (err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
-                if (err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-            } finally {
-                loading.close()
-            }
-        },
         handlePaginationChnage(page){
             this.$router.push({query:{page}});
         },

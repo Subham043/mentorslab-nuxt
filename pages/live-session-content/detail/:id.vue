@@ -22,6 +22,7 @@
             :status="status"
             :assigned-role="assignedRole"
             @payment-click="makePayment"
+            @request-session-click="requestSession"
             />
         </div>
     
@@ -88,6 +89,22 @@ import LiveContentDetailComponent from '~/components/LiveContentDetailComponent.
                 this.$router.push('/content/all');
             } finally{
                 this.loading=false
+            }
+        },
+        async requestSession(){
+            const loading = this.$loading({
+                lock: true,
+                fullscreen: true,
+            });
+            try {
+                const response = await this.$privateApi.get('/live-session-content-user/request-session/'+this.$route.params.id); // eslint-disable-line
+                this.checkId()
+                this.$toast.success(response.data.data)
+            } catch (err) {
+                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+            } finally{
+                loading.close()
             }
         },
         async makePayment(){

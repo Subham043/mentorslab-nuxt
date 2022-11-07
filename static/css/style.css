@@ -110,16 +110,20 @@ a{
     display: table; }
 
 body, .fullscreen-wrapper {
-  overflow-x: hidden;
-  overflow-y: auto;
-  color: #191d33;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  line-height: 1.5;
-  min-height: 100vh;
-  background-color: #f6f9fb; }
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  color: #191d33 !important;
+  font-size: 1rem !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-family: "Poppins", sans-serif !important;
+  line-height: 1.5 !important;
+  min-height: 100vh !important;
+  background-color: #f6f9fb !important; }
+
+  html{
+    font-size: 13px !important;
+  }
 
 /*---basic---*/
 a {
@@ -22291,7 +22295,7 @@ body .main-header .navbar .nav > li.search-box > a:hover, body .main-header .nav
 
 @media (min-width: 768px) {
   .fixed .multinav {
-    position: fixed;
+    /* position: fixed; */
     width: 19.29rem;
     overflow-y: scroll;
     padding-bottom: 0;
@@ -22326,7 +22330,7 @@ body .main-header .navbar .nav > li.search-box > a:hover, body .main-header .nav
     opacity: 0; } }
 @media (max-width: 767px) {
   .fixed .multinav {
-    position: fixed;
+    /* position: fixed; */
     width: 19.29rem;
     overflow-y: scroll;
     padding-bottom: 0;
@@ -22335,6 +22339,9 @@ body .main-header .navbar .nav > li.search-box > a:hover, body .main-header .nav
   position: absolute;
   top: 10px;
   right: 10px; }
+  .el-menu{
+    border-right: 1px solid transparent !important;
+  }
 
 #chat-box-body {
   z-index: 9998;

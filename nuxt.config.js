@@ -30,7 +30,6 @@ export default {
     '~/plugins/publicApi.js',
     '~/plugins/privateApi.js',
     '~/plugins/pagination.js',
-    // '~/plugins/zoom.client.js',
     { src: '~/plugins/zoom.client.js', mode: "client" }
   ],
 

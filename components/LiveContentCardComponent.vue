@@ -12,12 +12,14 @@
                     <span v-if="status==='PENDING' && assignedRole==='PURCHASED'"> Request Session </span>
                     <span v-else-if="status==='USER_REQUESTED' && assignedRole==='PURCHASED'"> Requested </span>
                     <span v-else-if="status==='SCHEDULED' && assignedRole==='PURCHASED'"> Scheduled </span>
+                    <span v-else-if="status==='RESCHEDULED' && assignedRole==='PURCHASED'"> Rescheduled </span>
                 </template>
                 <span v-else-if="!paid && !purchased"> Request Session </span>
                 <template v-else-if="!paid && purchased">
                     <span v-if="status==='PENDING' && assignedRole==='ASSIGNED'"> Request Session </span>
                     <span v-else-if="status==='USER_REQUESTED' && assignedRole==='ASSIGNED'"> Requested </span>
                     <span v-else-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'"> Scheduled </span>
+                    <span v-else-if="status==='RESCHEDULED' && assignedRole==='ASSIGNED'"> Rescheduled </span>
                 </template>
             </NuxtLink>
         </div> <!-- end card-body-->
@@ -67,6 +69,14 @@ export default {
         purchased:{
             type: Boolean,
             default: false
+        },
+        scheduledOn:{
+            type: String,
+            default: ''
+        },
+        scheduledAt:{
+            type: String,
+            default: ''
         },
     },
     computed:{

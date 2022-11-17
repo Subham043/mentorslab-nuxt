@@ -10,7 +10,44 @@
                                 <div class="d-inline col-auto">
                                     <h3 class="mt-0">{{name}}</h3>
                                     <h4 class=""><span class="badge badge-success-light">Live Session</span></h4>
+                                    
                                 </div>
+                                <template v-if="paid && purchased">
+                                    <div class="d-inline col-auto">
+                                        <h5>Time remaining before you can join the live session:</h5>
+                                        <template v-if="status==='SCHEDULED' && assignedRole==='PURCHASED'">
+                                            <client-only>
+                                                <vac :end-time="new Date(scheduledOn).getTime()" @finish="timeElapsedHandler">
+                                                    <span
+                                                    slot="process"
+                                                    slot-scope="{ timeObj }">{{ `Lefttime: ${timeObj.m}:${timeObj.s}` }}</span>
+                                                    <span slot="finish">Done!</span>
+                                                </vac>
+                                            </client-only>
+                                        </template>
+                                        <template v-else-if="status==='RESCHEDULED' && assignedRole==='PURCHASED'">
+                                            <client-only>
+                                                <vac :end-time="new Date(scheduledOn).getTime()" @finish="timeElapsedHandler">
+                                                    <span
+                                                    slot="process"
+                                                    slot-scope="{ timeObj }">{{ `Lefttime: ${timeObj.m}:${timeObj.s}` }}</span>
+                                                    <span slot="finish">Done!</span>
+                                                </vac>
+                                            </client-only>
+                                        </template>
+                                    </div>
+                                </template>
+                                <template v-else-if="!paid && purchased">
+                                    <div class="d-inline col-auto">
+                                        <h5>Time remaining before you can join the live session:</h5>
+                                        <template v-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'">
+                                            tt
+                                        </template>
+                                        <template v-else-if="status==='RESCHEDULED' && assignedRole==='ASSIGNED'">
+                                            tt
+                                        </template>
+                                    </div>
+                                </template>
                                 <div class="col-md-2 col-sm-6 text-center">
                                     <div class="box box-body b-1 text-center no-shadow">
                                         <img id="product-image" :src="`${apiUrl}/live-session-content-user/image/${uuid}`" class="img-responsive bg-light rounded img-fluid card-img-top" alt="" />
@@ -18,14 +55,16 @@
                                     <button v-if="paid && !purchased" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Buy Now @ Rs. {{amount}}</button>
                                     <template v-else-if="paid && purchased">
                                         <button v-if="status==='PENDING' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('request-session-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
-                                        <button v-else-if="status==='USER_REQUESTED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Requested </button>
-                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Scheduled </button>
+                                        <button v-else-if="status==='USER_REQUESTED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Requested On <br/>{{$dateFns.format(new Date(scheduledAt), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Scheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <button v-else-if="status==='RESCHEDULED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Rescheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
                                     </template>
-                                    <button v-else-if="!paid && !purchased" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
+                                    <button v-else-if="!paid && !purchased" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('request-session-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
                                     <template v-else-if="!paid && purchased">
                                         <button v-if="status==='PENDING' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('request-session-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
-                                        <button v-else-if="status==='USER_REQUESTED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Requested </button>
-                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Scheduled </button>
+                                        <button v-else-if="status==='USER_REQUESTED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Requested On <br/>{{$dateFns.format(new Date(scheduledAt), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Scheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <button v-else-if="status==='RESCHEDULED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Rescheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
                                     </template>
                                 </div>
                             </div>
@@ -43,7 +82,6 @@
 </template>
 
 <script>
-
 
 export default {
     name: "LiveContentDetailComponent",
@@ -88,10 +126,24 @@ export default {
             type: Boolean,
             default: false
         },
+        scheduledOn:{
+            type: String,
+            default: ''
+        },
+        scheduledAt:{
+            type: String,
+            default: ''
+        },
     },
     computed:{
         apiUrl(){
             return this.$config.apiURL
+        }
+    },
+    methods: {
+        timeElapsedHandler(){
+            // eslint-disable-next-line no-console
+            console.log('over')
         }
     }
 }

@@ -31,7 +31,10 @@
                                         <span v-else class="badge badge-danger">UNPAID</span>
                                     </template>
                                 </el-table-column>
-                                <el-table-column prop="createdAt" label="CreatedAt" width="250">
+                                <el-table-column label="CreatedAt" width="250">
+                                    <template slot-scope="scope">
+                                        {{$dateFns.format(new Date(scope.row.createdAt), 'dd-MMM-yyyy hh:mm aa')}}
+                                    </template>
                                 </el-table-column>
                                 <el-table-column fixed="right" label="Amount" width="120">
                                     <template slot-scope="scope">

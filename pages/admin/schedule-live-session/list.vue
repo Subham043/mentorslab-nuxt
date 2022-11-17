@@ -28,11 +28,20 @@
                                         <span class="badge badge-success">{{scope.row.status}}</span>
                                     </template>
                                 </el-table-column>
-                                <el-table-column prop="createdAt" label="CreatedAt" width="250">
+                                <el-table-column label="CreatedAt" width="250">
+                                    <template slot-scope="scope">
+                                        {{$dateFns.format(new Date(scope.row.createdAt), 'dd-MMM-yyyy hh:mm aa')}}
+                                    </template>
                                 </el-table-column>
-                                <el-table-column prop="scheduledAt" label="User Requested At" width="250">
+                                <el-table-column label="User Requested On" width="250">
+                                    <template slot-scope="scope">
+                                        {{$dateFns.format(new Date(scope.row.scheduledAt), 'dd-MMM-yyyy hh:mm aa')}}
+                                    </template>
                                 </el-table-column>
-                                <el-table-column prop="scheduledOn" label="Session Scheduled On" width="250">
+                                <el-table-column label="Session Scheduled On" width="250">
+                                    <template slot-scope="scope">
+                                        {{$dateFns.format(new Date(scope.row.scheduledOn), 'dd-MMM-yyyy hh:mm aa')}}
+                                    </template>
                                 </el-table-column>
                                 <el-table-column fixed="right" label="Action" width="120">
                                     <template slot-scope="scope">

@@ -30,6 +30,7 @@ export default {
     '~/plugins/publicApi.js',
     '~/plugins/privateApi.js',
     '~/plugins/pagination.js',
+    '~/plugins/countdown.js',
     { src: '~/plugins/zoom.client.js', mode: "client" }
   ],
 
@@ -43,6 +44,7 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     '@nuxtjs/fontawesome',
+    '@nuxtjs/date-fns',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

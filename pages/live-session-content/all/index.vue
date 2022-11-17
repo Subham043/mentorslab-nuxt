@@ -27,6 +27,8 @@
                     :paid="item.paid" 
                     :amount="item.amount" 
                     :status="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].status : ''" 
+                    :scheduled-on="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].scheduledOn : ''" 
+                    :scheduled-at="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].scheduledAt : ''" 
                     :assigned-role="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].assignedRole : ''" 
                     :purchased="item.LiveSessionContentAssigned.length>0" 
                     :paragraph="item.description" />

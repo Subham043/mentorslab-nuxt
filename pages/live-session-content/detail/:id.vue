@@ -20,6 +20,8 @@
             :amount="amount" 
             :paragraph="description"
             :status="status"
+            :scheduled-on="scheduledOn"
+            :scheduled-at="scheduledAt"
             :assigned-role="assignedRole"
             @payment-click="makePayment"
             @request-session-click="requestSession"
@@ -50,6 +52,8 @@ import LiveContentDetailComponent from '~/components/LiveContentDetailComponent.
             purchased: false,
             status: '',
             assignedRole: '',
+            scheduledOn: '',
+            scheduledAt: '',
             loading:false,
             skeletonCount:4,
         }
@@ -81,6 +85,8 @@ import LiveContentDetailComponent from '~/components/LiveContentDetailComponent.
                 if(response.data.data.LiveSessionContentAssigned && response.data.data.LiveSessionContentAssigned.length>0){
                     this.purchased = true;
                     this.status = response.data.data.LiveSessionContentAssigned[0].status
+                    this.scheduledOn = response.data.data.LiveSessionContentAssigned[0].scheduledOn
+                    this.scheduledAt = response.data.data.LiveSessionContentAssigned[0].scheduledAt
                     this.assignedRole = response.data.data.LiveSessionContentAssigned[0].assignedRole
                 }
             } catch (err) {

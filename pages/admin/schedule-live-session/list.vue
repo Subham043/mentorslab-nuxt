@@ -43,10 +43,11 @@
                                         {{$dateFns.format(new Date(scope.row.scheduledOn), 'dd-MMM-yyyy hh:mm aa')}}
                                     </template>
                                 </el-table-column>
-                                <el-table-column fixed="right" label="Action" width="120">
+                                <el-table-column fixed="right" label="Action" width="200">
                                     <template slot-scope="scope">
                                         <el-button v-if="scope.row.status=='USER_REQUESTED'" type="text" @click.prevent="openDialog(scope.row.id)">Schedule</el-button>
                                         <el-button v-if="scope.row.status=='SCHEDULED' || scope.row.status=='RESCHEDULED'" type="text" @click.prevent="openDialog2(scope.row.id)">Reschedule</el-button>
+                                        <NuxtLink v-if="scope.row.status=='SCHEDULED' || scope.row.status=='RESCHEDULED'" :to="`/admin/schedule-live-session/join/${scope.row.liveSessionContent.id}`" class="text-success font-weight-bold">Join Session</NuxtLink>
                                     </template>
                                 </el-table-column>
                             </el-table>

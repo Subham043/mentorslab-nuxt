@@ -110,14 +110,14 @@ export default {
             paid: false,
             purchased: false,
             status: '',
-            assignedId: '',
             assignedRole: '',
             scheduledOn: '',
             scheduledAt: '',
             showJoinButton: false,
             zoom_id:'',
             zoom_signature: '',
-            zoom_password: ''
+            zoom_password: '',
+            assignedId: '',
         }
     },
     mounted(){
@@ -134,7 +134,7 @@ export default {
                 this.$router.push('/live-session-content/all');
             }
             try {
-                const response = await this.$privateApi.get('/live-session-content-user/'+this.$route.params.id); // eslint-disable-line
+                const response = await this.$privateApi.get('/live-session-content/join/'+this.$route.params.id); // eslint-disable-line
                 this.id = response.data.data.id;
                 this.uuid = response.data.data.uuid;
                 this.name = response.data.data.name;
@@ -155,7 +155,7 @@ export default {
             } catch (err) {
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                this.$router.push('/content/all');
+                this.$router.push('/admin/schedule-live-session/list');
             } finally{
                 loading.close()
             }
@@ -166,7 +166,7 @@ export default {
                 fullscreen: true,
             });
             try {
-                const response = await this.$privateApi.get('/live-session-assigned-content-user/zoom-signature/'+this.assignedId); // eslint-disable-line
+                const response = await this.$privateApi.get('/live-session-assigned-content/zoom-signature/'+this.assignedId); // eslint-disable-line
                 this.zoom_signature = response.data.data
                 this.showJoinButton= true;
                 // eslint-disable-next-line no-console

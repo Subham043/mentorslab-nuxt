@@ -69,6 +69,7 @@ export default {
             });
             try {
                 const response = await this.$publicApi.post('/auth/verify-user/'+this.$route.params.id, { otp: this.otp }); // eslint-disable-line
+                await this.$auth.setUserToken(response.data.data.access_token, response.data.data.refresh_token);
                 this.$toast.success('Email verified successfully.')
                 // console.log(response);// eslint-disable-line
             } catch (err) {

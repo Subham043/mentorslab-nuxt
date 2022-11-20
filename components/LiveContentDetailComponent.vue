@@ -14,14 +14,16 @@
                                 </div>
                                 <template v-if="paid && purchased">
                                     <div class="d-inline col-auto">
-                                        <h5>Time remaining before you can join the live session:</h5>
                                         <template v-if="status==='SCHEDULED' && assignedRole==='PURCHASED'">
                                             <client-only>
                                                 <vac :end-time="new Date(scheduledOn).getTime()" @finish="timeElapsedHandler">
                                                     <span
                                                     slot="process"
-                                                    slot-scope="{ timeObj }">{{ `Lefttime: ${timeObj.m}:${timeObj.s}` }}</span>
-                                                    <span slot="finish">Done!</span>
+                                                    slot-scope="{ timeObj }">
+                                                    <h5 class="text-center">Time remaining before you can join the live session:</h5>
+                                                    <h6 class="text-center">{{ `${timeObj.d} days ${timeObj.h} hrs ${timeObj.m} mins ${timeObj.s} secs` }}</h6>
+                                                    </span>
+                                                    <h6 slot="finish" class="text-center">You can click the join button to join the session!</h6>
                                                 </vac>
                                             </client-only>
                                         </template>
@@ -30,8 +32,11 @@
                                                 <vac :end-time="new Date(scheduledOn).getTime()" @finish="timeElapsedHandler">
                                                     <span
                                                     slot="process"
-                                                    slot-scope="{ timeObj }">{{ `Lefttime: ${timeObj.m}:${timeObj.s}` }}</span>
-                                                    <span slot="finish">Done!</span>
+                                                    slot-scope="{ timeObj }">
+                                                    <h5 class="text-center">Time remaining before you can join the live session:</h5>
+                                                    <h6 class="text-center">{{ `${timeObj.d} days ${timeObj.h} hrs ${timeObj.m} mins ${timeObj.s} secs` }}</h6>
+                                                    </span>
+                                                    <h6 slot="finish" class="text-center">You can click the join button to join the session!</h6>
                                                 </vac>
                                             </client-only>
                                         </template>
@@ -41,10 +46,30 @@
                                     <div class="d-inline col-auto">
                                         <h5>Time remaining before you can join the live session:</h5>
                                         <template v-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'">
-                                            tt
+                                            <client-only>
+                                                <vac :end-time="new Date(scheduledOn).getTime()" @finish="timeElapsedHandler">
+                                                    <span
+                                                    slot="process"
+                                                    slot-scope="{ timeObj }">
+                                                    <h5 class="text-center">Time remaining before you can join the live session:</h5>
+                                                    <h6 class="text-center">{{ `${timeObj.d} days ${timeObj.h} hrs ${timeObj.m} mins ${timeObj.s} secs` }}</h6>
+                                                    </span>
+                                                    <h6 slot="finish" class="text-center">You can click the join button to join the session!</h6>
+                                                </vac>
+                                            </client-only>
                                         </template>
                                         <template v-else-if="status==='RESCHEDULED' && assignedRole==='ASSIGNED'">
-                                            tt
+                                            <client-only>
+                                                <vac :end-time="new Date(scheduledOn).getTime()" @finish="timeElapsedHandler">
+                                                    <span
+                                                    slot="process"
+                                                    slot-scope="{ timeObj }">
+                                                    <h5 class="text-center">Time remaining before you can join the live session:</h5>
+                                                    <h6 class="text-center">{{ `${timeObj.d} days ${timeObj.h} hrs ${timeObj.m} mins ${timeObj.s} secs` }}</h6>
+                                                    </span>
+                                                    <h6 slot="finish" class="text-center">You can click the join button to join the session!</h6>
+                                                </vac>
+                                            </client-only>
                                         </template>
                                     </div>
                                 </template>
@@ -56,15 +81,17 @@
                                     <template v-else-if="paid && purchased">
                                         <button v-if="status==='PENDING' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('request-session-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
                                         <button v-else-if="status==='USER_REQUESTED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Requested On <br/>{{$dateFns.format(new Date(scheduledAt), 'dd-MMM-yyyy hh:mm aa')}} </button>
-                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Scheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
-                                        <button v-else-if="status==='RESCHEDULED' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Rescheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='PURCHASED' && !showJoinButton" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Scheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <button v-else-if="status==='RESCHEDULED' && assignedRole==='PURCHASED' && !showJoinButton" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Rescheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <NuxtLink v-else-if="showJoinButton" :to="`/live-session-content/join/${uuid}`" type="button" class="btn btn-primary btn-outline mt-2"><i class="mdi mdi-cart me-1"></i> Join Session </NuxtLink>
                                     </template>
                                     <button v-else-if="!paid && !purchased" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('request-session-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
                                     <template v-else-if="!paid && purchased">
                                         <button v-if="status==='PENDING' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('request-session-click')"><i class="mdi mdi-cart me-1"></i> Request Session </button>
                                         <button v-else-if="status==='USER_REQUESTED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Requested On <br/>{{$dateFns.format(new Date(scheduledAt), 'dd-MMM-yyyy hh:mm aa')}} </button>
-                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Scheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
-                                        <button v-else-if="status==='RESCHEDULED' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Rescheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <button v-else-if="status==='SCHEDULED' && assignedRole==='ASSIGNED' && !showJoinButton" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Scheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <button v-else-if="status==='RESCHEDULED' && assignedRole==='ASSIGNED' && !showJoinButton" type="button" class="btn btn-primary btn-outline mt-2" disabled><i class="mdi mdi-cart me-1"></i> Rescheduled At <br/>{{$dateFns.format(new Date(scheduledOn), 'dd-MMM-yyyy hh:mm aa')}} </button>
+                                        <NuxtLink v-else-if="showJoinButton" :to="`/live-session-content/join/${uuid}`" type="button" class="btn btn-primary btn-outline mt-2"><i class="mdi mdi-cart me-1"></i> Join Session </NuxtLink>
                                     </template>
                                 </div>
                             </div>
@@ -135,6 +162,12 @@ export default {
             default: ''
         },
     },
+    data(){
+        return {
+            displayTimer:true,
+            showJoinButton: false,
+        }
+    },
     computed:{
         apiUrl(){
             return this.$config.apiURL
@@ -142,8 +175,8 @@ export default {
     },
     methods: {
         timeElapsedHandler(){
-            // eslint-disable-next-line no-console
-            console.log('over')
+            this.displayTimer=false;
+            this.showJoinButton= true;
         }
     }
 }

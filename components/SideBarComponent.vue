@@ -15,6 +15,12 @@
 					<div class="multinav-scroll">
 						<!-- sidebar menu-->
 						<el-menu default-active="2" class="el-menu-vertical-demo">
+							<NuxtLink to="/">
+								<el-menu-item index="8">
+									<i class="el-icon-s-home"></i>
+									<span>Dashboard</span>
+								</el-menu-item>
+							</NuxtLink>
 							<el-submenu index="1">
 								<template slot="title">
 									<i class="el-icon-reading"></i>

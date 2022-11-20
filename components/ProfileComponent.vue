@@ -49,7 +49,7 @@
           </div>
           <div class="d-flex flex-column fw-500 text-left">
             <a
-              href="extra_profile.html"
+              href="javascript:void(0)"
               class="text-dark hover-primary mb-1 fs-16"
               >My Profile</a
             >
@@ -67,13 +67,29 @@
               /></span>
           </div>
           <div class="d-flex flex-column fw-500 text-left">
-            <a href="setting.html" class="text-dark hover-success mb-1 fs-16"
+            <a href="javascript:void(0)" class="text-dark hover-success mb-1 fs-16"
               >Settings</a
             >
             <span class="text-fade">Accout Settings</span>
           </div>
         </div>
       </NuxtLink>
+      <button style="width:100%" @click="logout">
+        <div class="d-flex align-items-center mb-30 justify-content-between">
+          <div
+            class="me-15 bg-danger-light h-50 w-50 l-h-60 rounded text-center"
+          >
+            <span class="icon-Group-chat fs-24"
+              ><font-awesome-icon :icon="['fa', 'gear']"
+              /></span>
+          </div>
+          <div class="d-flex flex-column fw-500 text-left">
+            <a href="javascript:void(0)" class="text-dark hover-danger mb-1 fs-16"
+              >Log Out</a
+            >
+          </div>
+        </div>
+      </button>
     </div>
     <div class="dropdown-divider my-30"></div>
     
@@ -92,7 +108,10 @@ export default {
   methods: {
 		toogleProfileBar() {
 			this.$store.commit('profilebar/toggle', {status: !this.$store.state.profilebar.profilebar})
-		}
+		},
+    async logout(){
+      await this.$auth.logout()
+    }
 	}
 }
 </script>

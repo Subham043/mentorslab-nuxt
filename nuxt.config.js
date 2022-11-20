@@ -63,10 +63,12 @@ export default {
 
   publicRuntimeConfig: {
     apiURL: process.env.API_BASE_URL,
+    mainURL: process.env.MAIN_BASE_URL,
     RAZORPAY_KEY_ID: process.env.RAZORPAY_KEY_ID,
   },
   privateRuntimeConfig: {
     apiURL: process.env.API_BASE_URL,
+    mainURL: process.env.MAIN_BASE_URL,
     RAZORPAY_KEY_ID: process.env.RAZORPAY_KEY_ID,
   },
 
@@ -95,7 +97,7 @@ export default {
       logout: '/auth/login',
       callback: '/auth/login',
       // home: '/auth/dashboard'
-      home: '/auth/login'
+      home: '/'
     },
     localStorage: false, // REALLY not secure, so nah
     resetOnError: true, // kick the user if any error happens w/ the auth

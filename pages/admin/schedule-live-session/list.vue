@@ -43,11 +43,24 @@
                                         {{$dateFns.format(new Date(scope.row.scheduledOn), 'dd-MMM-yyyy hh:mm aa')}}
                                     </template>
                                 </el-table-column>
-                                <el-table-column fixed="right" label="Action" width="200">
+                                <el-table-column fixed="right" label="Action" width="120">
                                     <template slot-scope="scope">
-                                        <el-button v-if="scope.row.status=='USER_REQUESTED'" type="text" @click.prevent="openDialog(scope.row.id)">Schedule</el-button>
-                                        <el-button v-if="scope.row.status=='SCHEDULED' || scope.row.status=='RESCHEDULED'" type="text" @click.prevent="openDialog2(scope.row.id)">Reschedule</el-button>
-                                        <NuxtLink v-if="scope.row.status=='SCHEDULED' || scope.row.status=='RESCHEDULED'" :to="`/admin/schedule-live-session/join/${scope.row.liveSessionContent.id}`" class="text-success font-weight-bold">Join Session</NuxtLink>
+                                        <el-button v-if="scope.row.status=='USER_REQUESTED'" type="text" @click.prevent="openDialog(scope.row.id)">Schedule</el-button><br/>
+                                        <el-button v-if="scope.row.status=='SCHEDULED' || scope.row.status=='RESCHEDULED'" type="text" @click.prevent="openDialog2(scope.row.id)">Reschedule</el-button><br/>
+                                        <NuxtLink v-if="scope.row.status=='SCHEDULED' || scope.row.status=='RESCHEDULED'" :to="`/admin/schedule-live-session/join/${scope.row.liveSessionContent.id}`" class="text-success font-weight-bold">Join Session</NuxtLink><br/>
+                                        <el-popconfirm
+                                        v-if="scope.row.status=='SCHEDULED' || scope.row.status=='RESCHEDULED'"
+                                        confirm-button-text='OK'
+                                        cancel-button-text='No, Thanks'
+                                        icon="el-icon-info"
+                                        icon-color="red"
+                                        title="Are you sure to end this?"
+                                        @confirm="endSession(scope.row.id)"
+                                        >
+                                        <el-button
+                                        slot="reference" type="text"
+                                        >End Session</el-button>
+                                        </el-popconfirm><br/>
                                     </template>
                                 </el-table-column>
                             </el-table>
@@ -68,6 +81,7 @@
                                             style="width: 100%;"
                                             type="datetime"
                                             placeholder="Select date and time"
+                                            :default-value="new Date()"
                                             default-time="12:00:00">
                                             </el-date-picker>
                                         </div>
@@ -95,6 +109,7 @@
                                             style="width: 100%;"
                                             type="datetime"
                                             placeholder="Select date and time"
+                                            :default-value="new Date()"
                                             default-time="12:00:00">
                                             </el-date-picker>
                                         </div>
@@ -227,6 +242,24 @@ export default {
                 this.$refs.form.setErrors({
                 datetime: err?.response?.data?.form_error?.datetime,
                 });
+                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+                
+            }finally{
+            loading.close()
+            }
+        },
+        async endSession(id) {
+            const loading = this.$loading({
+            lock: true,
+            fullscreen: true,
+            });
+            try {
+                const response = await this.$privateApi.get('/live-session-assigned-content/end-session/'+id); // eslint-disable-line
+                this.$toast.success('Session Ended successfully')
+                this.handlePageChnage()
+            } catch (err) {
+                // console.log(err.response);// eslint-disable-line
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
                 

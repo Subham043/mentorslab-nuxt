@@ -290,6 +290,7 @@ export default {
                 const response = await this.$privateApi.post('/content', formData); // eslint-disable-line
                 await this.assignContentToUser(response.data.data.id);
                 this.$toast.success('Content created successfully')
+                this.$router.push(this.$nuxt.context.from.path);
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
                 this.$refs.form.setErrors({

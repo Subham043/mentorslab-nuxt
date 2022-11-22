@@ -112,6 +112,7 @@ export default {
             try {
                 const response = await this.$privateApi.post('/user', {email:this.email, password:this.password, name:this.name, phone:this.phone}); // eslint-disable-line
                 this.$toast.success('User created successfully')
+                this.$router.push(this.$nuxt.context.from.path);
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
                 this.$refs.form.setErrors({

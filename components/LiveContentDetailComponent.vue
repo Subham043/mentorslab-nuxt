@@ -44,7 +44,6 @@
                                 </template>
                                 <template v-else-if="!paid && purchased">
                                     <div class="d-inline col-auto">
-                                        <h5>Time remaining before you can join the live session:</h5>
                                         <template v-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'">
                                             <client-only>
                                                 <vac :end-time="new Date(scheduledOn).getTime()" @finish="timeElapsedHandler">

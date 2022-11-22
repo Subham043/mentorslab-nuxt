@@ -179,6 +179,7 @@ export default {
                 formData.append('image', this.file);
                 const response = await this.$privateApi.post('/live-session-content', formData); // eslint-disable-line
                 this.$toast.success('Live session content created successfully')
+                this.$router.push(this.$nuxt.context.from.path);
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
                 this.$refs.form.setErrors({

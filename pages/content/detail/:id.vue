@@ -4,12 +4,7 @@
         <div class="box-header d-flex justify-content-between align-items-center box-header-user">
             <UserCrumbComponent main-page="Content" current-page="Detail" />
         </div>
-        <div v-if="loading" class="row">
-            <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-3">
-                <ContentCardSkeletonComponent />
-            </div>
-        </div>
-        <div v-else class="row">
+        <div class="row">
             <ContentDetailComponent
             :id="id" 
             :uuid="uuid" 
@@ -32,11 +27,10 @@
   
   <script>
   import UserCrumbComponent from '~/components/UserCrumbComponent.vue'
-  import ContentCardSkeletonComponent from '~/components/ContentCardSkeletonComponent.vue';
 import ContentDetailComponent from '~/components/ContentDetailComponent.vue';
   export default {
     name: "UserContentDetailPage",
-    components: { UserCrumbComponent, ContentCardSkeletonComponent, ContentDetailComponent },
+    components: { UserCrumbComponent, ContentDetailComponent },
     layout: "UserLayout",
     data() {
         return {
@@ -50,8 +44,6 @@ import ContentDetailComponent from '~/components/ContentDetailComponent.vue';
             restricted: false,
             paid: false,
             purchased: false,
-            loading:false,
-            skeletonCount:4,
             file:this.$route.params.id,
             videoLink:''
         }
@@ -66,7 +58,10 @@ import ContentDetailComponent from '~/components/ContentDetailComponent.vue';
     },
     methods:{
         async checkId(){
-            this.loading=true
+            const loading = this.$loading({
+                lock: true,
+                fullscreen: true,
+            });
             if(!this.$route.params.id){
                 this.$toast.error('Invalid ID')
                 this.$router.push('/content/all');
@@ -93,11 +88,14 @@ import ContentDetailComponent from '~/components/ContentDetailComponent.vue';
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
                 this.$router.push('/content/all');
             } finally{
-                this.loading=false
+                loading.close()
             }
         },
         async getVideoLink(){
-            this.loading=true
+            const loading = this.$loading({
+                lock: true,
+                fullscreen: true,
+            });
             try {
                 const response = await this.$privateApi.get('/content-user/video-link/'+this.$route.params.id); // eslint-disable-line
                 this.videoLink = response.data.data.file_path;
@@ -106,7 +104,7 @@ import ContentDetailComponent from '~/components/ContentDetailComponent.vue';
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
                 this.$router.push('/content/all');
             } finally{
-                this.loading=false
+                loading.close()
             }
         },
         async makePayment(){

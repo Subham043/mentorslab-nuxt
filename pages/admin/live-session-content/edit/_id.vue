@@ -184,6 +184,7 @@ export default {
                 }
                 const response = await this.$privateApi.put('/live-session-content/'+this.$route.params.id, formData); // eslint-disable-line
                 this.$toast.success('Live session content updated successfully')
+                this.$router.push(this.$nuxt.context.from.path);
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
                 this.$refs.form.setErrors({

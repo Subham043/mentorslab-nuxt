@@ -101,6 +101,7 @@ export default {
             try {
                 const response = await this.$privateApi.patch('/user/'+this.$route.params.id, {email:this.email, name:this.name, phone:this.phone, blocked:this.blocked}); // eslint-disable-line
                 this.$toast.success('User updated successfully')
+                this.$router.push(this.$nuxt.context.from.path);
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
                 this.$refs.form.setErrors({

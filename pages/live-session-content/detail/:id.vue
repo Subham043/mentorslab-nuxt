@@ -4,12 +4,7 @@
         <div class="box-header d-flex justify-content-between align-items-center box-header-user">
             <UserCrumbComponent main-page="Live Session Content" current-page="Detail" />
         </div>
-        <div v-if="loading" class="row">
-            <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-3">
-                <LiveContentCardSkeletonComponent />
-            </div>
-        </div>
-        <div v-else class="row">
+        <div class="row">
             <LiveContentDetailComponent
             :id="id" 
             :uuid="uuid" 
@@ -34,11 +29,10 @@
   
   <script>
   import UserCrumbComponent from '~/components/UserCrumbComponent.vue'
-  import LiveContentCardSkeletonComponent from '~/components/LiveContentCardSkeletonComponent.vue';
 import LiveContentDetailComponent from '~/components/LiveContentDetailComponent.vue';
   export default {
     name: "UserContentDetailPage",
-    components: { UserCrumbComponent, LiveContentCardSkeletonComponent, LiveContentDetailComponent },
+    components: { UserCrumbComponent, LiveContentDetailComponent },
     layout: "UserLayout",
     data() {
         return {
@@ -54,8 +48,6 @@ import LiveContentDetailComponent from '~/components/LiveContentDetailComponent.
             assignedRole: '',
             scheduledOn: '',
             scheduledAt: '',
-            loading:false,
-            skeletonCount:4,
         }
     },
     head: {
@@ -68,7 +60,10 @@ import LiveContentDetailComponent from '~/components/LiveContentDetailComponent.
     },
     methods:{
         async checkId(){
-            this.loading=true
+            const loading = this.$loading({
+                lock: true,
+                fullscreen: true,
+            });
             if(!this.$route.params.id){
                 this.$toast.error('Invalid ID')
                 this.$router.push('/live-session-content/all');
@@ -94,7 +89,7 @@ import LiveContentDetailComponent from '~/components/LiveContentDetailComponent.
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
                 this.$router.push('/content/all');
             } finally{
-                this.loading=false
+                loading.close()
             }
         },
         async requestSession(){

@@ -1,86 +1,6 @@
-/*
-Template Name: edulearn - Responsive Admin Template 
-Author: Multipurpose Themes
-File: scss
-*/
-/*------------------------------------------------------------------
-[Table of contents]
 
-Body, layout, Basic
-Header
-Sidebar
-Form-element and progress bar
-tab
-google map
-wizard
-weather
-Advanced Medias
-avatar
-switch
-fullscreen
-data table
-direct-chat
-users-list
-widget
-mailbox
-Extra Pages
-invoice
-profile
-calendar
-icon & divider
-box group
-grid-stack
-date-paginator
-Nestable
-ribbon
-gallery
-subheader__daterange
-ecommerece pages
-web tickers
-form-element
-box
-badges
-modal
-mask Formatter
-flexbox
-dropdown
-Statistic widgets
-media
-blog and other widgets
-background and overlay
-blockquote
-nav-dot
-rating
-lookup
-price
-todo-list
-chat
-timeline
-Button
-social media background
-callout
-alert
-pagination
-Morris chart
-project table
-Waves
-
--------------------------------------------------------------------*/
-/****************************/
-/** Imports **/
-/****************************/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap");
-/*Dark demo*/
-/*Social Media Colors*/
-/*Theme Colors*/
-/*Theme Colors For Dark*/
-/*theme-primary*/
-/*theme-danger*/
-/*theme-info*/
-/*theme-success*/
-/*theme-warning*/
-/*---reset---*/
-/*Body*/
+
 html {
   height: 100%;
   font-size: 13px; }
@@ -26355,7 +26275,7 @@ th.fc-day-header {
   100% {
     -moz-transform: scale(1);
     opacity: 0.0; } }
-@-webkit-keyframes "mappulse" {
+/* @-webkit-keyframes "mappulse" {
   0% {
     -webkit-transform: scale(0);
     opacity: 0.0; }
@@ -26371,7 +26291,7 @@ th.fc-day-header {
   100% {
     -webkit-transform: scale(1);
     opacity: 0.0; } 
-  }
+  } */
 .dash-tx {
   position: absolute;
   width: 40%;
@@ -33148,7 +33068,7 @@ button.btn.dropdown-toggle:after {
 @media (min-width: 576px) {
   .card-columns {
     column-count: 3;
-    column-gap: calc($default-gutter-width / 2);
+    /* column-gap: calc($default-gutter-width / 2); */
     orphans: 1;
     widows: 1; }
     .card-columns .card {

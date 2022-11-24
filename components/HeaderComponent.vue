@@ -12,7 +12,7 @@
 			    </a>
 			</li>
 		</ul> 
-		<div class="d-flex align-items-center logo-box justify-content-start">		
+		<div class="d-md-flex d-none align-items-center logo-box justify-content-start">		
 		<div class="logo-lg">
 			<span class="light-logo"><img class="header-logo" src="/images/logo.png" alt="logo"></span>
 		</div>
@@ -24,8 +24,8 @@
 			<li class="btn-group d-md-inline-flex d-none">
               <a href="javascript:void(0)" title="skin Change" class="waves-effect skin-toggle waves-light" @click="toggleDarkMode">
 			  	<label class="switch">
-					<span class="switch-on"><font-awesome-icon :icon="['fa', 'sun']" /></span>
-					<span class="switch-off"><font-awesome-icon :icon="['fa', 'moon']" /></span>
+					<span class="switch-on"><i class="el-icon-moon" ></i></span>
+					<span class="switch-off"><i class="el-icon-sunny" ></i></span>
 				</label>
 			  </a>				
             </li>

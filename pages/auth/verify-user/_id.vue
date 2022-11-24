@@ -14,7 +14,7 @@ v-slot="{ classes, errors }" rules="required|min:4|max:4"
                             name="otp">
                             <div class="input-group mb-3">
                                 <span class="input-group-text bg-transparent">
-                                    <font-awesome-icon :icon="['fas', 'lock']" />
+                                    <i class="el-icon-lock"></i>
                                 </span>
                                 <input
 v-model="otp" type="password" class="form-control ps-15 bg-transparent"

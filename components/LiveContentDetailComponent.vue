@@ -7,13 +7,13 @@
                     <div class="col-sm-12 events-content">
                         <div class="selected">
                             <div class="row justify-content-between align-items-flex-end">
-                                <div class="d-inline col-auto">
+                                <div class="d-inline col-auto order-sm-1">
                                     <h3 class="mt-0">{{name}}</h3>
                                     <h4 class=""><span class="badge badge-success-light">Live Session</span></h4>
                                     
                                 </div>
                                 <template v-if="paid && purchased">
-                                    <div class="d-inline col-auto">
+                                    <div class="d-inline col-auto order-sm-3 mt-sm-5">
                                         <template v-if="status==='SCHEDULED' && assignedRole==='PURCHASED'">
                                             <client-only>
                                                 <vac :end-time="new Date(scheduledOn).getTime()" @finish="timeElapsedHandler">
@@ -43,7 +43,7 @@
                                     </div>
                                 </template>
                                 <template v-else-if="!paid && purchased">
-                                    <div class="d-inline col-auto">
+                                    <div class="d-inline col-auto order-sm-3 mt-sm-5">
                                         <template v-if="status==='SCHEDULED' && assignedRole==='ASSIGNED'">
                                             <client-only>
                                                 <vac :end-time="new Date(scheduledOn).getTime()" @finish="timeElapsedHandler">
@@ -72,7 +72,7 @@
                                         </template>
                                     </div>
                                 </template>
-                                <div class="col-md-2 col-sm-6 text-center">
+                                <div class="col-md-2 col-sm-6 text-center order-sm-2">
                                     <div class="box box-body b-1 text-center no-shadow">
                                         <img id="product-image" :src="`${apiUrl}/live-session-content-user/image/${uuid}`" class="img-responsive bg-light rounded img-fluid card-img-top" alt="" />
                                     </div>

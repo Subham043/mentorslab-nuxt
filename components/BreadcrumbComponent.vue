@@ -3,9 +3,9 @@
     <!-- Content Header (Page header) -->	  
 		<div class="content-header">
 			<div class="d-flex align-items-center">
-				<div class="me-auto d-flex align-items-center">
+				<div class="me-auto d-flex align-items-center flex-wrap full-flex-inner">
 					<h4 class="page-title">{{mainPage}}</h4>
-					<div class="d-inline-block align-items-center">
+					<div class="d-inline-block align-items-center mt-sm-5">
 						<nav>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><NuxtLink to="/"><i class="el-icon-s-home"></i></NuxtLink></li>

@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/valid-template-root -->
 <template>
   <el-drawer
-:visible.sync="activeProfilebar" direction="rtl" size="20%" :show-close="false" :with-header="false"
+:visible.sync="activeProfilebar" direction="rtl" :size="screenWidth > 500 ? '19.29rem' : `${screenWidth-80}px`" :show-close="false" :with-header="false"
 		:before-close="toogleProfileBar">
   <div class="p-30 bg-white">
     <div class="d-flex align-items-center justify-content-between pb-30">
@@ -63,8 +63,7 @@
             class="me-15 bg-success-light h-50 w-50 l-h-60 rounded text-center"
           >
             <span class="icon-Group-chat fs-24"
-              ><font-awesome-icon :icon="['fa', 'gear']"
-              /></span>
+              ><i class="el-icon-s-tools"></i></span>
           </div>
           <div class="d-flex flex-column fw-500 text-left">
             <a href="javascript:void(0)" class="text-dark hover-success mb-1 fs-16"
@@ -80,8 +79,7 @@
             class="me-15 bg-danger-light h-50 w-50 l-h-60 rounded text-center"
           >
             <span class="icon-Group-chat fs-24"
-              ><font-awesome-icon :icon="['fa', 'gear']"
-              /></span>
+              ><i class="el-icon-switch-button"></i></span>
           </div>
           <div class="d-flex flex-column fw-500 text-left">
             <a href="javascript:void(0)" class="text-dark hover-danger mb-1 fs-16"
@@ -103,6 +101,13 @@ export default {
   computed: {
 		activeProfilebar() {
 			return this.$store.state.profilebar.profilebar
+		},
+    screenWidth() {
+			if (process.client) {
+				return window.screen.width
+			} else {
+				return 500;
+			}
 		}
 	},
   methods: {

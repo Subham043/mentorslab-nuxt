@@ -1,17 +1,17 @@
 <!-- eslint-disable vue/valid-template-root -->
 <template>
 	<el-drawer
-:visible.sync="activeSidebar" direction="ltr" size="19.29rem" :show-close="false" :with-header="false"
+:visible.sync="activeSidebar" direction="ltr" :size="screenWidth > 500 ? '19.29rem' : `${screenWidth-80}px`" :show-close="false" :with-header="false"
 		:before-close="toogleSideBar">
-		<aside class="main-sidebar">
+		<aside class="main-sidebar" :style="screenWidth > 500 ? 'width:19.29rem' : `width:${screenWidth-80}px`">
 			<!-- sidebar-->
 			<section class="sidebar position-relative">
-				<div class="d-flex align-items-center logo-box justify-content-start">
+				<div class="d-flex align-items-center logo-box justify-content-start" :style="screenWidth > 500 ? '19.29rem' : `${screenWidth-80}px`">
 					<div class="logo-lg">
 						<span class="light-logo"><img src="/images/logo.png" alt="logo"></span>
 					</div>
 				</div>
-				<div class="multinav">
+				<div class="multinav" :style="screenWidth > 500 ? 'width:19.29rem' : `width:${screenWidth-80}px`">
 					<div class="multinav-scroll">
 						<!-- sidebar menu-->
 						<el-menu default-active="2" class="el-menu-vertical-demo">
@@ -121,6 +121,13 @@ export default {
 	computed: {
 		activeSidebar() {
 			return this.$store.state.sidebar.sidebar
+		},
+		screenWidth() {
+			if (process.client) {
+				return window.screen.width
+			} else {
+				return 500;
+			}
 		}
 	},
 	methods: {

@@ -10,7 +10,7 @@
                 style="background-position: right bottom; background-size: auto 100%; background-image: url('/images/custom-30.svg')">
                 <div class="row">
                   <div class="col-12 col-xl-12">
-                    <h1 class="mb-0 fw-600">Learn With Effectively With Us!</h1>
+                    <h1 class="mb-0 fw-600">Learn Effectively With Us!</h1>
                     <p class="my-10 fs-16 text-white-70">Get 30% off every course on january.</p>
                     <div class="mt-45 d-md-flex align-items-center">
                       <div class="me-30 mb-30 mb-md-0">

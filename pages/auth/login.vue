@@ -14,8 +14,7 @@
           <ValidationProvider v-slot="{ classes, errors }" rules="required|email" name="email">
           <div class="input-group mb-3">
             <span class="input-group-text bg-transparent"
-              ><font-awesome-icon :icon="['fas', 'envelope']"
-            /></span>
+              ><i class="el-icon-message"></i></span>
             <input
               v-model="email"
               type="email"
@@ -30,8 +29,7 @@
           <ValidationProvider v-slot="{ classes, errors }" rules="required" name="password">
           <div class="input-group mb-3">
             <span class="input-group-text bg-transparent"
-              ><font-awesome-icon :icon="['fas', 'lock']"
-            /></span>
+              ><i class="el-icon-lock"></i></span>
             <input
               v-model="password"
               type="password"
@@ -76,21 +74,6 @@
         </p>
       </div>
 
-      <div class="text-center">
-        <p class="mt-20 text-fade">- Sign With -</p>
-        <p class="gap-items-2 mb-0">
-          <a
-            class="waves-effect waves-circle btn btn-social-icon btn-circle btn-facebook-light"
-            href="#"
-            ><font-awesome-icon :icon="['fab', 'facebook-f']"
-          /></a>
-          <a
-            class="waves-effect waves-circle btn btn-social-icon btn-circle btn-instagram-light"
-            href="#"
-            ><font-awesome-icon :icon="['fab', 'google']"
-          /></a>
-        </p>
-      </div>
     </div>
   </div>
 </template>

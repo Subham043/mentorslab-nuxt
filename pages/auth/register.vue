@@ -37,7 +37,8 @@
               placeholder="Phone"
             />
           </div>
-          <span :class="classes">{{ errors[0] }}</span>
+          <div :class="classes">{{ errors[0] }}</div>
+          <small class="form-text text-muted"><code>Note :</code> Please add '+91' before typing the phone number</small>
           </ValidationProvider>
         </div>
         <div class="form-group">
@@ -52,7 +53,8 @@
               placeholder="Email"
             />
           </div>
-          <span :class="classes">{{ errors[0] }}</span>
+          <div :class="classes">{{ errors[0] }}</div>
+          <small class="form-text text-muted"><code>Note :</code> We'll never share your email with anyone else.</small>
           </ValidationProvider>
         </div>
         <div class="form-group">

@@ -71,6 +71,12 @@
 										<span>Live Session Content</span>
 									</el-menu-item>
 								</NuxtLink>
+								<NuxtLink to="/admin/exam/list">
+									<el-menu-item index="8">
+										<i class="el-icon-service"></i>
+										<span>Exam</span>
+									</el-menu-item>
+								</NuxtLink>
 								<NuxtLink to="/admin/schedule-live-session/list">
 									<el-menu-item index="6">
 										<i class="el-icon-service"></i>

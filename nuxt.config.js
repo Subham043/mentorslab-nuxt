@@ -32,6 +32,7 @@ export default {
     '~/plugins/privateApi.js',
     '~/plugins/pagination.js',
     '~/plugins/countdown.js',
+    '~/plugins/vue-slick-carousel.js',
     { src: '~/plugins/zoom.client.js', mode: "client" }
   ],
 

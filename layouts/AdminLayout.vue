@@ -21,6 +21,7 @@
 import HeaderComponent from '../components/HeaderComponent.vue';
 import SideBarComponent from '../components/SideBarComponent.vue';
 import ProfileComponent from '~/components/ProfileComponent.vue';
+
 export default {
   name: 'AdminLayout',
   components: { HeaderComponent, SideBarComponent, ProfileComponent },

@@ -73,7 +73,7 @@
 								</NuxtLink>
 								<NuxtLink to="/admin/exam/list">
 									<el-menu-item index="8">
-										<i class="el-icon-service"></i>
+										<i class="el-icon-s-order"></i>
 										<span>Exam</span>
 									</el-menu-item>
 								</NuxtLink>

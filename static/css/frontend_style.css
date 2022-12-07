@@ -63,6 +63,27 @@
   padding: 0;
 }
 
+body, .fullscreen-wrapper {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  color: #191d33 !important;
+  font-size: 1rem !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-family: "Poppins", sans-serif !important;
+  line-height: 1.5 !important;
+  min-height: 100vh !important;
+  background-color: #f6f9fb !important; }
+
+
+#zmmtg-root {
+  display: none;
+}
+
+#zmmtg-root .controls{
+  text-align: center;
+}
+
 body {
   font-size: 15px;
   line-height: 1.75;
@@ -75,6 +96,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: "";
+  background-color: white !important;
 }
 
 body[dir="rtl"] {

@@ -25,6 +25,18 @@ export default {
   name: 'DashboardLayout',
   components: { HeaderComponent, SideBarComponent, ProfileComponent },
   middleware: 'auth',
+  head() {
+        return {
+            title: "Mentorslab",
+            link: [
+                { rel: "stylesheet", href: "/css/bootstrap.min.css" },
+                { rel: "stylesheet", href: "/css/color_theme.css" },
+                { rel: "stylesheet", href: "/css/style_rtl.css" },
+                { rel: "stylesheet", href: "/css/style.css" },
+                { rel: "stylesheet", href: "/css/skin_color.css" },
+            ],
+        };
+  },
   computed: {
 		dark () {
 		return this.$store.state.dark.class

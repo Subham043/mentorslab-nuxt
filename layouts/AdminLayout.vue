@@ -26,6 +26,18 @@ export default {
   name: 'AdminLayout',
   components: { HeaderComponent, SideBarComponent, ProfileComponent },
   middleware: ['auth', 'IsAdmin'],
+  head() {
+        return {
+            title: "Mentorslab",
+            link: [
+              { rel: "stylesheet", href: "/css/bootstrap.min.css" },
+              { rel: "stylesheet", href: "/css/color_theme.css" },
+              { rel: "stylesheet", href: "/css/skin_color.css" },
+              { rel: "stylesheet", href: "/css/style_rtl.css" },
+              { rel: "stylesheet", href: "/css/style.css" },
+            ],
+        };
+  },
   computed: {
 		dark () {
 		return this.$store.state.dark.class

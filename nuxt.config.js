@@ -16,11 +16,11 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    '~/static/css/bootstrap.min.css',
-    '~/static/css/color_theme.css',
-    '~/static/css/style_rtl.css',
-    '~/static/css/style.css',
-    '~/static/css/skin_color.css',
+    // '~/static/css/bootstrap.min.css',
+    // '~/static/css/color_theme.css',
+    // '~/static/css/style_rtl.css',
+    // '~/static/css/style.css',
+    // '~/static/css/skin_color.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

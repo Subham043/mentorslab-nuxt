@@ -20,6 +20,18 @@
 <script>
 export default {
     name: "AuthLayout",
-	middleware: 'Unauthenticated'
+	middleware: 'Unauthenticated',
+	head() {
+        return {
+            title: "Mentorslab",
+            link: [
+                { rel: "stylesheet", href: "/css/bootstrap.min.css" },
+                { rel: "stylesheet", href: "/css/color_theme.css" },
+                { rel: "stylesheet", href: "/css/style_rtl.css" },
+                { rel: "stylesheet", href: "/css/style.css" },
+                { rel: "stylesheet", href: "/css/skin_color.css" },
+            ],
+        };
+  },
 }
 </script>

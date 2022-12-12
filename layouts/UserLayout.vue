@@ -24,7 +24,7 @@ import ProfileComponent from '~/components/ProfileComponent.vue';
 export default {
   name: 'DashboardLayout',
   components: { HeaderComponent, SideBarComponent, ProfileComponent },
-  middleware: 'auth',
+  middleware: ['auth'],
   head() {
         return {
             title: "Mentorslab",

@@ -16,11 +16,6 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    // '~/static/css/bootstrap.min.css',
-    // '~/static/css/color_theme.css',
-    // '~/static/css/style_rtl.css',
-    // '~/static/css/style.css',
-    // '~/static/css/skin_color.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -44,7 +39,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
+    // '@nuxtjs/stylelint-module',
     '@nuxtjs/fontawesome',
     '@nuxtjs/date-fns',
   ],
@@ -57,6 +52,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/auth-next',
     "vue2-editor/nuxt",
+    'vue-scrollto/nuxt',
     ["vue-toastification/nuxt", {
       timeout: 8000,
       position: "bottom-center"
@@ -98,8 +94,7 @@ export default {
       login: '/auth/login',
       logout: '/auth/login',
       callback: '/auth/login',
-      // home: '/auth/dashboard'
-      home: '/'
+      home: '/dashboard'
     },
     localStorage: false, // REALLY not secure, so nah
     resetOnError: true, // kick the user if any error happens w/ the auth

@@ -41,7 +41,15 @@
         <!-- Report Career Section End -->
 
 
-        <VardhaMurthyComponent />
+        <FrontendInstructorComponent 
+        title="Varada Murthy K. S." 
+        description="Varada is an Entrepreneur and a thought-leader with over 25 years of professional experience
+        in the area of Human Resources and Educational Services, having worked both in India and
+        abroad. He continuously strive to build people and help them become high performing
+        contributors. He believes in the potential of an individual, irrespective of their
+        background, if guided well, can create a humongous positive impact on the society."
+        designation="Entrepreneur, Leadership Coach and Founder of PFLA"
+        image="/images/15.jpeg" />
         
         <!-- Report Career Section Start -->
         <div class="section report-career-2-section section-padding-02">
@@ -110,16 +118,22 @@
 
 <script>
 import FrontendBreadcrumbComponent from '~/components/FrontendBreadcrumbComponent.vue';
-import VardhaMurthyComponent from '~/components/VardhaMurthyComponent.vue';
+import FrontendInstructorComponent from '~/components/FrontendInstructorComponent.vue';
 import FrontendContactComponent from '~/components/FrontendContactComponent.vue';
 
 
 export default {
     name: "AboutPage",
-    components: { FrontendBreadcrumbComponent, VardhaMurthyComponent, FrontendContactComponent },
+    components: { FrontendBreadcrumbComponent, FrontendInstructorComponent, FrontendContactComponent },
     layout: "FrontendLayout",
     data() {
         return {};
+    },
+    mounted(){
+      // eslint-disable-next-line nuxt/no-env-in-hooks
+      if(process.client){
+          this.$scrollTo('#__nuxt', 0, {force: true})
+      }
     }
 }
 </script>

@@ -10,7 +10,7 @@
                         <div class="page-banner text-center">
                             <h2 class="title">{{page}}</h2>
                             <ul class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Home</a> <i class="el-icon-arrow-right"></i></li>
                                 <li class="breadcrumb-item active" aria-current="page">{{page}}</li>
                             </ul>
                         </div>
@@ -36,3 +36,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.page-banner .breadcrumb .breadcrumb-item + .breadcrumb-item::before{
+    content: "";
+}
+</style>

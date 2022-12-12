@@ -20,7 +20,7 @@
 <script>
 export default {
     name: "AuthLayout",
-	middleware: 'Unauthenticated',
+	middleware: ['Unauthenticated'],
 	head() {
         return {
             title: "Mentorslab",

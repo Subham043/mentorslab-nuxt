@@ -25,7 +25,7 @@
                         <div class="col-lg-5">
                             <!-- Contact Form Start -->
                             <div class="contact-form">
-                                <h4 class="title">Register A Session Now</h4>
+                                <h4 class="title">Request A Session Now</h4>
                                 <form id="contactForm" action="#">
                                     <div class="row">
                                         <div class="col-sm-12">
@@ -66,7 +66,7 @@
                                         <div class="col-sm-12">
                                             <!-- Single Form Start -->
                                             <div class="contact-btn">
-                                                <button id="submitBtn" class="btn" type="submit" style="display:grid;place-items:center;">Register</button>
+                                                <button id="submitBtn" class="btn" type="submit" style="display:grid;place-items:center;">Request</button>
                                             </div>
                                             <!-- Single Form End -->
                                         </div>
@@ -97,6 +97,31 @@ export default {
     layout: "FrontendLayout",
     data() {
         return {};
+    },
+    mounted(){
+      // eslint-disable-next-line nuxt/no-env-in-hooks
+      if(process.client){
+          this.$scrollTo('#__nuxt', 0, {force: true})
+      }
     }
 }
 </script>
+
+<style scoped>
+.report-career-content ul {
+    list-style:disc;
+}
+.report-career-content ul li {
+    display: list-item;
+    display: list-item;
+    display: list-item;
+    display: list-item;
+}
+.section-padding-02{
+    padding-bottom:50px;
+}
+.contact-form {
+    min-height: 530px;
+    height: auto;
+}
+</style>

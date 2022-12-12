@@ -10,8 +10,8 @@
                         <div class="col-lg-4 col-sm-6">
                             <!-- Footer Widget Start -->
                             <div class="footer-widget widget-about">
-                                <a class="footer-logo" href="https://mentorslab.in/"><img
-                                        src="https://mentorslab.in/assets/main/assets/images/99.png" alt="Logo"></a>
+                                <NuxtLink class="footer-logo" to="/"><img
+                                        src="/images/99.png" alt="Logo"></NuxtLink>
 
                                 <div class="widget-info">
                                     <p>We support programs that create advancement opportunities for people.</p>
@@ -38,10 +38,10 @@ target="_blank"
 
                                 <div class="widget-link">
                                     <ul class="link">
-                                        <li><a href="https://mentorslab.in/about-us">About Us</a></li>
-                                        <li><a href="https://mentorslab.in/contact-us">Contact Us</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Terms & Condition</a></li>
+                                        <li><NuxtLink to="/about-us">About Us</NuxtLink></li>
+                                        <li><NuxtLink to="/contact-us">Contact Us</NuxtLink></li>
+                                        <li><NuxtLink to="#">Privacy Policy</NuxtLink></li>
+                                        <li><NuxtLink to="#">Terms & Condition</NuxtLink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -54,11 +54,9 @@ target="_blank"
 
                                 <div class="widget-link">
                                     <ul class="link">
-                                        <li><a href="https://mentorslab.in/events/upcoming">Upcoming Events</a></li>
-                                        <!--<li><a href="https://mentorslab.in/winning-edge">Winning Edge</a></li>-->
-                                        <!--<li><a href="https://mentorslab.in/programs">Programs</a></li>-->
-                                        <li><a href="https://mentorslab.in/publication">Publication</a></li>
-                                        <li><a href="https://mentorslab.in/iso">ISO</a></li>
+                                        <li><a href="https://mentorslab.in/events/upcoming" target="_blank">Upcoming Events</a></li>
+                                        <li><NuxtLink to="/publication">Publication</NuxtLink></li>
+                                        <li><NuxtLink to="/iso">ISO</NuxtLink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -80,7 +78,7 @@ target="_blank"
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <i class="flaticon-email"></i>
+                                            <i class="el-icon-message"></i>
                                             <div class="media-body">
                                                 <a href="vmlc@pfla.in">vmlc@pfla.in</a>
                                             </div>

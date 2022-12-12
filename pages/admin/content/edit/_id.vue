@@ -263,6 +263,12 @@ export default {
         this.checkId();
         this.getUsers();
     },
+    mounted() {
+        // eslint-disable-next-line nuxt/no-env-in-hooks
+        if(process.client){
+            this.$scrollTo('#__nuxt', 0, {force: true})
+        }
+    },
     methods: {
         paidChange(){
             this.paid ? this.restricted = true : this.restricted = false;

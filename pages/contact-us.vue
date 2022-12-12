@@ -16,8 +16,8 @@
                     <div class="contact-info-item-wrapper">
                         <div class="row">
                             <FrontendContactCardComponent classlist="contact-info-item contact-info-1 text-center" title="Our Numbers" detail="+91 9902570561" icon="fas fa-phone-volume" />
-                            <FrontendContactCardComponent classlist="contact-info-item contact-info-2 text-center" title="Email Address" detail="vmlc@pfla.in" icon="flaticon-email" />
-                            <FrontendContactCardComponent classlist="contact-info-item contact-info-3 text-center" title="Our Location" detail="Bengaluru" icon="flaticon-location-pin" />
+                            <FrontendContactCardComponent classlist="contact-info-item contact-info-2 text-center" title="Email Address" detail="vmlc@pfla.in" icon="el-icon-message" />
+                            <FrontendContactCardComponent classlist="contact-info-item contact-info-3 text-center" title="Our Location" detail="Bengaluru" icon="el-icon-position" />
                         </div>
                     </div>
                     <!-- Contact Info Item Wrapper End -->
@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="contact-map">
-                                <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=pfla&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="New York University" aria-label="New York University" frameborder="0"></iframe>
+                                <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982235.7441715254!2d73.12128012499997!3d12.914013800000022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1529159bc605%3A0xb88570bcfc4d4f0f!2sPeople%20First%20Leadership%20Academy!5e0!3m2!1sen!2sin!4v1670872290548!5m2!1sen!2sin" title="Mentorslab" aria-label="Mentorslab" frameborder="0"></iframe>
                             </div>
                         </div>
                         <div class="col-lg-5">
@@ -107,6 +107,12 @@ export default {
     layout: "FrontendLayout",
     data() {
         return {};
+    },
+    mounted(){
+      // eslint-disable-next-line nuxt/no-env-in-hooks
+      if(process.client){
+          this.$scrollTo('#__nuxt', 0, {force: true})
+      }
     }
 }
 </script>

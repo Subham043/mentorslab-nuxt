@@ -13,7 +13,7 @@
                                     <!-- Single Form Start -->
                                     <div class="single-form">
                                         <input id="name" type="text" placeholder="Your Name">
-                                        <i class="flaticon-user-1"></i>
+                                        <i class="el-icon-user"></i>
                                     </div>
                                     <!-- Single Form End -->
                                 </div>
@@ -21,7 +21,7 @@
                                     <!-- Single Form Start -->
                                     <div class="single-form">
                                         <input id="email" type="email" placeholder="Your Email">
-                                        <i class="flaticon-email"></i>
+                                        <i class="el-icon-message"></i>
                                     </div>
                                     <!-- Single Form End -->
                                 </div>
@@ -29,7 +29,7 @@
                                     <!-- Single Form Start -->
                                     <div class="single-form">
                                         <input id="phone" type="text" placeholder="Your Phone">
-                                        <i class="flaticon-phone-call"></i>
+                                        <i class="el-icon-phone-outline"></i>
                                     </div>
                                     <!-- Single Form End -->
                                 </div>
@@ -37,7 +37,7 @@
                                     <!-- Single Form Start -->
                                     <div class="single-form">
                                         <textarea id="message" placeholder="your Message..."></textarea>
-                                        <i class="flaticon-edit"></i>
+                                        <i class="el-icon-chat-line-round"></i>
                                     </div>
                                     <!-- Single Form End -->
                                 </div>

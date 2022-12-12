@@ -5,7 +5,7 @@
             :style="`background-image: url('${image}');`">
             <h3 class="title">{{title}}</h3>
             <p>{{paragraph}}</p>
-            <a class="btn" href="#courseSec">{{linktext}}</a>
+            <NuxtLink class="btn" to="#courseSec">{{linktext}}</NuxtLink>
         </div>
     </div>
 </template>

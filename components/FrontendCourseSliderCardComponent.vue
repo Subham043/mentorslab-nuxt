@@ -6,9 +6,9 @@
             <div class="single-course">
                 <!-- Courses Image Start -->
                 <div class="courses-image">
-                    <a :href="link"><img
+                    <NuxtLink :to="link"><img
                             :src="image" loading="lazy"
-                            alt="Courses"></a>
+                            alt="Courses"></NuxtLink>
                     <div class="top-meta">
                         <div class="categories">
                             <a class="tag color-1" href="#">Business</a>
@@ -27,7 +27,7 @@
                             alt="author">
                         <h4 class="name"><a href="#">MentorsLab</a></h4>
                     </div>
-                    <h3 class="title"><a :href="link">{{title}}</a></h3>
+                    <h3 class="title"><NuxtLink :to="link">{{title}}</NuxtLink></h3>
                 </div>
                 <!-- Courses Content End -->
 
@@ -61,3 +61,11 @@ export default {
     }
 }
 </script>
+
+
+<style scoped>
+.single-course{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+</style>

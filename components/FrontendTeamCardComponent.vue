@@ -3,8 +3,10 @@
         <!-- Single Team Start -->
         <div class="single-team">
             <div class="team-img">
-                <a :href="link"><img
-                        :src="image" loading="lazy" alt="team"></a>
+                <NuxtLink :to="link">
+                    <img
+                        :src="image" loading="lazy" alt="team">
+                </NuxtLink>
                 <div class="team-social">
                     <ul>
                         <li><a :href="facebooklink"><i class="fab fa-facebook"></i></a></li>
@@ -16,7 +18,7 @@
             </div>
             <div class="team-content">
                 <div class="team-name-deg">
-                    <h5 class="name"><a :href="link">{{title}}</a></h5>
+                    <h5 class="name"><NuxtLink :to="link">{{title}}</NuxtLink></h5>
                     <span class="team-deg">{{designation}}</span>
                 </div>
                 <div class="team-share">

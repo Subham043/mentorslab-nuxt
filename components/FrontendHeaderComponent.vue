@@ -7,8 +7,8 @@
 				<div class="header-wrapper">
 					<!-- Header Logo Start -->
 					<div class="header-logo">
-						<a href="https://mentorslab.in/"><img
-								src="https://mentorslab.in/assets/main/assets/images/logo-mentor.png" alt="" /></a>
+						<NuxtLink to="/"><img
+								src="/images/logo-mentor.png" alt="" /></NuxtLink>
 					</div>
 					<!-- Header Logo End -->
 
@@ -18,51 +18,23 @@
 						<div class="header-menu d-none d-lg-block">
 							<ul class="main-menu">
 
-								<!-- <li class="active-menu"><a href="index.html">Home</a></li> -->
-								<li class=""><a href="https://mentorslab.in/about-us">About Us</a></li>
-								<li class=""><a href="https://mentorslab.in/events/upcoming">Upcoming Events</a></li>
-								<!--<li><a href="https://mentorslab.in/winning-edge">Winning Edge</a></li>-->
-								<!--<li><a href=https://mentorslab.in/programs">Programs</a></li>-->
-								<li class=""><a href="https://mentorslab.in/publication">Publication</a></li>
-								<!--<li><a href="https://mentorslab.in/leadership">Leadership</a></li>-->
-								<li class=""><a href="https://mentorslab.in/iso">ISO</a></li>
-								<!-- <li><a href="https://mentorslab.in/expert">Experts</a></li> -->
-								<li class=""><a href="https://mentorslab.in/contact-us">Contact</a></li>
-								<!-- <li>
-                    <a href="blog.html">Blog</a>
-                    <ul class="sub-menu">
-                      <li><a href="blog.html">Blog Grid</a></li>
-                      <li><a href="blog-standard.html">Blog Listing</a></li>
-                      <li><a href="blog-details.html">Blog Single</a></li>
-                    </ul>
-                  </li> -->
+								<!-- <li class="active-menu"><NuxtLink to="index.html">Home</NuxtLink></li> -->
+								<li class=""><NuxtLink to="/about-us">About Us</NuxtLink></li>
+								<!-- <li class=""><NuxtLink to="/events/upcoming">Upcoming Events</NuxtLink></li> -->
+								<li class=""><NuxtLink to="/publication">Publication</NuxtLink></li>
+								<li class=""><NuxtLink to="/iso">ISO</NuxtLink></li>
+								<li class=""><NuxtLink to="/demo-session">Demo Session</NuxtLink></li>
+								<li class=""><NuxtLink to="/contact-us">Contact</NuxtLink></li>
+
 							</ul>
 						</div>
 						<!-- Header Menu End -->
 
 						<!-- Header Meta Start -->
 						<div class="header-meta">
-							<!-- <div class="header-search d-none d-lg-block">
-                  <a class="search-btn" href="#"
-                    ><i class="flaticon-loupe"></i
-                  ></a>
-                  <div class="header-search-content">
-                    <form action="#" method="get">
-                      <input type="text" placeholder="Search..." />
-                      <button class="close-search" type="submit">
-                        <i class="flaticon-loupe"></i>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <div class="header-cart">
-                  <a class="cart-btn" href="#"
-                    ><i class="flaticon-shopping-cart"></i
-                  ></a>
-                </div> -->
 							<div class="header-login-join d-none d-lg-block">
-								<!-- <a class="login" href="#">Login</a> -->
-								<a class="btn join-btn" href="https://mentorslab.in/registration">Registration</a>
+								<!-- <a class="login" to="#">Login</a> -->
+								<NuxtLink class="btn join-btn" to="/auth/login">Login</NuxtLink>
 							</div>
 							<!-- Header Login Join End -->
 						</div>
@@ -88,7 +60,7 @@
 			<div class="offcanvas-header">
 				<!-- Offcanvas Logo Start -->
 				<div class="offcanvas-logo">
-					<a href="#"><img src="https://mentorslab.in/assets/main/assets/images/logo-mentor.png" alt="" /></a>
+					<NuxtLink to="/"><img src="/images/logo-mentor.png" alt="" /></NuxtLink>
 				</div>
 				<!-- Offcanvas Logo End -->
 				<button class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -98,15 +70,12 @@
 				<div class="offcanvas-menu">
 					<ul class="main-menu">
 
-						<li><a href="https://mentorslab.in/about-us">About Us</a></li>
-						<li><a href="https://mentorslab.in/events/">Upcoming Events</a></li>
-						<!--<li><a href="https://mentorslab.in/winning-edge">Winning Edge</a></li>-->
-						<li><a href="https://mentorslab.in/publication">Publication</a></li>
-						<!--<li><a href=https://mentorslab.in/programs">Programs</a></li>-->
-						<!--<li><a href="https://mentorslab.in/leadership">Leadership</a></li>-->
-						<li><a href="https://mentorslab.in/iso">ISO</a></li>
-						<!--<li><a href="https://mentorslab.in/expert">Experts</a></li> -->
-						<li><a href="https://mentorslab.in/contact-us">Contact</a></li>
+						<li><NuxtLink to="/about-us">About Us</NuxtLink></li>
+						<!-- <li><NuxtLink to="/events/">Upcoming Events</NuxtLink></li> -->
+						<li><NuxtLink to="/publication">Publication</NuxtLink></li>
+						<li><NuxtLink to="/iso">ISO</NuxtLink></li>
+						<li><NuxtLink to="/demo-session">Demo Session</NuxtLink></li>
+						<li><NuxtLink to="/contact-us">Contact</NuxtLink></li>
 					</ul>
 				</div>
 			</div>

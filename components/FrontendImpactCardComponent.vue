@@ -3,11 +3,11 @@
         <!-- Courses Subject Item Start -->
         <div :class="classlist">
             <div class="courses-subject-img">
-                <a href="#"><i :class="icon" style="font-size:45px;color:white;"></i></a>
+                <NuxtLink to="#"><i :class="icon" style="font-size:45px;color:white;"></i></NuxtLink>
             </div>
             <div class="courses-subject-content">
-                <h3 class="title"><a href="#">{{count}}</a></h3>
-                <span><a href="#">{{title}}</a></span>
+                <h3 class="title"><NuxtLink to="#">{{count}}</NuxtLink></h3>
+                <span><NuxtLink to="#">{{title}}</NuxtLink></span>
             </div>
         </div>
         <!-- Courses Subject Item  -->

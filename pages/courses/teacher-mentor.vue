@@ -81,7 +81,7 @@ Over online.
                                                 designation="Entrepreneur, Leadership Coach and Founder of PFLA" />
                                             <CourseTeamCardComponent link="/instructor/chandrashekhar" image="/images/2.jpeg" title="Chandrashekhar" designation="Senior Educator & Professional Counsellor" />
                                         </VueSlickCarousel>
-                                        <SliderNavButtonComponent />
+                                        <SliderNavButtonComponent @previous-click="prevNavClick" @next-click="nextNavClick" />
 
                                     </div>
 
@@ -229,6 +229,14 @@ export default {
       if(process.client){
           this.$scrollTo('#__nuxt', 0, {force: true})
       }
+    },
+    methods: {
+        nextNavClick(){
+            this.$refs.slickInstructor.next()
+        },
+        prevNavClick(){
+            this.$refs.slickInstructor.prev()
+        },
     }
 }
 </script>

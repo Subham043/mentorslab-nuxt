@@ -57,7 +57,7 @@ image="/images/ps1.png" title="Parenting Skills" description="Parenting skills w
                                             <CourseTeamCardComponent link="/instructor/nalina-murthy" image="/images/22.jpeg" title="Nalina Murthy" designation="Counsellor & Psychologist" />
                                             <CourseTeamCardComponent link="/instructor/sharmila-jois" image="/images/img/sharmila-jois.jpg" title="Sharmila Jois" designation="Special Educator" />
                                         </VueSlickCarousel>
-                                        <SliderNavButtonComponent />
+                                        <SliderNavButtonComponent @previous-click="prevNavClick" @next-click="nextNavClick" />
                                     </div>
 
                                 </div>
@@ -215,6 +215,14 @@ export default {
       if(process.client){
           this.$scrollTo('#__nuxt', 0, {force: true})
       }
+    },
+    methods: {
+        nextNavClick(){
+            this.$refs.slickInstructor.next()
+        },
+        prevNavClick(){
+            this.$refs.slickInstructor.prev()
+        },
     }
 }
 </script>

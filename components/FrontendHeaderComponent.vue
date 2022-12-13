@@ -41,7 +41,7 @@
 						<!-- Header Meta End -->
 
 						<div class="header-toggle d-lg-none">
-							<button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+							<button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" @click="toggleFrontendSidebar">
 								<span></span>
 								<span></span>
 								<span></span>
@@ -56,14 +56,14 @@
 		<!-- Header End -->
 
 		<!-- Offcanvas Start -->
-		<div id="offcanvasMenu" class="offcanvas offcanvas-start">
+		<div id="offcanvasMenu" :class="frontendSidebar ? `offcanvas offcanvas-start offcanvas-start-expand` : `offcanvas offcanvas-start`">
 			<div class="offcanvas-header">
 				<!-- Offcanvas Logo Start -->
 				<div class="offcanvas-logo">
 					<NuxtLink to="/"><img src="/images/logo-mentor.png" alt="" /></NuxtLink>
 				</div>
 				<!-- Offcanvas Logo End -->
-				<button class="btn-close" data-bs-dismiss="offcanvas"></button>
+				<button class="btn-close" data-bs-dismiss="offcanvas" @click="toggleFrontendSidebar"></button>
 			</div>
 
 			<div class="offcanvas-body">
@@ -87,5 +87,22 @@
 <script>
 export default {
 	name: 'FrontendHeaderComponent',
+	data(){
+		return {
+			frontendSidebar: false
+		}
+	},
+	methods:{
+		toggleFrontendSidebar(){
+			this.frontendSidebar = !this.frontendSidebar
+		}
+	}
 }
 </script>
+
+<style>
+.offcanvas-start-expand{
+	visibility: visible;
+	transform: translateX(0);
+}
+</style>

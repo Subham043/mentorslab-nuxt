@@ -142,7 +142,6 @@ export default {
             const response = await this.$publicApi.post('/auth/sign-up', {email:this.email, password:this.password, name:this.name, phone:this.phone}); // eslint-disable-line
             this.$toast.info('We have shared you an otp via email. kindly enter that in order to verify your email.')
             this.$router.push('/auth/verify-user/'+response.data.data);
-            console.log(response);// eslint-disable-line
         } catch (err) {
             // console.log(err.response);// eslint-disable-line
             this.$refs.form.setErrors({

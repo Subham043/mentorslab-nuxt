@@ -83,7 +83,7 @@ link="/instructor/varada-murthy"
                                                 <span class="meta-label"><i class="flaticon-user-1"></i> Instructor</span>
                                             </div>
                                             <div class="price-box-info">
-                                                <span class="value"><a href="https://mentorslab.in/instructor/varada-murthy">Varada Murthy</a></span>
+                                                <span class="value"><NuxtLink to="/instructor/varada-murthy">Varada Murthy</NuxtLink></span>
                                             </div>
                                         </li>
                                         <li>

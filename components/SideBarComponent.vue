@@ -15,7 +15,7 @@
 					<div class="multinav-scroll">
 						<!-- sidebar menu-->
 						<el-menu default-active="2" class="el-menu-vertical-demo">
-							<NuxtLink to="/">
+							<NuxtLink to="/dashboard">
 								<el-menu-item index="8">
 									<i class="el-icon-s-home"></i>
 									<span>Dashboard</span>
@@ -93,6 +93,18 @@
 									</NuxtLink>
 									<NuxtLink to="/admin/payment/live-session-content">
 										<el-menu-item index="7-2">Live Session Content </el-menu-item>
+									</NuxtLink>
+								</el-submenu>
+								<el-submenu index="9">
+									<template slot="title">
+										<i class="el-icon-price-tag"></i>
+										<span>Enquiries</span>
+									</template>
+									<NuxtLink to="/admin/enquiries/contact-form">
+										<el-menu-item index="9-1">Contact Form </el-menu-item>
+									</NuxtLink>
+									<NuxtLink to="/admin/enquiries/demo-session">
+										<el-menu-item index="9-2">Demo Session </el-menu-item>
 									</NuxtLink>
 								</el-submenu>
 							</template>

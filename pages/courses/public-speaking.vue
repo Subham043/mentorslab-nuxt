@@ -112,7 +112,7 @@ link="/instructor/varada-murthy"
                                                     Instructor</span>
                                             </div>
                                             <div class="price-box-info">
-                                                <span class="value"><a href="#">Varada Murthy</a></span>
+                                                <span class="value"><NuxtLink to="#">Varada Murthy</NuxtLink></span>
                                             </div>
                                         </li>
                                         <li>

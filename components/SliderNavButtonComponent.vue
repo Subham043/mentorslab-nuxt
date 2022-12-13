@@ -1,10 +1,10 @@
 <template>
     <div class="slider-nav-button">
         <div class="control">
-            <button>
+            <button @click="$emit('previous-click')">
                 <i class="el-icon-back"></i>
             </button>
-            <button>
+            <button @click="$emit('next-click')">
                 <i class="el-icon-right"></i>
             </button>
         </div>

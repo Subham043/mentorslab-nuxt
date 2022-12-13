@@ -26,26 +26,36 @@
                             <!-- Contact Form Start -->
                             <div class="contact-form">
                                 <h4 class="title">Request A Session Now</h4>
-                                <form id="contactForm" action="#">
+                                <ValidationObserver ref="form" v-slot="{ handleSubmit }">
+                                <form id="contactForm" @submit.prevent="handleSubmit(formHandler)">
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <!-- Single Form Start -->
                                             <div class="single-form">
-                                                <input id="name" type="text" placeholder="Your Name">
+                                                <ValidationProvider v-slot="{ classes, errors }" rules="required|alpha_spaces" name="name">
+                                                    <input id="name" v-model="name" type="text" placeholder="Your Name">
+                                                    <div :class="classes">{{ errors[0] }}</div>
+                                                </ValidationProvider>
                                             </div>
                                             <!-- Single Form End -->
                                         </div>
                                         <div class="col-sm-12">
                                             <!-- Single Form Start -->
                                             <div class="single-form">
-                                                <input id="email" type="email" placeholder="Your Email">
+                                                <ValidationProvider v-slot="{ classes, errors }" rules="required|email" name="email">
+                                                    <input id="email" v-model="email" type="email" placeholder="Your Email">
+                                                    <div :class="classes">{{ errors[0] }}</div>
+                                                </ValidationProvider>
                                             </div>
                                             <!-- Single Form End -->
                                         </div>
                                         <div class="col-sm-12">
                                             <!-- Single Form Start -->
                                             <div class="single-form">
-                                                <input id="phone" type="text" placeholder="Phone">
+                                                <ValidationProvider v-slot="{ classes, errors }" rules="required|phone" name="phone">
+                                                    <input id="phone" v-model="phone" type="text" placeholder="Phone">
+                                                    <div :class="classes">{{ errors[0] }}</div>
+                                                </ValidationProvider>
                                             </div>
                                             <!-- Single Form End -->
                                         </div>
@@ -59,7 +69,10 @@
                                         <div class="col-sm-12">
                                             <!-- Single Form Start -->
                                             <div class="single-form">
-                                                <textarea id="message" placeholder="Message..."></textarea>
+                                                <ValidationProvider v-slot="{ classes, errors }" rules="required" name="message">
+                                                    <textarea id="message" v-model="message" placeholder="Message..."></textarea>
+                                                    <div :class="classes">{{ errors[0] }}</div>
+                                                </ValidationProvider>
                                             </div>
                                             <!-- Single Form End -->
                                         </div>
@@ -72,6 +85,7 @@
                                         </div>
                                     </div>
                                 </form>
+                                </ValidationObserver>
                             </div>
                             <!-- Contact Form End -->
                         </div>
@@ -96,14 +110,48 @@ export default {
     components: { FrontendBreadcrumbComponent },
     layout: "FrontendLayout",
     data() {
-        return {};
+        return {
+            name:'',
+            email:'',
+            phone:'',
+            message:''
+        };
     },
     mounted(){
       // eslint-disable-next-line nuxt/no-env-in-hooks
       if(process.client){
           this.$scrollTo('#__nuxt', 0, {force: true})
       }
-    }
+    },
+    methods: {
+        async formHandler(){
+            const loading = this.$loading({
+            lock: true,
+            fullscreen: true,
+            });
+            try {
+                await this.$publicApi.post('/demo-session-user', {email:this.email, message:this.message, name:this.name, phone:this.phone}); // eslint-disable-line
+                this.name=''
+                this.email=''
+                this.phone=''
+                this.message=''
+                this.$toast.success('Message Sent Successfully.')
+            } catch (err) {
+                // console.log(err.response);// eslint-disable-line
+                this.$refs.form.setErrors({
+                email: err?.response?.data?.form_error?.email,
+                message: err?.response?.data?.form_error?.message,
+                name: err?.response?.data?.form_error?.name,
+                phone: err?.response?.data?.form_error?.phone,
+                });
+                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+                
+            }finally{
+                loading.close()
+            }
+        }
+    },
 }
 </script>
 

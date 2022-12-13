@@ -21,7 +21,7 @@
                         <div class="col-lg-6 col-md-5">
                             <!-- Instructor Play Button Start -->
                             <div class="instructor-play text-center">
-                                <a class="popup-video" href="https://www.youtube-nocookie.com/embed/OOfYqSCvZy8"><i
+                                <a class="popup-video" @click.prevent="dialogFormVisible = true"><i
                                         class="fas fa-play"></i></a>
                             </div>
                             <!-- Instructor Play Button End -->
@@ -126,7 +126,7 @@
                                     <FrontendCourseSliderCardComponent image="/images/5.jpeg" link="/courses/teacher-mentor" title="Teacher Mentor" />
                                 </VueSlickCarousel>
                             <!-- </div> -->
-                            <SliderNavButtonComponent />
+                            <SliderNavButtonComponent @previous-click="prevNavClick" @next-click="nextNavClick" />
                         </div>
 
 
@@ -224,7 +224,7 @@ fill="url(#PSgrad_0)"
                                 <!-- Testimonial Slider Active Start -->
                                 <div class="swiper-container testimonial-2-active">
                                     <div class="swiper-wrapper">
-                                        <VueSlickCarousel v-bind="slickOptionsVideo" ref="slickCourse">
+                                        <VueSlickCarousel v-bind="slickOptionsVideo" ref="slickVideo">
                                         <div class="swiper-slide">
                                             <!-- Single Testimonial Start -->
                                             <div class="single-testimonial-2">
@@ -294,7 +294,7 @@ loading="lazy"
                                             <!-- Single Testimonial End -->
                                         </div>
                                     </VueSlickCarousel>
-                                    <SliderNavButtonComponent />
+                                    <SliderNavButtonComponent @previous-click="prevNavVideoClick" @next-click="nextNavVideoClick" />
                                     </div>
                                     <!-- Add Pagination -->
                                     <!-- <div class="testimonial-arrow swiper-button-next"></div>
@@ -352,7 +352,7 @@ loading="lazy"
                 <!-- Testimonial Wrapper Start -->
                 <div class="testimonial-wrapper swiper-container testimonial-active">
                     <div class="swiper-wrapper">
-                        <VueSlickCarousel v-bind="slickOptions" ref="slickCourse">
+                        <VueSlickCarousel v-bind="slickOptions" ref="slickTestimonial">
                             <FrontendTestimonialCardComponent 
                             image="/images/avatar.png" 
                             title="Varsha Bhat" 
@@ -412,7 +412,7 @@ loading="lazy"
                                         In fact, their attitude towards life and studies has changed after attending
                                         this program. I strongly recommend this to all Colleges." />
                     </VueSlickCarousel>
-                    <SliderNavButtonComponent />
+                    <SliderNavButtonComponent @previous-click="prevTestimonialNavClick" @next-click="nextTestimonialNavClick" />
                     </div>
                     <!-- Add Pagination -->
                     <!-- <div class="testimonial-arrow swiper-button-next"></div>
@@ -499,7 +499,7 @@ src="/images/app.jpg" loading="lazy"
                     <div class="certificate-content-wrapper client-wrapper">
                         <div class="row swiper-container client-active">
                             <div class="swiper-wrapper">
-                                <VueSlickCarousel v-bind="slickOptionsClient" ref="slickCourse">
+                                <VueSlickCarousel v-bind="slickOptionsClient" ref="slickClient">
                                     <FrontendClientCardComponent image="/images/clients/cl1.png" />
                                     <FrontendClientCardComponent image="/images/clients/2.png" />
                                     <FrontendClientCardComponent image="/images/clients/3.png" />
@@ -529,6 +529,10 @@ src="/images/app.jpg" loading="lazy"
             </div>
         </div>
         <!-- Certificate End -->
+
+        <el-dialog :visible.sync="dialogFormVisible">
+            <iframe :src="dialogFormVisible ? `https://www.youtube-nocookie.com/embed/OOfYqSCvZy8` : ``" class="modalIframe" frameborder="0"></iframe>
+        </el-dialog>
 
 
     </div>
@@ -646,6 +650,7 @@ export default {
                     },
                 ],
             },
+            dialogFormVisible: false,
         };
     },
     mounted(){
@@ -653,6 +658,26 @@ export default {
       if(process.client){
           this.$scrollTo('#__nuxt', 0, {force: true})
       }
+    },
+    methods: {
+        nextNavClick(){
+            this.$refs.slickCourse.next()
+        },
+        prevNavClick(){
+            this.$refs.slickCourse.prev()
+        },
+        nextNavVideoClick(){
+            this.$refs.slickVideo.next()
+        },
+        prevNavVideoClick(){
+            this.$refs.slickVideo.prev()
+        },
+        nextTestimonialNavClick(){
+            this.$refs.slickTestimonial.next()
+        },
+        prevTestimonialNavClick(){
+            this.$refs.slickTestimonial.prev()
+        },
     }
 }
 </script>
@@ -666,5 +691,9 @@ export default {
 }
 .swiper-container{
     position: relative;
+}
+.modalIframe{
+    width: 100%;
+    height: 300px;
 }
 </style>

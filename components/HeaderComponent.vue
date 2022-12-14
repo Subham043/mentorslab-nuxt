@@ -25,7 +25,7 @@
 				<NuxtLink to="/" data-provide="fullscreen" class="waves-effect skin-toggle waves-light" title="Full Screen" @click="toggleFullScreen">
 					<label class="switch">
 						<span class="switch-on">
-							<font-awesome-icon :icon="['fa', 'home']" />
+							<i class="el-icon-s-home"></i>
 						</span>
 					</label>
 			    </NuxtLink>

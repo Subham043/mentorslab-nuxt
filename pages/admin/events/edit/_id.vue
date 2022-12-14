@@ -269,7 +269,7 @@ export default {
                 formData.append('instagram', this.instagram);
                 formData.append('twitter', this.twitter);
                 formData.append('linkedin', this.linkedin);
-                if(this.banner.length>0){
+                if(!Array.isArray(this.banner)){
                     formData.append('banner', this.banner);
                 }
                 const response = await this.$privateApi.put('/event/'+this.$route.params.id, formData); // eslint-disable-line

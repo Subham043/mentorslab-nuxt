@@ -48,21 +48,23 @@
                                         {{$dateFns.format(new Date(scope.row.createdAt), 'dd-MMM-yyyy hh:mm aa')}}
                                     </template>
                                 </el-table-column>
-                                <el-table-column label="Operations" width="200">
+                                <el-table-column label="Operations" width="400">
                                     <template slot-scope="scope">
                                         <NuxtLink :to="`/admin/events/edit/${scope.row.id}`"><el-button type="primary" icon="el-icon-edit" circle></el-button></NuxtLink>
                                         <el-popconfirm
-                                        confirm-button-text='OK'
-                                        cancel-button-text='No, Thanks'
-                                        icon="el-icon-info"
-                                        icon-color="red"
-                                        title="Are you sure to delete this?"
-                                        @confirm="deleteRow(scope.row.id)"
-                                        >
-                                        <el-button
-                                        slot="reference" type="danger" icon="el-icon-delete"  circle
-                                        ></el-button>
+                                            confirm-button-text='OK'
+                                            cancel-button-text='No, Thanks'
+                                            icon="el-icon-info"
+                                            icon-color="red"
+                                            title="Are you sure to delete this?"
+                                            @confirm="deleteRow(scope.row.id)"
+                                            >
+                                            <el-button
+                                            slot="reference" type="danger" icon="el-icon-delete"  circle
+                                            ></el-button>
                                         </el-popconfirm>
+                                        <NuxtLink :to="`/admin/events/call-to-action/${scope.row.id}`"><el-button type="primary">Call To Action</el-button></NuxtLink>
+                                        <NuxtLink :to="`/admin/events/about-section/${scope.row.id}`"><el-button type="primary">About Section</el-button></NuxtLink>
                                     </template>
                                 </el-table-column>
                             </el-table>

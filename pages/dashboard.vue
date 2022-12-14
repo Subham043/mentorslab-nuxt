@@ -10,8 +10,8 @@
                 style="background-position: right bottom; background-size: auto 100%; background-image: url('/images/custom-30.svg')">
                 <div class="row">
                   <div class="col-12 col-xl-12">
-                    <h1 class="mb-0 fw-600">Learn Future Skills Now Online And Flexible Learning</h1>
-                    <p class="my-10 fs-16 text-white-70">Coached & Trained over 50,000 people.</p>
+                    <h1 class="mb-0 fw-600">"Learn and get Certified" now at your comfort.</h1>
+                    <p class="my-10 fs-16 text-white-70">Coached & Trained over 60,000 people.</p>
                     <div class="mt-45 d-md-flex align-items-center">
                       <div class="me-30 mb-30 mb-md-0">
                         <div class="d-flex align-items-center">

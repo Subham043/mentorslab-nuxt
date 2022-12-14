@@ -1,9 +1,9 @@
 <template>
   <div class="bg-white rounded10 shadow-lg">
     <div class="content-top-agile p-20 pb-0">
-      <div class="logo-lg">
+      <NuxtLink to="/" class="logo-lg">
 				<span class="light-logo"><img src="/images/logo.png" style="height:70px;" alt="logo"></span>
-			</div>
+			</NuxtLink>
       <h2 class="text-primary fw-600">Let's Get Started</h2>
       <p class="mb-0 text-fade">Sign up to continue to Mentorslab.</p>
     </div>

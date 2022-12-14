@@ -13,14 +13,24 @@
 			</li>
 		</ul> 
 		<div class="d-md-flex d-none align-items-center logo-box justify-content-start">		
-		<div class="logo-lg">
+		<NuxtLink to="/" class="logo-lg">
 			<span class="light-logo"><img class="header-logo" src="/images/logo.png" alt="logo"></span>
-		</div>
+		</NuxtLink>
 	  </div> 
 	  </div>
 		
       <div class="navbar-custom-menu r-side">
         <ul class="nav navbar-nav">
+			<li class="btn-group d-xl-inline-flex d-none">
+				<NuxtLink to="/" data-provide="fullscreen" class="waves-effect skin-toggle waves-light" title="Full Screen" @click="toggleFullScreen">
+					<label class="switch">
+						<span class="switch-on">
+							<font-awesome-icon :icon="['fa', 'home']" />
+						</span>
+					</label>
+			    </NuxtLink>
+			</li>
+
 			<li class="btn-group d-md-inline-flex d-none">
               <a href="javascript:void(0)" title="skin Change" class="waves-effect skin-toggle waves-light" @click="toggleDarkMode">
 			  	<label class="switch">

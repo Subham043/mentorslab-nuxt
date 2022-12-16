@@ -58,8 +58,12 @@
         </div>
       </div>
       <div class="card bg-primary-light">
-			  <div class="card-header justify-content-center">
-				<h4 class="card-title">Content</h4>
+			  <div class="card-header justify-content-between">
+          <h4 class="card-title"><i class="el-icon-reading"></i> Content</h4>
+          <div class="text-center col-sm-auto">
+            <NuxtLink to="/content/free"><el-button type="warning">Free Contents</el-button></NuxtLink>
+            <NuxtLink to="/content/paid"><el-button type="warning">Paid Contents</el-button></NuxtLink>
+          </div>
 			  </div>
 			</div>
       <div v-if="loading" class="row">
@@ -89,13 +93,14 @@
                   :paragraph="item.description" />
               </div><!-- end col -->
           </div>
-          <div class="text-center">
-            <NuxtLink to="/content/all"><el-button type="warning">View More</el-button></NuxtLink>
-          </div>
       </div>
       <div class="card bg-primary-light mt-55">
-			  <div class="card-header justify-content-center">
-				<h4 class="card-title">Live Session Content</h4>
+			  <div class="card-header justify-content-between">
+				<h4 class="card-title"><i class="el-icon-service"></i> Live Session Content</h4>
+        <div class="text-center col-sm-auto">
+            <NuxtLink to="/live-session-content/free"><el-button type="warning">Free Sessions</el-button></NuxtLink>
+            <NuxtLink to="/live-session-content/paid"><el-button type="warning">Paid Sessions</el-button></NuxtLink>
+          </div>
 			  </div>
 			</div>
       <div v-if="loading" class="row">
@@ -127,9 +132,6 @@
                     :purchased="item.LiveSessionContentAssigned.length>0" 
                     :paragraph="item.description" />
                 </div><!-- end col -->
-            </div>
-            <div class="text-center mb-55">
-              <NuxtLink to="/live-session-content/all"><el-button type="warning">View More</el-button></NuxtLink>
             </div>
         </div>
     </section>

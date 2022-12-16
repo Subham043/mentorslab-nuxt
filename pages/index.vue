@@ -14,7 +14,7 @@
                             <div class="instructor-content">
                                 <h2 class="title">Learn Future Skills Now Online And Flexible Learning</h2>
                                 <p>Coached & Trained over 50,000 people.</p>
-                                <a class="btn" href="#courseSec">Explore Our Programs</a>
+                                <NuxtLink class="btn" to="/dashboard">Explore Our Courses</NuxtLink>
                             </div>
                             <!-- Instructor Content End -->
                         </div>
@@ -474,7 +474,7 @@ src="/images/app.jpg" loading="lazy"
                                 <h2 class="title">Get Certified, Get Ahead with Our Programs</h2>
                                 <p>Learn at your pace using our App on LMS mode. We provide the tools and skills that
                                     you need for your progress.</p>
-                                <a class="btn" href="#courseSec">Explore More</a>
+                                <NuxtLink class="btn" to="/dashboard">Explore More</NuxtLink>
                             </div>
                             <!-- Certificate-2 Content End -->
                         </div>

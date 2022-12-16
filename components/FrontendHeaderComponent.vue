@@ -34,7 +34,7 @@
 						<div class="header-meta">
 							<div class="header-login-join d-none d-lg-block">
 								<!-- <a class="login" to="#">Login</a> -->
-								<NuxtLink class="btn join-btn" to="/auth/login">Login</NuxtLink>
+								<NuxtLink class="btn join-btn" to="/auth/login">Login / Register</NuxtLink>
 							</div>
 							<!-- Header Login Join End -->
 						</div>

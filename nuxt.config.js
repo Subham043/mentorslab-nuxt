@@ -1,4 +1,3 @@
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -9,8 +8,28 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
       { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
+      { name: 'author', content: 'Mentorslab' },
+      { name: 'owner', content: 'PFLA International Pvt. Ltd.' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'ROBOTS', content: 'index, follow' },
+      { name: 'googlebot', content: 'index, follow' },
+      { property: 'og:image', content: process.env.MAIN_BASE_URL+'/images/logo-mentor.png' },
+      { property: 'og:title', content: 'Mentorslab' },
+      { property: 'og:site_name', content: 'Mentorslab' },
+      { property: 'og:description', content: 'Learn Future Skills Now Online And Flexible Learning' },
+      { property: 'og:url', content: process.env.MAIN_BASE_URL },
+      { property: 'og:type', content: 'website' },
+      { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:image', content: process.env.MAIN_BASE_URL+'/images/logo-mentor.png' },
+      { property: 'twitter:url', content: process.env.MAIN_BASE_URL },
+      { property: 'twitter:title', content: 'Mentorslab' },
+      { property: 'twitter:description', content: 'Learn Future Skills Now Online And Flexible Learning' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', type:'image/png', href: '/apple-touch-icon.png' },
+      { rel: 'icon',  type:'image/png', href: '/icon.png' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -81,6 +100,16 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
+      icons:[{
+        src:`/dir/icon.png`,
+        size:"144x144",
+        type:"image/png"
+      },{
+        src:`/dir/apple-touch-icon.png`,
+        size:"180x180",
+        type:"image/png"
+      }
+    ]
     },
   },
 

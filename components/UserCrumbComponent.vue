@@ -8,7 +8,7 @@
 					<div class="d-inline-block align-items-center mt-sm-5">
 						<nav>
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><NuxtLink to="/"><i class="el-icon-s-home"></i></NuxtLink></li>
+								<li class="breadcrumb-item"><NuxtLink to="/dashboard"><i class="el-icon-s-home"></i></NuxtLink></li>
 								<li class="breadcrumb-item" aria-current="page">{{mainPage}}</li>
 								<li class="breadcrumb-item active" aria-current="page">{{currentPage}}</li>
 							</ol>

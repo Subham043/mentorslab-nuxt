@@ -53,7 +53,7 @@
                                         </ValidationProvider>
                                     </div>
                                     <div class="col-md-12">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="description">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="" name="description">
                                         <div class="form-group">
                                             <label class="form-label">Description</label>
                                         </div>

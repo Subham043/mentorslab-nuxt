@@ -2,7 +2,7 @@
     <div>
         <!-- slider-start -->
 		<div class="slider-area">
-			<div class="single-slider slider-height d-flex align-items-center" style="background-image:url(https://mentorslab.in/events/admin-panel/assets/uploads/event/banner/07800795d6eb754e1e5846ccd8f02e3b.jpg)">
+			<div class="single-slider slider-height d-flex align-items-center" :style="`background-image:url(${apiUrl}/event/file/${banner})`">
 			   <div class="container">
 				   <div class="row ">
 					   <div class="col-xl-12">
@@ -152,7 +152,7 @@
 		<!-- team-area-end -->
 		
 				<!-- event-tab-area-start -->
-		<div v-if="EventSchedule" class="event-tab-area pt-60 pb-30">
+		<div v-if="(EventSchedule.length>0)" class="event-tab-area pt-60 pb-30">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">

@@ -20,7 +20,7 @@
 
 								<!-- <li class="active-menu"><NuxtLink to="index.html">Home</NuxtLink></li> -->
 								<li class=""><NuxtLink to="/about-us">About Us</NuxtLink></li>
-								<!-- <li class=""><NuxtLink to="/events/upcoming">Upcoming Events</NuxtLink></li> -->
+								<li class=""><NuxtLink to="/events">Upcoming Events</NuxtLink></li>
 								<li class=""><NuxtLink to="/publication">Publication</NuxtLink></li>
 								<li class=""><NuxtLink to="/iso">ISO</NuxtLink></li>
 								<li class=""><NuxtLink to="/demo-session">Demo Session</NuxtLink></li>
@@ -34,7 +34,7 @@
 						<div class="header-meta">
 							<div class="header-login-join d-none d-lg-block">
 								<!-- <a class="login" to="#">Login</a> -->
-								<NuxtLink class="btn join-btn" to="/auth/login">Login / Register</NuxtLink>
+								<NuxtLink class="btn join-btn" to="/auth/login">Free Courses</NuxtLink>
 							</div>
 							<!-- Header Login Join End -->
 						</div>
@@ -71,7 +71,7 @@
 					<ul class="main-menu">
 
 						<li><NuxtLink to="/about-us">About Us</NuxtLink></li>
-						<!-- <li><NuxtLink to="/events/">Upcoming Events</NuxtLink></li> -->
+						<li><NuxtLink to="/events">Upcoming Events</NuxtLink></li>
 						<li><NuxtLink to="/publication">Publication</NuxtLink></li>
 						<li><NuxtLink to="/iso">ISO</NuxtLink></li>
 						<li><NuxtLink to="/demo-session">Demo Session</NuxtLink></li>

@@ -77,6 +77,18 @@
 										<span>Exam</span>
 									</el-menu-item>
 								</NuxtLink>
+								<el-submenu index="10">
+									<template slot="title">
+										<i class="el-icon-postcard"></i>
+										<span>Events</span>
+									</template>
+									<NuxtLink to="/admin/events/list">
+										<el-menu-item index="10-1">Event Details </el-menu-item>
+									</NuxtLink>
+									<NuxtLink to="/admin/events/registration">
+										<el-menu-item index="10-2">Event Registration </el-menu-item>
+									</NuxtLink>
+								</el-submenu>
 								<NuxtLink to="/admin/schedule-live-session/list">
 									<el-menu-item index="6">
 										<i class="el-icon-service"></i>

@@ -53,11 +53,13 @@
                                         </ValidationProvider>
                                     </div>
                                     <div class="col-md-12">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="" name="description">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="description">
                                         <div class="form-group">
                                             <label class="form-label">Description</label>
-                                            <el-input v-model="description" type="textarea" :rows="4" style="width: 100%;" placeholder="Enter Description"></el-input>
                                         </div>
+                                        <client-only>
+                                          <VueEditor v-model="description" :editor-toolbar="customToolbar" />
+                                        </client-only>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -142,6 +144,22 @@ export default {
             linkedin: '',
             twitter: '',
             image: [],
+            customToolbar: [
+                [{ header: [false, 1, 2, 3, 4, 5, 6] }],
+                ["bold", "italic", "underline", "strike"], // toggled buttons
+                [
+                    { align: "" },
+                    { align: "center" },
+                    { align: "right" },
+                    { align: "justify" }
+                ],
+                ["blockquote", "code-block"],
+                [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
+                [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+                [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+                ["link"],
+                ["clean"] // remove formatting button
+            ]
         }
     },
     mounted() {

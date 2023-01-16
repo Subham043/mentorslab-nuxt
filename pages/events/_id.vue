@@ -211,7 +211,7 @@
 						<div class="col-xl-9 cl-lg-9 col-md-9">
 							<div class="ticket-now-text">
 								<h2>{{EventCallToAction.heading}}</h2>
-								<p>{{EventCallToAction.description}}</p>
+                                <div v-html="EventCallToAction.description" />
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-3 col-md-3">
@@ -272,7 +272,7 @@
 		<!-- testimonial-area-end -->
 				
 
-				<!-- pricing-area-start -->
+
 		<div v-if="EventGallery.length>0" class="pricing-area pt-60 pb-10" style="background-image:url('/images/events/bgg2.jpeg')">
 			<div class="container">
 				<div class="row">
@@ -343,13 +343,13 @@
 		<!-- upcoming-event-area-end -->
 		
 		<!-- ticket-now-area-start -->
-		<div class="ticket-now-area pt-45 pb-45 ticket2-now purple-bg">
+		<div v-if="EventCallToAction" class="ticket-now-area pt-45 pb-45 ticket2-now purple-bg">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-9 cl-lg-9 col-md-9">
 						<div class="ticket-now-text">
-							<h2>Grab your Opportunity</h2>
-							<p>I am excited to be your Coach and Facilitator at the event and look forward to add value to your life!</p>
+                            <h2>{{EventCallToAction.heading}}</h2>
+                            <div v-html="EventCallToAction.description" style="color:white !important" />
 						</div>
 					</div>
 					<div class="col-xl-3 col-lg-3 col-md-3">

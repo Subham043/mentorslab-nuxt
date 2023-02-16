@@ -2,7 +2,7 @@
     <div>
     <section class="content">
         <div class="box-header d-flex justify-content-between align-items-center box-header-user">
-            <UserCrumbComponent main-page="Live Session Content" current-page="All" />
+            <UserCrumbComponent main-page="Live Session Content" current-page="Free" />
         </div>
         <div v-if="loading" class="row">
             <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-3">
@@ -20,17 +20,17 @@
             <div class="row">
                 <div v-for="item in tableData" :key="item.id" class="col-md-6 col-lg-3">
                     <LiveContentCardComponent
-                    :id="item.id" 
-                    :uuid="item.uuid" 
-                    :title="item.name" 
-                    :heading="item.heading" 
-                    :paid="item.paid" 
-                    :amount="item.amount" 
-                    :status="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].status : ''" 
-                    :scheduled-on="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].scheduledOn : ''" 
+                    :id="item.id"
+                    :uuid="item.uuid"
+                    :title="item.name"
+                    :heading="item.heading"
+                    :paid="item.paid"
+                    :amount="item.amount"
+                    :status="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].status : ''"
+                    :scheduled-on="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].scheduledOn : ''"
                     :scheduled-at="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].scheduledAt : ''"
-                    :assigned-role="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].assignedRole : ''" 
-                    :purchased="item.LiveSessionContentAssigned.length>0" 
+                    :assigned-role="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].assignedRole : ''"
+                    :purchased="item.LiveSessionContentAssigned.length>0"
                     :paragraph="item.description" />
                 </div><!-- end col -->
             </div>
@@ -46,11 +46,11 @@
                 </el-pagination>
             </div>
         </div>
-    
+
     </section>
     </div>
   </template>
-  
+
   <script>
   import UserCrumbComponent from '~/components/UserCrumbComponent.vue'
   import LiveContentCardSkeletonComponent from '~/components/LiveContentCardSkeletonComponent.vue';
@@ -113,4 +113,3 @@ import NoUserDataComponent from '~/components/NoUserDataComponent.vue';
         padding: 1.5rem 0;
     }
   </style>
-  

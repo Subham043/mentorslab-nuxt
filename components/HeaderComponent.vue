@@ -1,6 +1,6 @@
 <template>
     <header class="main-header box">
-	  
+
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
@@ -11,14 +11,14 @@
                     <font-awesome-icon :icon="activeSidebar ? ['fa', 'xmark'] : ['fa', 'bars']" />
 			    </a>
 			</li>
-		</ul> 
-		<div class="d-md-flex d-none align-items-center logo-box justify-content-start">		
+		</ul>
+		<div class="d-md-flex d-none align-items-center logo-box justify-content-start">
 		<NuxtLink to="/" class="logo-lg">
 			<span class="light-logo"><img class="header-logo" src="/images/logo.png" alt="logo"></span>
 		</NuxtLink>
-	  </div> 
 	  </div>
-		
+	  </div>
+
       <div class="navbar-custom-menu r-side">
         <ul class="nav navbar-nav">
 			<li class="btn-group d-xl-inline-flex d-none">
@@ -37,15 +37,15 @@
 					<span class="switch-on"><i class="el-icon-moon" ></i></span>
 					<span class="switch-off"><i class="el-icon-sunny" ></i></span>
 				</label>
-			  </a>				
+			  </a>
             </li>
-			
+
 			<li class="btn-group nav-item d-xl-inline-flex d-none">
 				<a href="javascript:void(0)" data-provide="fullscreen" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="Full Screen" @click="toggleFullScreen">
 					<font-awesome-icon :icon="fullScreen ? ['fa', 'expand'] : ['fa', 'compress']" />
 			    </a>
 			</li>
-			
+
 			<!-- User Account-->
 			<li class="dropdown user user-menu">
 				<a href="javascript:void(0)" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle" @click="toogleProfileBar">
@@ -57,9 +57,9 @@
 						<img src="/images/avatar/avatar-13.png" class="avatar rounded-circle bg-primary-light h-40 w-40" alt="" />
 					</div>
 				</a>
-			</li>		  
-        
-			
+			</li>
+
+
         </ul>
       </div>
     </nav>

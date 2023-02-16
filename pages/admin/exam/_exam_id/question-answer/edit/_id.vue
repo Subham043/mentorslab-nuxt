@@ -26,7 +26,24 @@
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
-                                    <div class="col-md-4 mt-4">
+                                    <div class="col-md-3 mt-4">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="marks">
+                                        <div class="form-group">
+                                            <label class="form-label">Marks *</label>
+                                            <el-select v-model="marks" placeholder="Select Marks" style="width:100%">
+                                                <el-option
+                                                v-for="item in [1,2,3,4,5,6,7,8,9,10]"
+                                                :key="item"
+                                                :label="item"
+                                                :value="item">
+                                                <span>{{ item }}</span>
+                                                </el-option>
+                                            </el-select>
+                                        </div>
+                                        <span :class="classes">{{ errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                    <div class="col-md-3 mt-4">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="duration">
                                         <div class="form-group">
                                             <label class="form-label">Duration (In Minutes) *</label>
@@ -43,7 +60,7 @@
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
-                                    <div class="col-md-4 mt-4">
+                                    <div class="col-md-3 mt-4">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="correct answer">
                                         <div class="form-group">
                                             <label class="form-label">Correct Answer *</label>
@@ -60,7 +77,7 @@
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
-                                    <div class="col-md-4 mt-4">
+                                    <div class="col-md-3 mt-4">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="ext:jpg,jpeg,png,webp" name="image">
                                         <div class="form-group">
                                             <label class="form-label">Image </label>
@@ -168,6 +185,7 @@ export default {
             answer_d: '',
             correct_answer: "answer_a",
             duration: 1,
+            marks: 1,
             draft: false,
             image: [],
             answerType: [{
@@ -225,6 +243,7 @@ export default {
                 formData.append('answer_d', this.answer_d);
                 formData.append('correct_answer', this.correct_answer);
                 formData.append('duration', this.duration);
+                formData.append('marks', this.marks);
                 formData.append('draft', this.draft);
                 if(!Array.isArray(this.image)){
                     formData.append('image', this.image);
@@ -242,6 +261,7 @@ export default {
                   answer_d: err?.response?.data?.form_error?.answer_d,
                   correct_answer: err?.response?.data?.form_error?.correct_answer,
                   duration: err?.response?.data?.form_error?.duration,
+                  marks: err?.response?.data?.form_error?.marks,
                   image: err?.response?.data?.form_error?.image,
                   draft: err?.response?.data?.form_error?.draft,
                 });
@@ -272,6 +292,7 @@ export default {
                 this.answer_d = response.data.data.answer_d;
                 this.correct_answer = response.data.data.correct_answer;
                 this.duration = response.data.data.duration;
+                this.marks = response.data.data.marks;
                 this.draft = response.data.data.draft;
             } catch (err) {
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)

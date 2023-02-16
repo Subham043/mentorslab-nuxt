@@ -1,7 +1,3 @@
-// import Vue from 'vue';
-// import VueFullscreen from 'vue-fullscreen'
-
-// Vue.component('VueFullScreen', VueFullscreen);
 import VueFullscreen from 'vue-fullscreen'
 import Vue from 'vue'
 Vue.use(VueFullscreen)

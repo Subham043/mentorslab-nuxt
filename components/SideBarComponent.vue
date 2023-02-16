@@ -51,6 +51,21 @@
 									<el-menu-item index="2-3">Paid Live Session </el-menu-item>
 								</NuxtLink>
 							</el-submenu>
+							<el-submenu index="11">
+								<template slot="title">
+									<i class="el-icon-service"></i>
+									<span>Exam</span>
+								</template>
+								<NuxtLink to="/exam/all">
+									<el-menu-item index="11-1">All Exam </el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/exam/free">
+									<el-menu-item index="11-2">Free Exam </el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/exam/paid">
+									<el-menu-item index="11-3">Paid Exam </el-menu-item>
+								</NuxtLink>
+							</el-submenu>
 							<template v-if="$auth.user.role=='ADMIN'">
 								<el-divider content-position="left">Admin Menu</el-divider>
 								<NuxtLink to="/admin/user/list">

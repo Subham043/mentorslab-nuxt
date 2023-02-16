@@ -128,7 +128,7 @@
         </section>
     </div>
 </template>
-  
+
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
@@ -185,7 +185,7 @@ export default {
                 formData.append('draft', !!this.draft);
                 formData.append('paid', !!this.paid);
                 formData.append('amount', this.amount);
-                if(this.file.length>0){
+                if(!Array.isArray(this.file)){
                     formData.append('image', this.file);
                 }
                 const response = await this.$privateApi.put('/exam/'+this.$route.params.id, formData); // eslint-disable-line
@@ -204,7 +204,7 @@ export default {
                 });
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                
+
             }finally{
             loading.close()
             }
@@ -240,4 +240,3 @@ export default {
     }
 }
 </script>
-  

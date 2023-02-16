@@ -21,6 +21,8 @@
                                 </el-table-column>
                                 <el-table-column prop="correct_answer" label="Correct Answer" width="350">
                                 </el-table-column>
+                                <el-table-column prop="marks" label="Marks" width="350">
+                                </el-table-column>
                                 <el-table-column prop="duration" label="Duration (In Minutes)" width="350">
                                 </el-table-column>
                                 <el-table-column label="CreatedAt" width="250">

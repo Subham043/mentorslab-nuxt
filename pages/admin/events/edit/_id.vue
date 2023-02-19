@@ -213,7 +213,7 @@
         </section>
     </div>
 </template>
-  
+
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
@@ -295,7 +295,7 @@ export default {
                 });
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                
+
             }finally{
             loading.close()
             }
@@ -312,7 +312,7 @@ export default {
             try {
                 const response = await this.$privateApi.get('/event/'+this.$route.params.id); // eslint-disable-line
                 // eslint-disable-next-line no-console
-                console.log(response);
+                // console.log(response);
                 this.title = response.data.data.title;
                 this.url = response.data.data.url;
                 this.from_date = response.data.data.from_date;
@@ -340,4 +340,3 @@ export default {
     }
 }
 </script>
-  

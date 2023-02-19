@@ -45,7 +45,7 @@
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <!-- /.box-body -->
@@ -68,7 +68,7 @@
         </section>
     </div>
 </template>
-  
+
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
@@ -121,7 +121,7 @@ export default {
                 if(!Array.isArray(this.image)){
                     formData.append('image', this.image);
                     // eslint-disable-next-line no-console
-                    console.log(this.image);
+                    // console.log(this.image);
                 }
                 const response = await this.$privateApi.post('/event-about/'+this.$route.params.id, formData); // eslint-disable-line
                 this.$toast.success('About Section updated successfully')
@@ -135,7 +135,7 @@ export default {
                 });
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                
+
             }finally{
             loading.close()
             }
@@ -183,4 +183,3 @@ export default {
     }
 }
 </script>
-  

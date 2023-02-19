@@ -53,7 +53,7 @@
 							</el-submenu>
 							<el-submenu index="11">
 								<template slot="title">
-									<i class="el-icon-service"></i>
+									<i class="el-icon-s-order"></i>
 									<span>Exam</span>
 								</template>
 								<NuxtLink to="/exam/all">
@@ -120,6 +120,9 @@
 									</NuxtLink>
 									<NuxtLink to="/admin/payment/live-session-content">
 										<el-menu-item index="7-2">Live Session Content </el-menu-item>
+									</NuxtLink>
+									<NuxtLink to="/admin/payment/exam">
+										<el-menu-item index="7-3">Exam </el-menu-item>
 									</NuxtLink>
 								</el-submenu>
 								<el-submenu index="9">

@@ -12,14 +12,14 @@
                     <span v-if="status==='PENDING' && assignedRole==='PURCHASED'"> Start Exam </span>
                     <span v-else-if="status==='ONGOING' && assignedRole==='PURCHASED'"> Continue Exam </span>
                     <span v-else-if="status==='COMPLETED' && assignedRole==='PURCHASED'"> View Exam Report </span>
-                    <span v-else-if="status==='ABORTED' && assignedRole==='PURCHASED'"> ABORTED </span>
+                    <span v-else-if="status==='ABORTED' && assignedRole==='PURCHASED'"> DEBARRED </span>
                 </template>
                 <span v-else-if="!paid && !purchased"> Start Exam </span>
                 <template v-else-if="!paid && purchased">
                     <span v-if="status==='PENDING' && assignedRole==='ASSIGNED'"> Start Exam </span>
                     <span v-else-if="status==='ONGOING' && assignedRole==='ASSIGNED'"> Continue Exam </span>
                     <span v-else-if="status==='COMPLETED' && assignedRole==='ASSIGNED'"> View Exam Report </span>
-                    <span v-else-if="status==='ABORTED' && assignedRole==='ASSIGNED'"> ABORTED </span>
+                    <span v-else-if="status==='ABORTED' && assignedRole==='ASSIGNED'"> DEBARRED </span>
                 </template>
             </NuxtLink>
         </div> <!-- end card-body-->

@@ -19,14 +19,22 @@
                                     <button v-if="paid && !purchased" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('payment-click')"><i class="mdi mdi-cart me-1"></i> Buy Now @ Rs. {{amount}} & Start Exam</button>
                                     <template v-else-if="paid && purchased">
                                         <button v-if="status==='PENDING' && assignedRole==='PURCHASED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('request-session-click')"><i class="mdi mdi-cart me-1"></i> Start Exam </button>
-                                        <NuxtLink v-else-if="status==='ONGOING' && assignedRole==='PURCHASED'" :to="`/exam/appear/${uuid}`" type="button" class="btn btn-primary btn-outline mt-2"><i class="mdi mdi-cart me-1"></i> Continue Exam </NuxtLink>
-                                        <NuxtLink v-else-if="status==='COMPLETED' && assignedRole==='PURCHASED'" :to="`/exam/appear/${uuid}`" type="button" class="btn btn-primary btn-outline mt-2"><i class="mdi mdi-cart me-1"></i> View Exam Report </NuxtLink>
+                                        <NuxtLink v-else-if="status==='ONGOING' && assignedRole==='PURCHASED'" :to="`/exam/sets/${uuid}`" type="button" class="btn btn-warning btn-outline mt-2"><i class="mdi mdi-cart me-1"></i> Continue Exam </NuxtLink>
+                                        <NuxtLink v-else-if="status==='COMPLETED' && assignedRole==='PURCHASED'" :to="`/exam/report/${uuid}`" type="button" class="btn btn-success btn-outline mt-2"><i class="mdi mdi-cart me-1"></i> View Exam Report </NuxtLink>
+                                        <template v-else-if="status==='ABORTED' && assignedRole==='PURCHASED'">
+                                          <el-tag type="danger" effect="dark">DEBARRED</el-tag><br/><br/>
+                                          {{ reason }}
+                                        </template>
                                     </template>
                                     <button v-else-if="!paid && !purchased" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('request-session-click')"><i class="mdi mdi-cart me-1"></i> Start Exam </button>
                                     <template v-else-if="!paid && purchased">
                                         <button v-if="status==='PENDING' && assignedRole==='ASSIGNED'" type="button" class="btn btn-primary btn-outline mt-2" @click="$emit('request-session-click')"><i class="mdi mdi-cart me-1"></i> Start Exam </button>
-                                        <NuxtLink v-else-if="status==='ONGOING' && assignedRole==='ASSIGNED'" :to="`/exam/appear/${uuid}`" type="button" class="btn btn-primary btn-outline mt-2" ><i class="mdi mdi-cart me-1"></i> Continue Exam </NuxtLink>
-                                        <NuxtLink v-else-if="status==='COMPLETED' && assignedRole==='ASSIGNED'" :to="`/exam/appear/${uuid}`" type="button" class="btn btn-primary btn-outline mt-2" ><i class="mdi mdi-cart me-1"></i> View Exam Report </NuxtLink>
+                                        <NuxtLink v-else-if="status==='ONGOING' && assignedRole==='ASSIGNED'" :to="`/exam/sets/${uuid}`" type="button" class="btn btn-warning btn-outline mt-2" ><i class="mdi mdi-cart me-1"></i> Continue Exam </NuxtLink>
+                                        <NuxtLink v-else-if="status==='COMPLETED' && assignedRole==='ASSIGNED'" :to="`/exam/report/${uuid}`" type="button" class="btn btn-success btn-outline mt-2" ><i class="mdi mdi-cart me-1"></i> View Exam Report </NuxtLink>
+                                        <template v-else-if="status==='ABORTED' && assignedRole==='ASSIGNED'">
+                                          <el-tag type="danger">DEBARRED</el-tag><br/><br/>
+                                          {{ reason }}
+                                        </template>
                                     </template>
                                 </div>
                             </div>
@@ -72,6 +80,10 @@ export default {
             type: String,
             default: ""
         },
+        reason: {
+            type: String,
+            default: ""
+        },
         status: {
             type: String,
             default: ""
@@ -87,6 +99,10 @@ export default {
         purchased: {
             type: Boolean,
             default: false
+        },
+        set: {
+            type: Object,
+            default: null
         },
     },
     data(){

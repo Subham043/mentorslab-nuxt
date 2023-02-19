@@ -15,6 +15,7 @@
             :amount="amount"
             :paragraph="description"
             :status="status"
+            :reason="reason"
             :assigned-role="assignedRole"
             @payment-click="makePayment"
             @request-session-click="requestSession"
@@ -43,6 +44,7 @@ import ExamDetailComponent from '~/components/ExamDetailComponent.vue';
             paid: false,
             purchased: false,
             status: '',
+            reason: '',
             assignedRole: '',
         }
     },
@@ -81,11 +83,12 @@ import ExamDetailComponent from '~/components/ExamDetailComponent.vue';
                     this.purchased = true;
                     this.status = response.data.data.ExamAssigned[0].status
                     this.assignedRole = response.data.data.ExamAssigned[0].assignedRole
+                    this.reason = response.data.data.ExamAssigned[0].reason
                 }
             } catch (err) {
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                this.$router.push('/content/all');
+                this.$router.push('/exam/all');
             } finally{
                 loading.close()
             }
@@ -99,6 +102,7 @@ import ExamDetailComponent from '~/components/ExamDetailComponent.vue';
                 const response = await this.$privateApi.get('/exam-user/appear/'+this.$route.params.id); // eslint-disable-line
                 this.checkId()
                 this.$toast.success(response.data.data)
+                this.$router.push('/exam/sets/'+this.$route.params.id);
             } catch (err) {
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
@@ -158,6 +162,7 @@ import ExamDetailComponent from '~/components/ExamDetailComponent.vue';
                 }); // eslint-disable-line
                 this.$toast.success(response.data.data.message)
                 this.checkId()
+
             } catch (err) {
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)

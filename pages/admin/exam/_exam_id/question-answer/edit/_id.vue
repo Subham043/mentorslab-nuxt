@@ -284,7 +284,7 @@ export default {
             try {
                 const response = await this.$privateApi.get('/question-answer/display/'+this.$route.params.id); // eslint-disable-line
                 // eslint-disable-next-line no-console
-                console.log(response);
+                // console.log(response);
                 this.question = response.data.data.question;
                 this.answer_a = response.data.data.answer_a;
                 this.answer_b = response.data.data.answer_b;
@@ -303,7 +303,7 @@ export default {
             }
         },
         handleFileChnage(event){
-            this.banner = event.target.files[0];
+            this.image = event.target.files[0];
         },
     }
 }

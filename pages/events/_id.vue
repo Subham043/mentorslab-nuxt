@@ -64,7 +64,7 @@
 									<h1>{{EventAbout.heading}}</h1>
 								</div>
 								<div class="mb-25"></div>
-								<div v-html="EventAbout.description" />					
+								<div v-html="EventAbout.description" />
                                 <button class="btn mt-15" @click="dialogFormVisible = true">Register Now</button>
 							</div>
 						</div>
@@ -73,7 +73,7 @@
 			</div>
 		</div>
 		<!-- events-area-end -->
-				
+
 				<!-- team-area-start -->
 		<div v-if="(EventInstructor.length>0)" class="team-area pt-60 pb-30 gray-bg">
 			<div class="container">
@@ -84,7 +84,7 @@
 					</div>
 				</div>
 				<div v-if="(EventInstructor.length===1)" class="row" style="justify-content:center;">
-					
+
 					<div class="col-xl-4 col-lg-4 col-md-6 pos-sticky" >
 						<div class="team2-wrapper mb-30 pos-sticky" >
 							<div class="team2-img">
@@ -114,13 +114,13 @@
 									<h1>{{EventInstructor[0].heading}}</h1>
 								</div>
 								<div class="mb-25"></div>
-								<div v-html="EventInstructor[0].description" />								
+								<div v-html="EventInstructor[0].description" />
                                 <button class="btn mt-15" @click="dialogFormVisible = true">Register Now</button>
 							</div>
 						</div>
 					</div>
-					
-										
+
+
 				</div>
                 <div v-else class="row" style="justify-content:center;">
 					<div v-for="(item, index) in EventInstructor" :key="index" class="col-xl-4 col-lg-4 col-md-6">
@@ -144,13 +144,13 @@
 							</div>
 						</div>
 					</div>
-															
+
 				</div>
 			</div>
 		</div>
 
 		<!-- team-area-end -->
-		
+
 				<!-- event-tab-area-start -->
 		<div v-if="(EventSchedule.length>0)" class="event-tab-area pt-60 pb-30">
 			<div class="container">
@@ -182,7 +182,7 @@
 			</div>
 		</div>
 		<!-- event-tab-area-end -->
-		
+
 		        <!-- event-video-area-start -->
 		<div class="event-video-area pt-230 pb-230" style="background-image:url('/images/events/bgg5.jpeg')">
 			<div class="container">
@@ -201,7 +201,7 @@
 			</div>
 		</div>
 		<!-- event-video-area-end -->
-		
+
 
 		        <!-- ticket-now-area-start -->
 		<div v-if="EventCallToAction" class="ticket-now-area">
@@ -224,7 +224,7 @@
 			</div>
 		</div>
 		<!-- ticket-now-area-end -->
-		
+
 		        <!-- testimonial-area-start -->
 		<div v-if="EventTestimonial.length>0" class="testimonial-area pt-200 pb-10" style="background-image:url('/images/events/bg4.jpeg')">
 			<div class="container">
@@ -255,7 +255,7 @@
                                     </div>
                                 </div>
                             </div>
-                                
+
                         </VueSlickCarousel>
                         <div class="owl-nav">
                             <div class="owl-prev" @click="prevTestimonialClick">
@@ -270,7 +270,7 @@
 			</div>
 		</div>
 		<!-- testimonial-area-end -->
-				
+
 
 
 		<div v-if="EventGallery.length>0" class="pricing-area pt-60 pb-10" style="background-image:url('/images/events/bgg2.jpeg')">
@@ -293,7 +293,7 @@
                                 </a>
                             </div>
                         </div>
-                                            
+
                     </VueSlickCarousel>
                     <div class="owl-nav">
                         <div class="owl-prev" @click="prevGalleryClick">
@@ -307,7 +307,7 @@
 			</div>
 		</div>
 		<!-- pricing-area-end -->
-		
+
 				<!-- upcoming-events-area-start -->
 		<div v-if="(latest.length>0)" class="upcoming-events-area pt-60 pb-30">
 			<div class="container">
@@ -341,7 +341,7 @@
 			</div>
 		</div>
 		<!-- upcoming-event-area-end -->
-		
+
 		<!-- ticket-now-area-start -->
 		<div v-if="EventCallToAction" class="ticket-now-area pt-45 pb-45 ticket2-now purple-bg">
 			<div class="container">
@@ -367,7 +367,7 @@
                 <iframe :src="dialogVideoVisible ? video : ''" style="width:100%;height:400px;"></iframe>
             </div>
         </el-dialog>
-        
+
         <el-dialog title="Register" :visible.sync="dialogFormVisible">
             <div>
                 <ValidationObserver ref="form" v-slot="{ handleSubmit }">
@@ -569,7 +569,7 @@ export default {
             try {
                 const response = await this.$publicApi.get("/event-user/detail/" + this.$route.params.id); // eslint-disable-line
                 // eslint-disable-next-line no-console
-                console.log(response);
+                // console.log(response);
                 this.EventAbout = response.data.data.EventAbout;
                 this.EventCallToAction = response.data.data.EventCallToAction;
                 this.EventGallery = response.data.data.EventGallery;
@@ -664,7 +664,7 @@ export default {
                 });
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                
+
             }finally{
                 loading.close()
             }

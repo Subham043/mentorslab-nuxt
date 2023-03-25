@@ -84,7 +84,7 @@ export default {
         experience: {
             // eslint-disable-next-line vue/require-prop-type-constructor
             type: String,
-            default: '20'
+            default: '25'
         },
     }
 }

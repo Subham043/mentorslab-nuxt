@@ -1,14 +1,14 @@
 <template>
     <div>
        <FrontendBreadcrumbComponent page="About Us" />
-        
+
         <!-- Report Career Section Start -->
         <div class="section report-career-2-section section-padding-02">
             <div class="container">
                 <!-- Report Career Wrapper Start -->
                 <div class="report-career-2-wrapper">
                     <div class="row">
-                        
+
                         <div class="col-xl-8 col-lg-6 d-lg-flex align-items-center">
                             <!-- Report Career Content Start -->
                             <div class="report-career-content report-career-2-content">
@@ -19,7 +19,7 @@
                                 <p>We strongly believe that you have the potential to make an impact. If you have the desire, you need to believe in you and develop a positive mind-set to get to the action mode. However good maybe our ideas are, unless we Action, we don’t get the desired result. Action creates RESULTS, inaction creates doubt in our minds! We are sure, you come to us for a positive solution.</p>
                                 <p>And before you start actioning, the other golden word you need to consider is “WHY’. It is a powerful question and if you have a strong purpose (Why) the how (plan of action) becomes easy..</p>
                                 <p>My team and I work with this concept of “WHY” (the Purpose) and the Action and help you unlock your true potential and achieve your desired result; be it creating an impact and significance, achieving personal success or transforming lives of others.</p>
-                                
+
                             </div>
                             <!-- Report Career Content End -->
                         </div>
@@ -32,7 +32,7 @@
                             </div>
                             <!-- Report Career Image End -->
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- Report Career Wrapper End -->
@@ -41,23 +41,20 @@
         <!-- Report Career Section End -->
 
 
-        <FrontendInstructorComponent 
-        title="Varada Murthy K. S." 
-        description="Varada is an Entrepreneur and a thought-leader with over 25 years of professional experience
-        in the area of Human Resources and Educational Services, having worked both in India and
-        abroad. He continuously strive to build people and help them become high performing
-        contributors. He believes in the potential of an individual, irrespective of their
-        background, if guided well, can create a humongous positive impact on the society."
+        <FrontendInstructorComponent
+        title="Varada Murthy K. S."
+        description="Entrepreneur, Leadership Coach and Founder of PFLA
+Varada is an Entrepreneur and a thought-leader with over 25 years of professional experience in the area of Human Resources and Educational Services, having worked both in India and abroad. He continuously strive to build people and help them become high performing contributors. He believes in the potential of an individual, irrespective of their background, if guided well, can create a humongous positive impact on the society."
         designation="Entrepreneur, Leadership Coach and Founder of PFLA"
         image="/images/15.jpeg" />
-        
+
         <!-- Report Career Section Start -->
         <div class="section report-career-2-section section-padding-02">
             <div class="container">
                 <!-- Report Career Wrapper Start -->
                 <div class="report-career-2-wrapper">
                     <div class="row">
-                        
+
                         <div class="col-xl-12 col-lg-6 d-lg-flex align-items-center">
                             <!-- Report Career Content Start -->
                             <div class="report-career-content report-career-2-content">
@@ -65,7 +62,7 @@
                                     <h2 class="title">Why coaching?</h2>
                                 </div>
                                 <p>“Each person holds so much power within themselves that needs to be let out. Sometimes they just need a little nudge, a little direction, a little support, a little coaching, and the greatest things can happen.” — Pete Carroll</p>
-                                
+
                             </div>
                             <!-- Report Career Content End -->
                         </div>
@@ -98,7 +95,7 @@
                             </div>
                             <!-- Report Career Image End -->
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- Report Career Wrapper End -->
@@ -108,7 +105,7 @@
 
 
 
-        
+
         <FrontendContactComponent />
 
 

@@ -13,8 +13,8 @@ image="/images/tm1.jpg" title=" Teacher Mentor" />
                             <!-- Single Course Description Start -->
                             <div class="single-course-description">
                                 <h4 class="title">Description</h4>
-                                <p>Teacher Mentor is a support system to help Teachers and  Parents to find solutions to their professional queries to improve their teaching learning 
-Process, performance, career progression.  
+                                <p>Teacher Mentor is a support system to help Teachers and  Parents to find solutions to their professional queries to improve their teaching learning
+Process, performance, career progression.
 </p>
                                 <p>Objective: Mentoring and Coaching the Teaching and Parenting community instantly
 Over online.
@@ -78,7 +78,7 @@ Over online.
                                             <CourseTeamCardComponent
     link="/instructor/varada-murthy"
                                                 image="/images/15.jpeg" title="Varada Murthy K. S."
-                                                designation="Entrepreneur, Leadership Coach and Founder of PFLA" />
+                                                designation="Leadership Coach" />
                                             <CourseTeamCardComponent link="/instructor/chandrashekhar" image="/images/2.jpeg" title="Chandrashekhar" designation="Senior Educator & Professional Counsellor" />
                                         </VueSlickCarousel>
                                         <SliderNavButtonComponent @previous-click="prevNavClick" @next-click="nextNavClick" />

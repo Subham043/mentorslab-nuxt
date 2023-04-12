@@ -1,6 +1,6 @@
 <template>
     <div>
-       
+
 
         <div
             class="section instructor-section section-padding"
@@ -157,7 +157,7 @@
                             <FrontendTeamCardComponent link="/instructor/deepa-ravichandran" image="/images/1.jpeg" title="Ms. Deepa Ravichandran" designation="Founder Principal of Floretz Academy" />
                             <FrontendTeamCardComponent link="/instructor/nalina-murthy" image="/images/22.jpeg" title="Nalina Murthy" designation="Counsellor & Psychologist" />
                             <FrontendTeamCardComponent link="/instructor/chandrashekhar" image="/images/2.jpeg" title="Chandrashekhar" designation="Senior Educator & Professional Counsellor" />
-                            <FrontendTeamCardComponent link="/instructor/varada-murthy" image="/images/15.jpeg" title="Varada Murthy K. S." designation="Entrepreneur, Leadership Coach and Founder of PFLA" />
+                            <FrontendTeamCardComponent link="/instructor/varada-murthy" image="/images/15.jpeg" title="Varada Murthy K. S." designation="Leadership Coach" />
                             <FrontendTeamCardComponent link="/instructor/sharad-gupta" image="/images/img/sharad.jpg" title="Sharad Gupta" designation="Entrepreneur" />
                             <FrontendTeamCardComponent link="/instructor/sharmila-jois" image="/images/img/sharmila-jois.jpg" title="Sharmila Jois" designation="Special Educator" />
                         </div>
@@ -353,60 +353,60 @@ loading="lazy"
                 <div class="testimonial-wrapper swiper-container testimonial-active">
                     <div class="swiper-wrapper">
                         <VueSlickCarousel v-bind="slickOptions" ref="slickTestimonial">
-                            <FrontendTestimonialCardComponent 
-                            image="/images/avatar.png" 
-                            title="Varsha Bhat" 
-                            designation="Principal - ANPS" 
+                            <FrontendTestimonialCardComponent
+                            image="/images/avatar.png"
+                            title="Varsha Bhat"
+                            designation="Principal - ANPS"
                             message="Without a doubt this is the best course you will find for Public Speaking.
                                         The course enables you to use proper tone, posture, presentation skills and
                                         speech preparation styles." />
-                            <FrontendTestimonialCardComponent 
-                            image="/images/10.jpg" 
-                            title="Shilpa Raghu" 
-                            designation="Principal NBGI" 
+                            <FrontendTestimonialCardComponent
+                            image="/images/10.jpg"
+                            title="Shilpa Raghu"
+                            designation="Principal NBGI"
                             message="I have availed Career Guidance and Mentoring services from Varada Murthy @ VMLC
                                         and I felt that he is a Leader with great insight. If you are looking for
                                         Coaching, he is the one to go for." />
-                            <FrontendTestimonialCardComponent 
-                            image="/images/11.jpg" 
-                            title="Priyanka Nair" 
-                            designation="Center Head at Kumon" 
+                            <FrontendTestimonialCardComponent
+                            image="/images/11.jpg"
+                            title="Priyanka Nair"
+                            designation="Center Head at Kumon"
                             message="The public Speaking & Coaching session I have attended at VMLC benefited me a
                                         lot. I have gained a lot of confidence and can speak now without hesitation and
                                         address parents with confidence." />
-                            <FrontendTestimonialCardComponent 
-                            image="/images/12.jpg" 
-                            title="Savitha R." 
-                            designation="Coordinator at Yellow" 
+                            <FrontendTestimonialCardComponent
+                            image="/images/12.jpg"
+                            title="Savitha R."
+                            designation="Coordinator at Yellow"
                             message="TTP was an incredible program which added lot of values to my life, it is a
                                         perfect program for those who have desire to be a trainer. Madam & Sir are
                                         incredible Coaches." />
-                            <FrontendTestimonialCardComponent 
-                            image="/images/avatar.png" 
-                            title="Reshma Sultana" 
-                            designation="Lecturer, Hyderabad" 
+                            <FrontendTestimonialCardComponent
+                            image="/images/avatar.png"
+                            title="Reshma Sultana"
+                            designation="Lecturer, Hyderabad"
                             message="2 months was an unforgettable experience to me @ VMLC. Sir's guidance in making
                                         me repeatedly give speeches and giving me continuous feedback helped me develop
                                         confidence." />
-                            <FrontendTestimonialCardComponent 
-                            image="/images/avatar.png" 
-                            title="Aparna" 
-                            designation="VP - Treamis World School" 
+                            <FrontendTestimonialCardComponent
+                            image="/images/avatar.png"
+                            title="Aparna"
+                            designation="VP - Treamis World School"
                             message="Public Speaking was a great exposure for our students, the training provided by
                                         VM has helped our students to gain confidence. We are glad to be part of this.
                                         The event was well organised- great job team!" />
-                            <FrontendTestimonialCardComponent 
-                            image="/images/avatar.png" 
-                            title="Ganga Prasad" 
-                            designation="Principal - St. Mira's School" 
+                            <FrontendTestimonialCardComponent
+                            image="/images/avatar.png"
+                            title="Ganga Prasad"
+                            designation="Principal - St. Mira's School"
                             message="The atmosphere was electrifying and fully charged. It was amazing to notice
                                         confidence levels of participants. This program has immensely helped our
                                         students and all other participants too. I congratulate PFLA team for the manner
                                         in which they have conducted this event." />
-                            <FrontendTestimonialCardComponent 
-                            image="/images/avatar.png" 
-                            title="Sir M V PU College" 
-                            designation="Dr.Rajendra Naidu" 
+                            <FrontendTestimonialCardComponent
+                            image="/images/avatar.png"
+                            title="Sir M V PU College"
+                            designation="Dr.Rajendra Naidu"
                             message="TPersonal Excellence Program with PS skills conducted by Shri Varada Murthy is a
                                         must for all students and our students have hugely benefited from this program.
                                         In fact, their attitude towards life and studies has changed after attending

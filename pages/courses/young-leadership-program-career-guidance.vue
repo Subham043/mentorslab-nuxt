@@ -70,7 +70,7 @@ image="/images/psc1.jpg" title="Young Leaders Program & Career Guidance" descrip
                                         <CourseTeamCardComponent
 link="/instructor/varada-murthy"
                                             image="/images/15.jpeg" title="Varada Murthy K. S."
-                                            designation="Entrepreneur, Leadership Coach and Founder of PFLA" />
+                                            designation="Leadership Coach" />
                                         <CourseTeamCardComponent link="/instructor/chandrashekhar" image="/images/2.jpeg" title="Chandrashekhar" designation="Senior Educator & Professional Counsellor" />
 
                                     </div>

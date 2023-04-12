@@ -52,7 +52,7 @@ image="/images/cm2.jpg" title="Coaching & Mentoring" description="Each person ho
                                         <CourseTeamCardComponent
 link="/instructor/varada-murthy"
                                             image="/images/15.jpeg" title="Varada Murthy K. S."
-                                            designation="Entrepreneur, Leadership Coach and Founder of PFLA" />
+                                            designation="Leadership Coach" />
 
                                     </div>
 
@@ -96,9 +96,9 @@ link="/instructor/varada-murthy"
                                         </li>
                                     </ul>
                                     <div class="price-box-btn">
-                                        
+
                                             <button class="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Enroll Now</button>
-                                        
+
                                     </div>
                                     <div class="price-box-social">
                                         <span class="share-title">Share:</span>

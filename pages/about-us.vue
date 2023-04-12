@@ -43,9 +43,8 @@
 
         <FrontendInstructorComponent
         title="Varada Murthy K. S."
-        description="Entrepreneur, Leadership Coach and Founder of PFLA
-Varada is an Entrepreneur and a thought-leader with over 25 years of professional experience in the area of Human Resources and Educational Services, having worked both in India and abroad. He continuously strive to build people and help them become high performing contributors. He believes in the potential of an individual, irrespective of their background, if guided well, can create a humongous positive impact on the society."
-        designation="Entrepreneur, Leadership Coach and Founder of PFLA"
+        description=""
+        designation="Leadership Coach"
         image="/images/15.jpeg" />
 
         <!-- Report Career Section Start -->

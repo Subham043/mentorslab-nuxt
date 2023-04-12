@@ -3,7 +3,7 @@
         <CourseBreadCrumbComponent page="Public Speaking and Communication skills" />
         <CourseHeroComponent
 image="/images/psc1.jpg" title="Public Speaking and Communication skills" description="There are certain things in which  mediocrity
-is not to be endured, such as poetry, music, 
+is not to be endured, such as poetry, music,
 painting and PUBLIC SPEAKING — Jean de la Bruyere" />
 
         <div class="section single-course-section">
@@ -80,7 +80,7 @@ painting and PUBLIC SPEAKING — Jean de la Bruyere" />
                                         <CourseTeamCardComponent
 link="/instructor/varada-murthy"
                                             image="/images/15.jpeg" title="Varada Murthy K. S."
-                                            designation="Entrepreneur, Leadership Coach and Founder of PFLA" />
+                                            designation="Leadership Coach" />
 
                                     </div>
 

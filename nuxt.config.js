@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+
   head: {
     title: 'Mentorslab',
     meta: [
@@ -48,7 +49,8 @@ export default {
     '~/plugins/pagination.js',
     '~/plugins/countdown.js',
     '~/plugins/vue-slick-carousel.js',
-    { src: '~/plugins/zoom.client.js', mode: "client" }
+    { src: '~/plugins/zoom.client.js', mode: "client" },
+    { src: '~/plugins/safeHtml.js', mode: "client" }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -66,6 +68,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'nuxt-helmet',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
@@ -76,8 +79,9 @@ export default {
     ["vue-toastification/nuxt", {
       timeout: 8000,
       position: "bottom-center"
-    }]
+    }],
   ],
+
 
   publicRuntimeConfig: {
     apiURL: process.env.API_BASE_URL,
@@ -162,7 +166,24 @@ export default {
     }
   },
 
-
+  helmet: {
+    /*
+    frameguard: false,
+    ...
+    */
+    contentSecurityPolicy: false,
+    crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
+    crossOriginResourcePolicy: true,
+    referrerPolicy: {policy: "no-referrer"},
+    frameguard: {action: "sameorigin"},
+    hidePoweredBy: true,
+    hsts: {
+      maxAge: 15552000,
+      includeSubDomains: true,
+      preload: true,
+    },
+    xssFilter: true,
+  },
 
   fontawesome: {
     icons: {

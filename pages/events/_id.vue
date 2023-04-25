@@ -64,7 +64,7 @@
 									<h1>{{EventAbout.heading}}</h1>
 								</div>
 								<div class="mb-25"></div>
-								<div v-html="EventAbout.description" />
+								<div v-html-safe="EventAbout.description" />
                                 <button class="btn mt-15" @click="dialogFormVisible = true">Register Now</button>
 							</div>
 						</div>
@@ -114,7 +114,7 @@
 									<h1>{{EventInstructor[0].heading}}</h1>
 								</div>
 								<div class="mb-25"></div>
-								<div v-html="EventInstructor[0].description" />
+								<div v-html-safe="EventInstructor[0].description" />
                                 <button class="btn mt-15" @click="dialogFormVisible = true">Register Now</button>
 							</div>
 						</div>
@@ -167,7 +167,7 @@
                         <el-tabs type="border-card">
                             <el-tab-pane v-for="(item, index) in EventSchedule" :key="index" :label="item.title">
                             <h3>{{item.heading}}</h3>
-                            <div v-html="item.description"/>
+                            <div v-html-safe="item.description"/>
                             </el-tab-pane>
                         </el-tabs>
 					</div>
@@ -211,7 +211,7 @@
 						<div class="col-xl-9 cl-lg-9 col-md-9">
 							<div class="ticket-now-text">
 								<h2>{{EventCallToAction.heading}}</h2>
-                                <div v-html="EventCallToAction.description" />
+                                <div v-html-safe="EventCallToAction.description" />
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-3 col-md-3">
@@ -349,7 +349,7 @@
 					<div class="col-xl-9 cl-lg-9 col-md-9">
 						<div class="ticket-now-text">
                             <h2>{{EventCallToAction.heading}}</h2>
-                            <div v-html="EventCallToAction.description" style="color:white !important" />
+                            <div v-html-safe="EventCallToAction.description" style="color:white !important" />
 						</div>
 					</div>
 					<div class="col-xl-3 col-lg-3 col-md-3">

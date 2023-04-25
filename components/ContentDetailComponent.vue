@@ -3,7 +3,7 @@
         <div class="box bg-holder-img ">
             <div class="box-body">
                 <div class="row">
-                    
+
                     <div v-if="!paid || (paid && purchased)" class="col-md-12 col-sm-12">
                         <div v-if="type=='PDF'" class="box box-body b-1 text-center no-shadow">
                             <PdfComponent :file="`${apiUrl}/content-user/pdf-file/${file}`" />
@@ -29,13 +29,13 @@
                             </div>
                             <hr class="mt-10 mb-20">
                             <h5 class="">{{heading}}</h5>
-                            <p class="pb-20 text-fade" v-html="paragraph"></p>
+                            <p v-html-safe="paragraph" class="pb-20 text-fade"></p>
                         </div>
                     </div>
-                
+
 
                 </div>
-            </div>				
+            </div>
         </div>
     </div>
 </template>

@@ -16,7 +16,7 @@
                                 </el-table-column>
                                 <el-table-column label="Question" width="450">
                                     <template slot-scope="scope">
-                                        <div v-html="scope.row.question" />
+                                        <div v-html-safe="scope.row.question" />
                                     </template>
                                 </el-table-column>
                                 <el-table-column prop="correct_answer" label="Correct Answer" width="350">

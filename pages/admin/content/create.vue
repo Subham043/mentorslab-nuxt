@@ -212,7 +212,7 @@
         </section>
     </div>
 </template>
-  
+
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
@@ -308,7 +308,7 @@ export default {
                 });
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                
+
             }finally{
             loading.close()
             }
@@ -360,4 +360,3 @@ export default {
     }
 }
 </script>
-  

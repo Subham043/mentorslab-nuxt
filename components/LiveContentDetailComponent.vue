@@ -3,14 +3,14 @@
         <div class="box bg-holder-img ">
             <div class="box-body">
                 <div class="row">
-                    
+
                     <div class="col-sm-12 events-content">
                         <div class="selected">
                             <div class="row justify-content-between align-items-flex-end">
                                 <div class="d-inline col-auto order-1-sm">
                                     <h3 class="mt-0">{{name}}</h3>
                                     <h4 class=""><span class="badge badge-success-light">Live Session</span></h4>
-                                    
+
                                 </div>
                                 <template v-if="paid && purchased">
                                     <div class="d-inline col-auto order-3-sm mt-sm-5">
@@ -96,13 +96,13 @@
                             </div>
                             <hr class="mt-10 mb-20">
                             <h5 class="">{{heading}}</h5>
-                            <p class="pb-20 text-fade" v-html="paragraph"></p>
+                            <p v-html-safe="paragraph" class="pb-20 text-fade"></p>
                         </div>
                     </div>
-                
+
 
                 </div>
-            </div>				
+            </div>
         </div>
     </div>
 </template>

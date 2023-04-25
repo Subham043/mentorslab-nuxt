@@ -30,7 +30,7 @@
                                               <div v-if="image" class="box box-body b-1 text-center no-shadow" style="max-width:200px;">
                                                 <img id="product-image" :src="`${apiUrl}/exam-user/question-answer-image/${image}`" class="img-responsive bg-light rounded img-fluid card-img-top" alt="" />
                                               </div>
-                                              <div class="mt-0" v-html="question" />
+                                              <div v-html-safe="question" class="mt-0" />
                                             </div>
                                             <div class="col-md-4 col-sm-12 text-center order-2-sm">
                                               <client-only>
@@ -63,19 +63,19 @@
                                           <h4 class=""><span class="badge badge-success-light">Select an Answers</span></h4>
                                           <div class="py-20" style="border-bottom: 1px dotted black;">
                                             <el-radio v-model="radio" label="answer_a">Option A : </el-radio>
-                                            <div class="my-10" v-html="answer_a" />
+                                            <div v-html-safe="answer_a" class="my-10" />
                                           </div>
                                           <div class="py-20" style="border-bottom: 1px dotted black;">
                                             <el-radio v-model="radio" label="answer_b">Option B : </el-radio>
-                                            <div class="my-10" v-html="answer_b" />
+                                            <div v-html-safe="answer_b" class="my-10" />
                                           </div>
                                           <div class="py-20" style="border-bottom: 1px dotted black;">
                                             <el-radio v-model="radio" label="answer_c">Option C : </el-radio>
-                                            <div class="my-10" v-html="answer_c" />
+                                            <div v-html-safe="answer_c" class="my-10" />
                                           </div>
                                           <div class="py-20" style="border-bottom: 1px dotted black;">
                                             <el-radio v-model="radio" label="answer_d">Option D : </el-radio>
-                                            <div class="my-10" v-html="answer_d" />
+                                            <div v-html-safe="answer_d" class="my-10" />
                                           </div>
                                           <div class="py-20">
                                             <el-button type="primary" @click="submitAnswer">Submit</el-button>

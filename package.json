@@ -36,7 +36,7 @@
     "nuxt-helmet": "^2.1.1",
     "v-viewer": "^1.6.4",
     "vee-validate": "^3.4.14",
-    "vue": "^2.7.10",
+    "vue": "^2.7.14",
     "vue-awesome-countdown": "^1.1.4",
     "vue-fullscreen": "^2.6.1",
     "vue-html-secure": "^1.0.10",
@@ -44,7 +44,7 @@
     "vue-scrollto": "^2.20.0",
     "vue-server-renderer": "^2.7.10",
     "vue-slick-carousel": "^1.0.6",
-    "vue-template-compiler": "^2.7.10",
+    "vue-template-compiler": "^2.7.14",
     "vue-toastification": "^1.7.14",
     "vue2-editor": "^2.10.3"
   },

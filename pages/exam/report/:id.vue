@@ -152,22 +152,24 @@
 </template>
 
 <script>
+import UserCrumbComponent from '~/components/UserCrumbComponent.vue';
+
 export default {
     name: "ExamAppearPage",
+    components: { UserCrumbComponent },
     layout: "UserLayout",
     data() {
         return {
-            count:1,
+            count: 1,
             tableData: [],
             currentPage: 1,
-
             id: 0,
-            uuid: '',
-            question: '',
-            answer_a: '',
-            answer_b: '',
-            answer_c: '',
-            answer_d: '',
+            uuid: "",
+            question: "",
+            answer_a: "",
+            answer_b: "",
+            answer_c: "",
+            answer_d: "",
             duration: 0,
             current_total_marks: 0,
             current_marks: 0,
@@ -175,21 +177,21 @@ export default {
             status: false,
             startOn: new Date().getTime(),
             scheduledOn: new Date(new Date().getTime() + 0 * 60000).getTime(),
-            radio: '',
-            warnStatus:false,
-            warnCounter:0,
-            total_questions:0,
-            total_marks:0,
-            attempted:0,
-            marks_alloted:0,
-            percentage:0,
-            current_question:0,
+            radio: "",
+            warnStatus: false,
+            warnCounter: 0,
+            total_questions: 0,
+            total_marks: 0,
+            attempted: 0,
+            marks_alloted: 0,
+            percentage: 0,
+            current_question: 0,
             timerTrigger: false
-        }
+        };
     },
-    computed:{
-        apiUrl(){
-            return this.$config.apiURL
+    computed: {
+        apiUrl() {
+            return this.$config.apiURL;
         },
     },
     watch: {
@@ -197,23 +199,23 @@ export default {
             this.handlePageChnage();
         }
     },
-    mounted(){
+    mounted() {
         // eslint-disable-next-line nuxt/no-env-in-hooks
-        if(process.client){
-            this.$scrollTo('#__nuxt', 0, {force: true})
+        if (process.client) {
+            this.$scrollTo("#__nuxt", 0, { force: true });
         }
         this.handlePageChnage();
     },
     methods: {
-        async getTableData(page=0) {
+        async getTableData(page = 0) {
             const loading = this.$loading({
                 lock: true,
                 fullscreen: true,
             });
             try {
-                const response = await this.$privateApi.get('/exam-user/report/'+this.$route.params.id+'?skip='+page); // eslint-disable-line
-                this.tableData = response?.data?.data?.data
-                this.count = response?.data?.data?.count
+                const response = await this.$privateApi.get("/exam-user/report/" + this.$route.params.id + "?skip=" + page); // eslint-disable-line
+                this.tableData = response?.data?.data?.data;
+                this.count = response?.data?.data?.count;
                 this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;
                 this.id = response.data.data.questionSet.id;
                 this.uuid = response.data.data.questionSet.uuid;
@@ -224,8 +226,8 @@ export default {
                 this.answer_d = response.data.data.questionSet.answer_d;
                 this.duration = parseInt(response.data.data.questionSet.duration);
                 this.image = response.data.data.questionSet.image;
-                this.radio = this.tableData.length>0 ? this.tableData[0].selected_answer : '';
-                this.current_marks = this.tableData.length>0 ? this.tableData[0].marks : '';
+                this.radio = this.tableData.length > 0 ? this.tableData[0].selected_answer : "";
+                this.current_marks = this.tableData.length > 0 ? this.tableData[0].marks : "";
                 this.current_total_marks = parseInt(response.data.data.questionSet.marks);
                 this.status = true;
                 this.total_questions = response?.data?.data?.total_questions;
@@ -233,25 +235,27 @@ export default {
                 this.marks_alloted = response?.data?.data?.marks_alloted;
                 this.total_marks = response?.data?.data?.total_marks;
                 this.percentage = response?.data?.data?.percentage;
-            } catch (err) {
+            }
+            catch (err) {
                 // console.log(err.response);// eslint-disable-line
-                if (err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
-                if (err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-
-            } finally {
-                loading.close()
+                if (err?.response?.data?.message)
+                    this.$toast.error(err?.response?.data?.message);
+                if (err?.response?.data?.error)
+                    this.$toast.error(err?.response?.data?.error);
+            }
+            finally {
+                loading.close();
             }
         },
-        handlePaginationChnage(page){
-            this.$router.push({query:{page}});
+        handlePaginationChnage(page) {
+            this.$router.push({ query: { page } });
         },
-        handlePageChnage(){
+        handlePageChnage() {
             this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;
-            this.getTableData(this.$route.query.page ? (this.$route.query.page*1)-1 : 0);
+            this.getTableData(this.$route.query.page ? (this.$route.query.page * 1) - 1 : 0);
             // console.log(this.currentPage);
         }
-
-    },
+    }
 }
 </script>
 

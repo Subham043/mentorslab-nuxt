@@ -22,8 +22,8 @@
                 <!-- Courses Content Start -->
                 <div class="courses-content">
                     <div class="courses-author">
-                        <img 
-                            src="https://mentorslab.in/assets/main/assets/images/logo-mentor.png" loading="lazy"
+                        <img
+                            src="/images/logo-mentor.png" loading="lazy"
                             alt="author">
                         <h4 class="name"><a href="#">MentorsLab</a></h4>
                     </div>

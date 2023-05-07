@@ -95,209 +95,239 @@
 </template>
 
 <script>
+import UserCrumbComponent from '~/components/UserCrumbComponent.vue';
+
 export default {
     name: "ExamAppearPage",
+    components: { UserCrumbComponent },
     layout: "UserLayout",
     data() {
         return {
             id: 0,
-            uuid: '',
-            question: '',
-            answer_a: '',
-            answer_b: '',
-            answer_c: '',
-            answer_d: '',
+            uuid: "",
+            question: "",
+            answer_a: "",
+            answer_b: "",
+            answer_c: "",
+            answer_d: "",
             duration: 0,
             marks: 0,
             image: null,
             status: false,
             startOn: new Date().getTime(),
             scheduledOn: new Date(new Date().getTime() + 0 * 60000).getTime(),
-            radio: '',
-            warnStatus:false,
-            warnCounter:0,
-            total_questions:0,
-            current_question:0,
+            radio: "",
+            warnStatus: false,
+            warnCounter: 0,
+            total_questions: 0,
+            current_question: 0,
             timerTrigger: false
-        }
+        };
     },
-    computed:{
-        apiUrl(){
-            return this.$config.apiURL
+    computed: {
+        apiUrl() {
+            return this.$config.apiURL;
         },
     },
-    mounted(){
+    mounted() {
         // eslint-disable-next-line nuxt/no-env-in-hooks
-        if(process.client){
-            this.$scrollTo('#__nuxt', 0, {force: true})
-            window.addEventListener('blur',this.logTabChanged);
+        if (process.client) {
+            this.$scrollTo("#__nuxt", 0, { force: true });
+            window.addEventListener("blur", this.logTabChanged);
         }
-        this.checkId()
+        this.checkId();
     },
-    destroyed(){
-      window.removeEventListener('blur',this.logTabChanged);
+    destroyed() {
+        window.removeEventListener("blur", this.logTabChanged);
     },
     methods: {
-        logTabChanged(){
-          if(process.client){
-            this.warningOpen()
-          }
+        logTabChanged() {
+            if (process.client) {
+                this.warningOpen();
+            }
         },
         warningOpen() {
-          if(this.warnStatus===false && this.warnCounter<=1){
-            this.warnStatus=true;
-            ++this.warnCounter;
-            this.$alert('This is a warning because you tried escape the exam screen. If you do it again, then you will be barred from giving this exam!', 'WARNING!!', {
-              confirmButtonText: 'OK',
-              callback: action => {
-                this.$message({
-                  type: 'success',
-                  message: `You can continue with the exam`
+            if (this.warnStatus === false && this.warnCounter <= 1) {
+                this.warnStatus = true;
+                ++this.warnCounter;
+                this.$alert("This is a warning because you tried escape the exam screen. If you do it again, then you will be barred from giving this exam!", "WARNING!!", {
+                    confirmButtonText: "OK",
+                    callback: action => {
+                        this.$message({
+                            type: "success",
+                            message: `You can continue with the exam`
+                        });
+                    }
                 });
-              }
-            });
-          }else{
-            this.abortExam()
-          }
+            }
+            else {
+                this.abortExam();
+            }
         },
-        async checkId(){
+        async checkId() {
             const loading = this.$loading({
                 lock: true,
                 fullscreen: true,
             });
-            if(!this.$route.params.id){
-                this.$toast.error('Invalid ID')
-                this.$router.push('/exam/all');
+            if (!this.$route.params.id) {
+                this.$toast.error("Invalid ID");
+                this.$router.push("/exam/all");
             }
             try {
-                const response = await this.$privateApi.get('/exam-user/sets/'+this.$route.params.id); // eslint-disable-line
-                if(response.data.data.exam_status==="ONGOING"){
-                  this.id = response.data.data.sets.id;
-                  this.uuid = response.data.data.sets.uuid;
-                  this.question = response.data.data.sets.question;
-                  this.answer_a = response.data.data.sets.answer_a;
-                  this.answer_b = response.data.data.sets.answer_b;
-                  this.answer_c = response.data.data.sets.answer_c;
-                  this.answer_d = response.data.data.sets.answer_d;
-                  this.duration = parseInt(response.data.data.sets.duration);
-                  this.image = response.data.data.sets.image;
-                  this.marks = parseInt(response.data.data.sets.marks);
-                  this.status = response.data.data.status;
-                  this.total_questions = response.data.data.totalQuestion;
-                  this.current_question = response.data.data.currentQuestion;
-                  this.timerTrigger = true
-                  this.startOn = new Date().getTime()
-                  this.scheduledOn = new Date(new Date().getTime() + parseInt(response.data.data.sets.duration) * 60000).getTime()
-                }else if(response.data.data.exam_status==="COMPLETED"){
-                  this.$message({
-                    type: 'success',
-                    duration: 5000,
-                    message: response.data.data.message
-                  });
-                  this.$router.push('/exam/report/'+this.$route.params.id);
-                }else if(response.data.data.exam_status==="ABORTED"){
-                  this.$message({
-                    type: 'error',
-                    duration: 5000,
-                    message: response.data.data.message
-                  });
-                  this.$router.push('/exam/detail/'+this.$route.params.id);
+                const response = await this.$privateApi.get("/exam-user/sets/" + this.$route.params.id); // eslint-disable-line
+                if (response.data.data.exam_status === "ONGOING") {
+                    this.id = response.data.data.sets.id;
+                    this.uuid = response.data.data.sets.uuid;
+                    this.question = response.data.data.sets.question;
+                    this.answer_a = response.data.data.sets.answer_a;
+                    this.answer_b = response.data.data.sets.answer_b;
+                    this.answer_c = response.data.data.sets.answer_c;
+                    this.answer_d = response.data.data.sets.answer_d;
+                    this.duration = parseInt(response.data.data.sets.duration);
+                    this.image = response.data.data.sets.image;
+                    this.marks = parseInt(response.data.data.sets.marks);
+                    this.status = response.data.data.status;
+                    this.total_questions = response.data.data.totalQuestion;
+                    this.current_question = response.data.data.currentQuestion;
+                    this.timerTrigger = true;
+                    this.startOn = new Date().getTime();
+                    this.scheduledOn = new Date(new Date().getTime() + parseInt(response.data.data.sets.duration) * 60000).getTime();
                 }
-            } catch (err) {
-              // eslint-disable-next-line no-console
-              console.log(err);
-                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
-                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                this.$router.push('/exam/all');
-            } finally{
-                loading.close()
+                else if (response.data.data.exam_status === "COMPLETED") {
+                    this.$message({
+                        type: "success",
+                        duration: 5000,
+                        message: response.data.data.message
+                    });
+                    this.$router.push("/exam/report/" + this.$route.params.id);
+                }
+                else if (response.data.data.exam_status === "ABORTED") {
+                    this.$message({
+                        type: "error",
+                        duration: 5000,
+                        message: response.data.data.message
+                    });
+                    this.$router.push("/exam/detail/" + this.$route.params.id);
+                }
+            }
+            catch (err) {
+                // eslint-disable-next-line no-console
+                console.log(err);
+                if (err?.response?.data?.message)
+                    this.$toast.error(err?.response?.data?.message);
+                if (err?.response?.data?.error)
+                    this.$toast.error(err?.response?.data?.error);
+                this.$router.push("/exam/all");
+            }
+            finally {
+                loading.close();
             }
         },
-        async submitAnswer(){
-          this.timerTrigger = false
-          const loading = this.$loading({
+        async submitAnswer() {
+            this.timerTrigger = false;
+            const loading = this.$loading({
                 lock: true,
                 fullscreen: true,
             });
-            if(!this.$route.params.id){
-                this.$toast.error('Invalid ID')
-                this.$router.push('/exam/all');
+            if (!this.$route.params.id) {
+                this.$toast.error("Invalid ID");
+                this.$router.push("/exam/all");
             }
             try {
                 const formData = {
-                  selected_answer: this.radio,
-                  status: "ONGOING"
-                }
-                const response = await this.$privateApi.post('/exam-user/answer/'+this.$route.params.id,formData); // eslint-disable-line
-                this.checkId()
-                this.radio= ''
-            } catch (err) {
-                if(err?.response?.data?.form_error?.reason) this.$toast.error(err?.response?.data?.form_error?.reason[0])
-                if(err?.response?.data?.form_error?.selected_answer) this.$toast.error(err?.response?.data?.form_error?.selected_answer[0])
-                if(err?.response?.data?.form_error?.status) this.$toast.error(err?.response?.data?.form_error?.status[0])
-                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
-                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-            } finally{
-                loading.close()
+                    selected_answer: this.radio,
+                    status: "ONGOING"
+                };
+                const response = await this.$privateApi.post("/exam-user/answer/" + this.$route.params.id, formData); // eslint-disable-line
+                this.checkId();
+                this.radio = "";
+            }
+            catch (err) {
+                if (err?.response?.data?.form_error?.reason)
+                    this.$toast.error(err?.response?.data?.form_error?.reason[0]);
+                if (err?.response?.data?.form_error?.selected_answer)
+                    this.$toast.error(err?.response?.data?.form_error?.selected_answer[0]);
+                if (err?.response?.data?.form_error?.status)
+                    this.$toast.error(err?.response?.data?.form_error?.status[0]);
+                if (err?.response?.data?.message)
+                    this.$toast.error(err?.response?.data?.message);
+                if (err?.response?.data?.error)
+                    this.$toast.error(err?.response?.data?.error);
+            }
+            finally {
+                loading.close();
             }
         },
-        async abortExam(){
-          this.timerTrigger = false
-          const loading = this.$loading({
+        async abortExam() {
+            this.timerTrigger = false;
+            const loading = this.$loading({
                 lock: true,
                 fullscreen: true,
             });
-            if(!this.$route.params.id){
-                this.$toast.error('Invalid ID')
-                this.$router.push('/exam/all');
+            if (!this.$route.params.id) {
+                this.$toast.error("Invalid ID");
+                this.$router.push("/exam/all");
             }
             try {
                 const formData = {
-                  status: "ABORTED",
-                  reason: "you tried to change the exam screen!"
-                }
-                const response = await this.$privateApi.post('/exam-user/answer/'+this.$route.params.id,formData); // eslint-disable-line
-                this.checkId()
-                this.radio= ''
-            } catch (err) {
-                if(err?.response?.data?.form_error?.reason) this.$toast.error(err?.response?.data?.form_error?.reason[0])
-                if(err?.response?.data?.form_error?.selected_answer) this.$toast.error(err?.response?.data?.form_error?.selected_answer[0])
-                if(err?.response?.data?.form_error?.status) this.$toast.error(err?.response?.data?.form_error?.status[0])
-                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
-                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-            } finally{
-                loading.close()
+                    status: "ABORTED",
+                    reason: "you tried to change the exam screen!"
+                };
+                const response = await this.$privateApi.post("/exam-user/answer/" + this.$route.params.id, formData); // eslint-disable-line
+                this.checkId();
+                this.radio = "";
+            }
+            catch (err) {
+                if (err?.response?.data?.form_error?.reason)
+                    this.$toast.error(err?.response?.data?.form_error?.reason[0]);
+                if (err?.response?.data?.form_error?.selected_answer)
+                    this.$toast.error(err?.response?.data?.form_error?.selected_answer[0]);
+                if (err?.response?.data?.form_error?.status)
+                    this.$toast.error(err?.response?.data?.form_error?.status[0]);
+                if (err?.response?.data?.message)
+                    this.$toast.error(err?.response?.data?.message);
+                if (err?.response?.data?.error)
+                    this.$toast.error(err?.response?.data?.error);
+            }
+            finally {
+                loading.close();
             }
         },
-        async timeElapsedHandler(){
-          this.timerTrigger = false
-          const loading = this.$loading({
+        async timeElapsedHandler() {
+            this.timerTrigger = false;
+            const loading = this.$loading({
                 lock: true,
                 fullscreen: true,
             });
-            if(!this.$route.params.id){
-                this.$toast.error('Invalid ID')
-                this.$router.push('/exam/all');
+            if (!this.$route.params.id) {
+                this.$toast.error("Invalid ID");
+                this.$router.push("/exam/all");
             }
             try {
                 const formData = {
-                  status: "ONGOING"
-                }
-                const response = await this.$privateApi.post('/exam-user/answer/'+this.$route.params.id,formData); // eslint-disable-line
-                this.checkId()
-                this.radio= ''
-            } catch (err) {
-                if(err?.response?.data?.form_error?.reason) this.$toast.error(err?.response?.data?.form_error?.reason[0])
-                if(err?.response?.data?.form_error?.selected_answer) this.$toast.error(err?.response?.data?.form_error?.selected_answer[0])
-                if(err?.response?.data?.form_error?.status) this.$toast.error(err?.response?.data?.form_error?.status[0])
-                if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
-                if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-            } finally{
-                loading.close()
+                    status: "ONGOING"
+                };
+                const response = await this.$privateApi.post("/exam-user/answer/" + this.$route.params.id, formData); // eslint-disable-line
+                this.checkId();
+                this.radio = "";
+            }
+            catch (err) {
+                if (err?.response?.data?.form_error?.reason)
+                    this.$toast.error(err?.response?.data?.form_error?.reason[0]);
+                if (err?.response?.data?.form_error?.selected_answer)
+                    this.$toast.error(err?.response?.data?.form_error?.selected_answer[0]);
+                if (err?.response?.data?.form_error?.status)
+                    this.$toast.error(err?.response?.data?.form_error?.status[0]);
+                if (err?.response?.data?.message)
+                    this.$toast.error(err?.response?.data?.message);
+                if (err?.response?.data?.error)
+                    this.$toast.error(err?.response?.data?.error);
+            }
+            finally {
+                loading.close();
             }
         }
-
-    },
+    }
 }
 </script>
 

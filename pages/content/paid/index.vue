@@ -21,13 +21,13 @@
                 <div v-for="item in tableData" :key="item.id" class="col-md-6 col-lg-3">
                     <ContentCardComponent
                     :id="item.id"
-                    :uuid="item.uuid"  
-                    :title="item.name" 
+                    :uuid="item.uuid"
+                    :title="item.name"
                     :heading="item.heading"
-                    :type="item.type" 
-                    :paid="item.paid" 
+                    :type="item.type"
+                    :paid="item.paid"
                     :amount="item.amount"
-                    :purchased="item.AssignedContent.length>0" 
+                    :purchased="item.AssignedContent.length>0"
                     :paragraph="item.description" />
                 </div><!-- end col -->
             </div>
@@ -43,18 +43,19 @@
                 </el-pagination>
             </div>
         </div>
-    
+
     </section>
     </div>
   </template>
-  
+
   <script>
   import UserCrumbComponent from '~/components/UserCrumbComponent.vue'
   import ContentCardSkeletonComponent from '~/components/ContentCardSkeletonComponent.vue';
   import ContentCardComponent from '~/components/ContentCardComponent.vue';
+import NoUserDataComponent from '~/components/NoUserDataComponent.vue';
   export default {
     name: "UserContentPaidPage",
-    components: { UserCrumbComponent, ContentCardComponent, ContentCardSkeletonComponent },
+    components: { UserCrumbComponent, ContentCardComponent, ContentCardSkeletonComponent, NoUserDataComponent },
     layout: "UserLayout",
     data() {
         return {
@@ -109,4 +110,3 @@
         padding: 1.5rem 0;
     }
   </style>
-  

@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import '~/plugins/zoom.client.js';
 
 export default {
   name: 'ZoomWindow',
@@ -27,9 +28,9 @@ beforeDestroy(){
 methods: {
   startZoom(meetingId, password, signature){
     document.getElementById("zmmtg-root").style.display = "block";
-    
+
     const meetConfig = this.$MeetingCfg(this.meetingId, this.nickname, this.password)
-    
+
     const ZoomMtg = this.$ZoomMtg
 
     // eslint-disable-next-line no-console
@@ -40,13 +41,13 @@ methods: {
     //   meetingNumber: meetingId,
     //   passWord: password
     // });
-    
+
     ZoomMtg.init({
-        
+
         leaveUrl: `${this.$config.mainURL}/`,
-        
+
         isSupportAV: true,
-        
+
         success: () => {
             ZoomMtg.join({
               signature,

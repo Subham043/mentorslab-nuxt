@@ -140,7 +140,7 @@ export default {
             description: '',
             heading: '',
             facebook: '',
-            instragram: '',
+            instagram: '',
             linkedin: '',
             twitter: '',
             image: [],

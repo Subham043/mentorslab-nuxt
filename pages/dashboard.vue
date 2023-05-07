@@ -82,14 +82,14 @@
           <div class="row justify-content-center">
               <div v-for="item in contentData" :key="item.id" class="col-md-6 col-lg-3">
                   <ContentCardComponent
-                  :id="item.id" 
-                  :uuid="item.uuid" 
-                  :title="item.name" 
-                  :heading="item.heading" 
-                  :type="item.type" 
-                  :paid="item.paid" 
-                  :amount="item.amount" 
-                  :purchased="item.AssignedContent.length>0" 
+                  :id="item.id"
+                  :uuid="item.uuid"
+                  :title="item.name"
+                  :heading="item.heading"
+                  :type="item.type"
+                  :paid="item.paid"
+                  :amount="item.amount"
+                  :purchased="item.AssignedContent.length>0"
                   :paragraph="item.description" />
               </div><!-- end col -->
           </div>
@@ -119,17 +119,17 @@
             <div class="row justify-content-center">
                 <div v-for="item in liveSessionContentData" :key="item.id" class="col-md-6 col-lg-3">
                     <LiveContentCardComponent
-                    :id="item.id" 
-                    :uuid="item.uuid" 
-                    :title="item.name" 
-                    :heading="item.heading" 
-                    :paid="item.paid" 
-                    :amount="item.amount" 
-                    :status="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].status : ''" 
-                    :scheduled-on="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].scheduledOn : ''" 
-                    :scheduled-at="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].scheduledAt : ''" 
-                    :assigned-role="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].assignedRole : ''" 
-                    :purchased="item.LiveSessionContentAssigned.length>0" 
+                    :id="item.id"
+                    :uuid="item.uuid"
+                    :title="item.name"
+                    :heading="item.heading"
+                    :paid="item.paid"
+                    :amount="item.amount"
+                    :status="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].status : ''"
+                    :scheduled-on="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].scheduledOn : ''"
+                    :scheduled-at="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].scheduledAt : ''"
+                    :assigned-role="item.LiveSessionContentAssigned.length>0 ? item.LiveSessionContentAssigned[0].assignedRole : ''"
+                    :purchased="item.LiveSessionContentAssigned.length>0"
                     :paragraph="item.description" />
                 </div><!-- end col -->
             </div>
@@ -143,10 +143,11 @@ import ContentCardComponent from '~/components/ContentCardComponent.vue';
 import ContentCardSkeletonComponent from '~/components/ContentCardSkeletonComponent.vue';
 import LiveContentCardComponent from '~/components/LiveContentCardComponent.vue';
 import LiveContentCardSkeletonComponent from '~/components/LiveContentCardSkeletonComponent.vue';
+import NoUserDataComponent from '~/components/NoUserDataComponent.vue';
 
 export default {
     name: "IndexPage",
-    components: { ContentCardComponent, ContentCardSkeletonComponent, LiveContentCardComponent, LiveContentCardSkeletonComponent },
+    components: { ContentCardComponent, ContentCardSkeletonComponent, LiveContentCardComponent, LiveContentCardSkeletonComponent, NoUserDataComponent },
     layout: "UserLayout",
     data() {
         return {

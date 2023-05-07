@@ -97,7 +97,8 @@ link="/instructor/varada-murthy"
                                     </ul>
                                     <div class="price-box-btn">
 
-                                            <button class="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Enroll Now</button>
+                                      <NuxtLink to="/auth/login" class="btn">Enroll
+                                            Now</NuxtLink>
 
                                     </div>
                                     <div class="price-box-social">

@@ -192,4 +192,14 @@ export default {
       regular: true,
     }
   },
+
+  loading: {
+    color: '#0c96e2',
+    height: '3px'
+  },
+
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+  }
 }

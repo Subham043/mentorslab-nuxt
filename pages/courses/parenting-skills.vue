@@ -15,7 +15,7 @@ image="/images/ps1.png" title="Parenting Skills" description="Parenting skills w
                                 <h4 class="title">Description</h4>
                                 <p>Objective: Empower Parenting community with better parenting skills.</p>
                                 <p>Mindful parenting workshops will help you learn mindful parenting skills
-                                    quickly and make you a better parent 
+                                    quickly and make you a better parent
                                    .</p>
                             </div>
                             <div class="single-course-description mt-2">
@@ -100,7 +100,8 @@ image="/images/ps1.png" title="Parenting Skills" description="Parenting skills w
                                         </li>
                                     </ul>
                                     <div class="price-box-btn">
-                                        <button class="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Enroll Now</button>
+                                      <NuxtLink to="/auth/login" class="btn">Enroll
+                                            Now</NuxtLink>
                                     </div>
                                     <div class="price-box-social">
                                         <span class="share-title">Share:</span>

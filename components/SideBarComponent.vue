@@ -66,6 +66,21 @@
 									<el-menu-item index="11-3">Paid Exam </el-menu-item>
 								</NuxtLink>
 							</el-submenu>
+							<el-submenu index="13">
+								<template slot="title">
+									<i class="el-icon-s-order"></i>
+									<span>Assessment</span>
+								</template>
+								<NuxtLink to="/assessment/all">
+									<el-menu-item index="13-1">All Assessment </el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/assessment/free">
+									<el-menu-item index="13-2">Free Assessment </el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/assessment/paid">
+									<el-menu-item index="13-3">Paid Assessment </el-menu-item>
+								</NuxtLink>
+							</el-submenu>
 							<template v-if="$auth.user.role=='ADMIN'">
 								<el-divider content-position="left">Admin Menu</el-divider>
 								<NuxtLink to="/admin/user/list">
@@ -90,6 +105,12 @@
 									<el-menu-item index="8">
 										<i class="el-icon-s-order"></i>
 										<span>Exam</span>
+									</el-menu-item>
+								</NuxtLink>
+								<NuxtLink to="/admin/assessment/list">
+									<el-menu-item index="12">
+										<i class="el-icon-s-order"></i>
+										<span>Assessment</span>
 									</el-menu-item>
 								</NuxtLink>
 								<el-submenu index="10">

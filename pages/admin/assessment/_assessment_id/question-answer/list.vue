@@ -8,22 +8,16 @@
                     <div class="box">
                         <div class="box-header d-flex justify-content-between align-items-center">
                             <h4 class="box-title">Question & Answer</h4>
-                            <NuxtLink :to="`/admin/exam/${$route.params.exam_id}/question-answer/create`"><el-button type="warning">Create</el-button></NuxtLink>
+                            <NuxtLink :to="`/admin/assessment/${$route.params.assessment_id}/question-answer/create`"><el-button type="warning">Create</el-button></NuxtLink>
                         </div>
                         <div class="box-body">
                             <el-table :data="tableData" style="width: 100%" max-height="100%">
                                 <el-table-column fixed prop="id" label="ID" width="150">
                                 </el-table-column>
-                                <el-table-column label="Question" width="450">
+                                <el-table-column label="Question" width="850">
                                     <template slot-scope="scope">
                                         <div v-html-safe="scope.row.question" />
                                     </template>
-                                </el-table-column>
-                                <el-table-column prop="correct_answer" label="Correct Answer" width="350">
-                                </el-table-column>
-                                <el-table-column prop="marks" label="Marks" width="350">
-                                </el-table-column>
-                                <el-table-column prop="duration" label="Duration (In Minutes)" width="350">
                                 </el-table-column>
                                 <el-table-column label="CreatedAt" width="250">
                                     <template slot-scope="scope">
@@ -32,7 +26,7 @@
                                 </el-table-column>
                                 <el-table-column fixed="right" label="Operations" width="150">
                                     <template slot-scope="scope">
-                                        <NuxtLink :to="`/admin/exam/${$route.params.exam_id}/question-answer/edit/${scope.row.id}`"><el-button type="primary" icon="el-icon-edit" circle></el-button></NuxtLink>
+                                        <NuxtLink :to="`/admin/assessment/${$route.params.assessment_id}/question-answer/edit/${scope.row.id}`"><el-button type="primary" icon="el-icon-edit" circle></el-button></NuxtLink>
                                         <el-popconfirm
                                             confirm-button-text='OK'
                                             cancel-button-text='No, Thanks'
@@ -94,7 +88,7 @@ export default {
                 fullscreen: true,
             });
             try {
-                const response = await this.$privateApi.get('/question-answer/paginate/'+this.$route.params.exam_id+'?skip='+page); // eslint-disable-line
+                const response = await this.$privateApi.get('/assessment-question-answer/paginate/'+this.$route.params.assessment_id+'?skip='+page); // eslint-disable-line
                 this.tableData = response?.data?.data?.data
                 this.count = response?.data?.data?.count
                 this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;

@@ -26,58 +26,7 @@
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
-                                    <div class="col-md-3 mt-4">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="marks">
-                                        <div class="form-group">
-                                            <label class="form-label">Marks *</label>
-                                            <el-select v-model="marks" placeholder="Select Marks" style="width:100%">
-                                                <el-option
-                                                v-for="item in [1,2,3,4,5,6,7,8,9,10]"
-                                                :key="item"
-                                                :label="item"
-                                                :value="item">
-                                                <span>{{ item }}</span>
-                                                </el-option>
-                                            </el-select>
-                                        </div>
-                                        <span :class="classes">{{ errors[0] }}</span>
-                                        </ValidationProvider>
-                                    </div>
-                                    <div class="col-md-3 mt-4">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="duration">
-                                        <div class="form-group">
-                                            <label class="form-label">Duration (In Minutes) *</label>
-                                            <el-select v-model="duration" placeholder="Select Duration" style="width:100%">
-                                                <el-option
-                                                v-for="item in [1,2,3,4,5,6,7,8,9,10]"
-                                                :key="item"
-                                                :label="item"
-                                                :value="item">
-                                                <span>{{ item }}</span>
-                                                </el-option>
-                                            </el-select>
-                                        </div>
-                                        <span :class="classes">{{ errors[0] }}</span>
-                                        </ValidationProvider>
-                                    </div>
-                                    <div class="col-md-3 mt-4">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="correct answer">
-                                        <div class="form-group">
-                                            <label class="form-label">Correct Answer *</label>
-                                            <el-select v-model="correct_answer" placeholder="Select Correct Answer" style="width:100%">
-                                                <el-option
-                                                v-for="item in answerType"
-                                                :key="item.value"
-                                                :label="item.label"
-                                                :value="item.value">
-                                                <span>{{ item.label }}</span>
-                                                </el-option>
-                                            </el-select>
-                                        </div>
-                                        <span :class="classes">{{ errors[0] }}</span>
-                                        </ValidationProvider>
-                                    </div>
-                                    <div class="col-md-3 mt-4">
+                                    <div class="col-md-12 mt-4">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="ext:jpg,jpeg,png,webp" name="image">
                                         <div class="form-group">
                                             <label class="form-label">Image </label>
@@ -99,6 +48,23 @@
                                         </ValidationProvider>
                                     </div>
                                     <div class="col-md-12 mt-4">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="category for answer a">
+                                        <div class="form-group">
+                                            <label class="form-label">Category That Answer A Belongs To *</label>
+                                            <el-select v-model="answer_a_choice_id" placeholder="Select Category That Answer A Belongs To" style="width:100%">
+                                                <el-option
+                                                v-for="item in categories"
+                                                :key="item.id"
+                                                :label="item.category"
+                                                :value="item.id">
+                                                <span>{{ item.category }}</span>
+                                                </el-option>
+                                            </el-select>
+                                        </div>
+                                        <span :class="classes">{{ errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="answer_b">
                                         <div class="form-group">
                                             <label class="form-label">Answer B</label>
@@ -106,6 +72,23 @@
                                         <client-only>
                                           <VueEditor v-model="answer_b" :editor-toolbar="customToolbar" />
                                         </client-only>
+                                        <span :class="classes">{{ errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="category for answer b">
+                                        <div class="form-group">
+                                            <label class="form-label">Category That Answer B Belongs To *</label>
+                                            <el-select v-model="answer_b_choice_id" placeholder="Select Category That Answer B Belongs To" style="width:100%">
+                                                <el-option
+                                                v-for="item in categories"
+                                                :key="item.id"
+                                                :label="item.category"
+                                                :value="item.id">
+                                                <span>{{ item.category }}</span>
+                                                </el-option>
+                                            </el-select>
+                                        </div>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -121,6 +104,23 @@
                                         </ValidationProvider>
                                     </div>
                                     <div class="col-md-12 mt-4">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="category for answer c">
+                                        <div class="form-group">
+                                            <label class="form-label">Category That Answer C Belongs To *</label>
+                                            <el-select v-model="answer_c_choice_id" placeholder="Select Category That Answer C Belongs To" style="width:100%">
+                                                <el-option
+                                                v-for="item in categories"
+                                                :key="item.id"
+                                                :label="item.category"
+                                                :value="item.id">
+                                                <span>{{ item.category }}</span>
+                                                </el-option>
+                                            </el-select>
+                                        </div>
+                                        <span :class="classes">{{ errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
                                         <ValidationProvider v-slot="{ classes, errors }" rules="required" name="answer_d">
                                         <div class="form-group">
                                             <label class="form-label">Answer D</label>
@@ -128,6 +128,23 @@
                                         <client-only>
                                           <VueEditor v-model="answer_d" :editor-toolbar="customToolbar" />
                                         </client-only>
+                                        <span :class="classes">{{ errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="category for answer d">
+                                        <div class="form-group">
+                                            <label class="form-label">Category That Answer D Belongs To *</label>
+                                            <el-select v-model="answer_d_choice_id" placeholder="Select Category That Answer D Belongs To" style="width:100%">
+                                                <el-option
+                                                v-for="item in categories"
+                                                :key="item.id"
+                                                :label="item.category"
+                                                :value="item.id">
+                                                <span>{{ item.category }}</span>
+                                                </el-option>
+                                            </el-select>
+                                        </div>
                                         <span :class="classes">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -151,7 +168,7 @@
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <NuxtLink :to="`/admin/exam/${$route.params.exam_id}/question-answer/list`"><button type="button" class="btn btn-primary-light me-1">
+                                <NuxtLink :to="`/admin/assessment/${$route.params.assessment_id}/assessment-question-answer/list`"><button type="button" class="btn btn-primary-light me-1">
                                     <i class="el-icon-close"></i> Cancel
                                 </button></NuxtLink>
                                 <button type="submit" class="btn btn-primary">
@@ -173,34 +190,23 @@
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
-    name: "EditEventInstructorPage",
+    name: "CreateQuestionAnswerInstructorPage",
     components: { BreadcrumbComponent },
     layout: "AdminLayout",
     data() {
         return {
-          question: '',
+            question: '',
             answer_a: '',
             answer_b: '',
             answer_c: '',
             answer_d: '',
-            correct_answer: "answer_a",
-            duration: 1,
-            marks: 1,
+            answer_a_choice_id: "",
+            answer_b_choice_id: "",
+            answer_c_choice_id: "",
+            answer_d_choice_id: "",
             draft: false,
             image: [],
-            answerType: [{
-                value: 'answer_a',
-                label: 'Answer A',
-                }, {
-                value: 'answer_b',
-                label: 'Answer B',
-                }, {
-                value: 'answer_c',
-                label: 'Answer C',
-                }, {
-                value: 'answer_d',
-                label: 'Answer D',
-            }],
+            categories: [],
             customToolbar: [
                 [{ header: [false, 1, 2, 3, 4, 5, 6] }],
                 ["bold", "italic", "underline", "strike"], // toggled buttons
@@ -220,13 +226,13 @@ export default {
         }
     },
     beforeMount(){
-        this.checkId();
+        this.getCategory();
     },
     mounted() {
         // eslint-disable-next-line nuxt/no-env-in-hooks
-        if(process.client){
-            this.$scrollTo('#__nuxt', 0, {force: true})
-        }
+      if(process.client){
+          this.$scrollTo('#__nuxt', 0, {force: true})
+      }
     },
     methods: {
         async formHandler() {
@@ -241,15 +247,16 @@ export default {
                 formData.append('answer_b', this.answer_b);
                 formData.append('answer_c', this.answer_c);
                 formData.append('answer_d', this.answer_d);
-                formData.append('correct_answer', this.correct_answer);
-                formData.append('duration', this.duration);
-                formData.append('marks', this.marks);
-                formData.append('draft', this.draft);
+                formData.append('answer_a_choice_id', this.answer_a_choice_id);
+                formData.append('answer_b_choice_id', this.answer_b_choice_id);
+                formData.append('answer_c_choice_id', this.answer_c_choice_id);
+                formData.append('answer_d_choice_id', this.answer_d_choice_id);
                 if(!Array.isArray(this.image)){
                     formData.append('image', this.image);
                 }
-                const response = await this.$privateApi.put('/question-answer/'+this.$route.params.id, formData); // eslint-disable-line
-                this.$toast.success('Question & Answer updated successfully')
+                formData.append('draft', this.draft);
+                const response = await this.$privateApi.post('/assessment-question-answer/'+this.$route.params.assessment_id, formData); // eslint-disable-line
+                this.$toast.success('Question & Answer created successfully')
                 this.$router.push(this.$nuxt.context.from.path);
             } catch (err) {
                 // console.log(err.response);// eslint-disable-line
@@ -259,9 +266,10 @@ export default {
                   answer_b: err?.response?.data?.form_error?.answer_b,
                   answer_c: err?.response?.data?.form_error?.answer_c,
                   answer_d: err?.response?.data?.form_error?.answer_d,
-                  correct_answer: err?.response?.data?.form_error?.correct_answer,
-                  duration: err?.response?.data?.form_error?.duration,
-                  marks: err?.response?.data?.form_error?.marks,
+                  answer_a_choice_id: err?.response?.data?.form_error?.answer_a_choice_id,
+                  answer_b_choice_id: err?.response?.data?.form_error?.answer_b_choice_id,
+                  answer_c_choice_id: err?.response?.data?.form_error?.answer_c_choice_id,
+                  answer_d_choice_id: err?.response?.data?.form_error?.answer_d_choice_id,
                   image: err?.response?.data?.form_error?.image,
                   draft: err?.response?.data?.form_error?.draft,
                 });
@@ -272,32 +280,19 @@ export default {
             loading.close()
             }
         },
-        async checkId(){
+        async getCategory(){
             const loading = this.$loading({
             lock: true,
             fullscreen: true,
             });
-            if(!this.$route.params.id){
-                this.$toast.error('Invalid ID')
-                this.$router.push(`/admin/exam/${this.$route.params.exam_id}/question-answer/list`);
-            }
             try {
-                const response = await this.$privateApi.get('/question-answer/display/'+this.$route.params.id); // eslint-disable-line
+                const response = await this.$privateApi.get('/category/all/'+this.$route.params.assessment_id); // eslint-disable-line
                 // eslint-disable-next-line no-console
                 // console.log(response);
-                this.question = response.data.data.question;
-                this.answer_a = response.data.data.answer_a;
-                this.answer_b = response.data.data.answer_b;
-                this.answer_c = response.data.data.answer_c;
-                this.answer_d = response.data.data.answer_d;
-                this.correct_answer = response.data.data.correct_answer;
-                this.duration = response.data.data.duration;
-                this.marks = response.data.data.marks;
-                this.draft = response.data.data.draft;
+                this.categories = response.data.data;
             } catch (err) {
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                this.$router.push(`/admin/exam/${this.$route.params.exam_id}/question-answer/list`);
             } finally{
                 loading.close()
             }

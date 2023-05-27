@@ -26,7 +26,7 @@
             width="100"
           />
         </div>
-        
+
         <div class="ps-20 text-left">
           <h5 class="mb-0">{{$auth.user.name ? $auth.user.name : "Anonymous"}}</h5>
           <p class="my-5 text-fade">{{$auth.user.role}}</p>
@@ -53,7 +53,7 @@
               class="text-dark hover-primary mb-1 fs-16"
               >My Profile</a
             >
-            <span class="text-fade">Account settings and more</span>
+            <span class="text-fade">Profile Details</span>
           </div>
         </div>
       </NuxtLink>
@@ -73,7 +73,7 @@
           </div>
         </div>
       </NuxtLink>
-      <button style="width:100%" @click="logout">
+      <button style="width:100%; border: none; background: transparent; padding: 0;" @click="logout">
         <div class="d-flex align-items-center mb-30 justify-content-between">
           <div
             class="me-15 bg-danger-light h-50 w-50 l-h-60 rounded text-center"
@@ -90,7 +90,7 @@
       </button>
     </div>
     <div class="dropdown-divider my-30"></div>
-    
+
   </div>
   </el-drawer>
 </template>

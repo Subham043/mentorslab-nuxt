@@ -1,49 +1,58 @@
 <template>
     <div>
-        <BreadcrumbComponent main-page="Question & Answer" current-page="List" />
+        <BreadcrumbComponent main-page="Assessment" current-page="List" />
         <section class="content">
             <div class="row">
 
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header d-flex justify-content-between align-items-center">
-                            <h4 class="box-title">Question & Answer</h4>
-                            <NuxtLink :to="`/admin/exam/${$route.params.exam_id}/question-answer/create`"><el-button type="warning">Create</el-button></NuxtLink>
+                            <h4 class="box-title">Assessment</h4>
+                            <NuxtLink to="/admin/assessment/create"><el-button type="warning">Create</el-button></NuxtLink>
                         </div>
                         <div class="box-body">
                             <el-table :data="tableData" style="width: 100%" max-height="100%">
                                 <el-table-column fixed prop="id" label="ID" width="150">
                                 </el-table-column>
-                                <el-table-column label="Question" width="450">
+                                <el-table-column prop="name" label="Name" width="250">
+                                </el-table-column>
+                                <el-table-column prop="heading" label="Heading" width="250">
+                                </el-table-column>
+                                <el-table-column prop="amount" label="Amount" width="250">
+                                </el-table-column>
+                                <el-table-column label="Paid" width="150">
                                     <template slot-scope="scope">
-                                        <div v-html-safe="scope.row.question" />
+                                        <span v-if="scope.row.paid==1" class="badge badge-success">Yes</span>
+                                        <span v-else class="badge badge-danger">No</span>
                                     </template>
                                 </el-table-column>
-                                <el-table-column prop="correct_answer" label="Correct Answer" width="350">
-                                </el-table-column>
-                                <el-table-column prop="marks" label="Marks" width="350">
-                                </el-table-column>
-                                <el-table-column prop="duration" label="Duration (In Minutes)" width="350">
+                                <el-table-column label="Draft" width="150">
+                                    <template slot-scope="scope">
+                                        <span v-if="scope.row.draft==1" class="badge badge-success">Yes</span>
+                                        <span v-else class="badge badge-danger">No</span>
+                                    </template>
                                 </el-table-column>
                                 <el-table-column label="CreatedAt" width="250">
                                     <template slot-scope="scope">
                                         {{$dateFns.format(new Date(scope.row.createdAt), 'dd-MMM-yyyy hh:mm aa')}}
                                     </template>
                                 </el-table-column>
-                                <el-table-column fixed="right" label="Operations" width="150">
+                                <el-table-column fixed="right" label="Operations" width="220">
                                     <template slot-scope="scope">
-                                        <NuxtLink :to="`/admin/exam/${$route.params.exam_id}/question-answer/edit/${scope.row.id}`"><el-button type="primary" icon="el-icon-edit" circle></el-button></NuxtLink>
+                                        <NuxtLink :to="`/admin/assessment/edit/${scope.row.id}`"><el-button type="primary" icon="el-icon-edit" circle></el-button></NuxtLink>
+                                        <NuxtLink :to="`/admin/assessment/${scope.row.id}/category/list`"><el-button type="success" icon="el-icon-s-data" circle></el-button></NuxtLink>
+                                        <NuxtLink :to="`/admin/assessment/${scope.row.id}/question-answer/list`"><el-button type="success" icon="el-icon-s-order" circle></el-button></NuxtLink>
                                         <el-popconfirm
-                                            confirm-button-text='OK'
-                                            cancel-button-text='No, Thanks'
-                                            icon="el-icon-info"
-                                            icon-color="red"
-                                            title="Are you sure to delete this?"
-                                            @confirm="deleteRow(scope.row.id)"
-                                            >
-                                            <el-button
-                                            slot="reference" type="danger" icon="el-icon-delete"  circle
-                                            ></el-button>
+                                        confirm-button-text='OK'
+                                        cancel-button-text='No, Thanks'
+                                        icon="el-icon-info"
+                                        icon-color="red"
+                                        title="Are you sure to delete this?"
+                                        @confirm="deleteRow(scope.row.id)"
+                                        >
+                                        <el-button
+                                        slot="reference" type="danger" icon="el-icon-delete"  circle
+                                        ></el-button>
                                         </el-popconfirm>
                                     </template>
                                 </el-table-column>
@@ -65,12 +74,12 @@
 <script>
 import BreadcrumbComponent from '~/components/BreadcrumbComponent.vue';
 export default {
-    name: "ListQuestionAnswerPage",
+    name: "ListAssessmentPage",
     components: { BreadcrumbComponent },
     layout: "AdminLayout",
     data() {
         return {
-            count:1,
+            count:0,
             tableData: [],
             currentPage: 1
         }
@@ -82,9 +91,9 @@ export default {
     },
     mounted(){
         // eslint-disable-next-line nuxt/no-env-in-hooks
-      if(process.client){
-          this.$scrollTo('#__nuxt', 0, {force: true})
-      }
+        if(process.client){
+            this.$scrollTo('#__nuxt', 0, {force: true})
+        }
         this.handlePageChnage();
     },
     methods: {
@@ -94,7 +103,7 @@ export default {
                 fullscreen: true,
             });
             try {
-                const response = await this.$privateApi.get('/question-answer/paginate/'+this.$route.params.exam_id+'?skip='+page); // eslint-disable-line
+                const response = await this.$privateApi.get('/assessment/paginate?skip='+page); // eslint-disable-line
                 this.tableData = response?.data?.data?.data
                 this.count = response?.data?.data?.count
                 this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;
@@ -114,12 +123,12 @@ export default {
             });
             try {
                 // eslint-disable-next-line no-unused-vars
-                const response = await this.$privateApi.delete('/question-answer/'+id);
+                const response = await this.$privateApi.delete('/assessment/'+id);
                 const newTableData = this.tableData.filter((item)=>{
                     return item.id!==id;
                 })
                 this.tableData = newTableData;
-                this.$toast.success('Question & Answer deleted successfully')
+                this.$toast.success('Assessment deleted successfully')
             } catch (err) {
                 if (err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if (err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)

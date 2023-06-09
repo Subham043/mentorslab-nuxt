@@ -50,12 +50,6 @@
             </div>
         </div>
         <!-- Report Career Section End -->
-
-        <FrontendInstructorComponent
-        title="Varada Murthy K. S."
-        description=""
-        designation="Leadership Coach"
-        image="/images/15.jpeg" />
         <FrontendContactComponent />
 
     </div>
@@ -64,13 +58,12 @@
 
 <script>
 import FrontendBreadcrumbComponent from '~/components/FrontendBreadcrumbComponent.vue';
-import FrontendInstructorComponent from '~/components/FrontendInstructorComponent.vue';
 import FrontendContactComponent from '~/components/FrontendContactComponent.vue';
 
 
 export default {
     name: "PublicationPage",
-    components: { FrontendBreadcrumbComponent, FrontendInstructorComponent, FrontendContactComponent },
+    components: { FrontendBreadcrumbComponent, FrontendContactComponent },
     layout: "FrontendLayout",
     data() {
         return {};

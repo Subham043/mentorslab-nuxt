@@ -26,7 +26,7 @@
             </div>
         </div>
         <!-- Contact Info End -->
-        
+
         <!-- Contact Form Start -->
         <div class="section contact-form-section section-padding">
             <div class="container">
@@ -156,7 +156,7 @@ export default {
                 });
                 if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
                 if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-                
+
             }finally{
                 loading.close()
             }

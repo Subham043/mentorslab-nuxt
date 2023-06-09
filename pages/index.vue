@@ -158,7 +158,6 @@
                             <FrontendTeamCardComponent link="/instructor/nalina-murthy" image="/images/22.jpeg" title="Nalina Murthy" designation="Counsellor & Psychologist" />
                             <FrontendTeamCardComponent link="/instructor/chandrashekhar" image="/images/2.jpeg" title="Chandrashekhar" designation="Senior Educator & Professional Counsellor" />
                             <FrontendTeamCardComponent link="/instructor/varada-murthy" image="/images/15.jpeg" title="Varada Murthy K. S." designation="Leadership Coach" />
-                            <FrontendTeamCardComponent link="/instructor/sharad-gupta" image="/images/img/sharad.jpg" title="Sharad Gupta" designation="Entrepreneur" />
                             <FrontendTeamCardComponent link="/instructor/sharmila-jois" image="/images/img/sharmila-jois.jpg" title="Sharmila Jois" designation="Special Educator" />
                         </div>
                     </div>

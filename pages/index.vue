@@ -120,7 +120,7 @@
                                 <VueSlickCarousel v-bind="slickOptions" ref="slickCourse">
                                     <FrontendCourseSliderCardComponent image="/images/6.jpeg" link="/courses/public-speaking" title="Public Speaking" />
                                     <FrontendCourseSliderCardComponent image="/images/pskil.jpg" link="/courses/parenting-skills" title="Parenting Skills" />
-                                    <FrontendCourseSliderCardComponent image="/images/28.jpeg" link="https://pfla.in" title="Certifications Programs" />
+                                    <FrontendCourseSliderCardComponent image="/images/28.jpeg" link="/courses/ittc-certification" title="Certifications Programs" />
                                     <FrontendCourseSliderCardComponent image="/images/cmm.jpg" link="/courses/coaching-mentoring" title="Coaching & Mentoring" />
                                     <FrontendCourseSliderCardComponent image="/images/4.jpeg" link="/courses/young-leadership-program-career-guidance" title="Young Leaders Program & Career Guidance" />
                                     <FrontendCourseSliderCardComponent image="/images/5.jpeg" link="/courses/teacher-mentor" title="Teacher Mentor" />

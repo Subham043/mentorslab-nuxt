@@ -130,7 +130,7 @@ export default {
       callback: '/auth/login',
       home: '/dashboard'
     },
-    localStorage: false, // REALLY not secure, so nah
+    localStorage: true, // REALLY not secure, so nah
     resetOnError: true, // kick the user if any error happens w/ the auth
     strategies: {
       local: {

@@ -40,11 +40,11 @@
                                             <el-radio v-model="radio" :label="answer_b_choice_id">Option B : </el-radio>
                                             <div v-html-safe="answer_b" class="my-10" />
                                           </div>
-                                          <div v-if="answer_c" class="py-20" style="border-bottom: 1px dotted black;">
+                                          <div v-if="answer_c_choice_id" class="py-20" style="border-bottom: 1px dotted black;">
                                             <el-radio v-model="radio" :label="answer_c_choice_id">Option C : </el-radio>
                                             <div v-html-safe="answer_c" class="my-10" />
                                           </div>
-                                          <div v-if="answer_d" class="py-20" style="border-bottom: 1px dotted black;">
+                                          <div v-if="answer_d_choice_id" class="py-20" style="border-bottom: 1px dotted black;">
                                             <el-radio v-model="radio" :label="answer_d_choice_id">Option D : </el-radio>
                                             <div v-html-safe="answer_d" class="my-10" />
                                           </div>

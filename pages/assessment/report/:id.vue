@@ -101,7 +101,7 @@
                                               <b>Preferred Choices</b> : {{ answer_b_choice.choices }}
                                             </p>
                                           </div>
-                                          <div class="py-20" style="border-bottom: 1px dotted black;">
+                                          <div v-if="answer_c_choice" class="py-20" style="border-bottom: 1px dotted black;">
                                             <el-radio v-model="radio" :label="answer_c_choice_id" :disabled="tableData.length > 0 && answer_c_choice_id !== tableData[0].selected_answer_id">Option C :
                                             </el-radio>
                                             <div v-html-safe="answer_c" class="my-10" />
@@ -112,7 +112,7 @@
                                               <b>Preferred Choices</b> : {{ answer_c_choice.choices }}
                                             </p>
                                           </div>
-                                          <div class="py-20" style="border-bottom: 1px dotted black;">
+                                          <div  v-if="answer_d_choice" class="py-20" style="border-bottom: 1px dotted black;">
                                             <el-radio v-model="radio" :label="answer_d_choice_id" :disabled="tableData.length > 0 && answer_d_choice_id !== tableData[0].selected_answer_id">Option D :
                                             </el-radio>
                                             <div v-html-safe="answer_d" class="my-10" />

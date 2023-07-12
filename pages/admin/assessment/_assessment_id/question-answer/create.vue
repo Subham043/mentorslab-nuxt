@@ -93,7 +93,7 @@
                                         </ValidationProvider>
                                     </div>
                                     <div class="col-md-12 mt-4">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="answer_c">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="" name="answer_c">
                                         <div class="form-group">
                                             <label class="form-label">Answer C</label>
                                         </div>
@@ -104,7 +104,7 @@
                                         </ValidationProvider>
                                     </div>
                                     <div class="col-md-12 mt-4">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="category for answer c">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="" name="category for answer c">
                                         <div class="form-group">
                                             <label class="form-label">Category That Answer C Belongs To *</label>
                                             <el-select v-model="answer_c_choice_id" placeholder="Select Category That Answer C Belongs To" style="width:100%">
@@ -121,7 +121,7 @@
                                         </ValidationProvider>
                                     </div>
                                     <div class="col-md-12 mt-4">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="answer_d">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="" name="answer_d">
                                         <div class="form-group">
                                             <label class="form-label">Answer D</label>
                                         </div>
@@ -132,7 +132,7 @@
                                         </ValidationProvider>
                                     </div>
                                     <div class="col-md-12 mt-4">
-                                        <ValidationProvider v-slot="{ classes, errors }" rules="required" name="category for answer d">
+                                        <ValidationProvider v-slot="{ classes, errors }" rules="" name="category for answer d">
                                         <div class="form-group">
                                             <label class="form-label">Category That Answer D Belongs To *</label>
                                             <el-select v-model="answer_d_choice_id" placeholder="Select Category That Answer D Belongs To" style="width:100%">

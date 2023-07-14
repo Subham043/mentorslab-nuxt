@@ -43,7 +43,7 @@
                                               <br/>
                                             </div>
                                             <div class="d-inline col-md-12 col-sm-12 order-1-sm">
-                                              <el-descriptions class="margin-top" title="Assessment Ananlysis" :column="1" size="large" border>
+                                              <el-descriptions class="margin-top" title="Assessment Analysis" :column="1" size="large" border>
                                                 <el-descriptions-item v-for="item in main_report" :key="item.id">
                                                   <template slot="label">
                                                     <el-badge :value="item.point" class="item">

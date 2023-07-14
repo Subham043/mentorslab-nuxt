@@ -91,7 +91,7 @@
           </ValidationProvider>
         </div>
         <div class="row">
-          
+
           <div class="col-12 text-center">
             <button type="submit" class="btn btn-primary w-p100 mt-10">
               Register
@@ -140,8 +140,10 @@ export default {
         });
         try {
             const response = await this.$publicApi.post('/auth/sign-up', {email:this.email, password:this.password, name:this.name, phone:this.phone}); // eslint-disable-line
-            this.$toast.info('We have shared you an otp via email. kindly enter that in order to verify your email.')
-            this.$router.push('/auth/verify-user/'+response.data.data);
+            // this.$toast.info('We have shared you an otp via email. kindly enter that in order to verify your email.')
+            // this.$router.push('/auth/verify-user/'+response.data.data);
+            this.$toast.info('Registration completed successfully.')
+            this.$router.push('/auth/login');
         } catch (err) {
             // console.log(err.response);// eslint-disable-line
             this.$refs.form.setErrors({
@@ -152,7 +154,7 @@ export default {
             });
             if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
             if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-            
+
         }finally{
           loading.close()
         }

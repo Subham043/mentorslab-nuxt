@@ -20,6 +20,7 @@
 
 								<!-- <li class="active-menu"><NuxtLink to="index.html">Home</NuxtLink></li> -->
 								<li class=""><NuxtLink to="/about-us">About Us</NuxtLink></li>
+								<li class=""><NuxtLink to="/courses/ittc-certification">ITTC</NuxtLink></li>
 								<li class=""><NuxtLink to="/events">Upcoming Events</NuxtLink></li>
 								<li class=""><NuxtLink to="/publication">Publication</NuxtLink></li>
 								<li class=""><NuxtLink to="/iso">ISO</NuxtLink></li>

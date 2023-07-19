@@ -237,29 +237,29 @@ community</p>
                             designation="ITTC participant Batch 10"
                             message='Glad to connect with you again with this mail. It gives me immense happiness in sharing this news with you all.  In my first year of teaching career, i have been awarded with "The Best Teacher Award for the year 2014-2015" by my school-New Beginnings Pre-school for Excellence.. I want to thank you all for making this happen to me. Without your guidance and training, this would not have been possible. Your training has really helped me getting this award. Special thanks to Shuba mam and Nalina Mam.' />
                             <FrontendTestimonialCardComponent
-                            image="/images/10.jpg"
+                            image="/images/avatar.png"
                             title="Bhuvaneshwari Vishwanathan"
                             designation="Facilitator’s Program Batch"
                             message="Thank you for giving me an opportunity to attend this training.  The Facilitation Program that I attended was one of the excellent programs that I have attended so far.  The instructors were excellent with great experience and diverse knowledge, good reference material, knowledgeable staff and moreover it was well organised. Practical references made the course significantly more valuable. The training was fantastic I already found multiple applications in my own work. Looking forward for more trainings." />
                             <FrontendTestimonialCardComponent
-                            image="/images/11.jpg"
+                            image="/images/avatar.png"
                             title="Neethu Reddy"
                             designation="ITTC Batch"
                             message="ITTC is not only a program that is designed for the teachers but anyone who seek guidance in relation to a child. My experience here was one of the best days where I not only enjoyed myself but also learnt many aspects of a child. I also learnt more about myself. This is truly like a life skills class. I would strongly recommend it to anyone who wants to learn about children." />
                             <FrontendTestimonialCardComponent
-                            image="/images/11.jpg"
+                            image="/images/avatar.png"
                             title="Neha Agarwal"
                             designation="ITTC Batch"
                             message="M’am when I joined your class, I remember, first day I came with a blank face, confused and without any goals..Now I feel I can face every challenge,
 confusion and last but not the least, honestly felt worth learning a lot from you and this course.. This course has given me a lot more than I expected...and needed it somewhere to enhance my hidden and lost confidence!
 Varada Murthy Sir.. Sir you are doing a superb job for upcoming generation and young Indians, we teachers and children." />
                             <FrontendTestimonialCardComponent
-                            image="/images/11.jpg"
+                            image="/images/avatar.png"
                             title="Priya Roshan"
                             designation="ITTC Batch"
                             message='Glad to connect with you again with this mail. It gives me immense happiness in sharing this news with you all.  In my first year of teaching career, i have been awarded with "The Best Teacher Award for the year 2014-2015" by my school-New Beginnings Pre-school for Excellence. I want to thank you all for making this happen to me. Without your guidance and training, this would not have been possible. Your training has really helped me getting this award. Special thanks to Shuba mam and Nalina Mam.' />
                             <FrontendTestimonialCardComponent
-                            image="/images/11.jpg"
+                            image="/images/avatar.png"
                             title="Pradeepa"
                             designation="ITTC BTM Batch"
                             message="First of all this opportunity made me to come out of my shell. At the outset, I have to

@@ -233,62 +233,38 @@ community</p>
                         <VueSlickCarousel v-bind="slickOptions" ref="slickTestimonial">
                             <FrontendTestimonialCardComponent
                             image="/images/avatar.png"
-                            title="Varsha Bhat"
-                            designation="Principal - ANPS"
-                            message="Without a doubt this is the best course you will find for Public Speaking.
-                                        The course enables you to use proper tone, posture, presentation skills and
-                                        speech preparation styles." />
+                            title="Priya Roshan"
+                            designation="ITTC participant Batch 10"
+                            message='Glad to connect with you again with this mail. It gives me immense happiness in sharing this news with you all.  In my first year of teaching career, i have been awarded with "The Best Teacher Award for the year 2014-2015" by my school-New Beginnings Pre-school for Excellence.. I want to thank you all for making this happen to me. Without your guidance and training, this would not have been possible. Your training has really helped me getting this award. Special thanks to Shuba mam and Nalina Mam.' />
                             <FrontendTestimonialCardComponent
                             image="/images/10.jpg"
-                            title="Shilpa Raghu"
-                            designation="Principal NBGI"
-                            message="I have availed Career Guidance and Mentoring services from Varada Murthy @ VMLC
-                                        and I felt that he is a Leader with great insight. If you are looking for
-                                        Coaching, he is the one to go for." />
+                            title="Bhuvaneshwari Vishwanathan"
+                            designation="Facilitator’s Program Batch"
+                            message="Thank you for giving me an opportunity to attend this training.  The Facilitation Program that I attended was one of the excellent programs that I have attended so far.  The instructors were excellent with great experience and diverse knowledge, good reference material, knowledgeable staff and moreover it was well organised. Practical references made the course significantly more valuable. The training was fantastic I already found multiple applications in my own work. Looking forward for more trainings." />
                             <FrontendTestimonialCardComponent
                             image="/images/11.jpg"
-                            title="Priyanka Nair"
-                            designation="Center Head at Kumon"
-                            message="The public Speaking & Coaching session I have attended at VMLC benefited me a
-                                        lot. I have gained a lot of confidence and can speak now without hesitation and
-                                        address parents with confidence." />
+                            title="Neethu Reddy"
+                            designation="ITTC Batch"
+                            message="ITTC is not only a program that is designed for the teachers but anyone who seek guidance in relation to a child. My experience here was one of the best days where I not only enjoyed myself but also learnt many aspects of a child. I also learnt more about myself. This is truly like a life skills class. I would strongly recommend it to anyone who wants to learn about children." />
                             <FrontendTestimonialCardComponent
-                            image="/images/12.jpg"
-                            title="Savitha R."
-                            designation="Coordinator at Yellow"
-                            message="TTP was an incredible program which added lot of values to my life, it is a
-                                        perfect program for those who have desire to be a trainer. Madam & Sir are
-                                        incredible Coaches." />
+                            image="/images/11.jpg"
+                            title="Neha Agarwal"
+                            designation="ITTC Batch"
+                            message="M’am when I joined your class, I remember, first day I came with a blank face, confused and without any goals..Now I feel I can face every challenge,
+confusion and last but not the least, honestly felt worth learning a lot from you and this course.. This course has given me a lot more than I expected...and needed it somewhere to enhance my hidden and lost confidence!
+Varada Murthy Sir.. Sir you are doing a superb job for upcoming generation and young Indians, we teachers and children." />
                             <FrontendTestimonialCardComponent
-                            image="/images/avatar.png"
-                            title="Reshma Sultana"
-                            designation="Lecturer, Hyderabad"
-                            message="2 months was an unforgettable experience to me @ VMLC. Sir's guidance in making
-                                        me repeatedly give speeches and giving me continuous feedback helped me develop
-                                        confidence." />
+                            image="/images/11.jpg"
+                            title="Priya Roshan"
+                            designation="ITTC Batch"
+                            message='Glad to connect with you again with this mail. It gives me immense happiness in sharing this news with you all.  In my first year of teaching career, i have been awarded with "The Best Teacher Award for the year 2014-2015" by my school-New Beginnings Pre-school for Excellence. I want to thank you all for making this happen to me. Without your guidance and training, this would not have been possible. Your training has really helped me getting this award. Special thanks to Shuba mam and Nalina Mam.' />
                             <FrontendTestimonialCardComponent
-                            image="/images/avatar.png"
-                            title="Aparna"
-                            designation="VP - Treamis World School"
-                            message="Public Speaking was a great exposure for our students, the training provided by
-                                        VM has helped our students to gain confidence. We are glad to be part of this.
-                                        The event was well organised- great job team!" />
-                            <FrontendTestimonialCardComponent
-                            image="/images/avatar.png"
-                            title="Ganga Prasad"
-                            designation="Principal - St. Mira's School"
-                            message="The atmosphere was electrifying and fully charged. It was amazing to notice
-                                        confidence levels of participants. This program has immensely helped our
-                                        students and all other participants too. I congratulate PFLA team for the manner
-                                        in which they have conducted this event." />
-                            <FrontendTestimonialCardComponent
-                            image="/images/avatar.png"
-                            title="Sir M V PU College"
-                            designation="Dr.Rajendra Naidu"
-                            message="TPersonal Excellence Program with PS skills conducted by Shri Varada Murthy is a
-                                        must for all students and our students have hugely benefited from this program.
-                                        In fact, their attitude towards life and studies has changed after attending
-                                        this program. I strongly recommend this to all Colleges." />
+                            image="/images/11.jpg"
+                            title="Pradeepa"
+                            designation="ITTC BTM Batch"
+                            message="First of all this opportunity made me to come out of my shell. At the outset, I have to
+confess that the whole credit goes to Nalina Mam. The classes were systematically planned to initiate a proper attitudes to be a teacher. I got lot of insights concerning teaching, education especially how the children's entire future is entrusted in a teacher's hand.
+" />
                     </VueSlickCarousel>
                     <SliderNavButtonComponent @previous-click="prevTestimonialNavClick" @next-click="nextTestimonialNavClick" />
                     </div>

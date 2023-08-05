@@ -346,7 +346,7 @@ loading="lazy"
         <div class="section testimonial-section section-padding">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2 class="title">Trained & Coached over 50k people & they share <br> success stories</h2>
+                    <h2 class="title">Trained & Coached over 60k people & they share <br> success stories</h2>
                 </div>
                 <!-- Testimonial Wrapper Start -->
                 <div class="testimonial-wrapper swiper-container testimonial-active">

@@ -6,7 +6,7 @@
 					<div class="row">
 						<div class="col-xl-6 col-lg-6 col-md-4 col-12">
 							<div class="header-text">
-								<span><i class="fas fa-phone-volume"></i> +91 9901938792</span>
+								<span><i class="fas fa-phone-volume"></i> +91 9902570561</span>
 							</div>
 						</div>
 						<div class="col-xl-6 col-lg-6 col-md-8 col-12">

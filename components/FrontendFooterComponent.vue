@@ -72,7 +72,7 @@ target="_blank"
                                         <div class="media">
                                             <i class="fas fa-phone-volume"></i>
                                             <div class="media-body">
-                                                <a href="tel:+919901938792">+91 9901938792</a>
+                                                <a href="tel:+9902570561">+91 9902570561</a>
                                             </div>
                                         </div>
                                     </li>

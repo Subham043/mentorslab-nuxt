@@ -72,6 +72,7 @@
 					<ul class="main-menu">
 
 						<li><NuxtLink to="/about-us">About Us</NuxtLink></li>
+            <li><NuxtLink to="/courses/ittc-certification">ITTC</NuxtLink></li>
 						<li><NuxtLink to="/events">Upcoming Events</NuxtLink></li>
 						<li><NuxtLink to="/publication">Publication</NuxtLink></li>
 						<li><NuxtLink to="/iso">ISO</NuxtLink></li>

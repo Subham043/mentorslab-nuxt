@@ -266,7 +266,7 @@ loading="lazy"
                                                         <iframe
 loading="lazy"
                                                             style="width:100%;min-height:320px;border-radius: 10px;"
-                                                            src="https://www.youtube.com/embed/xziPJSnbIRQ"
+                                                            src="https://www.youtube.com/embed/NGtNx1Y0o2U"
                                                             title="YouTube video player" frameborder="0"
                                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                             allowfullscreen></iframe>
@@ -284,6 +284,23 @@ loading="lazy"
 loading="lazy"
                                                             style="width:100%;min-height:320px;border-radius: 10px;"
                                                             src="https://www.youtube.com/embed/X3Hqo66VIaA"
+                                                            title="YouTube video player" frameborder="0"
+                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                            allowfullscreen></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Single Testimonial End -->
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Single Testimonial Start -->
+                                            <div class="single-testimonial-2">
+                                                <div class="testimonial-2-text">
+                                                    <div>
+                                                        <iframe
+loading="lazy"
+                                                            style="width:100%;min-height:320px;border-radius: 10px;"
+                                                            src="https://www.youtube.com/embed/2hNl214ewdE"
                                                             title="YouTube video player" frameborder="0"
                                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                             allowfullscreen></iframe>

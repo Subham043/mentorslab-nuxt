@@ -28,7 +28,7 @@
                       <p>You will want to know the answers to many questions, answers for which, you may not find outside.
                       </p>
                       <p>
-                        <strong><code><u>This report is an indicator and acts only as a guide to help you to engage in a vocation or a profession suitable to your propensities, under the current circumstances and conditions you have taken the test.</u></code></strong>
+                        <strong><code><u>This report is an indicator and acts only as a guide to help you to engage in a vocation<br/> or a profession suitable to your propensities, under the current circumstances and conditions<br/> you have taken the test.</u></code></strong>
                       </p>
                       <p><strong>However, it is possible to succeed, be happy with the profession & vocation of your
                           choice.</strong></p>

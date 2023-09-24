@@ -37,7 +37,7 @@
 
                         <div v-for="(item, i) in mainReportSorted" :key="item.id" class="item" :style="`--clr: ${rgb[i]}; --val: ${(item.point/attempted)*100}`">
                           <div class="label">{{ item.category }}</div>
-                          <div class="value">{{(item.point/attempted)*100}}%</div>
+                          <div class="value">{{((item.point/attempted)*100).toFixed(2)}}%</div>
                         </div>
 
                       </div>
@@ -361,11 +361,6 @@ export default {
 
 <style scoped>
 /* stylelint-disable */
-.card-img-top {
-  height: 130px;
-  width: auto;
-  object-fit: contain;
-}
 
 .align-items-flex-end {
   align-items: flex-end;
@@ -388,77 +383,6 @@ export default {
   text-align: center;
 }
 
-.countdown {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.timer {
-  background: -webkit-linear-gradient(left, #eee 50%, #019ff8 50%);
-  border-radius: 100%;
-  height: calc(var(--size) * 1px);
-  width: calc(var(--size) * 1px);
-  position: relative;
-  -webkit-animation: time calc(var(--duration) * 1s) steps(1000, start) infinite;
-  -webkit-mask: radial-gradient(transparent 50%, #000 50%);
-  mask: radial-gradient(transparent 50%, #000 50%);
-}
-
-.timer-full {
-  font-size: 3.2rem;
-  display: inline-block;
-  vertical-align: top;
-  font-weight: 600;
-  background: -webkit-linear-gradient(left, #eee 100%, #019ff8 50%);
-  border-radius: 100%;
-  height: calc(var(--size) * 1px);
-  width: calc(var(--size) * 1px);
-  position: relative;
-  -webkit-animation: time calc(var(--duration) * 1s) steps(1000, start) infinite;
-  -webkit-mask: radial-gradient(transparent 50%, #000 50%);
-  mask: radial-gradient(transparent 50%, #000 50%);
-}
-
-.mask {
-  border-radius: 100% 0 0 100% / 50% 0 0 50%;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 50%;
-  -webkit-animation: mask calc(var(--duration) * 1s) steps(500, start) infinite;
-  -webkit-transform-origin: 100% 50%;
-}
-
-@keyframes time {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes mask {
-  0% {
-    background: #019ff8;
-    -webkit-transform: rotate(0deg);
-  }
-
-  50% {
-    background: #019ff8;
-    -webkit-transform: rotate(-180deg);
-  }
-
-  50.01% {
-    background: #eee;
-    -webkit-transform: rotate(0deg);
-  }
-
-  100% {
-    background: #eee;
-    -webkit-transform: rotate(-180deg);
-  }
-}
 .simple-bar-chart{
   --line-count: 10;
   --line-color: currentcolor;
@@ -466,7 +390,7 @@ export default {
   --item-gap: 2%;
   --item-default-color: #060606;
 
-  height: 20rem;
+  height: 25rem;
   display: grid;
   grid-auto-flow: column;
   gap: var(--item-gap);

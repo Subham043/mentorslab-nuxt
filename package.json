@@ -32,7 +32,7 @@
     "@zoomus/websdk": "^2.8.0",
     "core-js": "^3.25.3",
     "element-ui": "^2.15.10",
-    "nuxt": "^2.15.8",
+    "nuxt": "^3.4.3",
     "nuxt-helmet": "^2.1.1",
     "v-viewer": "^1.6.4",
     "vee-validate": "^3.4.14",

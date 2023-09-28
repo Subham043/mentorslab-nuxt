@@ -22,36 +22,44 @@
                     <div class="selected">
                       <h2>{{ name }}</h2>
                       <hr>
-                      <p><b>Dear: {{ $auth.user.name }}.</b></p>
-                      <p>Congratulations. You have made a beginning and getting ready for a journey in your personal life.
-                      </p>
-                      <p>You will want to know the answers to many questions, answers for which, you may not find outside.
-                      </p>
-                      <p>
-                        <strong><code><u>This report is an indicator and acts only as a guide to help you to engage in a vocation<br/> or a profession suitable to your propensities, under the current circumstances and conditions<br/> you have taken the test.</u></code></strong>
-                      </p>
-                      <p><strong>However, it is possible to succeed, be happy with the profession & vocation of your
+                      <div class="row align-items-end">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                          <p><b>Dear: {{ $auth.user.name }}.</b></p>
+                          <p>Congratulations. You have made a beginning and getting ready for a journey in your personal life.
+                          </p>
+                          <p>You will want to know the answers to many questions, answers for which, you may not find outside.
+                          </p>
+                          <p>
+                            <strong><code><u>This report is an indicator and acts only as a guide to help you to engage in a vocation<br/> or a profession suitable to your propensities, under the current circumstances and conditions<br/> you have taken the test.</u></code></strong>
+                          </p>
+                          <p><strong>However, it is possible to succeed, be happy with the profession & vocation of your
                           choice.</strong></p>
-                      <h5><strong><i><u>Based on the scores, which suggests the following</u> :</i></strong></h5>
-                      <div class="simple-bar-chart">
+                          <p v-for="(item, i) in mainReportSorted?.data" :key="i">
+                            <template v-if="i==0">
+                              You belong to the category of {{ item.category }} person. Which would be your first choice.
+                              Few of the future courses would be from any of the following:
+                              <span v-html-safe="item.choices" />
+                            </template>
+                          </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                          <h5 class="text-center"><strong><i><u>Based on the scores, which suggests the following</u> :</i></strong></h5>
+                          <pie-chart :data="mainReportSorted?.graph"></pie-chart>
+                        </div>
+                      </div>
 
-                        <div v-for="(item, i) in mainReportSorted" :key="item.id" class="item" :style="`--clr: ${rgb[i]}; --val: ${(item.point/attempted)*100}`">
+                      <!-- <div class="simple-bar-chart">
+
+                        <div v-for="(item, i) in mainReportSorted?.data" :key="item.id" class="item" :style="`--clr: ${rgb[i]}; --val: ${(item.point/attempted)*100}`">
                           <div class="label">{{ item.category }}</div>
                           <div class="value">{{((item.point/attempted)*100).toFixed(2)}}%</div>
                         </div>
 
-                      </div>
-                      <p v-for="(item, i) in mainReportSorted" :key="i">
-                        <template v-if="i==0">
-                          You belong to the category of {{ item.category }} person. Which would be your first choice.
-                          Few of the future courses would be from any of the following:
-                          <span v-html-safe="item.choices" />
-                        </template>
-                      </p>
+                      </div> -->
                       <p><strong>However, the preferences are likely to narrow down, after confirming your basic personality traits &
                       motivational levels.</strong></p>
                       <div class="row justify-content-center">
-                        <div v-for="(item, i) in mainReportSorted" :key="i" class="col-lg-auto col-md-auto col-sm-12">
+                        <div v-for="(item, i) in mainReportSorted?.data" :key="i" class="col-lg-auto col-md-auto col-sm-12">
                           <div class="ribbon-box">
                             <div class="cross-shadow-ribbon" :style="`--clr: ${rgb[i]};`">
                               {{ item.category }}
@@ -60,7 +68,7 @@
                               <span>#{{ i+1 }}</span>
                             </div>
                             <div v-html-safe="item.choices" class="text-center" />
-                            </div>
+                          </div>
                         </div>
                       </div>
                       <div v-html-safe="main_report_data.message" class="my-10" />
@@ -90,7 +98,7 @@
                         </div>
                         <div class="d-inline col-md-12 col-sm-12 order-1-sm">
                           <el-descriptions class="margin-top" title="Assessment Analysis" :column="1" size="large" border>
-                            <el-descriptions-item v-for="item in main_report" :key="item.id">
+                            <el-descriptions-item v-for="item in mainReportSorted?.data" :key="item.id">
                               <template slot="label">
                                 <el-badge :value="item.point" class="item">
                                   <el-tag type="info">{{ item.category }}</el-tag>
@@ -243,7 +251,20 @@ export default {
     },
     mainReportSorted() {
       const report = [...this.main_report];
-      return report.sort((a, b) => {return b.point - a.point;});
+      const sortedReport = report.sort((a, b) => {return b.point - a.point;});
+      const data = [];
+      const graph = [];
+      for (let index = 0; index < sortedReport.length; index++) {
+        if(index>2){
+          break;
+        }
+        data.push(sortedReport[index]);
+        graph.push([sortedReport[index].category, sortedReport[index].point]);
+      }
+      return {
+        data,
+        graph,
+      };
     },
   },
   watch: {
@@ -271,9 +292,10 @@ export default {
       return 'rgb(' + r + ',' + g + ',' + b + ')';
     },
     generateColorArray(){
-      for(let i = 0; i < this.main_report.length; i++){
-        this.rgb.push(this.randomRgbColor());
-      }
+      // for(let i = 0; i < this.main_report.length; i++){
+      //   this.rgb.push(this.randomRgbColor());
+      // }
+      this.rgb = ['rgb(51 101 199)', 'rgb(220 57 18)', 'rgb(255 153 0)'];
     },
     async checkId() {
       const loading = this.$loading({

@@ -50,7 +50,8 @@ export default {
     '~/plugins/countdown.js',
     '~/plugins/vue-slick-carousel.js',
     // { src: '~/plugins/zoom.client.js', mode: "client" },
-    { src: '~/plugins/safeHtml.js', mode: "client" }
+    { src: '~/plugins/safeHtml.js', mode: "client" },
+    { src: '~/plugins/chart.js', mode: "client" }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

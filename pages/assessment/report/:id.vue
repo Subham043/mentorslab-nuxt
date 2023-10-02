@@ -22,9 +22,9 @@
                     <div class="selected">
                       <h2>{{ name }}</h2>
                       <hr>
-                      <div class="row align-items-end">
+                      <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-12">
-                          <p><b>Dear: {{ $auth.user.name }}.</b></p>
+                          <p><b>Dear {{ $auth.user.name }}.</b></p>
                           <p>Congratulations. You have made a beginning and getting ready for a journey in your personal life.
                           </p>
                           <p>You will want to know the answers to many questions, answers for which, you may not find outside.
@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                           <h5 class="text-center"><strong><i><u>Based on the scores, which suggests the following</u> :</i></strong></h5>
-                          <pie-chart :data="mainReportSorted?.graph"></pie-chart>
+                          <pie-chart loading="Loading Chart..." suffix="%" :data="mainReportSorted?.graph"></pie-chart>
                         </div>
                       </div>
 
@@ -64,7 +64,7 @@
                             <div class="cross-shadow-ribbon" :style="`--clr: ${rgb[i]};`">
                               {{ item.category }}
                             </div>
-                            <div class="featured-badge">
+                            <div :class="`featured-badge feature-badge-color-${i+1}`">
                               <span>#{{ i+1 }}</span>
                             </div>
                             <div v-html-safe="item.choices" class="text-center" />
@@ -252,14 +252,22 @@ export default {
     mainReportSorted() {
       const report = [...this.main_report];
       const sortedReport = report.sort((a, b) => {return b.point - a.point;});
+      let attempted = 0;
       const data = [];
       const graph = [];
       for (let index = 0; index < sortedReport.length; index++) {
         if(index>2){
           break;
         }
+        attempted+=sortedReport[index].point;
+      }
+      for (let index = 0; index < sortedReport.length; index++) {
+        if(index>2){
+          break;
+        }
         data.push(sortedReport[index]);
-        graph.push([sortedReport[index].category, sortedReport[index].point]);
+        // graph.push([sortedReport[index].category, sortedReport[index].point]);
+        graph.push([sortedReport[index].category, ((sortedReport[index].point/attempted)*100).toFixed(2)]);
       }
       return {
         data,
@@ -384,6 +392,9 @@ export default {
 <style scoped>
 /* stylelint-disable */
 
+.events-content p{
+  font-size: 1.2rem;
+}
 .align-items-flex-end {
   align-items: flex-end;
 }
@@ -531,6 +542,15 @@ export default {
   box-shadow: 0.025em 0.025em 0.1em #303030;
   border-radius: 50%;
 }
+.feature-badge-color-1 span {
+  background: #f0c808;
+}
+.feature-badge-color-2 span {
+  background: #d8d8d8;
+}
+.feature-badge-color-3 span {
+  background: #905921;
+}
 /* text area */
 .featured-badge span::before {
   content: '';
@@ -542,5 +562,14 @@ export default {
   box-shadow: 0.025em 0.025em 0.1em #303030 inset;
   border-radius: 50%;
   z-index: -1;
+}
+.feature-badge-color-1 span::before {
+  background: #c4a408;
+}
+.feature-badge-color-2 span::before {
+  background: #cccccc;
+}
+.feature-badge-color-3 span::before {
+  background: #a87143;
 }
 </style>

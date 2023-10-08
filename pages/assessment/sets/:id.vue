@@ -15,19 +15,18 @@
                     <div class="col-lg-10 col-md-12 col-sm-12">
                       <div class="box bg-holder-img ">
                           <div class="box-body">
-                              <div class="row">
+                              <div class="row justify-content-between align-items-center">
 
-                                  <div class="col-sm-12 events-content">
+                                  <div class="col-lg-10 col-md-9 col-sm-12 events-content">
                                       <div class="selected">
                                           <div class="row justify-content-between align-items-flex-end">
-                                            <div class="d-inline col-md-12 col-sm-12 order-1-sm">
-                                              <h4 class="">
-                                                <span class="badge badge-primary-light">Question ({{ current_question }} / {{ total_questions }})</span>
-                                              </h4>
-                                              <div v-if="image" class="box box-body b-1 text-center no-shadow" style="max-width:200px;">
-                                                <img id="product-image" :src="`${apiUrl}/assessment-user/question-answer-image/${image}`" class="img-responsive bg-light rounded img-fluid card-img-top" alt="" />
-                                              </div>
-                                              <div v-html-safe="question" class="mt-0" />
+                                              <!-- <div class="d-flex flex-wrap justify-content-center col-md-12 col-sm-12 mb-3">
+                                              </div> -->
+                                              <div class="d-inline col-lg-8 col-md-8 col-sm-12 order-1-sm">
+                                                <div v-if="image" class="box box-body b-1 text-center no-shadow" style="max-width:200px;">
+                                                  <img id="product-image" :src="`${apiUrl}/assessment-user/question-answer-image/${image}`" class="img-responsive bg-light rounded img-fluid card-img-top" alt="" />
+                                                </div>
+                                                <div v-html-safe="question" class="mt-0" />
                                             </div>
                                           </div>
                                           <hr class="mt-10 mb-20">
@@ -56,6 +55,14 @@
                                             <el-button type="primary" @click="submitAnswer">Submit</el-button>
                                           </div>
                                       </div>
+                                  </div>
+                                  <div class="col-lg-2 col-md-3 col-sm-12 p-2">
+                                    <h4 class="text-center">
+                                      <span class="badge badge-primary-light">Question ({{ current_question }} / {{ total_questions }})</span>
+                                    </h4>
+                                    <div class="question_set_marker d-flex flex-wrap align-items-center" style="justify-content:center">
+                                      <div v-for="i in total_questions" :key="i" :class="`${(i)==parseInt(current_question) ? 'question_set_box_current' : ((i)<parseInt(current_question) ? 'question_set_box_completed' : 'question_set_box_pending')} question_set_box`" >{{i}}</div>
+                                    </div>
                                   </div>
 
 
@@ -293,5 +300,28 @@ background-size: 13% auto;}
         background: #eee;
         -webkit-transform: rotate(-180deg);
     }
+}
+.question_set_marker{
+  /* border:1px solid #888888; */
+  width:100%;
+}
+.question_set_box{
+  width:40px;
+  height:40px;
+  border:1px dashed #b8b8b8;
+  display:grid;
+  place-content:center;
+}
+.question_set_box_pending{
+  background-color: #ee8f8f;
+}
+.question_set_box_completed{
+  background-color: #a3e1a3;
+}
+.question_set_box_current{
+  background-color: #9292f3;
+}
+.events-content{
+  border-right: 1px dotted #ccc;
 }
 </style>

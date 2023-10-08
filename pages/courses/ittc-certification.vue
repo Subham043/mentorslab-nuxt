@@ -281,13 +281,13 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
 
         <div class="py-5 detail mb-5">
         <div class="container">
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-12 mb-5">
               <div class="section-title section-devider text-center">
                   <h2 class="title">FAQ</h2>
               </div>
             </div>
-            <div class="col-md-6 col-sm-12">
+            <!-- <div class="col-md-6 col-sm-12">
               <el-collapse v-model="activeName" accordion>
                   <el-collapse-item name="1">
                     <template slot="title">
@@ -319,9 +319,9 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
                     <p>Controlled consequences: users should be granted the freedom to operate, including canceling, aborting or terminating current operation.</p>
                   </el-collapse-item>
               </el-collapse>
-            </div>
+            </div> -->
             <div class="col-md-6 col-sm-12">
-              <iframe src="https://www.youtube-nocookie.com/embed/8e0AZzr779E" class="w-100 h-100" frameborder="0"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/8e0AZzr779E" class="w-100" height="400" frameborder="0"></iframe>
             </div>
           </div>
         </div>

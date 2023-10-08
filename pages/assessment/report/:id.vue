@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                           <h5 class="text-center"><strong><i><u>Based on the scores, which suggests the following</u> :</i></strong></h5>
-                          <pie-chart loading="Loading Chart..." suffix="%" :data="mainReportSorted?.graph"></pie-chart>
+                          <pie-chart loading="Loading Chart..." :data="mainReportSorted?.graph"></pie-chart>
                         </div>
                       </div>
 
@@ -267,7 +267,7 @@ export default {
         }
         data.push(sortedReport[index]);
         // graph.push([sortedReport[index].category, sortedReport[index].point]);
-        graph.push([sortedReport[index].category, ((sortedReport[index].point/attempted)*100).toFixed(2)]);
+        graph.push([sortedReport[index].category + ': ' + (((sortedReport[index].point/attempted)*100).toFixed(2)) + '%', ((sortedReport[index].point/attempted)*100).toFixed(2)]);
       }
       return {
         data,

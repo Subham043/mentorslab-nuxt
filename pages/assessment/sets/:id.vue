@@ -177,6 +177,10 @@ export default {
             }
         },
         async submitAnswer() {
+            if (!this.radio) {
+                this.$toast.error("Please select any one option before submitting.");
+                return;
+            }
             const loading = this.$loading({
                 lock: true,
                 fullscreen: true,

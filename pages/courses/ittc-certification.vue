@@ -287,39 +287,57 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
                   <h2 class="title">FAQ</h2>
               </div>
             </div>
-            <!-- <div class="col-md-6 col-sm-12">
+            <div class="col-md-6 col-sm-12">
               <el-collapse v-model="activeName" accordion>
                   <el-collapse-item name="1">
                     <template slot="title">
-                      <h4>How do i access the Fb Ad templates ?</h4>
+                      <h4>What is the Eligibility for ITTC – Level I program?</h4>
                     </template>
-                    <p>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</p>
-                    <p>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</p>
+                    <p>
+                      <ul>
+                        <li>Undergraduate / Graduate / Post Graduate</li>
+                        <li>With interest in teaching</li>
+                      </ul>
+                    </p>
                   </el-collapse-item>
                   <el-collapse-item name="2">
                     <template slot="title">
-                      <h4>How do i access the Fb Ad templates ?</h4>
+                      <h4>What is the Eligibility for ITTC Level II – Advanced program - iLed?</h4>
                     </template>
-                    <p>Operation feedback: enable the users to clearly perceive their operations by style updates and interactive effects;</p>
-                    <p>Visual feedback: reflect current state by updating or rearranging elements of the page.</p>
+                    <p>
+                      <ul>
+                        <li>Graduate / Post graduate with 1+ years of experience</li>
+                        <li>In teaching / training / counseling </li>
+                      </ul>
+                    </p>
                   </el-collapse-item>
                   <el-collapse-item name="3">
                     <template slot="title">
-                      <h4>How do i access the Fb Ad templates ?</h4>
+                      <h4>Who can take Train the Trainer Program?</h4>
                     </template>
-                    <p>Simplify the process: keep operating process simple and intuitive;</p>
-                    <p>Definite and clear: enunciate your intentions clearly so that the users can quickly understand and make decisions;</p>
-                    <p>Easy to identify: the interface should be straightforward, which helps the users to identify and frees them from memorizing and recalling.</p>
+                    <p>
+                      <ul>
+                        <li>Anybody interested in becoming a Trainer / Facilitator</li>
+                        <li>Wanting to improve and be an effective communicator</li>
+                        <li>Wanting to improve presentation skills</li>
+                        <li>Wanting to make an impact in their teaching</li>
+                        <li>Looking to shift their career from Teacher to a Trainer</li>
+                      </ul>
+                    </p>
                   </el-collapse-item>
                   <el-collapse-item name="4">
                     <template slot="title">
-                      <h4>How do i access the Fb Ad templates ?</h4>
+                      <h4>Documents required?</h4>
                     </template>
-                    <p>Decision making: giving advices about operations is acceptable, but do not make decisions for the users;</p>
-                    <p>Controlled consequences: users should be granted the freedom to operate, including canceling, aborting or terminating current operation.</p>
+                    <p>
+                      <ul>
+                        <li>ID / address proof</li>
+                        <li>Copy of your latest educational certificate</li>
+                      </ul>
+                    </p>
                   </el-collapse-item>
               </el-collapse>
-            </div> -->
+            </div>
             <div class="col-md-6 col-sm-12">
               <iframe src="https://www.youtube-nocookie.com/embed/8e0AZzr779E" class="w-100" height="400" frameborder="0"></iframe>
             </div>

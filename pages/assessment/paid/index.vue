@@ -18,7 +18,7 @@
         </div>
         <div v-else>
             <div class="row">
-                <div v-for="item in tableData" :key="item.id" class="col-md-6 col-lg-3">
+                <div v-for="item in tableDataSorted" :key="item.id" class="col-md-6 col-lg-3">
                     <AssessmentCardComponent
                     :id="item.id"
                     :uuid="item.uuid"
@@ -66,6 +66,12 @@ import NoUserDataComponent from '~/components/NoUserDataComponent.vue';
             loading:false,
             skeletonCount:4
         }
+    },
+    computed: {
+      tableDataSorted() {
+        const data = [...this.tableData];
+        return data.sort((a, b) => {return a.id - b.id;});
+      },
     },
     watch: {
         $route(to, from) {

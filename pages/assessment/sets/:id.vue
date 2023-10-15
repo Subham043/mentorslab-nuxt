@@ -30,24 +30,24 @@
                                             </div>
                                           </div>
                                           <hr class="mt-10 mb-20">
-                                          <h4 class=""><span class="badge badge-success-light">Select an Answers</span></h4>
+                                          <h4 class=""><span class="badge badge-success-light">Select any one:</span></h4>
                                           <div class="py-20" style="border-bottom: 1px dotted black;">
-                                            <el-radio v-model="radio" :label="answer_a_choice_id">Option A :
+                                            <el-radio v-model="radio" :label="answer_a_choice_id">
                                               <div v-html-safe="answer_a" class="my-10" />
                                             </el-radio>
                                           </div>
                                           <div class="py-20" style="border-bottom: 1px dotted black;">
-                                            <el-radio v-model="radio" :label="answer_b_choice_id">Option B :
+                                            <el-radio v-model="radio" :label="answer_b_choice_id">
                                               <div v-html-safe="answer_b" class="my-10" />
                                             </el-radio>
                                           </div>
                                           <div v-if="answer_c_choice_id" class="py-20" style="border-bottom: 1px dotted black;">
-                                            <el-radio v-model="radio" :label="answer_c_choice_id">Option C :
+                                            <el-radio v-model="radio" :label="answer_c_choice_id">
                                               <div v-html-safe="answer_c" class="my-10" />
                                             </el-radio>
                                           </div>
                                           <div v-if="answer_d_choice_id" class="py-20" style="border-bottom: 1px dotted black;">
-                                            <el-radio v-model="radio" :label="answer_d_choice_id">Option D :
+                                            <el-radio v-model="radio" :label="answer_d_choice_id">
                                               <div v-html-safe="answer_d" class="my-10" />
                                             </el-radio>
                                           </div>

@@ -35,7 +35,7 @@
                           <p><strong>However, it is possible to succeed, be happy with the profession & vocation of your
                           choice.</strong></p>
                           <p v-for="(item, i) in mainReportSorted?.data" :key="i">
-                            <template v-if="i==0">
+                            <template v-if="i==0 && assessment_id!=2">
                               You belong to the category of {{ item.category }} person. Which would be your first choice.
                               Few of the future courses would be from any of the following:
                               <span v-html-safe="item.choices" />
@@ -67,7 +67,7 @@
                             <div :class="`featured-badge feature-badge-color-${i+1}`">
                               <span>#{{ i+1 }}</span>
                             </div>
-                            <div v-html-safe="item.choices" class="text-center" />
+                            <div v-if="assessment_id!=2" v-html-safe="item.choices" class="text-center" />
                           </div>
                         </div>
                       </div>
@@ -243,6 +243,7 @@ export default {
       main_report_data: null,
       name: '',
       heading: '',
+      assessment_id: 0,
     };
   },
   computed: {
@@ -318,6 +319,7 @@ export default {
         const response = await this.$privateApi.get('/assessment-user/' + this.$route.params.id); // eslint-disable-line
         this.name = response.data.data.name;
         this.heading = response.data.data.heading;
+        this.assessment_id = response.data.data.id;
       } catch (err) {
         if (err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
         if (err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
@@ -469,6 +471,7 @@ export default {
 	padding: 40px 60px 15px 10px;
 	background: #FFF;
 	max-width: 300px;
+	min-width: 150px;
 	position: relative;
 	border-radius: 3px;
   margin: 30px auto 45px;

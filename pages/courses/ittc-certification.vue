@@ -387,7 +387,7 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
                                 </ValidationProvider>
                             </div>
                             <div class="col-md-12">
-                                <button class="btn" type="submit">Register Now @ Rs. 500</button>
+                                <button class="btn" type="submit">Register Now @ Rs. 26000</button>
                             </div>
                         </div>
                     </form>

@@ -20,20 +20,33 @@
 
                   <div class="col-sm-12 events-content">
                     <div class="selected">
-                      <h2>{{ name }}</h2>
-                      <hr>
-                      <div class="row align-items-center">
+                      <div class="row justify-content-between">
                         <div class="col-lg-6 col-md-6 col-sm-12">
+                          <h2>{{ name }}</h2>
+                        </div>
+                        <div class="col-lg-auto col-md-auto col-sm-12">
+                          <NuxtLink v-if="assessment_id===1" to="/assessment/detail/1bcae896-7ba0-4dd6-9f90-086147815aa7" type="button" class="btn btn-primary m-0">Success Quotient Assessment</NuxtLink>
+                          <button type="button" class="btn btn-warning m-0" @click="generateReport">Download Report</button>
+                        </div>
+                      </div>
+                      <hr>
+
+                      <div class="row align-items-center">
+                        <div :class="assessment_id!=2 ? 'col-lg-6 col-md-6 col-sm-12' : 'col-lg-12 col-md-12 col-sm-12'">
                           <p><b>Dear {{ $auth.user.name }}.</b></p>
                           <p>Congratulations. You have made a beginning and getting ready for a journey in your personal life.
                           </p>
                           <p>You will want to know the answers to many questions, answers for which, you may not find outside.
                           </p>
-                          <p>
+                          <p v-if="assessment_id!=2">
                             <strong><code><u>This report is an indicator and acts only as a guide to help you to engage in a vocation<br/> or a profession suitable to your propensities, under the current circumstances and conditions<br/> you have taken the test.</u></code></strong>
+                          </p>
+                          <p v-else>
+                            <strong><code><u>This report is an indicator and acts only as a guide to help you to engage in a vocation or a profession suitable to your propensities, under the current circumstances and conditions you have taken the test.</u></code></strong>
                           </p>
                           <p><strong>However, it is possible to succeed, be happy with the profession & vocation of your
                           choice.</strong></p>
+                          <h5 v-if="assessment_id===2" class="text-center"><strong><i><u>Based on the scores, which suggests the following</u> :</i></strong></h5>
                           <p v-for="(item, i) in mainReportSorted?.data" :key="i">
                             <template v-if="i==0 && assessment_id!=2">
                               You belong to the category of {{ item.category }} person. Which would be your first choice.
@@ -43,22 +56,22 @@
                           </p>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
-                          <h5 class="text-center"><strong><i><u>Based on the scores, which suggests the following</u> :</i></strong></h5>
+                          <h5 v-if="assessment_id!==2" class="text-center"><strong><i><u>Based on the scores, which suggests the following</u> :</i></strong></h5>
                           <pie-chart loading="Loading Chart..." :data="mainReportSorted?.graph"></pie-chart>
+                        </div>
+                        <div v-if="assessment_id==2" class="col-lg-6 col-md-6 col-sm-12 simple-bar-chart">
+
+                          <div v-for="(item, i) in mainReportSorted?.data" :key="item.id" class="item" :style="`--clr: ${rgb[i]}; --val: ${(item.point/attempted)*100}`">
+                            <div class="label">{{ item.category }}</div>
+                            <div class="value">{{((item.point/attempted)*100).toFixed(2)}}%</div>
+                          </div>
+
                         </div>
                       </div>
 
-                      <!-- <div class="simple-bar-chart">
-
-                        <div v-for="(item, i) in mainReportSorted?.data" :key="item.id" class="item" :style="`--clr: ${rgb[i]}; --val: ${(item.point/attempted)*100}`">
-                          <div class="label">{{ item.category }}</div>
-                          <div class="value">{{((item.point/attempted)*100).toFixed(2)}}%</div>
-                        </div>
-
-                      </div> -->
-                      <p><strong>However, the preferences are likely to narrow down, after confirming your basic personality traits &
+                      <p v-if="assessment_id!=2"><strong>However, the preferences are likely to narrow down, after confirming your basic personality traits &
                       motivational levels.</strong></p>
-                      <div class="row justify-content-center">
+                      <div v-if="assessment_id!=2" class="row justify-content-center">
                         <div v-for="(item, i) in mainReportSorted?.data" :key="i" class="col-lg-auto col-md-auto col-sm-12">
                           <div class="ribbon-box">
                             <div class="cross-shadow-ribbon" :style="`--clr: ${rgb[i]};`">
@@ -67,13 +80,13 @@
                             <div :class="`featured-badge feature-badge-color-${i+1}`">
                               <span>#{{ i+1 }}</span>
                             </div>
-                            <div v-if="assessment_id!=2" v-html-safe="item.choices" class="text-center" />
+                            <div v-html-safe="item.choices" class="text-center" />
                           </div>
                         </div>
                       </div>
                       <div v-html-safe="main_report_data.message" class="my-10" />
                       <hr>
-                      <div class="row justify-content-between align-items-flex-end">
+                      <div v-if="assessment_id!=2" class="row justify-content-between align-items-flex-end">
                         <div class="d-inline col-md-12 col-sm-12 order-1-sm">
                           <el-descriptions class="margin-top" title="Assessment Report" :column="1" size="large" border>
                             <el-descriptions-item>
@@ -263,12 +276,24 @@ export default {
         attempted+=sortedReport[index].point;
       }
       for (let index = 0; index < sortedReport.length; index++) {
+        // if(index===1 && this.assessment_id===2){
+        //   break;
+        // }
         if(index>2){
           break;
         }
-        data.push(sortedReport[index]);
+        if(index===0 && this.assessment_id===2){
+          data.push(sortedReport[index]);
+        }
+        if(this.assessment_id!==2){
+          data.push(sortedReport[index]);
+        }
         // graph.push([sortedReport[index].category, sortedReport[index].point]);
-        graph.push([sortedReport[index].category + ': ' + (((sortedReport[index].point/attempted)*100).toFixed(2)) + '%', ((sortedReport[index].point/attempted)*100).toFixed(2)]);
+        if(this.assessment_id===2){
+          graph.push([index!==0 ? '' : 'Correct Responses' + ': ' + (((sortedReport[index].point/attempted)*100).toFixed(2)) + '%', ((sortedReport[index].point/attempted)*100).toFixed(2)]);
+        }else{
+          graph.push([sortedReport[index].category + ': ' + (((sortedReport[index].point/attempted)*100).toFixed(2)) + '%', ((sortedReport[index].point/attempted)*100).toFixed(2)]);
+        }
       }
       return {
         data,
@@ -304,7 +329,7 @@ export default {
       // for(let i = 0; i < this.main_report.length; i++){
       //   this.rgb.push(this.randomRgbColor());
       // }
-      this.rgb = ['rgb(51 101 199)', 'rgb(220 57 18)', 'rgb(255 153 0)'];
+      this.rgb = ['rgb(67 199 51)', 'rgb(220 57 18)', 'rgb(255 153 0)'];
     },
     async checkId() {
       const loading = this.$loading({
@@ -386,6 +411,11 @@ export default {
       this.currentPage = this.$route.query.page ? Number(this.$route.query.page) : 1;
       this.getTableData(this.$route.query.page ? (this.$route.query.page * 1) - 1 : 0);
       // console.log(this.currentPage);
+    },
+    generateReport () {
+      if (process.client) {
+        window.print()
+      }
     }
   }
 }

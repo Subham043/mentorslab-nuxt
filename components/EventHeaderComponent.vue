@@ -39,7 +39,7 @@
 											<li><NuxtLink to="/publication">Publication</NuxtLink></li>
 											<li><NuxtLink to="/iso">ISO</NuxtLink></li>
 											<li><NuxtLink to="/contact-us">Contact</NuxtLink></li>
-											<li><NuxtLink to="/demo-session">Demo Session</NuxtLink></li>
+											<li><NuxtLink to="/school-audit">School Audit</NuxtLink></li>
 										</ul>
 									</nav>
 								</div>
@@ -95,9 +95,9 @@
 									<span>Contact</span>
 								</el-menu-item>
 							</NuxtLink>
-							<NuxtLink to="/demo-session">
+							<NuxtLink to="/school-audit">
 								<el-menu-item index="6">
-									<span>Demo Session</span>
+									<span>School Audit</span>
 								</el-menu-item>
 							</NuxtLink>
 						</el-menu>

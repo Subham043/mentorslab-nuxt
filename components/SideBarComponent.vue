@@ -148,6 +148,9 @@
 									<NuxtLink to="/admin/payment/ittc">
 										<el-menu-item index="7-4">ITTC </el-menu-item>
 									</NuxtLink>
+									<NuxtLink to="/admin/payment/ttp">
+										<el-menu-item index="7-4">TTP </el-menu-item>
+									</NuxtLink>
 								</el-submenu>
 								<el-submenu index="9">
 									<template slot="title">

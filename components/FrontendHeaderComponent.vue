@@ -28,7 +28,7 @@
                     <el-dropdown-menu slot="dropdown">
                       <el-dropdown-item><NuxtLink to="/courses/ittc-certification">ITTC</NuxtLink></el-dropdown-item>
                       <el-dropdown-item><NuxtLink to="/courses/ittc-advanced-certification">ITTC Advanced</NuxtLink></el-dropdown-item>
-                      <el-dropdown-item>TTP</el-dropdown-item>
+                      <el-dropdown-item><NuxtLink to="/courses/ttp">TTP</NuxtLink></el-dropdown-item>
                     </el-dropdown-menu>
                   </el-dropdown>
                 </li>
@@ -91,7 +91,7 @@
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item><NuxtLink to="/courses/ittc-certification">ITTC</NuxtLink></el-dropdown-item>
                   <el-dropdown-item><NuxtLink to="/courses/ittc-advanced-certification">ITTC Advanced</NuxtLink></el-dropdown-item>
-                  <el-dropdown-item>TTP</el-dropdown-item>
+                  <el-dropdown-item><NuxtLink to="/courses/ttp">TTP</NuxtLink></el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
             </li>

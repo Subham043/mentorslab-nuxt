@@ -19,12 +19,23 @@
 							<ul class="main-menu">
 
 								<!-- <li class="active-menu"><NuxtLink to="index.html">Home</NuxtLink></li> -->
-								<li class=""><NuxtLink to="/about-us">About Us</NuxtLink></li>
-								<li class=""><NuxtLink to="/courses/ittc-certification">ITTC</NuxtLink></li>
-								<li class=""><NuxtLink to="/events">Upcoming Events</NuxtLink></li>
+								<li class=""><NuxtLink to="/about-us">About</NuxtLink></li>
+                <li>
+                  <el-dropdown>
+                    <a href="#" class="el-dropdown-link">
+                      Teachers Training<i class="el-icon-arrow-down el-icon--right"></i>
+                    </a>
+                    <el-dropdown-menu slot="dropdown">
+                      <el-dropdown-item><NuxtLink to="/courses/ittc-certification">ITTC</NuxtLink></el-dropdown-item>
+                      <el-dropdown-item><NuxtLink to="/courses/ittc-advanced-certification">ITTC Advanced</NuxtLink></el-dropdown-item>
+                      <el-dropdown-item>TTP</el-dropdown-item>
+                    </el-dropdown-menu>
+                  </el-dropdown>
+                </li>
+								<li class=""><NuxtLink to="/events">Events</NuxtLink></li>
 								<li class=""><NuxtLink to="/publication">Publication</NuxtLink></li>
 								<li class=""><NuxtLink to="/iso">ISO</NuxtLink></li>
-								<li class=""><NuxtLink to="/demo-session">Demo Session</NuxtLink></li>
+								<li class=""><NuxtLink to="/school-audit">School Audit</NuxtLink></li>
 								<li class=""><NuxtLink to="/contact-us">Contact</NuxtLink></li>
 
 							</ul>
@@ -72,11 +83,22 @@
 					<ul class="main-menu">
 
 						<li><NuxtLink to="/about-us">About Us</NuxtLink></li>
-            <li><NuxtLink to="/courses/ittc-certification">ITTC</NuxtLink></li>
+            <li>
+              <el-dropdown>
+                <a href="#" class="el-dropdown-link">
+                  Teachers Training<i class="el-icon-arrow-down el-icon--right"></i>
+                </a>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item><NuxtLink to="/courses/ittc-certification">ITTC</NuxtLink></el-dropdown-item>
+                  <el-dropdown-item><NuxtLink to="/courses/ittc-advanced-certification">ITTC Advanced</NuxtLink></el-dropdown-item>
+                  <el-dropdown-item>TTP</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+            </li>
 						<li><NuxtLink to="/events">Upcoming Events</NuxtLink></li>
 						<li><NuxtLink to="/publication">Publication</NuxtLink></li>
 						<li><NuxtLink to="/iso">ISO</NuxtLink></li>
-						<li><NuxtLink to="/demo-session">Demo Session</NuxtLink></li>
+						<li><NuxtLink to="/school-audit">School Audit</NuxtLink></li>
 						<li><NuxtLink to="/contact-us">Contact</NuxtLink></li>
 					</ul>
 				</div>

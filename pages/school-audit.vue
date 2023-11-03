@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FrontendBreadcrumbComponent page="Request A Demo Session" />
+        <FrontendBreadcrumbComponent page="School Audit" />
 
         <!-- Contact Form Start -->
         <div class="section contact-form-section section-padding-02">
@@ -9,23 +9,20 @@
                 <div class="contact-form-wrapper">
                     <div class="row">
                         <div class="col-lg-7">
-                            <div class="report-career-content report-career-2-content">
-                                <div class="section-title section-devider">
-                                    <h2 class="title">Get Started Now</h2>
-                                </div>
-                                <p><strong>We value your time and make sure that the time, money and effort you put in this journey is worth it.</strong></p>
-                                <p>If you are in doubt or seeking a clarification on any of the programs you are interested in, feel free to book a <code>30 minute FREE consultation</code> with a Coach. We believe that when you sign up for coaching, you are investing in yourself and to get a desired result, both our commitment is key. Before you sign up, it is important that I hear you and understand your REASON for COACHING.</p>
-                                <ul>
-                                    <li><strong>Schedule a 30 min FREE video call</strong>: Get to know your coach, understand the coaching journey and clarify any expectations before commencing sessions.</li>
-                                    <li>The Coach will also get to know your challenges, the reason you are thinking of hiring a Coach and your very purpose.</li>
-                                    <li>If you decide to go ahead with a coaching session, we shall take the next steps forward.</li>
-                                </ul>
+                          <div class="report-career-content report-career-2-content">
+                              <div class="section-title section-devider">
+                                <h2 class="title">Why School Audit and Quality initiative?</h2>
+                              </div>
+                              <img src="/images/school-audit.jpeg" />
+                                <p>Periodic audit will help Institutions raise their performance and standard of education to the next level.</p>
+                                <p>This unbiased self-assessment will fetch many unaddressed and hidden challenges which the Institution is not able to recognize or understand them.</p>
+                                <p>This practice instils a lot of confidence in the Institution’s leadership and other stakeholders to improve the Institution’s performance at an unprecedented level.</p>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <!-- Contact Form Start -->
                             <div class="contact-form">
-                                <h4 class="title">Request A Session Now</h4>
+                                <h4 class="title">Request For A School Audit</h4>
                                 <ValidationObserver ref="form" v-slot="{ handleSubmit }">
                                 <form id="contactForm" @submit.prevent="handleSubmit(formHandler)">
                                     <div class="row">

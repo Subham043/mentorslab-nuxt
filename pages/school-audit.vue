@@ -50,7 +50,8 @@
                                             <!-- Single Form Start -->
                                             <div class="single-form">
                                                 <ValidationProvider v-slot="{ classes, errors }" rules="required|phone" name="phone">
-                                                    <input id="phone" v-model="phone" type="text" placeholder="Phone">
+                                                    <input id="phone" v-model="phone" type="text" placeholder="Your Phone (+91**********)">
+                                                    <small class="form-text text-muted"><code>Note :</code> Please add '+91' before typing the phone number</small>
                                                     <div :class="classes">{{ errors[0] }}</div>
                                                 </ValidationProvider>
                                             </div>

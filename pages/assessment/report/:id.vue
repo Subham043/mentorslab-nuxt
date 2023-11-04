@@ -57,7 +57,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                           <h5 v-if="assessment_id!==2" class="text-center"><strong><i><u>Based on the scores, which suggests the following</u> :</i></strong></h5>
-                          <pie-chart loading="Loading Chart..." :data="mainReportSorted?.graph"></pie-chart>
+                          <pie-chart loading="Loading Chart..." :data="mainReportSorted?.graph" :colors="assessment_id!==2 ? rgb : ['rgb(18 82 220)']" :donut="false"></pie-chart>
                         </div>
                         <div v-if="assessment_id==2" class="col-lg-6 col-md-6 col-sm-12 simple-bar-chart">
 
@@ -65,6 +65,7 @@
                             <div class="label">{{ item.category }}</div>
                             <div class="value">{{((item.point/attempted)*100).toFixed(2)}}%</div>
                           </div>
+                          <!-- <column-chart :data="mainReportSorted?.graph" :colors="assessment_id!==2 ? rgb : ['rgb(18 82 220)']"></column-chart> -->
 
                         </div>
                       </div>
@@ -329,7 +330,7 @@ export default {
       // for(let i = 0; i < this.main_report.length; i++){
       //   this.rgb.push(this.randomRgbColor());
       // }
-      this.rgb = ['rgb(67 199 51)', 'rgb(220 57 18)', 'rgb(255 153 0)'];
+      this.rgb = ['rgb(67 199 51)', 'rgb(18 82 220)', 'rgb(255 153 0)'];
     },
     async checkId() {
       const loading = this.$loading({
@@ -452,7 +453,8 @@ export default {
   --line-count: 10;
   --line-color: currentcolor;
   --line-opacity: 0.25;
-  --item-gap: 2%;
+  /* --item-gap: 2%; */
+  --item-gap: 20%;
   --item-default-color: #060606;
 
   height: 25rem;

@@ -30,7 +30,9 @@
               <p>The most important role of a great Teacher-Mentor is to connect with students and build a professional relationship that encourages continuous support, helping students develop into a successful professional.</p>
               <p>Emotional health and well-being of students are key to create meaningful learning environment in future and this is becoming a huge task for Teachers.</p>
               <p>I’ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.”</p>
-              <button class="btn" @click="dialogFormVisible = true">Apply Now</button>
+              <div class="text-center">
+                <button class="btn" @click="dialogFormVisible = true">Apply Now</button>
+              </div>
             </div>
           </div>
         </div>

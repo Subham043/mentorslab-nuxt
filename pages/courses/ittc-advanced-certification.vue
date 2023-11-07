@@ -1,29 +1,257 @@
 <template>
     <div>
 
-      <div class="py-5 detail mt-5">
+      <div class="ittc-banner">
         <div class="container">
           <div class="row">
-            <div class="col-12 mb-5">
-              <img src="/images/ittc-advanced.jpeg" alt="">
+            <div class="col-md-7 col-sm-12 mb-5">
+              <h1>
+                ITTC Level II - Advanced Program
+              </h1>
+              <h3>Focus light within, delve deeper, know the outer and explore the inner wisdom...</h3>
+              <button class="btn mb-5" @click="dialogFormVisible = true">Apply Now</button>
+            </div>
+            <div class="col-md-5 col-sm-12">
+              <img src="/images/ttp.jpeg" alt="">
             </div>
           </div>
         </div>
       </div>
 
+      <div class="py-5 detail">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-5">
+              <div class="section-title section-devider text-center">
+                  <h2 class="title">Program Highlights</h2>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <p>Teachers today face many challenges. The expectations from them are skyrocketed and the real challenge for Teachers is to put themselves on continuous learning and update themselves to meet the ever-growing expectations.  Managing people is one of the critical factors now and it is going to be even more critical in the future.</p>
+              <p>The iLed. program is a 3 month certification program to help in-service K-12 Teachers and other Teacher educators to equip with integrated leadership skills, creativity and latest teaching methodologies, inclusive education to assume next-level responsibilities in the School and grow professionally by contributing positively in School’s progression.</p>
+              <div class="text-center">
+                <button class="btn" @click="dialogFormVisible = true">Apply Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-5 detail">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-5">
+              <div class="section-title section-devider text-center">
+                  <h2 class="title">Who should take this program? </h2>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <p>All in-service Teachers and Teacher aspirants who are looking to progress to next level in the School leadership ladder to manage people and become high performers.  </p>
+              <div class="text-center">
+                <button class="btn" @click="dialogFormVisible = true">Apply Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-5 detail">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-5">
+              <div class="section-title section-devider text-center">
+                  <h2 class="title">Why is this program for you? </h2>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <p>Whether you are a fresh graduate with at least a year of experience, a Teacher who has started your career, or an experienced K12 Teacher or Teacher educator, this program will help upskill yourself, without taking a career break and boost your professional network significantly.</p>
+              <div class="text-center">
+                <button class="btn" @click="dialogFormVisible = true">Apply Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <el-dialog title="Register" :visible.sync="dialogFormVisible">
+            <div>
+                <ValidationObserver ref="form" v-slot="{ handleSubmit }">
+                    <form class="form" method="post" @submit.prevent="handleSubmit(formHandler)">
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <ValidationProvider v-slot="{ classes, errors }" rules="required" name="name">
+                                    <div class="form-group">
+                                        <label class="form-label">Name *</label>
+                                        <el-input v-model="name" style="width: 100%;" placeholder="Enter Name"></el-input>
+                                    </div>
+                                    <span :class="classes">{{ errors[0] }}</span>
+                                </ValidationProvider>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <ValidationProvider v-slot="{ classes, errors }" rules="required|email" name="email">
+                                    <div class="form-group">
+                                        <label class="form-label">Email *</label>
+                                        <el-input v-model="email" style="width: 100%;" placeholder="Enter Email"></el-input>
+                                    </div>
+                                    <span :class="classes">{{ errors[0] }}</span>
+                                </ValidationProvider>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <ValidationProvider v-slot="{ classes, errors }" rules="required" name="phone">
+                                    <div class="form-group">
+                                        <label class="form-label">Phone *</label>
+                                        <el-input v-model="phone" style="width: 100%;" placeholder="Enter Phone"></el-input>
+                                    </div>
+                                    <span :class="classes">{{ errors[0] }}</span>
+                                </ValidationProvider>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <ValidationProvider v-slot="{ classes, errors }" rules="required" name="message">
+                                    <div class="form-group">
+                                        <label class="form-label">Message *</label>
+                                        <el-input v-model="message" type="textarea" :row="10" style="width: 100%;" placeholder="Enter Message"></el-input>
+                                    </div>
+                                    <span :class="classes">{{ errors[0] }}</span>
+                                </ValidationProvider>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="btn" type="submit">Register Now @ Rs. 500</button>
+                            </div>
+                        </div>
+                    </form>
+                </ValidationObserver>
+            </div>
+        </el-dialog>
+
+
+
     </div>
 </template>
 
 <script>
+
 export default {
-    name: "IttcAdvancedPage",
+    name: "TtpPage",
     layout: "FrontendLayout",
+    data() {
+        return {
+          dialogFormVisible: false,
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        };
+    },
+    head: {
+        script: [
+            { src: 'https://checkout.razorpay.com/v1/checkout.js' },
+        ],
+    },
     mounted() {
         // eslint-disable-next-line nuxt/no-env-in-hooks
         if (process.client) {
             this.$scrollTo("#__nuxt", 0, { force: true });
         }
     },
+    methods: {
+      nextTestimonialNavClick(){
+          this.$refs.slickTestimonial.next()
+      },
+      prevTestimonialNavClick(){
+          this.$refs.slickTestimonial.prev()
+      },
+      async formHandler() {
+          const loading = this.$loading({
+          lock: true,
+          fullscreen: true,
+          });
+          try {
+              const validate = await this.$publicApi.post('/ittc-advanced-user/validate/',{ // eslint-disable-line
+                  name: this.name,
+                  email: this.email,
+                  phone: this.phone,
+                  message: this.message,
+              }); // eslint-disable-line
+
+                const response = await this.$publicApi.get('/ittc-advanced-user/generate-payment-order'); // eslint-disable-line
+                this.loadRazorpay(response.data.data)
+              // console.log(response);// eslint-disable-line
+          } catch (err) {
+              // console.log(err.response);// eslint-disable-line
+              this.$refs.form.setErrors({
+                email: err?.response?.data?.form_error?.email,
+                message: err?.response?.data?.form_error?.message,
+                name: err?.response?.data?.form_error?.name,
+                phone: err?.response?.data?.form_error?.phone,
+              });
+              if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+              if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+
+          }finally{
+              loading.close()
+          }
+      },
+      loadRazorpay(data){
+          const options = {
+                  key: this.$config.RAZORPAY_KEY_ID,
+                  amount: data.amount,
+                  currency: data.currency,
+                  description: "Payment description",
+                  order_id: data.id,
+                  prefill: {
+                  name: this.name,
+                  email: this.email,
+                  contact: this.phone
+              },
+              theme: {
+                  color: "#000000" // Set your website theme color
+              },
+              handler: async (response) => {
+                  await this.verifyPayment(response, data)
+              }
+          };
+
+          // eslint-disable-next-line no-undef
+          const rzp = new Razorpay(options);
+          rzp.open();
+      },
+      async verifyPayment(data, order){
+          const loading = this.$loading({
+              lock: true,
+              fullscreen: true,
+          });
+          try {
+              const response = await this.$publicApi.post('/ittc-advanced-user/verify-payment',{
+                  razorpayOrderId: data.razorpay_order_id,
+                  razorpayPaymentId: data.razorpay_payment_id,
+                  signature: data.razorpay_signature,
+                  name: this.name,
+                  email: this.email,
+                  phone: this.phone,
+                  message: this.message,
+                  receipt: order.receipt,
+              }); // eslint-disable-line
+              this.$toast.success(response.data.data.message)
+              this.name=''
+              this.email=''
+              this.phone=''
+              this.message=''
+              this.$refs.form.reset()
+              this.dialogFormVisible = false;
+          } catch (err) {
+              this.$refs.form.setErrors({
+                  email: err?.response?.data?.form_error?.email,
+                  message: err?.response?.data?.form_error?.message,
+                  name: err?.response?.data?.form_error?.name,
+                  phone: err?.response?.data?.form_error?.phone,
+              });
+              if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+              if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+          } finally{
+              loading.close()
+          }
+      }
+    }
 }
 </script>
 

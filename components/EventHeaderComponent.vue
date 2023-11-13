@@ -13,7 +13,7 @@
 							<div class="header-wraaper header-top-wrapper text-center">
 								<div class="header-inner">
 									<div class="header-text">
-										<span><i class="far fa-envelope"></i> vmlc@pfla.in</span>
+										<span><i class="far fa-envelope"></i> info@pfla.in</span>
 									</div>
 								</div>
 							</div>

@@ -16,7 +16,7 @@
                     <div class="contact-info-item-wrapper">
                         <div class="row">
                             <FrontendContactCardComponent classlist="contact-info-item contact-info-1 text-center" title="Our Numbers" detail="+91 9902570561" icon="fas fa-phone-volume" />
-                            <FrontendContactCardComponent classlist="contact-info-item contact-info-2 text-center" title="Email Address" detail="vmlc@pfla.in" icon="el-icon-message" />
+                            <FrontendContactCardComponent classlist="contact-info-item contact-info-2 text-center" title="Email Address" detail="info@pfla.in" icon="el-icon-message" />
                             <FrontendContactCardComponent classlist="contact-info-item contact-info-3 text-center" title="Our Location" detail="Bengaluru" icon="el-icon-position" />
                         </div>
                     </div>

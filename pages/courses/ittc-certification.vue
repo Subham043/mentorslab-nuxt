@@ -137,7 +137,7 @@ community</p>
                           <i class="el-icon-user"></i>
                         </div>
                       </div>
-                      <h4>HIGHLY EXPERIENCED TEACHERS</h4>
+                      <h4>HIGHLY EXPERIENCED FACILITATOR</h4>
                     </div>
                 </div>
               </div>

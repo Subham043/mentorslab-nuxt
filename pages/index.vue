@@ -158,7 +158,6 @@
                             <FrontendTeamCardComponent link="/instructor/nalina-murthy" image="/images/22.jpeg" title="Nalina Murthy" designation="Counsellor & Psychologist" />
                             <FrontendTeamCardComponent link="/instructor/chandrashekhar" image="/images/2.jpeg" title="Chandrashekhar" designation="Senior Educator & Professional Counsellor" />
                             <FrontendTeamCardComponent link="/instructor/varada-murthy" image="/images/15.jpeg" title="Varada Murthy K. S." designation="Leadership Coach" />
-                            <FrontendTeamCardComponent link="/instructor/sharmila-jois" image="/images/img/sharmila-jois.jpg" title="Sharmila Jois" designation="Special Educator" />
                         </div>
                     </div>
                     <!-- Team Item Wrapper End -->
@@ -453,10 +452,10 @@ loading="lazy"
                     <!-- Courses Subject Content Wrapper Start -->
                     <div class="courses-subject-content-wrapper">
                         <div class="row">
-                            <FrontendImpactCardComponent classlist="courses-subject-item color-1 text-center" icon="fas fa-book" title="Courses" count="Over 25" />
-                            <FrontendImpactCardComponent classlist="courses-subject-item color-2 text-center" icon="fas fa-globe-americas" title="Learn With Ease" count="Online & offline" />
-                            <FrontendImpactCardComponent classlist="courses-subject-item color-3 text-center" icon="fas fa-graduation-cap" title="Coached / Trained People" count="50000+" />
-                            <FrontendImpactCardComponent classlist="courses-subject-item color-4 text-center" icon="fas fa-calendar-alt" title="Conducted Events" count="Over 60" />
+                            <FrontendImpactCardComponent classlist="courses-subject-item color-1 text-center" icon="fas fa-book" title="Courses" count="Over 30" />
+                            <FrontendImpactCardComponent classlist="courses-subject-item color-2 text-center" icon="fas fa-globe-americas" title="Mode of Learning" count="Online, Offline & Hybrid" />
+                            <FrontendImpactCardComponent classlist="courses-subject-item color-3 text-center" icon="fas fa-graduation-cap" title="Coached / Trained / Mentored Facilitator" count="60000+" />
+                            <FrontendImpactCardComponent classlist="courses-subject-item color-4 text-center" icon="fas fa-calendar-alt" title="Conducted Events" count="Over 100" />
                         </div>
                     </div>
                     <!-- Courses Subject Content Wrapper End -->
@@ -474,13 +473,11 @@ loading="lazy"
                 <div
 class="access-course-wrapper certificate-2-wrapper"
                     style="background-image: url('/images/bg/certificate-2-bg.png');">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-xl-6">
                             <!-- Certificate-2 Image Start -->
                             <div class="access-course-img" data-aos="fade-up" data-aos-delay="200">
-                                <img
-src="/images/app.jpg" loading="lazy"
-                                    alt="">
+                                <img src="/images/app.jpeg" loading="lazy" alt="">
                             </div>
                             <!-- Certificate-2 Image End -->
                         </div>
@@ -490,7 +487,7 @@ src="/images/app.jpg" loading="lazy"
                                 <h2 class="title">Get Certified, Get Ahead with Our Programs</h2>
                                 <p>Learn at your pace using our App on LMS mode. We provide the tools and skills that
                                     you need for your progress.</p>
-                                <NuxtLink class="btn" to="/dashboard">Explore More</NuxtLink>
+                                <NuxtLink class="btn" to="/dashboard">Try Now</NuxtLink>
                             </div>
                             <!-- Certificate-2 Content End -->
                         </div>

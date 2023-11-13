@@ -75,6 +75,10 @@ h1 {
   html {
     min-width: 100% !important
   }
+
+  .el-dialog{
+    width: 95% !important;
+  }
 }
 
 h2 {

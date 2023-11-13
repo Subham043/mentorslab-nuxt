@@ -54,9 +54,13 @@ target="_blank"
 
                                 <div class="widget-link">
                                     <ul class="link">
-                                        <li><a href="https://mentorslab.in/events/upcoming" target="_blank">Upcoming Events</a></li>
+                                        <li><a href="/events" target="_blank">Upcoming Events</a></li>
                                         <li><NuxtLink to="/publication">Publication</NuxtLink></li>
                                         <li><NuxtLink to="/iso">ISO</NuxtLink></li>
+                                        <li><NuxtLink to="/school-audit">School Audit</NuxtLink></li>
+                                        <li><NuxtLink to="/courses/ittc-certification">ITTC</NuxtLink></li>
+                                        <li><NuxtLink to="/courses/ittc-advanced-certification">ITTC Advanced</NuxtLink></li>
+                                        <li><NuxtLink to="/courses/ttp">TTP</NuxtLink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -80,7 +84,7 @@ target="_blank"
                                         <div class="media">
                                             <i class="el-icon-message"></i>
                                             <div class="media-body">
-                                                <a href="vmlc@pfla.in">vmlc@pfla.in</a>
+                                                <a href="info@pfla.in">info@pfla.in</a>
                                             </div>
                                         </div>
                                     </li>

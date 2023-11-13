@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div class="py-5 detail">
+      <div class="py-1 detail">
         <div class="container">
           <div class="row">
             <div class="col-12 mb-5">
@@ -37,7 +37,7 @@
         </div>
       </div>
 
-      <div class="py-5 detail">
+      <div class="py-4 detail">
         <div class="container">
           <div class="row">
             <div class="col-12 mb-5">
@@ -55,7 +55,7 @@
         </div>
       </div>
 
-      <div class="py-5 detail">
+      <div class="py-4 detail">
         <div class="container">
           <div class="row">
             <div class="col-12 mb-5">
@@ -66,6 +66,19 @@
             <div class="col-md-12 col-sm-12">
               <p>Whether you are a fresh graduate with at least a year of experience, a Teacher who has started your career, or an experienced K12 Teacher or Teacher educator, this program will help upskill yourself, without taking a career break and boost your professional network significantly.</p>
               <div class="text-center">
+                <button class="btn" @click="dialogFormVisible = true">Apply Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-4 detail">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <img src="/images/ittc-advanced.jpeg" alt="" />
+              <div class="text-center mt-4">
                 <button class="btn" @click="dialogFormVisible = true">Apply Now</button>
               </div>
             </div>

@@ -12,7 +12,7 @@
               <button class="btn mb-5" @click="dialogFormVisible = true">Apply Now</button>
             </div>
             <div class="col-md-5 col-sm-12">
-              <img src="/images/ttp.jpeg" alt="">
+              <img src="/images/ttp-2.jpeg" alt="">
             </div>
           </div>
         </div>

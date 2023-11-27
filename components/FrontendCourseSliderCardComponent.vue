@@ -23,7 +23,7 @@
                 <div class="courses-content">
                     <div class="courses-author">
                         <img
-                            src="/images/logo-mentor.png" loading="lazy"
+                            src="/images/logo-mentor.webp" loading="lazy"
                             alt="author">
                         <h4 class="name"><a href="#">MentorsLab</a></h4>
                     </div>

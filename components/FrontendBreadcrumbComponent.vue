@@ -1,6 +1,6 @@
 <template>
     <!-- Page Banner Start -->
-    <div class="section page-banner-section" style="background-image: url('/images/bnrt.jpg');">
+    <div class="section page-banner-section" :style="`background-image: url(${bannerImg});`">
         <div class="container">
             <!-- Page Banner Wrapper Start -->
             <div class="page-banner-wrapper">
@@ -32,6 +32,11 @@ export default {
             // eslint-disable-next-line vue/require-prop-type-constructor
             type: String,
             default: ''
+        },
+        bannerImg: {
+            // eslint-disable-next-line vue/require-prop-type-constructor
+            type: String,
+            default: '/images/bnrt.jpg'
         },
     }
 }

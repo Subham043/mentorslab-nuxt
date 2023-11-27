@@ -2,7 +2,7 @@
     <div class="bg-white rounded10 shadow-lg">
         <div class="content-top-agile p-20 pb-0">
             <NuxtLink to="/" class="logo-lg">
-				<span class="light-logo"><img src="/images/logo.png" style="height:70px;" alt="logo"></span>
+				<span class="light-logo"><img src="/images/logo-mentor.webp" style="height:70px;" alt="logo"></span>
 			</NuxtLink>
             <h2 class="text-primary fw-600">Let's Get Started</h2>
             <p class="mb-0 text-fade">Reset your password to continue to Mentorslab.</p>

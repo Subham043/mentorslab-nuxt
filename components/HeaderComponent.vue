@@ -14,7 +14,7 @@
 		</ul>
 		<div class="d-md-flex d-none align-items-center logo-box justify-content-start">
 		<NuxtLink to="/" class="logo-lg">
-			<span class="light-logo"><img class="header-logo" src="/images/logo.png" alt="logo"></span>
+			<span class="light-logo"><img class="header-logo" src="/images/logo-mentor.webp" alt="logo"></span>
 		</NuxtLink>
 	  </div>
 	  </div>

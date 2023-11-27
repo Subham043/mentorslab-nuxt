@@ -13,7 +13,7 @@
                               <div class="section-title section-devider">
                                 <h2 class="title">Why School Audit and Quality initiative?</h2>
                               </div>
-                              <img src="/images/school-audit.jpeg" />
+                              <img src="/images/school-audit.webp" />
                                 <p>Periodic audit will help Institutions raise their performance and standard of education to the next level.</p>
                                 <p>This unbiased self-assessment will fetch many unaddressed and hidden challenges which the Institution is not able to recognize or understand them.</p>
                                 <p>This practice instils a lot of confidence in the Institution’s leadership and other stakeholders to improve the Institution’s performance at an unprecedented level.</p>

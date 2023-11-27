@@ -7,7 +7,7 @@
 						<div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
 							<div class="footer2-wrapper text-center">
 								<div class="footer2-logo">
-									<NuxtLink to="/"><img src="/images/logo-mentor.png" alt="" /></NuxtLink>
+									<NuxtLink to="/"><img src="/images/logo-mentor.webp" alt="" /></NuxtLink>
 								</div>
 								<!-- <div class="subscribes-form">
 									<form id="subscribe-form" action="#">

@@ -27,7 +27,7 @@
 						<div class="row align-items-center justify-content-between">
 							<div class="col-xl-3 col-lg-3 col-sm-auto">
 								<div class="logo">
-									<NuxtLink to="/"><img src="/images/logo-mentor.png" alt="" /></NuxtLink>
+									<NuxtLink to="/"><img src="/images/logo-mentor.webp" alt="" /></NuxtLink>
 								</div>
 							</div>
 							<div class="col-xl-9 col-lg-9 d-none d-lg-block">
@@ -63,7 +63,7 @@
 			<section class="sidebar position-relative">
 				<div class="d-flex align-items-center logo-box justify-content-start" :style="screenWidth > 500 ? '19.29rem' : `${screenWidth-280}px`">
 					<NuxtLink to="/" class="logo-lg">
-						<span class="light-logo"><img src="/images/logo.png" alt="logo"></span>
+						<span class="light-logo"><img src="/images/logo-mentor.webp" alt="logo"></span>
 					</NuxtLink>
 				</div>
 				<div class="multinav" :style="screenWidth > 500 ? 'width:19.29rem' : `width:${screenWidth-200}px`">

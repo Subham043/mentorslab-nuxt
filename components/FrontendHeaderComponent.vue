@@ -8,7 +8,7 @@
 					<!-- Header Logo Start -->
 					<div class="header-logo">
 						<NuxtLink to="/"><img
-								src="/images/logo-mentor.png" alt="" /></NuxtLink>
+								src="/images/logo-mentor.webp" alt="" /></NuxtLink>
 					</div>
 					<!-- Header Logo End -->
 
@@ -72,7 +72,7 @@
 			<div class="offcanvas-header">
 				<!-- Offcanvas Logo Start -->
 				<div class="offcanvas-logo">
-					<NuxtLink to="/"><img src="/images/logo-mentor.png" alt="" /></NuxtLink>
+					<NuxtLink to="/"><img src="/images/logo-mentor.webp" alt="" /></NuxtLink>
 				</div>
 				<!-- Offcanvas Logo End -->
 				<button class="btn-close" data-bs-dismiss="offcanvas" @click="toggleFrontendSidebar"></button>

@@ -8,7 +8,7 @@
 			<section class="sidebar position-relative">
 				<div class="d-flex align-items-center logo-box justify-content-start" :style="screenWidth > 500 ? '19.29rem' : `${screenWidth-80}px`">
 					<NuxtLink to="/" class="logo-lg">
-						<span class="light-logo"><img src="/images/logo.png" alt="logo"></span>
+						<span class="light-logo"><img src="/images/logo-mentor.webp" alt="logo"></span>
 					</NuxtLink>
 				</div>
 				<div class="multinav" :style="screenWidth > 500 ? 'width:19.29rem' : `width:${screenWidth-80}px`">

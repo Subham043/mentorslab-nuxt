@@ -11,7 +11,7 @@
                             <!-- Footer Widget Start -->
                             <div class="footer-widget widget-about">
                                 <NuxtLink class="footer-logo" to="/"><img
-                                        src="/images/99.png" alt="Logo"></NuxtLink>
+                                        src="/images/logo-edumentor.webp" alt="Logo"></NuxtLink>
 
                                 <div class="widget-info">
                                     <p>We support programs that create advancement opportunities for people.</p>

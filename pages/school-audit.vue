@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FrontendBreadcrumbComponent page="School Audit" />
+        <FrontendBreadcrumbComponent page="School Audit" banner-img='/images/school-audit-banner.jpeg' />
 
         <!-- Contact Form Start -->
         <div class="section contact-form-section section-padding-02">

@@ -1,6 +1,26 @@
 <template>
     <div>
-        <FrontendBreadcrumbComponent page="School Audit" banner-img='/images/school-audit-banner.jpeg' />
+        <div class="section page-banner-section" :style="`background-image: url(/images/school-audit-banner.jpeg);`">
+            <div class="container">
+                <!-- Page Banner Wrapper Start -->
+                <div class="page-banner-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Page Banner Content Start -->
+                            <div class="page-banner text-center">
+                                <h2 class="title" style="visibility:hidden;">School Audit</h2>
+                                <ul class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><NuxtLink to="/">Home</NuxtLink> <i class="el-icon-arrow-right"></i></li>
+                                    <li class="breadcrumb-item active" aria-current="page">School Audit</li>
+                                </ul>
+                            </div>
+                            <!-- Page Banner Content End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Page Banner Wrapper End -->
+            </div>
+        </div>
 
         <!-- Contact Form Start -->
         <div class="section contact-form-section section-padding-02">
@@ -13,7 +33,7 @@
                               <div class="section-title section-devider">
                                 <h2 class="title">Why School Audit and Quality initiative?</h2>
                               </div>
-                              <img src="/images/school-audit.webp" />
+                              <img src="/images/school-audit.jpeg" />
                                 <p>Periodic audit will help Institutions raise their performance and standard of education to the next level.</p>
                                 <p>This unbiased self-assessment will fetch many unaddressed and hidden challenges which the Institution is not able to recognize or understand them.</p>
                                 <p>This practice instils a lot of confidence in the Institution’s leadership and other stakeholders to improve the Institution’s performance at an unprecedented level.</p>
@@ -100,12 +120,9 @@
 </template>
 
 <script>
-import FrontendBreadcrumbComponent from '~/components/FrontendBreadcrumbComponent.vue';
-
 
 export default {
     name: "RequestSessionPage",
-    components: { FrontendBreadcrumbComponent },
     layout: "FrontendLayout",
     data() {
         return {

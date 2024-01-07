@@ -5,7 +5,7 @@
         <div class="bg-container">
           <div class="container">
             <div class="row align-items-center">
-              <div class="col-md-7 col-sm-12 order-sm-2 sm-banner-text">
+              <div class="col-md-7 col-sm-12 order-2-sm sm-banner-text">
                 <h1>
                   School Leaders<br/>
                 </h1>
@@ -14,7 +14,7 @@
                 </h3>
                 <button class="btn" @click="dialogFormVisible = true">Become A Member</button>
               </div>
-              <div class="col-md-5 col-sm-12 order-sm-1">
+              <div class="col-md-5 col-sm-12 order-1-sm">
                 <img src="/images/school-leader-6.png" style="object-fit: contain; width: auto;" alt="">
               </div>
             </div>
@@ -134,7 +134,7 @@ community</p>
         <div class="py-5 detail mb-2">
           <div class="container">
             <div class="row justify-content-center align-items-center">
-              <div class="col-md-6 col-sm-12 order-sm-2">
+              <div class="col-md-6 col-sm-12 order-2-sm">
                 <div class="section-title section-devider text-center mb-5">
                     <h2 class="title">HIRING INSTRUCTIONS</h2>
                 </div>
@@ -188,7 +188,7 @@ community</p>
                     </el-collapse-item>
                 </el-collapse>
               </div>
-              <div class="col-md-6 col-sm-12 order-sm-1 sm-mb-3">
+              <div class="col-md-6 col-sm-12 order-1-sm sm-mb-3">
                 <img src="/images/school-leader-3.jpg" alt="" class="w-100">
               </div>
             </div>
@@ -669,10 +669,10 @@ img {
   .banner-svg{
     margin-top: -5px;
   }
-  .order-sm-1{
+  .order-1-sm{
     order:1
   }
-  .order-sm-2{
+  .order-2-sm{
     order:2
   }
   .sm-banner-text{

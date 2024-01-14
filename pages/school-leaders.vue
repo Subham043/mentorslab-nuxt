@@ -15,7 +15,7 @@
                 <button class="btn" @click="dialogFormVisible = true">Become A Member</button>
               </div>
               <div class="col-md-5 col-sm-12 order-1-sm">
-                <img src="/images/school-leader-6.png" style="object-fit: contain; width: auto;" alt="">
+                <img src="/images/school-leader-8.png" style="object-fit: contain; width: auto;" alt="">
               </div>
             </div>
           </div>
@@ -29,7 +29,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-6 col-sm-12">
-              <img src="/images/school-leader-4.jpg" alt="" class="w-100 sm-mb-3" />
+              <img src="/images/school-leader-7.jpg" alt="" class="w-100 sm-mb-3" />
             </div>
             <div class="col-md-6 col-sm-12">
               <div class="section-title section-devider text-center mb-5">

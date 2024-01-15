@@ -4,24 +4,24 @@
       <div class="ittc-banner">
         <div class="bg-container">
           <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-7 col-sm-12 order-2-sm sm-banner-text">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-6 col-sm-12 order-2-sm sm-banner-text">
                 <h1>
-                  School Leaders<br/>
+                  Be the Next School Leader<br/>
                 </h1>
                 <h3>
-                  Improve Your Skills and become an effective Principal
+                  Step up to become an effective Principal
                 </h3>
-                <button class="btn" @click="dialogFormVisible = true">Become A Member</button>
+                <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
               </div>
               <div class="col-md-5 col-sm-12 order-1-sm">
-                <img src="/images/school-leader-8.png" style="object-fit: contain; width: auto;" alt="">
+                <img src="/images/school-leader-9.png" style="object-fit: contain; width: auto;" alt="">
               </div>
             </div>
           </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 170" class="banner-svg">
-          <path fill="#027ec2" fill-opacity="1" d="M0,128L80,106.7C160,85,320,43,480,58.7C640,75,800,149,960,160C1120,171,1280,117,1360,90.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+          <path fill="#dde8fa" fill-opacity="1" d="M0,128L80,106.7C160,85,320,43,480,58.7C640,75,800,149,960,160C1120,171,1280,117,1360,90.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
       </div>
 
@@ -29,11 +29,11 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-6 col-sm-12">
-              <img src="/images/school-leader-7.jpg" alt="" class="w-100 sm-mb-3" />
+              <img src="/images/school-leader-8.png" alt="" class="w-100 sm-mb-3" />
             </div>
             <div class="col-md-6 col-sm-12">
               <div class="section-title section-devider text-center mb-5">
-                  <h2 class="title">WHAT IS SCHOOL LEADER ?</h2>
+                  <h2 class="title">HOW WILL IT BENEFIT ME?</h2>
               </div>
               <p>PFLA believes that academic briliance alone does not guarantee success in today's
 highly competitive and fast paced world. With Academic achievements, SKILL
@@ -47,14 +47,14 @@ have trained and coached over 35000 people that include young Students at School
 Colleges and Business Schools, Corporate and Government Employees, Teaching
 community</p>
             <div class="text-center">
-              <button class="btn" @click="dialogFormVisible = true">Become a Member</button>
+              <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
             </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="detail">
+      <!-- <div class="detail">
           <div class="shape_bg_div pt-4 pb-5">
             <div class="container">
               <div class="row">
@@ -129,9 +129,9 @@ community</p>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="py-5 detail mb-2">
+        <!-- <div class="py-5 detail mb-2">
           <div class="container">
             <div class="row justify-content-center align-items-center">
               <div class="col-md-6 col-sm-12 order-2-sm">
@@ -193,10 +193,83 @@ community</p>
               </div>
             </div>
           </div>
+        </div> -->
+
+        <!-- Certificate Start -->
+        <div class="section certificate-section testimonial-section section-padding pt-5 mb-5">
+              <div class="container">
+                  <!-- Certificate Wrapper Start -->
+                  <div class="certificate-wrapper">
+                      <!-- Section Title Start -->
+                      <div class="section-title section-devider text-center">
+                          <h2 class="title">RECRUITING SCHOOLS</h2>
+                      </div>
+                      <!-- Section Title End -->
+                      <!-- Certificate Content Wrapper Start -->
+                      <div class="certificate-content-wrapper client-wrapper">
+                          <div class="row swiper-container client-active">
+                              <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/cl1.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/2.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/3.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/5.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/6.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/7.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/cl2.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/cl3.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/11.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/12.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/13.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/cl4.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/cl5.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/16.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/18.png" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                  <FrontendClientCardComponent image="/images/clients/19.png" />
+                                </div>
+                                  <!-- <div class="swiper-pagination"></div> -->
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Certificate Content Wrapper End -->
+                  </div>
+                  <!-- Certificate Wrapper End -->
+              </div>
         </div>
+        <!-- Certificate End -->
 
         <!-- Testimonial Start -->
-        <div class="section testimonial-section section-padding">
+        <div class="section section-padding">
             <div class="container">
                 <div class="section-title section-devider text-center">
                     <h2 class="title">TESTIMONIAL</h2>
@@ -254,52 +327,6 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
         <!-- Testimonial End -->
 
 
-        <!-- Certificate Start -->
-        <div class="section certificate-section section-padding pt-5 mb-5">
-              <div class="container">
-                  <!-- Certificate Wrapper Start -->
-                  <div class="certificate-wrapper">
-                      <!-- Section Title Start -->
-                      <div class="section-title section-devider text-center">
-                          <h2 class="title">SCHOOL RECRUITING</h2>
-                      </div>
-                      <!-- Section Title End -->
-                      <!-- Certificate Content Wrapper Start -->
-                      <div class="certificate-content-wrapper client-wrapper">
-                          <div class="row swiper-container client-active">
-                              <div class="swiper-wrapper">
-                                  <VueSlickCarousel v-bind="slickOptionsClient" ref="slickClient">
-                                      <FrontendClientCardComponent image="/images/clients/cl1.png" />
-                                      <FrontendClientCardComponent image="/images/clients/2.png" />
-                                      <FrontendClientCardComponent image="/images/clients/3.png" />
-                                      <FrontendClientCardComponent image="/images/clients/5.png" />
-                                      <FrontendClientCardComponent image="/images/clients/6.png" />
-                                      <FrontendClientCardComponent image="/images/clients/7.png" />
-                                      <FrontendClientCardComponent image="/images/clients/cl2.png" />
-                                      <FrontendClientCardComponent image="/images/clients/cl3.png" />
-                                      <FrontendClientCardComponent image="/images/clients/11.png" />
-                                      <FrontendClientCardComponent image="/images/clients/12.png" />
-                                      <FrontendClientCardComponent image="/images/clients/13.png" />
-                                      <FrontendClientCardComponent image="/images/clients/cl4.png" />
-                                      <FrontendClientCardComponent image="/images/clients/cl5.png" />
-                                      <FrontendClientCardComponent image="/images/clients/16.png" />
-                                      <FrontendClientCardComponent image="/images/clients/18.png" />
-                                      <FrontendClientCardComponent image="/images/clients/19.png" />
-                                      <FrontendClientCardComponent image="/images/clients/cl5.png" />
-                                      <FrontendClientCardComponent image="/images/clients/cl5.png" />
-                              </VueSlickCarousel>
-                                  <!-- <div class="swiper-pagination"></div> -->
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Certificate Content Wrapper End -->
-                  </div>
-                  <!-- Certificate Wrapper End -->
-              </div>
-        </div>
-        <!-- Certificate End -->
-
-
       <el-dialog title="Register" :visible.sync="dialogFormVisible">
             <div>
                 <ValidationObserver ref="form" v-slot="{ handleSubmit }">
@@ -342,7 +369,7 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
                                 </ValidationProvider>
                             </div>
                             <div class="col-md-12">
-                                <button class="btn" type="submit">Register Now @ Rs. 26000</button>
+                                <button class="btn" type="submit">Subscribe @ &#8377;599</button>
                             </div>
                         </div>
                     </form>
@@ -561,10 +588,12 @@ img {
 }
 .bg-container{
   padding-top: 20px;
-  background-color: #027ec2;
+  background-color: #dde8fa;
 }
 .banner-svg{
-  margin-top: -55px;
+  margin-top: -50px;
+  transform: rotateX(180deg);
+  transform: rotateY(180deg);
 }
 /* .shapes-container {
   position: absolute;
@@ -591,18 +620,18 @@ img {
   z-index: 3;
 }
 .ittc-banner h1{
-  color: white;
+  color: #0d96e2;
 }
 .ittc-banner h3{
-  color: white;
+  color: #222;
   font-weight: normal;
   margin-top: 20px;
 }
 .ittc-banner .btn{
   margin-top: 30px;
-  background-color: white;
-  border-color: white;
-  color: #027ec2;
+  background-color: #0d96e2;
+  border-color: #0d96e2;
+  color: #fff;
 }
 /* .ittc-banner::before {
 	content: "";

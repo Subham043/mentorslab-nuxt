@@ -32,8 +32,9 @@
                     </el-dropdown-menu>
                   </el-dropdown>
                 </li>
-								<li class=""><NuxtLink to="/events">Events</NuxtLink></li>
-								<li class=""><NuxtLink to="/publication">Publication</NuxtLink></li>
+								<!-- <li class=""><NuxtLink to="/events">Events</NuxtLink></li> -->
+								<!-- <li class=""><NuxtLink to="/publication">Publication</NuxtLink></li> -->
+								<li class=""><NuxtLink to="/school-leaders">School Leaders</NuxtLink></li>
 								<li class=""><NuxtLink to="/iso">ISO</NuxtLink></li>
 								<li class=""><NuxtLink to="/school-audit">School Audit</NuxtLink></li>
 								<li class=""><NuxtLink to="/contact-us">Contact</NuxtLink></li>

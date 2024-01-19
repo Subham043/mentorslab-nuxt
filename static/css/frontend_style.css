@@ -12527,3 +12527,9 @@ only screen and (max-width:767px) {
 .page-leave-active {
   opacity: 0
 }
+
+.certificate-content-wrapper-main .certificate-img img{
+  mix-blend-mode: darken;
+  object-fit: contain;
+  border-radius: 10px;
+}

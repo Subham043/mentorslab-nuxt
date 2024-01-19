@@ -4,8 +4,8 @@
       <div class="ittc-banner">
         <div class="bg-container">
           <div class="container">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-6 col-sm-12 order-2-sm sm-banner-text">
+            <div class="row align-items-center justify-content-center banner-row-main">
+              <div class="col-md-6 col-sm-12 order-1-sm sm-banner-text">
                 <h1>
                   Be the Next School Leader<br/>
                 </h1>
@@ -14,186 +14,146 @@
                 </h3>
                 <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
               </div>
-              <div class="col-md-5 col-sm-12 order-1-sm">
-                <img src="/images/school-leader-9.png" style="object-fit: contain; width: auto;" alt="">
+              <div class="col-md-6 col-sm-12 order-2-sm">
+                <img src="/images/school-leader-10.png" style="object-fit: contain; width: auto;" alt="">
               </div>
             </div>
           </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 170" class="banner-svg">
-          <path fill="#dde8fa" fill-opacity="1" d="M0,128L80,106.7C160,85,320,43,480,58.7C640,75,800,149,960,160C1120,171,1280,117,1360,90.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-        </svg>
       </div>
 
       <div class="py-5 detail">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6 col-sm-12">
-              <img src="/images/school-leader-8.png" alt="" class="w-100 sm-mb-3" />
-            </div>
+          <div class="row align-items-start">
+
             <div class="col-md-6 col-sm-12">
               <div class="section-title section-devider text-center mb-5">
                   <h2 class="title">HOW WILL IT BENEFIT ME?</h2>
               </div>
-              <p>PFLA believes that academic briliance alone does not guarantee success in today's
-highly competitive and fast paced world. With Academic achievements, SKILL
-DEVELOPMENT is an absolute must to be employable, be competitive and succeed
-in Life.</p>
-                                <p>Our purpose is to help people unleash their true potential through life transforming
-Personal Excellence Programs and motivate them to be successful in School, College
-and Life. PFLA is an Award Winning (Future of India Award for Business
-Excellence Achievement under Quality in Leadership Excellence) Academy. We
-have trained and coached over 35000 people that include young Students at Schools,
-Colleges and Business Schools, Corporate and Government Employees, Teaching
-community</p>
-            <div class="text-center">
-              <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
+              <div class="apps-craft-why-choose-us-container clear-both" style="height: 643px;">
+                <div class="apps-craft-why-choose-us-container-inner clear-both">
+                  <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico">
+                      <i class="el-icon-postcard apps-craft-round">
+                        <span class="apps-craft-dash-border"></span>
+                      </i>
+                    </div>
+
+                    <div class="apps-craft-why-chose-txt">
+                      <h3>Grooming to next-level leadership roles</h3>
+                    </div>
+                  </div>
+                  <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico">
+                      <i class="el-icon-postcard apps-craft-round">
+                        <span class="apps-craft-dash-border"></span>
+                      </i>
+                    </div>
+
+                    <div class="apps-craft-why-chose-txt">
+                      <h3>Access to Digital Knowledge repository</h3>
+                    </div>
+                  </div>
+                  <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico">
+                      <i class="el-icon-postcard apps-craft-round">
+                        <span class="apps-craft-dash-border"></span>
+                      </i>
+                    </div>
+
+                    <div class="apps-craft-why-chose-txt">
+                      <h3>CBSE Processes</h3>
+                    </div>
+                  </div>
+                  <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico">
+                      <i class="el-icon-postcard apps-craft-round">
+                        <span class="apps-craft-dash-border"></span>
+                      </i>
+                    </div>
+
+                    <div class="apps-craft-why-chose-txt">
+                      <h3>Career Shift opportunities in Leadership roles</h3>
+                    </div>
+                  </div>
+                  <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico">
+                      <i class="el-icon-postcard apps-craft-round">
+                        <span class="apps-craft-dash-border"></span>
+                      </i>
+                    </div>
+
+                    <div class="apps-craft-why-chose-txt">
+                      <h3>Leadership Programs</h3>
+                    </div>
+                  </div>
+                  <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico">
+                      <i class="el-icon-postcard apps-craft-round">
+                        <span class="apps-craft-dash-border"></span>
+                      </i>
+                    </div>
+
+                    <div class="apps-craft-why-chose-txt">
+                      <h3>Personalized Mentoring and Coaching</h3>
+                    </div>
+                  </div>
+                  <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico">
+                      <i class="el-icon-postcard apps-craft-round">
+                        <span class="apps-craft-dash-border"></span>
+                      </i>
+                    </div>
+
+                    <div class="apps-craft-why-chose-txt">
+                      <h3>Continuous Professional Development</h3>
+                    </div>
+                  </div>
+                  <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico">
+                      <i class="el-icon-postcard apps-craft-round">
+                        <span class="apps-craft-dash-border"></span>
+                      </i>
+                    </div>
+
+                    <div class="apps-craft-why-chose-txt">
+                      <h3>Administration Skills</h3>
+                    </div>
+                  </div>
+                  <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico">
+                      <i class="el-icon-postcard apps-craft-round">
+                        <span class="apps-craft-dash-border"></span>
+                      </i>
+                    </div>
+
+                    <div class="apps-craft-why-chose-txt">
+                      <h3>Free Assessment for Teacher educators</h3>
+                    </div>
+                  </div>
+                  <!-- <div class="apps-craft-why-chose-single clear-both">
+                    <div class="apps-craft-why-chose-ico" style="width: 50%;">
+                      <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
+                    </div>
+                  </div> -->
+
+                </div>
+              </div>
+              <!-- <div class="text-center">
+                <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
+              </div> -->
             </div>
+
+            <div class="col-md-6 col-sm-12 sticky-img-col">
+              <img src="/images/school-leader-8.png" alt="" class="w-100 sm-mb-3" />
+              <div class="text-center">
+                <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
-
-      <!-- <div class="detail">
-          <div class="shape_bg_div pt-4 pb-5">
-            <div class="container">
-              <div class="row">
-                <div class="col-12 mb-5">
-                  <div class="section-title section-devider text-center">
-                      <h2 class="title">BENEFITS</h2>
-                  </div>
-                </div>
-
-              </div>
-              <div class="row justify-content-center gap-5">
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                    <div class="icon_col">
-                      <div class="icon_main_shap_col">
-                        <div class="icon_shap_col">
-                          <i class="el-icon-postcard"></i>
-                        </div>
-                      </div>
-                      <h4>ISO CERTIFIED</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                    <div class="icon_col">
-                      <div class="icon_main_shap_col">
-                        <div class="icon_shap_col">
-                          <i class="el-icon-money"></i>
-                        </div>
-                      </div>
-                      <h4>LOWEST FEES</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                    <div class="icon_col">
-                      <div class="icon_main_shap_col">
-                        <div class="icon_shap_col">
-                          <i class="el-icon-key"></i>
-                        </div>
-                      </div>
-                      <h4>USER PERMISSION</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                    <div class="icon_col">
-                      <div class="icon_main_shap_col">
-                        <div class="icon_shap_col">
-                          <i class="el-icon-service"></i>
-                        </div>
-                      </div>
-                      <h4>MULTI-LANGUAGE SUPPORT</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                    <div class="icon_col">
-                      <div class="icon_main_shap_col">
-                        <div class="icon_shap_col">
-                          <i class="el-icon-trophy"></i>
-                        </div>
-                      </div>
-                      <h4>100% PLACEMENT ASSISTANCE</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                    <div class="icon_col">
-                      <div class="icon_main_shap_col">
-                        <div class="icon_shap_col">
-                          <i class="el-icon-user"></i>
-                        </div>
-                      </div>
-                      <h4>HIGHLY EXPERIENCED FACILITATOR</h4>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- <div class="py-5 detail mb-2">
-          <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-6 col-sm-12 order-2-sm">
-                <div class="section-title section-devider text-center mb-5">
-                    <h2 class="title">HIRING INSTRUCTIONS</h2>
-                </div>
-                <el-collapse v-model="activeName" accordion>
-                    <el-collapse-item name="1">
-                      <template slot="title">
-                        <h4>What is the Eligibility for ITTC – Level I program?</h4>
-                      </template>
-                      <p>
-                        <ul>
-                          <li>Undergraduate / Graduate / Post Graduate</li>
-                          <li>With interest in teaching</li>
-                        </ul>
-                      </p>
-                    </el-collapse-item>
-                    <el-collapse-item name="2">
-                      <template slot="title">
-                        <h4>What is the Eligibility for ITTC Level II – Advanced program - iLed?</h4>
-                      </template>
-                      <p>
-                        <ul>
-                          <li>Graduate / Post graduate with 1+ years of experience</li>
-                          <li>In teaching / training / counseling </li>
-                        </ul>
-                      </p>
-                    </el-collapse-item>
-                    <el-collapse-item name="3">
-                      <template slot="title">
-                        <h4>Who can take Train the Trainer Program?</h4>
-                      </template>
-                      <p>
-                        <ul>
-                          <li>Anybody interested in becoming a Trainer / Facilitator</li>
-                          <li>Wanting to improve and be an effective communicator</li>
-                          <li>Wanting to improve presentation skills</li>
-                          <li>Wanting to make an impact in their teaching</li>
-                          <li>Looking to shift their career from Teacher to a Trainer</li>
-                        </ul>
-                      </p>
-                    </el-collapse-item>
-                    <el-collapse-item name="4">
-                      <template slot="title">
-                        <h4>Documents required?</h4>
-                      </template>
-                      <p>
-                        <ul>
-                          <li>ID / address proof</li>
-                          <li>Copy of your latest educational certificate</li>
-                        </ul>
-                      </p>
-                    </el-collapse-item>
-                </el-collapse>
-              </div>
-              <div class="col-md-6 col-sm-12 order-1-sm sm-mb-3">
-                <img src="/images/school-leader-3.jpg" alt="" class="w-100">
-              </div>
-            </div>
-          </div>
-        </div> -->
 
         <!-- Certificate Start -->
         <div class="section certificate-section testimonial-section section-padding pt-5 mb-5">
@@ -206,7 +166,7 @@ community</p>
                       </div>
                       <!-- Section Title End -->
                       <!-- Certificate Content Wrapper Start -->
-                      <div class="certificate-content-wrapper client-wrapper">
+                      <div class="certificate-content-wrapper client-wrapper certificate-content-wrapper-main">
                           <div class="row swiper-container client-active">
                               <div class="row justify-content-center">
                                 <div class="col-lg-3 col-md-6 col-sm-12">
@@ -360,6 +320,16 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
                                 </ValidationProvider>
                             </div>
                             <div class="col-md-12 mb-2">
+                                <ValidationProvider v-slot="{ classes, errors }" rules="required|ext:pdf" name="cv">
+                                    <div class="form-group">
+                                        <label class="form-label">CV *</label>
+                                        <input v-model="file" type="hidden" />
+                                        <input class="form-control form-control-sm" type="file" @change="handleFileChnage">
+                                    </div>
+                                    <span :class="classes">{{ errors[0] }}</span>
+                                </ValidationProvider>
+                            </div>
+                            <div class="col-md-12 mb-2">
                                 <ValidationProvider v-slot="{ classes, errors }" rules="required" name="message">
                                     <div class="form-group">
                                         <label class="form-label">Message *</label>
@@ -399,68 +369,38 @@ export default {
           email: "",
           phone: "",
           message: "",
-          slickOptionsClient: {
-                arrows: false,
-                dots: false,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                draggable: true,
-                pauseOnHover: true,
-                swipe: true,
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: false,
-                        },
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            dots: false,
-                        },
-                    },
-                ],
-            },
-            slickOptions: {
-                arrows: false,
-                dots: false,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                draggable: true,
-                pauseOnHover: true,
-                swipe: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: false,
-                        },
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            dots: false,
-                        },
-                    },
-                ],
-            },
+          file: [],
+          slickOptions: {
+              arrows: false,
+              dots: false,
+              infinite: true,
+              autoplay: true,
+              autoplaySpeed: 5000,
+              draggable: true,
+              pauseOnHover: true,
+              swipe: true,
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              responsive: [
+                  {
+                      breakpoint: 1024,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1,
+                          infinite: true,
+                          dots: false,
+                      },
+                  },
+                  {
+                      breakpoint: 600,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1,
+                          dots: false,
+                      },
+                  },
+              ],
+          },
         };
     },
     head: {
@@ -482,59 +422,60 @@ export default {
           this.$refs.slickTestimonial.prev()
       },
       async formHandler() {
-          const loading = this.$loading({
-          lock: true,
-          fullscreen: true,
-          });
-          try {
-              const validate = await this.$publicApi.post('/ittc-user/validate/',{ // eslint-disable-line
-                  name: this.name,
-                  email: this.email,
-                  phone: this.phone,
-                  message: this.message,
-              }); // eslint-disable-line
+        const loading = this.$loading({
+        lock: true,
+        fullscreen: true,
+        });
+        try {
+            const formData = new FormData;
+            formData.append('name', this.name);
+            formData.append('email', this.email);
+            formData.append('phone', this.phone);
+            formData.append('message', !!this.message);
+            formData.append('cv', this.file);
+            await this.$publicApi.post('/subscription-user/validate/',formData); // eslint-disable-line
+            const response = await this.$publicApi.get('/subscription-user/generate-payment-order'); // eslint-disable-line
+            this.loadRazorpay(response.data.data)
+            // console.log(response);// eslint-disable-line
+        } catch (err) {
+            // console.log(err.response);// eslint-disable-line
+            this.$refs.form.setErrors({
+              email: err?.response?.data?.form_error?.email,
+              message: err?.response?.data?.form_error?.message,
+              name: err?.response?.data?.form_error?.name,
+              phone: err?.response?.data?.form_error?.phone,
+              cv: err?.response?.data?.form_error?.cv,
+            });
+            if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+            if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
 
-                const response = await this.$publicApi.get('/ittc-user/generate-payment-order'); // eslint-disable-line
-                this.loadRazorpay(response.data.data)
-              // console.log(response);// eslint-disable-line
-          } catch (err) {
-              // console.log(err.response);// eslint-disable-line
-              this.$refs.form.setErrors({
-                email: err?.response?.data?.form_error?.email,
-                message: err?.response?.data?.form_error?.message,
-                name: err?.response?.data?.form_error?.name,
-                phone: err?.response?.data?.form_error?.phone,
-              });
-              if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
-              if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
-
-          }finally{
-              loading.close()
-          }
+        }finally{
+            loading.close()
+        }
       },
       loadRazorpay(data){
-          const options = {
-                  key: this.$config.RAZORPAY_KEY_ID,
-                  amount: data.amount,
-                  currency: data.currency,
-                  description: "Payment description",
-                  order_id: data.id,
-                  prefill: {
-                  name: this.name,
-                  email: this.email,
-                  contact: this.phone
-              },
-              theme: {
-                  color: "#000000" // Set your website theme color
-              },
-              handler: async (response) => {
-                  await this.verifyPayment(response, data)
-              }
-          };
+        const options = {
+                key: this.$config.RAZORPAY_KEY_ID,
+                amount: data.amount,
+                currency: data.currency,
+                description: "Payment description",
+                order_id: data.id,
+                prefill: {
+                name: this.name,
+                email: this.email,
+                contact: this.phone
+            },
+            theme: {
+                color: "#000000" // Set your website theme color
+            },
+            handler: async (response) => {
+                await this.verifyPayment(response, data)
+            }
+        };
 
-          // eslint-disable-next-line no-undef
-          const rzp = new Razorpay(options);
-          rzp.open();
+        // eslint-disable-next-line no-undef
+        const rzp = new Razorpay(options);
+        rzp.open();
       },
       async verifyPayment(data, order){
           const loading = this.$loading({
@@ -542,21 +483,24 @@ export default {
               fullscreen: true,
           });
           try {
-              const response = await this.$publicApi.post('/ittc-user/verify-payment',{
-                  razorpayOrderId: data.razorpay_order_id,
-                  razorpayPaymentId: data.razorpay_payment_id,
-                  signature: data.razorpay_signature,
-                  name: this.name,
-                  email: this.email,
-                  phone: this.phone,
-                  message: this.message,
-                  receipt: order.receipt,
-              }); // eslint-disable-line
+              const formData = new FormData;
+              formData.append('name', this.name);
+              formData.append('email', this.email);
+              formData.append('phone', this.phone);
+              formData.append('message', this.message);
+              formData.append('amount', order.amount);
+              formData.append('receipt', order.receipt);
+              formData.append('razorpayOrderId', data.razorpay_order_id);
+              formData.append('razorpayPaymentId', data.razorpay_payment_id);
+              formData.append('signature', data.razorpay_signature);
+              formData.append('cv', this.file);
+              const response = await this.$publicApi.post('/subscription-user/verify-payment',formData); // eslint-disable-line
               this.$toast.success(response.data.data.message)
               this.name=''
               this.email=''
               this.phone=''
               this.message=''
+              this.file = []
               this.$refs.form.reset()
               this.dialogFormVisible = false;
           } catch (err) {
@@ -565,13 +509,17 @@ export default {
                   message: err?.response?.data?.form_error?.message,
                   name: err?.response?.data?.form_error?.name,
                   phone: err?.response?.data?.form_error?.phone,
+                  cv: err?.response?.data?.form_error?.cv,
               });
               if(err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
               if(err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
           } finally{
               loading.close()
           }
-      }
+      },
+      handleFileChnage(event){
+            this.file = event.target.files[0];
+      },
     }
 }
 </script>
@@ -586,14 +534,68 @@ img {
   z-index: 1;
   padding-top: 85px;
 }
+
+.bg-container:before, .bg-container:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    min-width: 300vw;
+    min-height: 300vw;
+    background-image: -webkit-linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
+    background-image: -moz-linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
+    background-image: -o-linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
+    background-image: -ms-linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
+    background-image: linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
+    -webkit-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.bg-container:before {
+    bottom: 8vh;
+    border-radius: 45%;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+}
+.bg-container:after {
+    bottom: 6vh;
+    opacity: .5;
+    border-radius: 47%;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, 1%) rotateZ(0deg);
+            transform: translate(-50%, 1%) rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 1%) rotateZ(180deg);
+            transform: translate(-50%, 1%) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 1%) rotateZ(360deg);
+            transform: translate(-50%, 1%) rotateZ(360deg);
+  }
+}
+
 .bg-container{
   padding-top: 20px;
-  background-color: #dde8fa;
+  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
 }
 .banner-svg{
   margin-top: -50px;
   transform: rotateX(180deg);
   transform: rotateY(180deg);
+}
+.banner-row-main{
+  flex-direction: column-reverse;
+  text-align: center;
 }
 /* .shapes-container {
   position: absolute;
@@ -620,7 +622,7 @@ img {
   z-index: 3;
 }
 .ittc-banner h1{
-  color: #0d96e2;
+  color: rgb(13, 150, 226);
 }
 .ittc-banner h3{
   color: #222;
@@ -662,6 +664,9 @@ img {
   font-weight: 400;
   font-size: 30px;
 }
+.detail{
+  padding-top: 90px !important;
+}
 .detail p{
   text-align: justify;
   margin-bottom: 10px;
@@ -694,6 +699,86 @@ img {
   width: 30%;
 }
 
+.apps-craft-why-choose-us-container {
+	width: calc(100% - 160px);
+	margin: 0 auto;
+	display: table;
+}
+.apps-craft-why-choose-us-container-inner{
+	vertical-align: middle;
+	display: table-cell;
+}
+.apps-craft-why-chose-single{
+	margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+}
+.apps-craft-why-chose-ico {
+	width: 30%;
+	height: 100%;
+	text-align: center;
+}
+.apps-craft-why-chose-ico i.apps-craft-round{
+	width: 76px;
+	height: 76px;
+	border-radius: 50%;
+	background-color: #1096e2;
+	box-shadow: 0 18px 32px rgba(0,0,0,.28);
+	line-height: 76px;
+	position: relative;
+	color: #fff;
+	font-size: 2.571em;
+	text-align: center;
+}
+.apps-craft-dash-border {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.apps-craft-dash-border:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.apps-craft-dash-border:before {
+    border-left: 1px dashed #E24B48;
+}
+
+.apps-craft-why-chose-single:last-child .apps-craft-dash-border:before {
+    border-left: none;
+}
+
+.apps-craft-why-chose-txt {
+    width: 70%;
+}
+
+.apps-craft-why-chose-txt h3 {
+    color: #666666;
+    font-size: 1.214em;
+    margin: 0;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 29px 0 23px;
+}
+.sticky-img-col{
+  position: sticky;
+  top: 100px;
+}
+
+.certificate-section{
+  background-image: url(/images/school-lines-bg.png);
+  /* transform: translateZ(-1px) scale(2); */
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 @media only screen and (max-width:500px) {
   .banner-svg{
     margin-top: -5px;
@@ -710,6 +795,10 @@ img {
   }
   .sm-mb-3{
     margin-bottom: 3rem;
+  }
+
+  .apps-craft-why-choose-us-container{
+    width: 100%;
   }
 }
 </style>

@@ -9,23 +9,22 @@
                     <div class="row" style="justify-content:space-between;">
                         <div class="col-lg-4 col-sm-6">
                             <!-- Footer Widget Start -->
-                            <div class="footer-widget widget-about">
+                            <div class="footer-widget widget-about text-center">
                                 <NuxtLink class="footer-logo" to="/"><img
                                         src="/images/logo-edumentor.webp" alt="Logo"></NuxtLink>
 
                                 <div class="widget-info">
-                                    <p>We support programs that create advancement opportunities for people.</p>
 
-                                    <ul class="social">
-                                        <li><a target="_blank" href="https://www.facebook.com/MentorsLab.in"><i
+                                    <ul class="social justify-content-center gap-3">
+                                        <li class="m-0"><a target="_blank" href="https://www.facebook.com/MentorsLab.in"><i
                                                     class="fab fa-facebook"></i></a></li>
-                                        <li><a target="_blank" href="https://www.instagram.com/mentorslab.in/"><i
+                                        <li class="m-0"><a target="_blank" href="https://www.instagram.com/mentorslab.in/"><i
                                                     class="fab fa-instagram"></i></a></li>
-                                        <li><a
+                                        <li class="m-0"><a
 target="_blank"
                                                 href="https://www.linkedin.com/feed/update/urn:li:activity:6914775360538644480/"><i
                                                     class="fab fa-linkedin"></i></a></li>
-                                        <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="m-0"><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -103,7 +102,7 @@ target="_blank"
                         <p>Designed & Developed by <a href="#"> Raistheme</a></p>
                     </div> -->
                         <div class="copyright-text">
-                            <p>&copy; Copyright 2022 All Rights Reserved by PFLA International Pvt. Ltd.
+                            <p>&copy; Copyright 2022 All Rights Reserved by EdumentorsLab Pvt. Ltd.
                             </p>
                         </div>
                     </div>

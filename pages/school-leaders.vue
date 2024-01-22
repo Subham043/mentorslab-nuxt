@@ -5,7 +5,10 @@
         <div class="bg-container">
           <div class="container">
             <div class="row align-items-center justify-content-center banner-row-main">
-              <div class="col-md-6 col-sm-12 order-1-sm sm-banner-text">
+              <div class="col-md-6 col-sm-12 order-1-sm">
+                <img src="/images/school-leader-11.png" style="object-fit: contain; width: auto;" alt="">
+              </div>
+              <div class="col-md-6 col-sm-12 order-2-sm sm-banner-text">
                 <h1>
                   Be the Next School Leader<br/>
                 </h1>
@@ -13,9 +16,6 @@
                   Step up to become an effective Principal
                 </h3>
                 <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
-              </div>
-              <div class="col-md-6 col-sm-12 order-2-sm">
-                <img src="/images/school-leader-10.png" style="object-fit: contain; width: auto;" alt="">
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@
                 <div class="apps-craft-why-choose-us-container-inner clear-both">
                   <div class="apps-craft-why-chose-single clear-both">
                     <div class="apps-craft-why-chose-ico">
-                      <i class="el-icon-postcard apps-craft-round">
+                      <i class="el-icon-star-on apps-craft-round">
                         <span class="apps-craft-dash-border"></span>
                       </i>
                     </div>
@@ -45,7 +45,7 @@
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
                     <div class="apps-craft-why-chose-ico">
-                      <i class="el-icon-postcard apps-craft-round">
+                      <i class="el-icon-star-on apps-craft-round">
                         <span class="apps-craft-dash-border"></span>
                       </i>
                     </div>
@@ -56,7 +56,7 @@
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
                     <div class="apps-craft-why-chose-ico">
-                      <i class="el-icon-postcard apps-craft-round">
+                      <i class="el-icon-star-on apps-craft-round">
                         <span class="apps-craft-dash-border"></span>
                       </i>
                     </div>
@@ -67,7 +67,7 @@
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
                     <div class="apps-craft-why-chose-ico">
-                      <i class="el-icon-postcard apps-craft-round">
+                      <i class="el-icon-star-on apps-craft-round">
                         <span class="apps-craft-dash-border"></span>
                       </i>
                     </div>
@@ -78,7 +78,7 @@
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
                     <div class="apps-craft-why-chose-ico">
-                      <i class="el-icon-postcard apps-craft-round">
+                      <i class="el-icon-star-on apps-craft-round">
                         <span class="apps-craft-dash-border"></span>
                       </i>
                     </div>
@@ -89,7 +89,7 @@
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
                     <div class="apps-craft-why-chose-ico">
-                      <i class="el-icon-postcard apps-craft-round">
+                      <i class="el-icon-star-on apps-craft-round">
                         <span class="apps-craft-dash-border"></span>
                       </i>
                     </div>
@@ -100,7 +100,7 @@
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
                     <div class="apps-craft-why-chose-ico">
-                      <i class="el-icon-postcard apps-craft-round">
+                      <i class="el-icon-star-on apps-craft-round">
                         <span class="apps-craft-dash-border"></span>
                       </i>
                     </div>
@@ -111,7 +111,7 @@
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
                     <div class="apps-craft-why-chose-ico">
-                      <i class="el-icon-postcard apps-craft-round">
+                      <i class="el-icon-star-on apps-craft-round">
                         <span class="apps-craft-dash-border"></span>
                       </i>
                     </div>
@@ -122,7 +122,7 @@
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
                     <div class="apps-craft-why-chose-ico">
-                      <i class="el-icon-postcard apps-craft-round">
+                      <i class="el-icon-star-on apps-craft-round">
                         <span class="apps-craft-dash-border"></span>
                       </i>
                     </div>
@@ -188,12 +188,6 @@
                                   <FrontendClientCardComponent image="/images/clients/7.png" />
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                  <FrontendClientCardComponent image="/images/clients/cl2.png" />
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-12">
-                                  <FrontendClientCardComponent image="/images/clients/cl3.png" />
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-12">
                                   <FrontendClientCardComponent image="/images/clients/11.png" />
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
@@ -201,9 +195,6 @@
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                   <FrontendClientCardComponent image="/images/clients/13.png" />
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-12">
-                                  <FrontendClientCardComponent image="/images/clients/cl4.png" />
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                   <FrontendClientCardComponent image="/images/clients/cl5.png" />
@@ -541,11 +532,11 @@ img {
     left: 50%;
     min-width: 300vw;
     min-height: 300vw;
-    background-image: -webkit-linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
-    background-image: -moz-linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
-    background-image: -o-linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
-    background-image: -ms-linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
-    background-image: linear-gradient( 25deg, rgb(195, 234, 255) 0%, rgb(195, 216, 251) 100%);
+    background-image: -webkit-linear-gradient( 25deg, rgb(13 150 226) 0%, rgb(13 150 226) 100%);
+    background-image: -moz-linear-gradient( 25deg, rgb(13 150 226) 0%, rgb(13 150 226) 100%);
+    background-image: -o-linear-gradient( 25deg, rgb(13 150 226) 0%, rgb(13 150 226) 100%);
+    background-image: -ms-linear-gradient( 25deg, rgb(13 150 226) 0%, rgb(13 150 226) 100%);
+    background-image: linear-gradient( 25deg, rgb(13 150 226) 0%, rgb(13 150 226) 100%);
     -webkit-animation-name: rotate;
     animation-name: rotate;
     -webkit-animation-iteration-count: infinite;
@@ -594,7 +585,7 @@ img {
   transform: rotateY(180deg);
 }
 .banner-row-main{
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
   text-align: center;
 }
 /* .shapes-container {
@@ -622,18 +613,19 @@ img {
   z-index: 3;
 }
 .ittc-banner h1{
-  color: rgb(13, 150, 226);
+  color: #fff;
+  font-size: 2.5rem;
 }
 .ittc-banner h3{
-  color: #222;
-  font-weight: normal;
-  margin-top: 20px;
+  color: #fff;
+  font-weight: 600 !important;
+  margin-top: 5px;
 }
 .ittc-banner .btn{
   margin-top: 30px;
-  background-color: #0d96e2;
-  border-color: #0d96e2;
-  color: #fff;
+  background-color: #fff;
+  border-color: #fff;
+  color: #0d96e2;
 }
 /* .ittc-banner::before {
 	content: "";
@@ -709,7 +701,7 @@ img {
 	display: table-cell;
 }
 .apps-craft-why-chose-single{
-	margin-bottom: 35px;
+	margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
@@ -719,15 +711,15 @@ img {
 	text-align: center;
 }
 .apps-craft-why-chose-ico i.apps-craft-round{
-	width: 76px;
-	height: 76px;
+	width: 46px;
+	height: 46px;
 	border-radius: 50%;
 	background-color: #1096e2;
 	box-shadow: 0 18px 32px rgba(0,0,0,.28);
-	line-height: 76px;
+	line-height: 46px;
 	position: relative;
 	color: #fff;
-	font-size: 2.571em;
+	font-size: 2.171em;
 	text-align: center;
 }
 .apps-craft-dash-border {
@@ -760,11 +752,11 @@ img {
 
 .apps-craft-why-chose-txt h3 {
     color: #666666;
-    font-size: 1.214em;
+    font-size: 1.114em;
     margin: 0;
     font-weight: 500;
     text-transform: capitalize;
-    margin: 29px 0 23px;
+    margin: 0;
 }
 .sticky-img-col{
   position: sticky;
@@ -799,6 +791,14 @@ img {
 
   .apps-craft-why-choose-us-container{
     width: 100%;
+  }
+
+  .ittc-banner h1{
+    font-size: 1.5rem;
+  }
+  .ittc-banner .btn{
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 }
 </style>

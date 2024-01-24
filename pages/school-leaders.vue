@@ -10,7 +10,7 @@
               </div>
               <div class="col-md-6 col-sm-12 order-2-sm sm-banner-text">
                 <h1>
-                  Be the Next School Leader<br/>
+                  Be the Next School Leader
                 </h1>
                 <h3>
                   Step up to become an effective Principal
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="py-5 detail">
+      <div class="pb-4 detail">
         <div class="container">
           <div class="row align-items-start">
 
@@ -156,13 +156,13 @@
       </div>
 
         <!-- Certificate Start -->
-        <div class="section certificate-section testimonial-section section-padding pt-5 mb-5">
+        <div class="section certificate-section testimonial-section section-padding pt-2 pb-2 mb-5">
               <div class="container">
                   <!-- Certificate Wrapper Start -->
                   <div class="certificate-wrapper">
                       <!-- Section Title Start -->
                       <div class="section-title section-devider text-center">
-                          <h2 class="title">RECRUITING SCHOOLS</h2>
+                          <h2 class="title">HIRING SCHOOLS</h2>
                       </div>
                       <!-- Section Title End -->
                       <!-- Certificate Content Wrapper Start -->
@@ -220,7 +220,7 @@
         <!-- Certificate End -->
 
         <!-- Testimonial Start -->
-        <div class="section section-padding">
+        <div class="section section-padding pt-2 pb-3">
             <div class="container">
                 <div class="section-title section-devider text-center">
                     <h2 class="title">TESTIMONIAL</h2>
@@ -524,9 +524,10 @@ img {
   position: relative;
   z-index: 1;
   padding-top: 85px;
+  background-color: rgb(13 150 226);
 }
 
-.bg-container:before, .bg-container:after {
+/* .bg-container:before, .bg-container:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -570,7 +571,7 @@ img {
     -webkit-transform: translate(-50%, 1%) rotateZ(360deg);
             transform: translate(-50%, 1%) rotateZ(360deg);
   }
-}
+} */
 
 .bg-container{
   padding-top: 20px;
@@ -614,7 +615,8 @@ img {
 }
 .ittc-banner h1{
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  line-height: 1;
 }
 .ittc-banner h3{
   color: #fff;
@@ -622,7 +624,7 @@ img {
   margin-top: 5px;
 }
 .ittc-banner .btn{
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: #fff;
   border-color: #fff;
   color: #0d96e2;
@@ -657,7 +659,7 @@ img {
   font-size: 30px;
 }
 .detail{
-  padding-top: 90px !important;
+  padding-top: 30px !important;
 }
 .detail p{
   text-align: justify;
@@ -755,7 +757,6 @@ img {
     font-size: 1.114em;
     margin: 0;
     font-weight: 500;
-    text-transform: capitalize;
     margin: 0;
 }
 .sticky-img-col{

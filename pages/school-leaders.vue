@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="apps-craft-why-chose-txt">
-                      <h3>Grooming to next-level leadership roles</h3>
+                      <h3>Grooming to next-level leadership roles from Experts</h3>
                     </div>
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="apps-craft-why-chose-txt">
-                      <h3>Access to Digital Knowledge repository</h3>
+                      <h3>Access to Digital Knowledge Repository</h3>
                     </div>
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="apps-craft-why-chose-txt">
-                      <h3>CBSE Processes</h3>
+                      <h3>Free Assessment for Teacher Educators</h3>
                     </div>
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
@@ -84,7 +84,7 @@
                     </div>
 
                     <div class="apps-craft-why-chose-txt">
-                      <h3>Leadership Programs</h3>
+                      <h3>Access to Leadership Programs</h3>
                     </div>
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
@@ -117,7 +117,7 @@
                     </div>
 
                     <div class="apps-craft-why-chose-txt">
-                      <h3>Administration Skills</h3>
+                      <h3>Coaching on Administration Skills</h3>
                     </div>
                   </div>
                   <div class="apps-craft-why-chose-single clear-both">
@@ -128,7 +128,7 @@
                     </div>
 
                     <div class="apps-craft-why-chose-txt">
-                      <h3>Free Assessment for Teacher educators</h3>
+                      <h3>Assessment and Certification from Edumentorslab</h3>
                     </div>
                   </div>
                   <!-- <div class="apps-craft-why-chose-single clear-both">
@@ -311,7 +311,7 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
                                 </ValidationProvider>
                             </div>
                             <div class="col-md-12 mb-2">
-                                <ValidationProvider v-slot="{ classes, errors }" rules="required|ext:pdf" name="cv">
+                                <ValidationProvider v-slot="{ classes, errors }" rules="ext:pdf" name="cv">
                                     <div class="form-group">
                                         <label class="form-label">CV *</label>
                                         <input v-model="file" type="hidden" />
@@ -360,7 +360,7 @@ export default {
           email: "",
           phone: "",
           message: "",
-          file: [],
+          file: null,
           slickOptions: {
               arrows: false,
               dots: false,
@@ -423,7 +423,9 @@ export default {
             formData.append('email', this.email);
             formData.append('phone', this.phone);
             formData.append('message', !!this.message);
-            formData.append('cv', this.file);
+            if(this.file){
+              formData.append('cv', this.file);
+            }
             await this.$publicApi.post('/subscription-user/validate/',formData); // eslint-disable-line
             const response = await this.$publicApi.get('/subscription-user/generate-payment-order'); // eslint-disable-line
             this.loadRazorpay(response.data.data)
@@ -484,14 +486,31 @@ export default {
               formData.append('razorpayOrderId', data.razorpay_order_id);
               formData.append('razorpayPaymentId', data.razorpay_payment_id);
               formData.append('signature', data.razorpay_signature);
-              formData.append('cv', this.file);
+              if(this.file){
+                formData.append('cv', this.file);
+              }
               const response = await this.$publicApi.post('/subscription-user/verify-payment',formData); // eslint-disable-line
               this.$toast.success(response.data.data.message)
+              if(this.$auth.loggedIn){
+                await this.$auth.logout();
+              }
+              await this.$auth.setUser({
+                id: response.data.data.order.userId,
+                name: response.data.data.order.name,
+                email: response.data.data.order.email,
+                phone: response.data.data.order.phone,
+                role: response.data.data.order.role,
+                blocked: response.data.data.order.blocked,
+                verified: response.data.data.order.verified,
+                createdAt: response.data.data.order.createdAt,
+                updatedAt: response.data.data.order.updatedAt,
+              })
+              await this.$auth.setUserToken(response.data.data.order.access_token, response.data.data.order.refresh_token)
               this.name=''
               this.email=''
               this.phone=''
               this.message=''
-              this.file = []
+              this.file = null
               this.$refs.form.reset()
               this.dialogFormVisible = false;
           } catch (err) {

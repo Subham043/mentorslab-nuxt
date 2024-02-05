@@ -73,7 +73,8 @@
       <div class="text-center">
         <p class="mt-15 mb-0 text-fade">
           Don't have an account?
-          <NuxtLink to="/auth/register" class="text-primary ms-5">Register</NuxtLink>
+          <!-- <NuxtLink to="/auth/register" class="text-primary ms-5">Register</NuxtLink> -->
+          <NuxtLink to="/school-leaders" class="text-primary ms-5">Register</NuxtLink>
         </p>
       </div>
 

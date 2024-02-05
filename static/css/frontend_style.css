@@ -12533,3 +12533,12 @@ only screen and (max-width:767px) {
   object-fit: contain;
   border-radius: 10px;
 }
+
+.certificate-section-school-leader .certificate-content-wrapper-main .certificate-img img{
+  height: 120px;
+}
+
+.certificate-section-school-leader .client-active .certificate-item{
+  padding: 0;
+  margin-top: 10px;
+}

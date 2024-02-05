@@ -6,7 +6,7 @@
           <div class="container">
             <div class="row align-items-center justify-content-center banner-row-main">
               <div class="col-md-6 col-sm-12 order-1-sm">
-                <img src="/images/school-leader-11.png" style="object-fit: contain; width: auto;" alt="">
+                <img src="/images/school-leader-12.webp" style="object-fit: contain; width: auto;" alt="">
               </div>
               <div class="col-md-6 col-sm-12 order-2-sm sm-banner-text">
                 <h1>
@@ -22,7 +22,113 @@
         </div>
       </div>
 
-      <div class="pb-4 detail">
+      <div class="detail">
+        <div class="shape_bg_div_2 pb-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mb-5">
+                <div class="section-title section-devider text-center">
+                    <h2 class="title">HOW WILL IT BENEFIT ME?</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-between">
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <div class="icon_col">
+                    <div class="icon_main_shap_col">
+                      <div class="icon_shap_col">
+                        <i class="el-icon-medal-1"></i>
+                      </div>
+                    </div>
+                    <h4>Grooming to next-level leadership roles from Experts</h4>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <div class="icon_col">
+                    <div class="icon_main_shap_col">
+                      <div class="icon_shap_col">
+                        <i class="el-icon-key"></i>
+                      </div>
+                    </div>
+                    <h4>Access to Digital Knowledge Repository</h4>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <div class="icon_col">
+                    <div class="icon_main_shap_col">
+                      <div class="icon_shap_col">
+                        <i class="el-icon-tickets"></i>
+                      </div>
+                    </div>
+                    <h4>Free Assessment for Teacher Educators</h4>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <div class="icon_col">
+                    <div class="icon_main_shap_col">
+                      <div class="icon_shap_col">
+                        <i class="el-icon-trophy"></i>
+                      </div>
+                    </div>
+                    <h4>Career Shift opportunities in Leadership roles</h4>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <div class="icon_col">
+                    <div class="icon_main_shap_col">
+                      <div class="icon_shap_col">
+                        <i class="el-icon-unlock"></i>
+                      </div>
+                    </div>
+                    <h4>Access to Leadership Programs</h4>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <div class="icon_col">
+                    <div class="icon_main_shap_col">
+                      <div class="icon_shap_col">
+                        <i class="el-icon-service"></i>
+                      </div>
+                    </div>
+                    <h4>Personalized Mentoring and Coaching</h4>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <div class="icon_col">
+                    <div class="icon_main_shap_col">
+                      <div class="icon_shap_col">
+                        <i class="el-icon-s-cooperation"></i>
+                      </div>
+                    </div>
+                    <h4>Continuous Professional Development</h4>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <div class="icon_col">
+                    <div class="icon_main_shap_col">
+                      <div class="icon_shap_col">
+                        <i class="el-icon-user"></i>
+                      </div>
+                    </div>
+                    <h4>Coaching on Administration Skills</h4>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                  <div class="icon_col">
+                    <div class="icon_main_shap_col">
+                      <div class="icon_shap_col">
+                        <i class="el-icon-postcard"></i>
+                      </div>
+                    </div>
+                    <h4>Assessment and Certification from Edumentorslab</h4>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="pb-4 detail">
         <div class="container">
           <div class="row align-items-start">
 
@@ -131,17 +237,9 @@
                       <h3>Assessment and Certification from Edumentorslab</h3>
                     </div>
                   </div>
-                  <!-- <div class="apps-craft-why-chose-single clear-both">
-                    <div class="apps-craft-why-chose-ico" style="width: 50%;">
-                      <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
-                    </div>
-                  </div> -->
 
                 </div>
               </div>
-              <!-- <div class="text-center">
-                <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
-              </div> -->
             </div>
 
             <div class="col-md-6 col-sm-12 sticky-img-col">
@@ -153,10 +251,10 @@
 
           </div>
         </div>
-      </div>
+      </div> -->
 
         <!-- Certificate Start -->
-        <div class="section certificate-section testimonial-section section-padding pt-2 pb-2 mb-5">
+        <div class="section certificate-section certificate-section-school-leader  testimonial-section section-padding pt-2 pb-2 mb-5">
               <div class="container">
                   <!-- Certificate Wrapper Start -->
                   <div class="certificate-wrapper">
@@ -313,7 +411,7 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
                             <div class="col-md-12 mb-2">
                                 <ValidationProvider v-slot="{ classes, errors }" rules="ext:pdf" name="cv">
                                     <div class="form-group">
-                                        <label class="form-label">CV *</label>
+                                        <label class="form-label">CV</label>
                                         <input v-model="file" type="hidden" />
                                         <input class="form-control form-control-sm" type="file" @change="handleFileChnage">
                                     </div>
@@ -543,7 +641,28 @@ img {
   position: relative;
   z-index: 1;
   padding-top: 85px;
-  background-color: rgb(13 150 226);
+  /* background-color: rgb(13 150 226); */
+  background: radial-gradient(circle, #0d96e2 0%, #88d3fe 100%);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 25% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 0% 25%;
+  }
 }
 
 /* .bg-container:before, .bg-container:after {
@@ -688,7 +807,7 @@ img {
   background:#dde8fa;
 }
 .icon_shap_col{
-  background-color: #0d96e2;
+  background-color: #65c0f6;
   color: white;
   font-size: 45px;
   width: 100%;
@@ -708,8 +827,9 @@ img {
   border-radius: 50%;
   margin-bottom: 15px;
 }
-.shape_bg_div .col-lg-4{
+.shape_bg_div .col-lg-4, .shape_bg_div_2 .col-lg-4{
   width: 30%;
+  margin-bottom: 25px;
 }
 
 .apps-craft-why-choose-us-container {
@@ -784,11 +904,26 @@ img {
 }
 
 .certificate-section{
+  background: none;
   background-image: url(/images/school-lines-bg.png);
+  background-color: #ddf3ff;
   /* transform: translateZ(-1px) scale(2); */
   background-repeat: repeat-x;
   background-attachment: fixed;
   background-position: center;
+  animation: gradient-school-animation 30s linear infinite;
+}
+
+@keyframes gradient-school-animation {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }
 
 @media only screen and (max-width:500px) {
@@ -819,6 +954,10 @@ img {
   .ittc-banner .btn{
     margin-top: 20px;
     margin-bottom: 30px;
+  }
+
+  .col-lg-4{
+    width: 100% !important;
   }
 }
 </style>

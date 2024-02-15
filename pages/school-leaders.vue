@@ -6,7 +6,7 @@
           <div class="container">
             <div class="row align-items-center justify-content-start banner-row-main">
               <div class="col-md-6 col-sm-12 order-1-sm">
-                <img src="/images/school-leader-14.png" style="object-fit: contain; width: auto;" alt="">
+                <img src="/images/school-leader-12.webp" style="object-fit: contain; width: auto;" alt="">
               </div>
               <div class="col-md-6 col-sm-12 order-2-sm sm-banner-text">
                 <h1>
@@ -15,7 +15,7 @@
                 <h3>
                   Step up to become an effective Principal
                 </h3>
-                <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
+                <button class="btn custom-anim-btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
               </div>
             </div>
           </div>
@@ -128,14 +128,15 @@
         </div>
       </div> -->
 
-      <div class="pb-4 detail">
+      <div class="pb-5 detail">
         <div class="container">
           <div class="row align-items-start">
 
             <div class="col-md-6 col-sm-12 order-2-sm sticky-img-col">
-              <img src="/images/school-leader-8.png" alt="" class="w-100 sm-mb-3" />
+              <!-- <img src="/images/school-leader-8.png" alt="" class="w-100 sm-mb-3" /> -->
+              <img src="/images/school-leader-15.png" alt="" class="w-100 sm-mb-3" />
               <div class="text-center">
-                <button class="btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
+                <button class="btn custom-anim-btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
               </div>
             </div>
 
@@ -633,6 +634,59 @@ export default {
 </script>
 
 <style scoped>
+.custom-anim-btn{
+  margin: 15px auto;
+  font-size: 20px;
+  line-height: 1px;
+  color: #ffffff !important;
+  cursor: pointer;
+  border-radius: 100px;
+  padding: 15px 20px;
+  border: 0px solid #000;
+  animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in;
+}
+.custom-anim-btn:hover,
+.custom-anim-btn:focus {
+  animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in, hoverShine 200ms;
+}
+
+
+/* Declate color shifting animation */
+@keyframes colorShift {
+  0%, 100% {
+      background: #b78e35;
+  }
+  33% {
+    background: #b78e35;
+  }
+  66%{
+    background: #b78e35;
+  }
+}
+
+/* Declare border pulse animation */
+@keyframes borderPulse {
+  0% {
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255,.4), 0px 0px 0px 0px rgba(255,255,255,1);
+  }
+  100% {
+    box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255,.2), 0px 0px 0px 10px rgba(255,255,255,0);
+  }
+}
+
+/* Declare shine on hover animation */
+@keyframes hoverShine {
+  0%{
+    background-image: linear-gradient(135deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
+  }
+  50%{
+    background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.4) 50%, rgba(255,255,255,0) 100%);
+  }
+  100%{
+    background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,.4) 100%);
+  }
+}
+
 img {
     max-width: 100%;
     width: 100%;
@@ -642,12 +696,13 @@ img {
   z-index: 1;
   padding-top: 65px;
   /* background-color: rgb(13 150 226); */
-  /* background: radial-gradient(circle, #0d96e2 0%, #88d3fe 100%);
+  background: radial-gradient(circle, #88d3fe 0%, #0d96e2 100%);
   background-size: 180% 180%;
-  animation: gradient-animation 10s ease-in-out infinite; */
-  background-image: url('/images/school-leader-bg.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* animation: gradient-animation 10s ease-in-out infinite; */
+  /* background-image: radial-gradient(circle, rgba(136, 211, 254, 0.5) 0%, rgba(13, 150, 226, 0.8) 100%), url('/images/school-leader-14.png'); */
+  /* background-image: url('/images/school-leader-14.png'); */
+  /* background-repeat: no-repeat;
+  background-size: contain; */
 }
 
 @keyframes gradient-animation {

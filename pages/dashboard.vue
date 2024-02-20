@@ -59,19 +59,20 @@
       </div>
       <div class="card bg-primary-light">
 			  <div class="card-header justify-content-between">
-          <h4 class="card-title"><i class="el-icon-reading"></i> Content</h4>
+          <h4 class="card-title"><i class="el-icon-reading"></i> Free Content</h4>
           <div class="text-center col-sm-auto">
-            <NuxtLink to="/content/free"><el-button type="warning">Free Contents</el-button></NuxtLink>
-            <NuxtLink to="/content/paid"><el-button type="warning">Paid Contents</el-button></NuxtLink>
+            <!-- <NuxtLink to="/content/free"><el-button type="warning">Free Contents</el-button></NuxtLink>
+            <NuxtLink to="/content/paid"><el-button type="warning">Paid Contents</el-button></NuxtLink> -->
+            <NuxtLink to="/content/free"><el-button type="warning">View All</el-button></NuxtLink>
           </div>
 			  </div>
 			</div>
-      <div v-if="loading" class="row">
+      <div v-if="freeLoading" class="row">
           <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-3">
               <ContentCardSkeletonComponent />
           </div>
       </div>
-      <div v-else-if="contentData.length===0">
+      <div v-else-if="freeTableData.length===0">
           <div class="row justify-content-center">
               <div class="col-md-6 col-sm-12">
                   <NoUserDataComponent />
@@ -80,7 +81,45 @@
       </div>
       <div v-else>
           <div class="row justify-content-center">
-              <div v-for="item in contentData" :key="item.id" class="col-md-6 col-lg-3">
+              <div v-for="item in freeTableData" :key="item.id" class="col-md-6 col-lg-3">
+                  <ContentCardComponent
+                  :id="item.id"
+                  :uuid="item.uuid"
+                  :title="item.name"
+                  :heading="item.heading"
+                  :type="item.type"
+                  :paid="item.paid"
+                  :amount="item.amount"
+                  :purchased="item.AssignedContent.length>0"
+                  :paragraph="item.description" />
+              </div><!-- end col -->
+          </div>
+      </div>
+      <div class="card bg-primary-light">
+			  <div class="card-header justify-content-between">
+          <h4 class="card-title"><i class="el-icon-reading"></i> Paid Content</h4>
+          <div class="text-center col-sm-auto">
+            <!-- <NuxtLink to="/content/free"><el-button type="warning">Free Contents</el-button></NuxtLink>
+            <NuxtLink to="/content/paid"><el-button type="warning">Paid Contents</el-button></NuxtLink> -->
+            <NuxtLink to="/content/paid"><el-button type="warning">View All</el-button></NuxtLink>
+          </div>
+			  </div>
+			</div>
+      <div v-if="paidLoading" class="row">
+          <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-3">
+              <ContentCardSkeletonComponent />
+          </div>
+      </div>
+      <div v-else-if="paidTableData.length===0">
+          <div class="row justify-content-center">
+              <div class="col-md-6 col-sm-12">
+                  <NoUserDataComponent />
+              </div>
+          </div>
+      </div>
+      <div v-else>
+          <div class="row justify-content-center">
+              <div v-for="item in paidTableData" :key="item.id" class="col-md-6 col-lg-3">
                   <ContentCardComponent
                   :id="item.id"
                   :uuid="item.uuid"
@@ -152,8 +191,12 @@ export default {
     data() {
         return {
             contentData: [],
+            freeTableData: [],
+            paidTableData: [],
             liveSessionContentData: [],
             loading: false,
+            freeLoading: false,
+            paidLoading: false,
             skeletonCount: 4,
             contentCount: 0,
             liveSessionCount: 0,
@@ -162,6 +205,8 @@ export default {
     },
     mounted(){
         this.loadData();
+        this.getFreeTableData();
+        this.getPaidTableData();
     },
     methods: {
       async loadData(){
@@ -181,7 +226,35 @@ export default {
         } finally {
             this.loading=false
         }
-      }
+      },
+      async getFreeTableData(page=0) {
+        this.freeLoading=true
+        try {
+            const response = await this.$privateApi.get('/content-user/paginate-free?skip='+page); // eslint-disable-line
+            this.freeTableData = response?.data?.data?.data
+        } catch (err) {
+            // console.log(err.response);// eslint-disable-line
+            if (err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+            if (err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+
+        } finally {
+            this.freeLoading=false
+        }
+      },
+      async getPaidTableData(page=0) {
+        this.paidLoading=true
+        try {
+            const response = await this.$privateApi.get('/content-user/paginate-paid?skip='+page); // eslint-disable-line
+            this.paidTableData = response?.data?.data?.data
+        } catch (err) {
+            // console.log(err.response);// eslint-disable-line
+            if (err?.response?.data?.message) this.$toast.error(err?.response?.data?.message)
+            if (err?.response?.data?.error) this.$toast.error(err?.response?.data?.error)
+
+        } finally {
+            this.paidLoading=false
+        }
+      },
     }
 }
 </script>

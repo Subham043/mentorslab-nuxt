@@ -57,81 +57,87 @@
           </div>
         </div>
       </div>
-      <div class="card bg-primary-light">
-			  <div class="card-header justify-content-between">
-          <h4 class="card-title"><i class="el-icon-reading"></i> Free Content</h4>
-          <div class="text-center col-sm-auto">
-            <!-- <NuxtLink to="/content/free"><el-button type="warning">Free Contents</el-button></NuxtLink>
-            <NuxtLink to="/content/paid"><el-button type="warning">Paid Contents</el-button></NuxtLink> -->
-            <NuxtLink to="/content/free"><el-button type="warning">View All</el-button></NuxtLink>
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <div class="card bg-primary-light">
+            <div class="card-header justify-content-between">
+              <h4 class="card-title"><i class="el-icon-reading"></i> Free Content</h4>
+              <div class="text-center col-sm-auto">
+                <!-- <NuxtLink to="/content/free"><el-button type="warning">Free Contents</el-button></NuxtLink>
+                <NuxtLink to="/content/paid"><el-button type="warning">Paid Contents</el-button></NuxtLink> -->
+                <NuxtLink to="/content/free"><el-button type="warning">View All</el-button></NuxtLink>
+              </div>
+            </div>
           </div>
-			  </div>
-			</div>
-      <div v-if="freeLoading" class="row">
-          <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-3">
-              <ContentCardSkeletonComponent />
-          </div>
-      </div>
-      <div v-else-if="freeTableData.length===0">
-          <div class="row justify-content-center">
-              <div class="col-md-6 col-sm-12">
-                  <NoUserDataComponent />
+          <div v-if="freeLoading" class="row">
+              <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-6">
+                  <ContentCardSkeletonComponent />
               </div>
           </div>
-      </div>
-      <div v-else>
-          <div class="row justify-content-center">
-              <div v-for="item in freeTableData" :key="item.id" class="col-md-6 col-lg-3">
-                  <ContentCardComponent
-                  :id="item.id"
-                  :uuid="item.uuid"
-                  :title="item.name"
-                  :heading="item.heading"
-                  :type="item.type"
-                  :paid="item.paid"
-                  :amount="item.amount"
-                  :purchased="item.AssignedContent.length>0"
-                  :paragraph="item.description" />
-              </div><!-- end col -->
-          </div>
-      </div>
-      <div class="card bg-primary-light">
-			  <div class="card-header justify-content-between">
-          <h4 class="card-title"><i class="el-icon-reading"></i> Paid Content</h4>
-          <div class="text-center col-sm-auto">
-            <!-- <NuxtLink to="/content/free"><el-button type="warning">Free Contents</el-button></NuxtLink>
-            <NuxtLink to="/content/paid"><el-button type="warning">Paid Contents</el-button></NuxtLink> -->
-            <NuxtLink to="/content/paid"><el-button type="warning">View All</el-button></NuxtLink>
-          </div>
-			  </div>
-			</div>
-      <div v-if="paidLoading" class="row">
-          <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-3">
-              <ContentCardSkeletonComponent />
-          </div>
-      </div>
-      <div v-else-if="paidTableData.length===0">
-          <div class="row justify-content-center">
-              <div class="col-md-6 col-sm-12">
-                  <NoUserDataComponent />
+          <div v-else-if="freeTableData.length===0">
+              <div class="row justify-content-center">
+                  <div class="col-md-6 col-sm-12">
+                      <NoUserDataComponent />
+                  </div>
               </div>
           </div>
-      </div>
-      <div v-else>
-          <div class="row justify-content-center">
-              <div v-for="item in paidTableData" :key="item.id" class="col-md-6 col-lg-3">
-                  <ContentCardComponent
-                  :id="item.id"
-                  :uuid="item.uuid"
-                  :title="item.name"
-                  :heading="item.heading"
-                  :type="item.type"
-                  :paid="item.paid"
-                  :amount="item.amount"
-                  :purchased="item.AssignedContent.length>0"
-                  :paragraph="item.description" />
-              </div><!-- end col -->
+          <div v-else>
+              <div class="row justify-content-between">
+                  <div v-for="item in freeTableData" :key="item.id" class="col-md-6 col-lg-6">
+                      <ContentCardComponent
+                      :id="item.id"
+                      :uuid="item.uuid"
+                      :title="item.name"
+                      :heading="item.heading"
+                      :type="item.type"
+                      :paid="item.paid"
+                      :amount="item.amount"
+                      :purchased="item.AssignedContent.length>0"
+                      :paragraph="item.description" />
+                  </div><!-- end col -->
+              </div>
           </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="card bg-primary-light">
+            <div class="card-header justify-content-between">
+              <h4 class="card-title"><i class="el-icon-reading"></i> Paid Content</h4>
+              <div class="text-center col-sm-auto">
+                <!-- <NuxtLink to="/content/free"><el-button type="warning">Free Contents</el-button></NuxtLink>
+                <NuxtLink to="/content/paid"><el-button type="warning">Paid Contents</el-button></NuxtLink> -->
+                <NuxtLink to="/content/paid"><el-button type="warning">View All</el-button></NuxtLink>
+              </div>
+            </div>
+          </div>
+          <div v-if="paidLoading" class="row">
+              <div v-for="(n) in skeletonCount" :key="n" class="col-md-6 col-lg-6">
+                  <ContentCardSkeletonComponent />
+              </div>
+          </div>
+          <div v-else-if="paidTableData.length===0">
+              <div class="row justify-content-center">
+                  <div class="col-md-6 col-sm-12">
+                      <NoUserDataComponent />
+                  </div>
+              </div>
+          </div>
+          <div v-else>
+              <div class="row justify-content-between">
+                  <div v-for="item in paidTableData" :key="item.id" class="col-md-6 col-lg-6">
+                      <ContentCardComponent
+                      :id="item.id"
+                      :uuid="item.uuid"
+                      :title="item.name"
+                      :heading="item.heading"
+                      :type="item.type"
+                      :paid="item.paid"
+                      :amount="item.amount"
+                      :purchased="item.AssignedContent.length>0"
+                      :paragraph="item.description" />
+                  </div><!-- end col -->
+              </div>
+          </div>
+        </div>
       </div>
       <div class="card bg-primary-light mt-55">
 			  <div class="card-header justify-content-between">

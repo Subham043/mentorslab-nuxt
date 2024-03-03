@@ -134,7 +134,7 @@
 
             <div class="col-md-6 col-sm-12 order-2-sm sticky-img-col">
               <!-- <img src="/images/school-leader-8.png" alt="" class="w-100 sm-mb-3" /> -->
-              <img src="/images/school-leader-15.png" alt="" class="w-100 sm-mb-3" />
+              <img src="/images/school-leader-15.png" alt="" class="w-100 sm-mb-3" style="height:450px; object-fit: contain;" />
               <div class="text-center">
                 <button class="btn custom-anim-btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
               </div>
@@ -252,6 +252,172 @@
 
           </div>
         </div>
+      </div>
+
+      <div
+          class="section testimonial-2-section section-padding"
+          style="background-image: url('/images/bg/testimonial2-bg.jpg');">
+          <div class="container">
+              <div class="testimonial-2-wrapper">
+                  <!-- Section Title Start -->
+                  <div class="section-title section-devider text-center">
+                      <h2 class="title">What Learners Say About Us</h2>
+                  </div>
+                  <!-- Section Title End -->
+                  <!-- Testimonial Slider Wrappper Start -->
+                  <div
+                      class="testimonial-2-slider-wrapper"
+                      style="background-image: url('/images/testimonial/testimonial2.jpg');">
+                      <div class="testimonial-2-slider">
+                          <div class="testimonial-2-content">
+                              <div class="svg-bg">
+                                  <svg
+                                      class="feedback-svg-large" xmlns="http://www.w3.org/2000/svg"
+                                      xmlns:xlink="http://www.w3.org/1999/xlink" width="554px" height="526px">
+                                      <defs>
+                                          <linearGradient id="PSgrad_0" x1="0%" x2="100%" y1="0%" y2="0%">
+                                              <stop offset="0%" stop-color="#0c83c5" stop-opacity="1"></stop>
+                                              <stop offset="100%" stop-color="#71a3f3" stop-opacity="1"></stop>
+                                          </linearGradient>
+                                      </defs>
+                                      <path
+fill-rule="evenodd" fill="rgb(255, 31, 89)"
+                                          d="M342.000,436.999 L10.000,436.999 C4.477,436.999 -0.000,432.522 -0.000,426.999 L-0.000,9.999 C-0.000,4.476 4.477,-0.001 10.000,-0.001 L544.000,-0.001 C549.523,-0.001 554.000,4.476 554.000,9.999 L554.000,426.999 C554.000,432.522 549.523,436.999 544.000,436.999 L483.000,436.999 L483.000,525.999 L342.000,436.999 Z">
+                                      </path>
+                                      <path
+fill="url(#PSgrad_0)"
+                                          d="M342.000,436.999 L10.000,436.999 C4.477,436.999 -0.000,432.522 -0.000,426.999 L-0.000,9.999 C-0.000,4.476 4.477,-0.001 10.000,-0.001 L544.000,-0.001 C549.523,-0.001 554.000,4.476 554.000,9.999 L554.000,426.999 C554.000,432.522 549.523,436.999 544.000,436.999 L483.000,436.999 L483.000,525.999 L342.000,436.999 Z">
+                                      </path>
+                                  </svg>
+                              </div>
+                              <!-- Testimonial Slider Active Start -->
+                              <div class="swiper-container testimonial-2-active">
+                                  <div class="swiper-wrapper">
+                                      <VueSlickCarousel v-bind="slickOptionsVideo" ref="slickVideo">
+                                      <div class="swiper-slide">
+                                          <!-- Single Testimonial Start -->
+                                          <div class="single-testimonial-2">
+                                              <div class="testimonial-2-text">
+                                                  <div>
+                                                      <iframe
+loading="lazy"
+                                                          style="width:100%;min-height:320px;border-radius: 10px;"
+                                                          src="https://www.youtube.com/embed/FGhxDOlUztk"
+                                                          title="YouTube video player" frameborder="0"
+                                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                          allowfullscreen></iframe>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <!-- Single Testimonial End -->
+                                      </div>
+                                      <div class="swiper-slide">
+                                          <!-- Single Testimonial Start -->
+                                          <div class="single-testimonial-2">
+                                              <div class="testimonial-2-text">
+                                                  <div>
+                                                      <iframe
+loading="lazy"
+                                                          style="width:100%;min-height:320px;border-radius: 10px;"
+                                                          src="https://www.youtube.com/embed/8e0AZzr779E"
+                                                          title="YouTube video player" frameborder="0"
+                                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                          allowfullscreen></iframe>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <!-- Single Testimonial End -->
+                                      </div>
+                                      <div class="swiper-slide">
+                                          <!-- Single Testimonial Start -->
+                                          <div class="single-testimonial-2">
+                                              <div class="testimonial-2-text">
+                                                  <div>
+                                                      <iframe
+loading="lazy"
+                                                          style="width:100%;min-height:320px;border-radius: 10px;"
+                                                          src="https://www.youtube.com/embed/NGtNx1Y0o2U"
+                                                          title="YouTube video player" frameborder="0"
+                                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                          allowfullscreen></iframe>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <!-- Single Testimonial End -->
+                                      </div>
+                                      <div class="swiper-slide">
+                                          <!-- Single Testimonial Start -->
+                                          <div class="single-testimonial-2">
+                                              <div class="testimonial-2-text">
+                                                  <div>
+                                                      <iframe
+loading="lazy"
+                                                          style="width:100%;min-height:320px;border-radius: 10px;"
+                                                          src="https://www.youtube.com/embed/X3Hqo66VIaA"
+                                                          title="YouTube video player" frameborder="0"
+                                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                          allowfullscreen></iframe>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <!-- Single Testimonial End -->
+                                      </div>
+                                      <div class="swiper-slide">
+                                          <!-- Single Testimonial Start -->
+                                          <div class="single-testimonial-2">
+                                              <div class="testimonial-2-text">
+                                                  <div>
+                                                      <iframe
+loading="lazy"
+                                                          style="width:100%;min-height:320px;border-radius: 10px;"
+                                                          src="https://www.youtube.com/embed/2hNl214ewdE"
+                                                          title="YouTube video player" frameborder="0"
+                                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                          allowfullscreen></iframe>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <!-- Single Testimonial End -->
+                                      </div>
+                                  </VueSlickCarousel>
+                                  <SliderNavButtonComponent @previous-click="prevNavVideoClick" @next-click="nextNavVideoClick" />
+                                  </div>
+                                  <!-- Add Pagination -->
+                                  <!-- <div class="testimonial-arrow swiper-button-next"></div>
+                                  <div class="testimonial-arrow swiper-button-prev"></div>
+
+                                  <div class="swiper-pagination"></div> -->
+
+                              </div>
+                              <!-- Testimonial Slider Active End -->
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Testimonial Slider Wrappper End -->
+              </div>
+          </div>
+      </div>
+
+      <div class="section team-2-section section-padding">
+          <div class="container">
+              <!-- Team Wrapper Start -->
+              <div class="section-title section-devider text-center mb-3">
+                  <h2 class="title">MEET OUR RESOURCE TEAM</h2>
+              </div>
+              <div class="team-wrapper">
+                  <!-- Team Item Wrapper Start -->
+                  <div class="team-2-item-wrapper">
+                      <div class="row" style="justify-content:center;">
+                          <FrontendTeamCardComponent link="/instructor/deepa-ravichandran" image="/images/1.jpeg" title="Ms. Deepa Ravichandran" designation="Founder Principal of Floretz Academy" />
+                          <FrontendTeamCardComponent link="/instructor/nalina-murthy" image="/images/22.jpeg" title="Nalina Murthy" designation="Counsellor & Psychologist" />
+                          <FrontendTeamCardComponent link="/instructor/chandrashekhar" image="/images/2.jpeg" title="Chandrashekhar" designation="Senior Educator & Professional Counsellor" />
+                          <FrontendTeamCardComponent link="/instructor/varada-murthy" image="/images/15.jpeg" title="Varada Murthy K. S." designation="Leadership Coach" />
+                      </div>
+                  </div>
+                  <!-- Team Item Wrapper End -->
+              </div>
+              <!-- Team Wrapper End -->
+          </div>
       </div>
 
         <!-- Certificate Start -->
@@ -444,12 +610,13 @@ confess that the whole credit goes to Nalina Mam. The classes were systematicall
 
 <script>
 import FrontendClientCardComponent from '~/components/FrontendClientCardComponent.vue';
+import FrontendTeamCardComponent from '~/components/FrontendTeamCardComponent.vue';
 import FrontendTestimonialCardComponent from '~/components/FrontendTestimonialCardComponent.vue';
 import SliderNavButtonComponent from '~/components/SliderNavButtonComponent.vue';
 
 export default {
     name: "ParentingSkillPage",
-    components: { FrontendClientCardComponent, SliderNavButtonComponent, FrontendTestimonialCardComponent },
+    components: { FrontendClientCardComponent, SliderNavButtonComponent, FrontendTestimonialCardComponent, FrontendTeamCardComponent },
     layout: "FrontendLayout",
     data() {
         return {
@@ -491,6 +658,37 @@ export default {
                   },
               ],
           },
+          slickOptionsVideo: {
+              arrows: false,
+              dots: false,
+              infinite: true,
+              autoplay: true,
+              autoplaySpeed: 5000,
+              draggable: true,
+              pauseOnHover: true,
+              swipe: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              responsive: [
+                  {
+                      breakpoint: 1024,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1,
+                          infinite: true,
+                          dots: false,
+                      },
+                  },
+                  {
+                      breakpoint: 600,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1,
+                          dots: false,
+                      },
+                  },
+              ],
+          },
         };
     },
     head: {
@@ -510,6 +708,12 @@ export default {
       },
       prevTestimonialNavClick(){
           this.$refs.slickTestimonial.prev()
+      },
+      nextNavVideoClick(){
+          this.$refs.slickVideo.next()
+      },
+      prevNavVideoClick(){
+          this.$refs.slickVideo.prev()
       },
       async formHandler() {
         const loading = this.$loading({
@@ -970,6 +1174,13 @@ img {
   background-attachment: fixed;
   background-position: center;
   animation: gradient-school-animation 30s linear infinite;
+}
+
+.testimonial-2-slider-wrapper{padding: 85px 0;margin-top: 70px;}
+.testimonial-2-slider .testimonial-2-content .single-testimonial-2 .testimonial-2-text {padding: 60px 65px;}
+.testimonial-2-slider .testimonial-2-content .single-testimonial-2 .testimonial-2-text iframe{
+    width: 100%;
+    min-height: 300px;
 }
 
 @keyframes gradient-school-animation {

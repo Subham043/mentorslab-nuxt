@@ -260,8 +260,45 @@
           <div class="container">
               <div class="testimonial-2-wrapper">
                   <!-- Section Title Start -->
+                  <div class="section-title section-devider text-center mb-5">
+                      <h2 class="title">PROGRAM OUTLINE</h2>
+                  </div>
+                  <div class="text-center text-light pb-5">
+                        <p class="mb-4">The program caters to flexible learning for the working professionals via state of the art learning platform which gives a classroom exposure even while learning remotely. Focus is maintained through a deeply impactful curriculum designed together by academia and industry practitioners. The course structure has cutting edge pedagogy including case studies and cohort learning, aiming to give the learner a practical business overview that influences decision making as a C-Suite leader.</p>
+                        <p>With two weeks of valuable on-campus kinship over the 18 month course, the students also focus on building lifelong networks aiding them in their C-Suite journey. Live learning sessions from Top 5 Consulting firms will aid in giving a practical pulse on the market realities. The industry practitioners from CXO Club will add best practice sharing along with their views on their experiences on managing multi-prone challenges</p>
+                    </div>
+              </div>
+          </div>
+      </div>
+
+      <div
+          class="section video-slider testimonial-2-section section-padding pt-1 pb-0">
+          <div class="container">
+              <div class="testimonial-2-wrapper">
+                  <!-- Section Title Start -->
+                  <div class="section-title section-devider text-center mb-4">
+                      <h2 class="title">DIPLOMA BY MENTORSLAB</h2>
+                  </div>
+                  <div class="text-center">
+                        <p class="mb-4">Upon successful completion of the program, participants will be felicitated with the Post Graduate Diploma at MENTORSLAB.</p>
+                        <div class="row justify-content-center align-items-center">
+                          <div class="col-lg-8 col-md-12">
+                            <img src="https://pgdhrm-chro.xlri.ac.in/images/certificate.jpg?v=2024" class="w-100" alt="">
+                          </div>
+                        </div>
+                    </div>
+              </div>
+          </div>
+      </div>
+
+      <div
+          class="section video-slider testimonial-2-section section-padding pt-1 pb-0"
+        >
+          <div class="container">
+              <div class="testimonial-2-wrapper">
+                  <!-- Section Title Start -->
                   <div class="section-title section-devider text-center">
-                      <h2 class="title">What Learners Say About Us</h2>
+                      <h2 class="title">WHAT LEARNERS SAY ABOUT US</h2>
                   </div>
                   <!-- Section Title End -->
                   <!-- Testimonial Slider Wrappper Start -->
@@ -1181,6 +1218,16 @@ img {
 .testimonial-2-slider .testimonial-2-content .single-testimonial-2 .testimonial-2-text iframe{
     width: 100%;
     min-height: 300px;
+}
+
+.video-slider.testimonial-2-section::before {
+  background: transparent;
+}
+
+.video-slider.testimonial-2-section .testimonial-2-wrapper .section-title .title {
+    font-size: 30px;
+    line-height: unset;
+    color: #027ec2;
 }
 
 @keyframes gradient-school-animation {

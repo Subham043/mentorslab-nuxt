@@ -277,7 +277,7 @@
               <div class="testimonial-2-wrapper">
                   <!-- Section Title Start -->
                   <div class="section-title section-devider text-center mb-4">
-                      <h2 class="title">DIPLOMA BY MENTORSLAB</h2>
+                      <h2 class="title">CERTIFICATE BY EDUMENTORSLAB</h2>
                   </div>
                   <div class="text-center">
                         <p class="mb-4">Upon successful completion of the program, participants will be felicitated with the Post Graduate Diploma at MENTORSLAB.</p>

@@ -254,12 +254,11 @@
         </div>
       </div>
 
-      <div
+      <!-- <div
           class="section testimonial-2-section section-padding"
           style="background-image: url('/images/bg/testimonial2-bg.jpg');">
           <div class="container">
               <div class="testimonial-2-wrapper">
-                  <!-- Section Title Start -->
                   <div class="section-title section-devider text-center mb-5">
                       <h2 class="title">PROGRAM OUTLINE</h2>
                   </div>
@@ -275,7 +274,6 @@
           class="section video-slider testimonial-2-section section-padding pt-1 pb-0">
           <div class="container">
               <div class="testimonial-2-wrapper">
-                  <!-- Section Title Start -->
                   <div class="section-title section-devider text-center mb-4">
                       <h2 class="title">CERTIFICATE BY EDUMENTORSLAB</h2>
                   </div>
@@ -289,7 +287,7 @@
                     </div>
               </div>
           </div>
-      </div>
+      </div> -->
 
       <div
           class="section video-slider testimonial-2-section section-padding pt-1 pb-0"

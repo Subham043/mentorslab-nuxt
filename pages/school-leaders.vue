@@ -278,8 +278,8 @@
             <h2 class="title">CERTIFICATE BY EDUMENTORSLAB</h2>
           </div>
           <div class="text-center">
-            <p class="mb-4">Upon successful completion of the program, participants will be felicitated with the Post
-              Graduate Diploma at MENTORSLAB.</p>
+            <p class="mb-4">Upon successful completion of the program, you will be awarded a certificate of completion
+              by Edumentorslab.</p>
             <div class="row justify-content-center align-items-center">
               <div class="col-lg-8 col-md-12">
                 <img src="/images/cert.jpeg" class="w-100" alt="">

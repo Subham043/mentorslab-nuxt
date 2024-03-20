@@ -255,21 +255,185 @@
       </div>
     </div>
 
-    <!-- <div
-          class="section testimonial-2-section section-padding"
-          style="background-image: url('/images/bg/testimonial2-bg.jpg');">
-          <div class="container">
-              <div class="testimonial-2-wrapper">
-                  <div class="section-title section-devider text-center mb-5">
-                      <h2 class="title">PROGRAM OUTLINE</h2>
-                  </div>
-                  <div class="text-center text-light pb-5">
-                        <p class="mb-4">The program caters to flexible learning for the working professionals via state of the art learning platform which gives a classroom exposure even while learning remotely. Focus is maintained through a deeply impactful curriculum designed together by academia and industry practitioners. The course structure has cutting edge pedagogy including case studies and cohort learning, aiming to give the learner a practical business overview that influences decision making as a C-Suite leader.</p>
-                        <p>With two weeks of valuable on-campus kinship over the 18 month course, the students also focus on building lifelong networks aiding them in their C-Suite journey. Live learning sessions from Top 5 Consulting firms will aid in giving a practical pulse on the market realities. The industry practitioners from CXO Club will add best practice sharing along with their views on their experiences on managing multi-prone challenges</p>
-                    </div>
-              </div>
+    <div class="section testimonial-2-section section-padding mb-5"
+      style="background-image: url('/images/bg/testimonial2-bg.jpg');">
+      <div class="container">
+        <div class="testimonial-2-wrapper">
+          <div class="section-title section-devider text-center mb-5">
+            <h2 class="title">WHY DID WE THINK OF OFFERING THIS PROGRAM?</h2>
           </div>
-      </div> -->
+          <div class="text-center text-light pb-5">
+            <p class="mb-4">In our collective experience of over 25 years of offering educational services and
+              Empowering Teachers and Teacher Educators, Having empowered over 5000 Teachers and helped them find jobs
+              in various Institutes, we have observed that there is great potential in these Teachers and Teacher
+              Educators to progress to Principals and School Leaders, if they are mentored and coached by helping them
+              develop key skills to be effective in Leadership roles.</p>
+            <p class="mb-4">At the same time, we have realized that there is a great need for Teachers and Teacher
+              Educators to wear the “Leadership Hat” to help Institutions grow further. </p>
+            <p class="mb-4">Therefore, to help Teachers embrace the school leader’s hat and progress to the next level,
+              our team of experts has designed and developed a unique “Mentoring and Coaching” program to groom
+              Principal aspirants and School Leadership enthusiasts. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pb-5 detail">
+      <div class="container">
+        <div class="row align-items-start">
+
+          <div class="col-md-12 col-sm-12">
+            <div class="section-title section-devider text-center mb-4">
+              <h2 class="title">PROGRAM OUTLINE?</h2>
+            </div>
+            <div class="text-center">
+              <p class="mb-4">The program caters to building the deliverables and decision-making of Principals and
+                School
+                Leaders in the Making’ with a focus on the following modules:</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 order-1-sm">
+            <div class="apps-craft-why-choose-us-container clear-both" style="height: 643px;">
+              <div class="apps-craft-why-choose-us-container-inner clear-both">
+                <div class="apps-craft-why-chose-single clear-both">
+                  <div class="apps-craft-why-chose-ico">
+                    <i class="el-icon-star-on apps-craft-round">
+                      <span class="apps-craft-dash-border"></span>
+                    </i>
+                  </div>
+
+                  <div class="apps-craft-why-chose-txt">
+                    <h3>School Governance</h3>
+                  </div>
+                </div>
+                <div class="apps-craft-why-chose-single clear-both">
+                  <div class="apps-craft-why-chose-ico">
+                    <i class="el-icon-star-on apps-craft-round">
+                      <span class="apps-craft-dash-border"></span>
+                    </i>
+                  </div>
+
+                  <div class="apps-craft-why-chose-txt">
+                    <h3>Principles of Excellence</h3>
+                  </div>
+                </div>
+                <div class="apps-craft-why-chose-single clear-both">
+                  <div class="apps-craft-why-chose-ico">
+                    <i class="el-icon-star-on apps-craft-round">
+                      <span class="apps-craft-dash-border"></span>
+                    </i>
+                  </div>
+
+                  <div class="apps-craft-why-chose-txt">
+                    <h3>Quality Audit</h3>
+                  </div>
+                </div>
+                <div class="apps-craft-why-chose-single clear-both">
+                  <div class="apps-craft-why-chose-ico">
+                    <i class="el-icon-star-on apps-craft-round">
+                      <span class="apps-craft-dash-border"></span>
+                    </i>
+                  </div>
+
+                  <div class="apps-craft-why-chose-txt">
+                    <h3>Instructional Leadership</h3>
+                  </div>
+                </div>
+                <div class="apps-craft-why-chose-single clear-both">
+                  <div class="apps-craft-why-chose-ico">
+                    <i class="el-icon-star-on apps-craft-round">
+                      <span class="apps-craft-dash-border"></span>
+                    </i>
+                  </div>
+
+                  <div class="apps-craft-why-chose-txt">
+                    <h3>Curriculum Dev</h3>
+                  </div>
+                </div>
+                <div class="apps-craft-why-chose-single clear-both">
+                  <div class="apps-craft-why-chose-ico">
+                    <i class="el-icon-star-on apps-craft-round">
+                      <span class="apps-craft-dash-border"></span>
+                    </i>
+                  </div>
+
+                  <div class="apps-craft-why-chose-txt">
+                    <h3>Pedagogy and CRM</h3>
+                  </div>
+                </div>
+                <div class="apps-craft-why-chose-single clear-both">
+                  <div class="apps-craft-why-chose-ico">
+                    <i class="el-icon-star-on apps-craft-round">
+                      <span class="apps-craft-dash-border"></span>
+                    </i>
+                  </div>
+
+                  <div class="apps-craft-why-chose-txt">
+                    <h3>Career Guidance</h3>
+                  </div>
+                </div>
+                <div class="apps-craft-why-chose-single clear-both">
+                  <div class="apps-craft-why-chose-ico">
+                    <i class="el-icon-star-on apps-craft-round">
+                      <span class="apps-craft-dash-border"></span>
+                    </i>
+                  </div>
+
+                  <div class="apps-craft-why-chose-txt">
+                    <h3>Vision & Team Building</h3>
+                  </div>
+                </div>
+                <div class="apps-craft-why-chose-single clear-both">
+                  <div class="apps-craft-why-chose-ico">
+                    <i class="el-icon-star-on apps-craft-round">
+                      <span class="apps-craft-dash-border"></span>
+                    </i>
+                  </div>
+
+                  <div class="apps-craft-why-chose-txt">
+                    <h3>Financial Management</h3>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-12 order-2-sm sticky-img-col">
+            <!-- <img src="/images/school-leader-8.png" alt="" class="w-100 sm-mb-3" /> -->
+            <img src="/images/school-leader-7.jpg" alt="" class="w-100 sm-mb-3"
+              style="height:450px; object-fit: contain;" />
+            <div class="text-center">
+              <button class="btn custom-anim-btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="section testimonial-22-section section-padding">
+      <div class="container">
+        <div class="testimonial-2-wrapper">
+          <div class="section-title section-devider text-center mb-5">
+            <h2 class="title text-white">WHO SHOULD TAKE THIS PROGRAM?</h2>
+          </div>
+          <div class="text-center text-light pb-5">
+            <p class="mb-4">It is an advanced program for people who are looking to embrace School Leadership roles and
+              Principal aspirants. This program runs on a hybrid/online mode and offers flexible learning.</p>
+            <ul class="d-flex flex-wrap justify-content-center gap-3">
+              <li><b><i class="el-icon-check check-block"></i>&nbsp;Teachers who are principal aspirants</b></li>
+              <li><b><i class="el-icon-check check-block"></i>&nbsp;Teachers looking for Leadership roles in the
+                  School</b>
+              </li>
+              <li><b><i class="el-icon-check check-block"></i>&nbsp;Teachers Keen on Curriculum Design and
+                  Development</b>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="section video-slider testimonial-2-section section-padding pt-1 pb-0">
       <div class="container">
@@ -995,6 +1159,17 @@ img {
             transform: translate(-50%, 1%) rotateZ(360deg);
   }
 } */
+
+.check-block {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #0d96e2;
+  border-radius: 50%;
+}
 
 .bg-container {
   /* padding-top: 20px;

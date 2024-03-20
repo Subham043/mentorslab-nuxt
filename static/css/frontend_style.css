@@ -5956,6 +5956,14 @@ only screen and (min-width:768px) and (max-width:991px) {
   z-index: 1
 }
 
+.testimonial-22-section {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1
+}
+
 .testimonial-2-section::before {
   content: '';
   height: 100%;
@@ -5964,6 +5972,18 @@ only screen and (min-width:768px) and (max-width:991px) {
   left: 0;
   position: absolute;
   background: #1f455ad1;
+  opacity: .95;
+  z-index: -1
+}
+
+.testimonial-22-section::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #0d96e2;
   opacity: .95;
   z-index: -1
 }

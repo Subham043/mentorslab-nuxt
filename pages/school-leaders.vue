@@ -278,7 +278,7 @@
       </div>
     </div>
 
-    <div class="pb-5 detail">
+    <div class="pb-3 detail">
       <div class="container">
         <div class="row align-items-start">
 
@@ -293,11 +293,12 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12 order-1-sm">
-            <div class="apps-craft-why-choose-us-container clear-both" style="height: 643px;">
-              <div class="apps-craft-why-choose-us-container-inner clear-both">
+            <div class="apps-craft-why-choose-us-container clear-both">
+              <div
+                class="apps-craft-why-choose-us-container-inner apps-craft-why-choose-us-container-inner-2 clear-both">
                 <div class="apps-craft-why-chose-single clear-both">
-                  <div class="apps-craft-why-chose-ico">
-                    <i class="el-icon-star-on apps-craft-round">
+                  <div class="apps-craft-why-chose-ico apps-craft-why-chose-ico-2">
+                    <i class="el-icon-info apps-craft-round">
                       <span class="apps-craft-dash-border"></span>
                     </i>
                   </div>
@@ -307,8 +308,8 @@
                   </div>
                 </div>
                 <div class="apps-craft-why-chose-single clear-both">
-                  <div class="apps-craft-why-chose-ico">
-                    <i class="el-icon-star-on apps-craft-round">
+                  <div class="apps-craft-why-chose-ico apps-craft-why-chose-ico-2">
+                    <i class="el-icon-info apps-craft-round">
                       <span class="apps-craft-dash-border"></span>
                     </i>
                   </div>
@@ -318,8 +319,8 @@
                   </div>
                 </div>
                 <div class="apps-craft-why-chose-single clear-both">
-                  <div class="apps-craft-why-chose-ico">
-                    <i class="el-icon-star-on apps-craft-round">
+                  <div class="apps-craft-why-chose-ico apps-craft-why-chose-ico-2">
+                    <i class="el-icon-info apps-craft-round">
                       <span class="apps-craft-dash-border"></span>
                     </i>
                   </div>
@@ -329,8 +330,8 @@
                   </div>
                 </div>
                 <div class="apps-craft-why-chose-single clear-both">
-                  <div class="apps-craft-why-chose-ico">
-                    <i class="el-icon-star-on apps-craft-round">
+                  <div class="apps-craft-why-chose-ico apps-craft-why-chose-ico-2">
+                    <i class="el-icon-info apps-craft-round">
                       <span class="apps-craft-dash-border"></span>
                     </i>
                   </div>
@@ -340,8 +341,8 @@
                   </div>
                 </div>
                 <div class="apps-craft-why-chose-single clear-both">
-                  <div class="apps-craft-why-chose-ico">
-                    <i class="el-icon-star-on apps-craft-round">
+                  <div class="apps-craft-why-chose-ico apps-craft-why-chose-ico-2">
+                    <i class="el-icon-info apps-craft-round">
                       <span class="apps-craft-dash-border"></span>
                     </i>
                   </div>
@@ -351,8 +352,8 @@
                   </div>
                 </div>
                 <div class="apps-craft-why-chose-single clear-both">
-                  <div class="apps-craft-why-chose-ico">
-                    <i class="el-icon-star-on apps-craft-round">
+                  <div class="apps-craft-why-chose-ico apps-craft-why-chose-ico-2">
+                    <i class="el-icon-info apps-craft-round">
                       <span class="apps-craft-dash-border"></span>
                     </i>
                   </div>
@@ -362,8 +363,8 @@
                   </div>
                 </div>
                 <div class="apps-craft-why-chose-single clear-both">
-                  <div class="apps-craft-why-chose-ico">
-                    <i class="el-icon-star-on apps-craft-round">
+                  <div class="apps-craft-why-chose-ico apps-craft-why-chose-ico-2">
+                    <i class="el-icon-info apps-craft-round">
                       <span class="apps-craft-dash-border"></span>
                     </i>
                   </div>
@@ -373,8 +374,8 @@
                   </div>
                 </div>
                 <div class="apps-craft-why-chose-single clear-both">
-                  <div class="apps-craft-why-chose-ico">
-                    <i class="el-icon-star-on apps-craft-round">
+                  <div class="apps-craft-why-chose-ico apps-craft-why-chose-ico-2">
+                    <i class="el-icon-info apps-craft-round">
                       <span class="apps-craft-dash-border"></span>
                     </i>
                   </div>
@@ -384,8 +385,8 @@
                   </div>
                 </div>
                 <div class="apps-craft-why-chose-single clear-both">
-                  <div class="apps-craft-why-chose-ico">
-                    <i class="el-icon-star-on apps-craft-round">
+                  <div class="apps-craft-why-chose-ico apps-craft-why-chose-ico-2">
+                    <i class="el-icon-info apps-craft-round">
                       <span class="apps-craft-dash-border"></span>
                     </i>
                   </div>
@@ -401,7 +402,7 @@
 
           <div class="col-md-6 col-sm-12 order-2-sm sticky-img-col">
             <!-- <img src="/images/school-leader-8.png" alt="" class="w-100 sm-mb-3" /> -->
-            <img src="/images/school-leader-7.jpg" alt="" class="w-100 sm-mb-3"
+            <img src="/images/school-leader-16.jpg" alt="" class="w-100 sm-mb-3"
               style="height:450px; object-fit: contain;" />
             <div class="text-center">
               <button class="btn custom-anim-btn" @click="dialogFormVisible = true">Subscribe @ &#8377;599</button>
@@ -1318,6 +1319,10 @@ img {
   display: table-cell;
 }
 
+.apps-craft-why-choose-us-container-inner.apps-craft-why-choose-us-container-inner-2 {
+  display: block;
+}
+
 .apps-craft-why-chose-single {
   margin-bottom: 20px;
   display: flex;
@@ -1328,6 +1333,10 @@ img {
   width: 30%;
   height: 100%;
   text-align: center;
+}
+
+.apps-craft-why-chose-ico.apps-craft-why-chose-ico-2 {
+  width: 20%;
 }
 
 .apps-craft-why-chose-ico i.apps-craft-round {
@@ -1341,6 +1350,13 @@ img {
   color: #fff;
   font-size: 2.171em;
   text-align: center;
+}
+
+.apps-craft-why-chose-ico.apps-craft-why-chose-ico-2 i.apps-craft-round {
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 1.171em;
 }
 
 .apps-craft-dash-border {

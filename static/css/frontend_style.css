@@ -4164,8 +4164,9 @@ only screen and (max-width:767px) {
 }
 
 .features-col .features-item .features-icon {
-  width: 130px;
-  height: 90px
+  max-width: 130px;
+  height: 90px;
+  flex: 1 1 0;
 }
 
 @media only screen and (max-width:767px) {
@@ -4194,7 +4195,7 @@ only screen and (min-width:768px) and (max-width:991px) {
 }
 
 .features-col .features-item .features-content .title {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 18px;
   color: #333;
   font-weight: 700

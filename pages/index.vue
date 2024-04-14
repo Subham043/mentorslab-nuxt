@@ -37,7 +37,7 @@
         <div class="features-wrapper">
           <div class="row g-0">
             <BannerCardComponent image="/images/27.png" title="Grooming Principal Aspirants"
-              paragraph="Learn Parenting skills" />
+              paragraph="Building Future School Leaders" />
             <BannerCardComponent image="/images/26.png" title="Mentoring and Coaching" paragraph="Learn from Experts" />
             <BannerCardComponent image="/images/features/f-icon-3.png" title="Design your Life"
               paragraph="Young Leaders' Program" />

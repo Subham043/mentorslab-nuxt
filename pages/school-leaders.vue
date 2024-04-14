@@ -260,7 +260,7 @@
       <div class="container">
         <div class="testimonial-2-wrapper">
           <div class="section-title section-devider text-center mb-5">
-            <h2 class="title">WHY DID WE THINK OF OFFERING THIS PROGRAM?</h2>
+            <h2 class="title">WHY THIS PROGRAM?</h2>
           </div>
           <div class="text-center text-light pb-5">
             <p class="mb-4">In our collective experience of over 25 years of offering educational services and
@@ -430,6 +430,9 @@
               <li><b><i class="el-icon-check check-block"></i>&nbsp;Teachers Keen on Curriculum Design and
                   Development</b>
               </li>
+              <li><b><i class="el-icon-check check-block"></i>&nbsp;Teachers looking to become coordinators &
+                  administrators</b>
+              </li>
             </ul>
           </div>
         </div>
@@ -460,7 +463,7 @@
         <div class="testimonial-2-wrapper">
           <!-- Section Title Start -->
           <div class="section-title section-devider text-center">
-            <h2 class="title">WHAT LEARNERS SAY ABOUT US</h2>
+            <h2 class="title">SCHOOL LEADERS SPEAK</h2>
           </div>
           <!-- Section Title End -->
           <!-- Testimonial Slider Wrappper Start -->

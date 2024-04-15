@@ -450,7 +450,7 @@
               by Edumentorslab.</p>
             <div class="row justify-content-center align-items-center">
               <div class="col-lg-8 col-md-12">
-                <img src="/images/cert.jpeg" class="w-100" alt="">
+                <img src="/images/cert2.jpeg" class="w-100" alt="">
               </div>
             </div>
           </div>
@@ -463,7 +463,7 @@
         <div class="testimonial-2-wrapper">
           <!-- Section Title Start -->
           <div class="section-title section-devider text-center">
-            <h2 class="title">SCHOOL LEADERS SPEAK</h2>
+            <h2 class="title">WHAT LEARNERS SAY ABOUT US</h2>
           </div>
           <!-- Section Title End -->
           <!-- Testimonial Slider Wrappper Start -->

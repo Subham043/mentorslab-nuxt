@@ -42,7 +42,7 @@
                 <!-- <li class=""><NuxtLink to="/events">Events</NuxtLink></li> -->
                 <!-- <li class=""><NuxtLink to="/publication">Publication</NuxtLink></li> -->
                 <li class="">
-                  <NuxtLink to="/school-leaders">Grooming Principals</NuxtLink>
+                  <NuxtLink to="/school-leaders">Grooming Principal Aspirants</NuxtLink>
                 </li>
                 <li class="">
                   <NuxtLink to="/iso">ISO</NuxtLink>

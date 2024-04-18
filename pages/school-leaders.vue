@@ -258,21 +258,38 @@
     <div class="section testimonial-2-section section-padding mb-5"
       style="background-image: url('/images/bg/testimonial2-bg.jpg');">
       <div class="container">
-        <div class="testimonial-2-wrapper">
-          <div class="section-title section-devider text-center mb-5">
-            <h2 class="title">WHY THIS PROGRAM?</h2>
+        <div class="row align-items-center">
+          <div class="col-sm-12">
+            <div class="section-title section-devider text-center mb-2">
+              <h2 class="title text-light">WHY THIS PROGRAM?</h2>
+            </div>
           </div>
-          <div class="text-center text-light pb-5">
-            <p class="mb-4">In our collective experience of over 25 years of offering educational services and
-              Empowering Teachers and Teacher Educators, Having empowered over 5000 Teachers and helped them find jobs
-              in various Institutes, we have observed that there is great potential in these Teachers and Teacher
-              Educators to progress to Principals and School Leaders, if they are mentored and coached by helping them
-              develop key skills to be effective in Leadership roles.</p>
-            <p class="mb-4">At the same time, we have realized that there is a great need for Teachers and Teacher
-              Educators to wear the “Leadership Hat” to help Institutions grow further. </p>
-            <p class="mb-4">Therefore, to help Teachers embrace the school leader’s hat and progress to the next level,
-              our team of experts has designed and developed a unique “Mentoring and Coaching” program to groom
-              Principal aspirants and School Leadership enthusiasts. </p>
+          <div class="col-lg-5 col-md-6 col-sm-12">
+            <div>
+              <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
+                src="https://www.youtube.com/embed/vEa2gCqgiQ0" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-12">
+            <div class="testimonial-2-wrapper">
+              <div class="text-light pb-5">
+                <p class="mb-3">In our collective experience of over 25 years of offering educational services and
+                  Empowering Teachers and Teacher Educators, Having empowered over 5000 Teachers and helped them find
+                  jobs
+                  in various Institutes, we have observed that there is great potential in these Teachers and Teacher
+                  Educators to progress to Principals and School Leaders, if they are mentored and coached by helping
+                  them
+                  develop key skills to be effective in Leadership roles.</p>
+                <p class="mb-3">At the same time, we have realized that there is a great need for Teachers and Teacher
+                  Educators to wear the “Leadership Hat” to help Institutions grow further. </p>
+                <p class="mb-1">Therefore, to help Teachers embrace the school leader’s hat and progress to the next
+                  level,
+                  our team of experts has designed and developed a unique “Mentoring and Coaching” program to groom
+                  Principal aspirants and School Leadership enthusiasts. </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -586,7 +603,93 @@
       </div>
     </div>
 
-    <div class="section team-2-section section-padding">
+    <div
+      class="section certificate-section certificate-section-school-leader  testimonial-section section-padding leader-speak-section pt-4 pb-4 mb-0 mt-5">
+      <div class="container">
+        <!-- Certificate Wrapper Start -->
+        <div class="certificate-wrapper">
+          <!-- Section Title Start -->
+          <div class="section-title section-devider text-center">
+            <h2 class="title">SCHOOL LEADERS SPEAK</h2>
+          </div>
+          <!-- Section Title End -->
+          <!-- Certificate Content Wrapper Start -->
+          <div class="certificate-content-wrapper client-wrapper certificate-content-wrapper-main">
+            <div class="row swiper-container client-active">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                  <div class="swiper-container testimonial-2-active">
+                    <div class="swiper-wrapper">
+                      <VueSlickCarousel v-bind="slickOptionsVideo" ref="slickLeaderSpeak">
+                        <div class="swiper-slide">
+                          <!-- Single Testimonial Start -->
+                          <div class="single-testimonial-2">
+                            <div class="testimonial-2-text">
+                              <div>
+                                <p class="leader-quote">"This is to state that Edumentorslab (formerly PFLA) conducted
+                                  Personal Excellence
+                                  coaching program for our faculty and students. The program was very informative
+                                  interactive and experiential. The methodology used by them was extremely good and
+                                  effective. I am of the opinion that these classes are going to be helpful for the
+                                  students, teaching staff and employees of any educational institution or organization
+                                  with or without commercial motive."</p>
+                                <div class="row align-items-center justify-content-center mt-3">
+                                  <div class="col-auto">
+                                    <img src="/images/leader-1.jpeg" alt="" class="leader-img">
+                                  </div>
+                                  <div class="col-auto">
+                                    <h4 class="leader-name">Ramana Kumar</h4>
+                                    <h5 class="leader-position">Director Chethana Group of Institutions</h5>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Single Testimonial End -->
+                        </div>
+                        <div class="swiper-slide">
+                          <!-- Single Testimonial Start -->
+                          <div class="single-testimonial-2">
+                            <div class="testimonial-2-text">
+                              <div>
+                                <p class="leader-quote">"I am extremely happy to write that Edumentorslab (PFLA) has
+                                  offered various educational services including Teachers Training and Leadership
+                                  Program.. Their programs are very effective useful for the Teacher and student
+                                  community. Leadership Seminars, Effective communication skills, Teaching methodologies
+                                  and ITTC Certification programs, Goal setting and career guidance for students have
+                                  been delivered very effectively and we are very happy to endorse that our Teachers and
+                                  students have immensely benefited from these programs.
+                                  They are extremely professional in their approach and we have deepest personal and
+                                  professional respect for Varada Murthy and his team. "</p>
+                                <div class="row align-items-center justify-content-center mt-3">
+                                  <div class="col-auto">
+                                    <img src="/images/avatar.png" alt="" class="leader-img">
+                                  </div>
+                                  <div class="col-auto">
+                                    <h4 class="leader-name">Ayyappan Nair</h4>
+                                    <h5 class="leader-position">Academic Director – BGS NPS B’lore South</h5>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Single Testimonial End -->
+                        </div>
+                      </VueSlickCarousel>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Certificate Content Wrapper End -->
+        </div>
+        <!-- Certificate Wrapper End -->
+      </div>
+    </div>
+
+    <div class="section team-2-section section-padding pt-5">
       <div class="container">
         <!-- Team Wrapper Start -->
         <div class="section-title section-devider text-center mb-3">
@@ -1033,6 +1136,21 @@ export default {
   animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in, hoverShine 200ms;
 }
 
+.leader-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.leader-quote {
+  font-style: italic;
+}
+
+.leader-position {
+  font-style: italic;
+  color: #737373;
+}
 
 /* Declate color shifting animation */
 @keyframes colorShift {
@@ -1413,6 +1531,11 @@ img {
   background-attachment: fixed;
   background-position: center;
   animation: gradient-school-animation 30s linear infinite;
+}
+
+.leader-speak-section {
+  background: none;
+  background-color: #f1faff;
 }
 
 .testimonial-2-slider-wrapper {

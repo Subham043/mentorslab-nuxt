@@ -610,7 +610,7 @@
         <div class="certificate-wrapper">
           <!-- Section Title Start -->
           <div class="section-title section-devider text-center">
-            <h2 class="title">SCHOOL LEADERS SPEAK</h2>
+            <h2 class="title">INSTITUTIONS LEADERS SPEAK</h2>
           </div>
           <!-- Section Title End -->
           <!-- Certificate Content Wrapper Start -->
@@ -668,6 +668,58 @@
                                   <div class="col-auto">
                                     <h4 class="leader-name">Ayyappan Nair</h4>
                                     <h5 class="leader-position">Academic Director – BGS NPS B’lore South</h5>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Single Testimonial End -->
+                        </div>
+                        <div class="swiper-slide">
+                          <!-- Single Testimonial Start -->
+                          <div class="single-testimonial-2">
+                            <div class="testimonial-2-text">
+                              <div>
+                                <p class="leader-quote">"Sri Varada Murthy from Edumentorslab has trained our PU
+                                  students on Personal Excellence Program, the modules of Self awareness, Goal setting,
+                                  Exam skills and Time Management. Our students were immensely benefited by his trining.
+                                  Their attutide towards life and studeis has changed noticeably. His way of training
+                                  and coaching is scientific and practical for present day generation.
+                                  I strongly recommend that PU Board should consider for his sessions in all PU Colleges
+                                  of Karnataka."</p>
+                                <div class="row align-items-center justify-content-center mt-3">
+                                  <div class="col-auto">
+                                    <img src="/images/avatar.png" alt="" class="leader-img">
+                                  </div>
+                                  <div class="col-auto">
+                                    <h4 class="leader-name">Dr.Naidu</h4>
+                                    <h5 class="leader-position">Sir MV PU College</h5>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Single Testimonial End -->
+                        </div>
+                        <div class="swiper-slide">
+                          <!-- Single Testimonial Start -->
+                          <div class="single-testimonial-2">
+                            <div class="testimonial-2-text">
+                              <div>
+                                <p class="leader-quote">"It is rightly said that new generation children with a
+                                  different IQ levels require altogether a new teaching methodology. In achieving this
+                                  goal, we aptly selected Edumentorslab (PFLA) to conduct a two day workshop for out
+                                  Faculty. They came, they guided and they conquered the mind and heart of our Faculty.
+                                  All our faculty members thoroughly enjoyed the program and appreciated their
+                                  innovative technique and methodology which found to be really functional and down to
+                                  earth."</p>
+                                <div class="row align-items-center justify-content-center mt-3">
+                                  <div class="col-auto">
+                                    <img src="/images/avatar.png" alt="" class="leader-img">
+                                  </div>
+                                  <div class="col-auto">
+                                    <h4 class="leader-name">M.H. Krishna Murthy</h4>
+                                    <h5 class="leader-position">Principal PESPS</h5>
                                   </div>
                                 </div>
                               </div>
@@ -808,6 +860,10 @@ Varada Murthy Sir.. Sir you are doing a superb job for upcoming generation and y
                 message="First of all this opportunity made me to come out of my shell. At the outset, I have to
 confess that the whole credit goes to Nalina Mam. The classes were systematically planned to initiate a proper attitudes to be a teacher. I got lot of insights concerning teaching, education especially how the children's entire future is entrusted in a teacher's hand.
 " />
+              <FrontendTestimonialCardComponent image="/images/avatar.png" title="Prerana Wakade" designation="Parent"
+                message="This is the 4th time my children have participated in the speech contest held by PFLA.  We are very happy that you people have made it happen on such a big scale. I was extremely happy to see the improvement that has taken place in their Public speaking skills this year.  The most important thing is my children have conquered their '
+                STAGE FEAR' because of your coaching. This has happened only because of you. Our children are fortunate
+                to get a platform for expressing themselves on such a big platform..." />
             </VueSlickCarousel>
             <SliderNavButtonComponent @previous-click="prevTestimonialNavClick" @next-click="nextTestimonialNavClick" />
           </div>

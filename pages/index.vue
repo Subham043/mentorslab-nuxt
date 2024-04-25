@@ -390,7 +390,7 @@
               <FrontendTestimonialCardComponent image="/images/avatar.png" title="Ganga Prasad"
                 designation="Principal - St. Mira's School" message="The atmosphere was electrifying and fully charged. It was amazing to notice
                                         confidence levels of participants. This program has immensely helped our
-                                        students and all other participants too. I congratulate PFLA team for the manner
+                                        students and all other participants too. I congratulate Edumentorslab (formerly PFLA) team for the manner
                                         in which they have conducted this event." />
               <FrontendTestimonialCardComponent image="/images/avatar.png" title="Sir M V PU College"
                 designation="Dr.Rajendra Naidu" message="TPersonal Excellence Program with PS skills conducted by Shri Varada Murthy is a

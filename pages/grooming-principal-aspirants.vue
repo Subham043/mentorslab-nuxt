@@ -781,44 +781,44 @@
           <!-- Certificate Content Wrapper Start -->
           <div class="certificate-content-wrapper client-wrapper certificate-content-wrapper-main">
             <div class="row swiper-container client-active">
-              <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/cl1.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/2.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/3.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/5.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/6.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/7.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/11.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/12.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/13.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/cl5.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/16.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/18.png" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-2 col-md-6 col-sm-12 school-img-col">
                   <FrontendClientCardComponent image="/images/clients/19.png" />
                 </div>
                 <!-- <div class="swiper-pagination"></div> -->
@@ -1580,13 +1580,13 @@ img {
 
 .certificate-section {
   background: none;
-  background-image: url(/images/school-lines-bg.png);
-  background-color: #ddf3ff;
+  /* background-image: url(/images/school-lines-bg.png); */
+  background-color: #eaf7ff;
   /* transform: translateZ(-1px) scale(2); */
   background-repeat: repeat-x;
   background-attachment: fixed;
   background-position: center;
-  animation: gradient-school-animation 30s linear infinite;
+  /* animation: gradient-school-animation 30s linear infinite; */
 }
 
 .leader-speak-section {
@@ -1616,6 +1616,10 @@ img {
   font-size: 30px;
   line-height: unset;
   color: #027ec2;
+}
+
+.school-img-col {
+  border: 1px dashed #ccc;
 }
 
 @keyframes gradient-school-animation {

@@ -2591,10 +2591,10 @@ only screen and (max-width:767px) {
 }
 
 .header-menu .main-menu li a {
-  font-size: 14px;
+  font-size: 15px;
   font-family: Khula, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 500;
+  text-transform: capitalize;
   color: #1b2336
 }
 

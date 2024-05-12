@@ -267,7 +267,7 @@
           <div class="col-lg-5 col-md-6 col-sm-12">
             <div>
               <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
-                src="https://www.youtube.com/embed/vEa2gCqgiQ0" title="YouTube video player" frameborder="0"
+                src="https://www.youtube.com/embed/eergmKh85Vk" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
             </div>

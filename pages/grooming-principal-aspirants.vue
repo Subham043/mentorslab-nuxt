@@ -832,6 +832,96 @@
     </div>
     <!-- Certificate End -->
 
+    <!-- Video Testimonial Start -->
+    <div class="section section-padding pt-2 pb-3">
+      <div class="container">
+        <div class="section-title section-devider text-center">
+          <h2 class="title">VIDEO TESTIMONIAL</h2>
+        </div>
+        <!-- Video Testimonial Wrapper Start -->
+        <div class="swiper-container testimonial-2-active video-testimonial">
+          <div class="swiper-wrapper">
+            <VueSlickCarousel v-bind="slickOptionsVideoTestimonial" ref="slickVideoTestimonial">
+              <div class="swiper-slide">
+                <!-- Single Testimonial Start -->
+                <div class="single-testimonial-2">
+                  <div class="testimonial-2-text">
+                    <div style="width: 100%">
+                      <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
+                        src="https://www.youtube.com/embed/FGhxDOlUztk" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Testimonial End -->
+              </div>
+              <div class="swiper-slide">
+                <!-- Single Testimonial Start -->
+                <div class="single-testimonial-2">
+                  <div class="testimonial-2-text">
+                    <div style="width: 100%">
+                      <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
+                        src="https://www.youtube.com/embed/8e0AZzr779E" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Testimonial End -->
+              </div>
+              <div class="swiper-slide">
+                <!-- Single Testimonial Start -->
+                <div class="single-testimonial-2">
+                  <div class="testimonial-2-text">
+                    <div style="width: 100%">
+                      <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
+                        src="https://www.youtube.com/embed/NGtNx1Y0o2U" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Testimonial End -->
+              </div>
+              <div class="swiper-slide">
+                <!-- Single Testimonial Start -->
+                <div class="single-testimonial-2">
+                  <div class="testimonial-2-text">
+                    <div style="width: 100%">
+                      <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
+                        src="https://www.youtube.com/embed/X3Hqo66VIaA" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Testimonial End -->
+              </div>
+              <div class="swiper-slide">
+                <!-- Single Testimonial Start -->
+                <div class="single-testimonial-2">
+                  <div class="testimonial-2-text">
+                    <div style="width: 100%">
+                      <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
+                        src="https://www.youtube.com/embed/2hNl214ewdE" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Testimonial End -->
+              </div>
+            </VueSlickCarousel>
+            <SliderNavButtonComponent @previous-click="prevNavVideoTestimonialClick"
+              @next-click="nextNavVideoTestimonialClick" />
+          </div>
+        </div>
+        <!-- Video Testimonial Wrapper End -->
+      </div>
+    </div>
+    <!-- Video Testimonial End -->
+
     <!-- Testimonial Start -->
     <div class="section section-padding pt-2 pb-3">
       <div class="container">
@@ -1026,6 +1116,37 @@ export default {
           },
         ],
       },
+      slickOptionsVideoTestimonial: {
+        arrows: false,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        draggable: true,
+        pauseOnHover: true,
+        swipe: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: false,
+            },
+          },
+        ],
+      },
     };
   },
   head: {
@@ -1051,6 +1172,12 @@ export default {
     },
     prevNavVideoClick() {
       this.$refs.slickVideo.prev()
+    },
+    nextNavVideoTestimonialClick() {
+      this.$refs.slickVideoTestimonial.next()
+    },
+    prevNavVideoTestimonialClick() {
+      this.$refs.slickVideoTestimonial.prev()
     },
     async formHandler() {
       const loading = this.$loading({
@@ -1620,6 +1747,29 @@ img {
 
 .school-img-col {
   border: 1px dashed #ccc;
+}
+
+.video-testimonial {
+  padding-top: 50px;
+}
+
+.video-testimonial .single-testimonial-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.video-testimonial .testimonial-2-text {
+  width: 100%;
+}
+
+.video-testimonial .testimonial-2-text iframe {
+  width: 100%;
+  border: 1px dashed #0d96e2;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #eaf7ff;
+  min-height: 300px;
+  box-shadow: 0px 1px 6px 4px #ccc;
 }
 
 @keyframes gradient-school-animation {

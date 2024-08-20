@@ -759,6 +759,8 @@
                 designation="Senior Educator & Professional Counsellor" />
               <FrontendTeamCardComponent link="/instructor/varada-murthy" image="/images/15.jpeg"
                 title="Varada Murthy K. S." designation="Leadership Coach" />
+              <FrontendTeamCardComponent link="/instructor/menka-sharma" image="/images/99.jpeg" title="Menka Sharma"
+                designation="Educator, Communication Trainer and Content Writer" />
             </div>
           </div>
           <!-- Team Item Wrapper End -->

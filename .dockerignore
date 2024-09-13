@@ -1,0 +1,7 @@
+.git
+.github
+.husky
+.nuxt
+.gitignore
+node_modules/
+.env

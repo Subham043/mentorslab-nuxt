@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  nuxt-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=development
+      target: development
+    env_file:
+    - .env
+    restart: always
+    ports:
+      - "3000:3000"
+    command: "npm run start"
+    networks:
+      - mentorslab_nest
+networks:
+  mentorslab_nest:
+    external: true

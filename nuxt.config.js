@@ -2,28 +2,28 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
   head: {
-    title: 'Mentorslab',
+    title: 'Edumentorslab',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
       { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
-      { name: 'author', content: 'Mentorslab' },
+      { name: 'author', content: 'Edumentorslab' },
       { name: 'owner', content: 'PFLA International Pvt. Ltd.' },
       { name: 'robots', content: 'index, follow' },
       { name: 'ROBOTS', content: 'index, follow' },
       { name: 'googlebot', content: 'index, follow' },
       { property: 'og:image', content: process.env.MAIN_BASE_URL+'/images/logo-mentor.webp' },
-      { property: 'og:title', content: 'Mentorslab' },
-      { property: 'og:site_name', content: 'Mentorslab' },
+      { property: 'og:title', content: 'Edumentorslab' },
+      { property: 'og:site_name', content: 'Edumentorslab' },
       { property: 'og:description', content: 'Learn Future Skills Now Online And Flexible Learning' },
       { property: 'og:url', content: process.env.MAIN_BASE_URL },
       { property: 'og:type', content: 'website' },
       { property: 'twitter:card', content: 'summary' },
       { property: 'twitter:image', content: process.env.MAIN_BASE_URL+'/images/logo-mentor.webp' },
       { property: 'twitter:url', content: process.env.MAIN_BASE_URL },
-      { property: 'twitter:title', content: 'Mentorslab' },
+      { property: 'twitter:title', content: 'Edumentorslab' },
       { property: 'twitter:description', content: 'Learn Future Skills Now Online And Flexible Learning' },
     ],
     link: [

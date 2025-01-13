@@ -80,7 +80,7 @@
 				<div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
 					<div class="section-title text-center mb-50">
 						<h1>Event Speakers</h1>
-						<p>To get further updates on our events, seminars and programs, subscribe to Mentorslab</p>
+						<p>To get further updates on our events, seminars and programs, subscribe to Edumentorslab</p>
 					</div>
 				</div>
 				<div v-if="(EventInstructor.length===1)" class="row" style="justify-content:center;">
@@ -158,7 +158,7 @@
 					<div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
 						<div class="section-title text-center mb-50">
 							<h1>Event Schedule</h1>
-							<p>To get further updates on our events, seminars and programs, subscribe to Mentorslab</p>
+							<p>To get further updates on our events, seminars and programs, subscribe to Edumentorslab</p>
 						</div>
 					</div>
 				</div>
@@ -279,7 +279,7 @@
 					<div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
 						<div class="section-title white-title text-center mb-50">
 							<h1>Our Gallery</h1>
-							<p>To get further updates on our events, seminars and programs, subscribe to Mentorslab</p>
+							<p>To get further updates on our events, seminars and programs, subscribe to Edumentorslab</p>
 						</div>
 					</div>
 				</div>
@@ -315,7 +315,7 @@
 					<div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
 						<div class="section-title text-center mb-50">
 							<h1>our upcoming event</h1>
-							<p>To get further updates on our events, seminars and programs, subscribe to Mentorslab</p>
+							<p>To get further updates on our events, seminars and programs, subscribe to Edumentorslab</p>
 						</div>
 					</div>
 				</div>

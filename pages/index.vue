@@ -13,7 +13,7 @@
               <div class="instructor-content">
                 <h2 class="title">Learn Future Skills Now Online And Flexible Learning</h2>
                 <p>Coached & Trained over 50,000 people.</p>
-                <NuxtLink class="btn" to="/dashboard">Explore Our Courses</NuxtLink>
+                <a class="btn" href="https://lms.edumentorslab.com" target="_blank">Explore Our Courses</a>
               </div>
               <!-- Instructor Content End -->
             </div>
@@ -47,6 +47,87 @@
       </div>
     </div>
     <!-- Features End -->
+
+    <!-- Courses Start -->
+    <div id="courseSec" class="section section-padding">
+      <div class="container">
+        <div class="top-courses-wrapper">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 justify-content-center">
+              <!-- Section Title Start -->
+              <div class="section-title section-devider">
+                <h2 class="title text-center">Explore Courses</h2>
+              </div>
+              <!-- Section Title End -->
+            </div>
+          </div>
+
+          <!-- Courses Wrapper Start -->
+          <div class="top-courses-content-wrapper">
+            <div class="testimonial-wrapper swiper-container testimonial-active">
+              <!-- <div class="swiper-wrapper"> -->
+              <VueSlickCarousel v-bind="slickOptions" ref="slickCourse">
+                <FrontendCourseSliderCardComponent image="/images/6.jpeg" link="/courses/public-speaking"
+                  title="Public Speaking" />
+                <FrontendCourseSliderCardComponent image="/images/pskil.jpg" link="/courses/parenting-skills"
+                  title="Parenting Skills" />
+                <FrontendCourseSliderCardComponent image="/images/28.jpeg" link="/courses/ittc-certification"
+                  title="Certifications Programs" />
+                <FrontendCourseSliderCardComponent image="/images/cmm.jpg" link="/courses/coaching-mentoring"
+                  title="Coaching & Mentoring" />
+                <FrontendCourseSliderCardComponent image="/images/4.jpeg"
+                  link="/courses/young-leadership-program-career-guidance"
+                  title="Young Leaders Program & Career Guidance" />
+                <FrontendCourseSliderCardComponent image="/images/5.jpeg" link="/courses/teacher-mentor"
+                  title="Teacher Mentor" />
+              </VueSlickCarousel>
+              <!-- </div> -->
+              <SliderNavButtonComponent @previous-click="prevNavClick" @next-click="nextNavClick" />
+            </div>
+
+
+          </div>
+          <!-- Courses Wrapper End -->
+        </div>
+      </div>
+    </div>
+    <!-- Courses End -->
+
+    <!-- Team Start -->
+    <div class="section top-courses-section team-2-section section-padding">
+      <div class="container">
+        <!-- Team Wrapper Start -->
+        <div class="team-wrapper">
+          <div class="row">
+            <div class="col-lg-7">
+              <!-- Section Title Start -->
+              <div class="section-title section-devider">
+                <h2 class="title">Meet our Resource Team</h2>
+              </div>
+              <!-- Section Title End -->
+            </div>
+          </div>
+          <!-- Team Item Wrapper Start -->
+          <div class="team-2-item-wrapper">
+            <div class="row" style="justify-content:center;">
+              <FrontendTeamCardComponent link="/instructor/deepa-ravichandran" image="/images/1.jpeg"
+                title="Ms. Deepa Ravichandran" designation="Founder Principal of Floretz Academy" />
+              <FrontendTeamCardComponent link="/instructor/nalina-murthy" image="/images/22.jpeg" title="Nalina Murthy"
+                designation="Counsellor & Psychologist" />
+              <FrontendTeamCardComponent link="/instructor/chandrashekhar" image="/images/2.jpeg" title="Chandrashekhar"
+                designation="Senior Educator & Professional Counsellor" />
+              <FrontendTeamCardComponent link="/instructor/varada-murthy" image="/images/15.jpeg"
+                title="Varada Murthy K. S." designation="Leadership Coach" />
+              <FrontendTeamCardComponent link="/instructor/menka-sharma" image="/images/99.jpeg" title="Menka Sharma"
+                designation="Educator, Communication Trainer and Content Writer" />
+            </div>
+          </div>
+          <!-- Team Item Wrapper End -->
+        </div>
+        <!-- Team Wrapper End -->
+      </div>
+    </div>
+    <!-- Team End -->
 
     <!-- Report Career Section Start -->
     <div class="section report-career-2-section section-padding">
@@ -92,87 +173,6 @@
       </div>
     </div>
     <!-- Report Career Section End -->
-
-    <!-- Courses Start -->
-    <div id="courseSec" class="section top-courses-section section-padding">
-      <div class="container">
-        <div class="top-courses-wrapper">
-          <div class="row">
-            <div class="col-lg-6 col-md-12">
-              <!-- Section Title Start -->
-              <div class="section-title section-devider">
-                <h2 class="title">Explore Courses</h2>
-              </div>
-              <!-- Section Title End -->
-            </div>
-          </div>
-
-          <!-- Courses Wrapper Start -->
-          <div class="top-courses-content-wrapper">
-            <div class="testimonial-wrapper swiper-container testimonial-active">
-              <!-- <div class="swiper-wrapper"> -->
-              <VueSlickCarousel v-bind="slickOptions" ref="slickCourse">
-                <FrontendCourseSliderCardComponent image="/images/6.jpeg" link="/courses/public-speaking"
-                  title="Public Speaking" />
-                <FrontendCourseSliderCardComponent image="/images/pskil.jpg" link="/courses/parenting-skills"
-                  title="Parenting Skills" />
-                <FrontendCourseSliderCardComponent image="/images/28.jpeg" link="/courses/ittc-certification"
-                  title="Certifications Programs" />
-                <FrontendCourseSliderCardComponent image="/images/cmm.jpg" link="/courses/coaching-mentoring"
-                  title="Coaching & Mentoring" />
-                <FrontendCourseSliderCardComponent image="/images/4.jpeg"
-                  link="/courses/young-leadership-program-career-guidance"
-                  title="Young Leaders Program & Career Guidance" />
-                <FrontendCourseSliderCardComponent image="/images/5.jpeg" link="/courses/teacher-mentor"
-                  title="Teacher Mentor" />
-              </VueSlickCarousel>
-              <!-- </div> -->
-              <SliderNavButtonComponent @previous-click="prevNavClick" @next-click="nextNavClick" />
-            </div>
-
-
-          </div>
-          <!-- Courses Wrapper End -->
-        </div>
-      </div>
-    </div>
-    <!-- Courses End -->
-
-    <!-- Team Start -->
-    <div class="section team-2-section section-padding">
-      <div class="container">
-        <!-- Team Wrapper Start -->
-        <div class="team-wrapper">
-          <div class="row">
-            <div class="col-lg-7">
-              <!-- Section Title Start -->
-              <div class="section-title section-devider">
-                <h2 class="title">Meet our Resource Team</h2>
-              </div>
-              <!-- Section Title End -->
-            </div>
-          </div>
-          <!-- Team Item Wrapper Start -->
-          <div class="team-2-item-wrapper">
-            <div class="row" style="justify-content:center;">
-              <FrontendTeamCardComponent link="/instructor/deepa-ravichandran" image="/images/1.jpeg"
-                title="Ms. Deepa Ravichandran" designation="Founder Principal of Floretz Academy" />
-              <FrontendTeamCardComponent link="/instructor/nalina-murthy" image="/images/22.jpeg" title="Nalina Murthy"
-                designation="Counsellor & Psychologist" />
-              <FrontendTeamCardComponent link="/instructor/chandrashekhar" image="/images/2.jpeg" title="Chandrashekhar"
-                designation="Senior Educator & Professional Counsellor" />
-              <FrontendTeamCardComponent link="/instructor/varada-murthy" image="/images/15.jpeg"
-                title="Varada Murthy K. S." designation="Leadership Coach" />
-              <FrontendTeamCardComponent link="/instructor/menka-sharma" image="/images/99.jpeg" title="Menka Sharma"
-                designation="Educator, Communication Trainer and Content Writer" />
-            </div>
-          </div>
-          <!-- Team Item Wrapper End -->
-        </div>
-        <!-- Team Wrapper End -->
-      </div>
-    </div>
-    <!-- Team End -->
 
     <!-- Features Start -->
     <div class="section features-5-section section-padding pt-0">
@@ -463,7 +463,7 @@
                 <h2 class="title">Get Certified, Get Ahead with Our Programs</h2>
                 <p>Learn at your pace using our App on LMS mode. We provide the tools and skills that
                   you need for your progress.</p>
-                <NuxtLink class="btn" to="/dashboard">Try Now</NuxtLink>
+                <a class="btn" href="https://lms.edumentorslab.com" target="_blank">Try Now</a>
               </div>
               <!-- Certificate-2 Content End -->
             </div>

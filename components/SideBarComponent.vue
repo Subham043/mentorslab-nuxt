@@ -174,7 +174,7 @@
 									<img
 src="http://edulearn-lms-admin-template.multipurposethemes.com/images/svg-icon/color-svg/custom-24.svg"
 										class="sideimg p-5" alt="">
-									<h4 class="title-bx text-primary">Mentorslab</h4>
+									<h4 class="title-bx text-primary">Edumentorslab</h4>
 								</div>
 							</div>
 						</div>

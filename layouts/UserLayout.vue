@@ -27,7 +27,7 @@ export default {
   middleware: ['auth'],
   head() {
         return {
-            title: "Mentorslab",
+            title: "Edumentorslab",
             link: [
                 { rel: "stylesheet", href: "/css/bootstrap.min.css" },
                 { rel: "stylesheet", href: "/css/color_theme.css" },

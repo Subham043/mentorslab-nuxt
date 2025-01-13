@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="contact-map">
-                                <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982235.7441715254!2d73.12128012499997!3d12.914013800000022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1529159bc605%3A0xb88570bcfc4d4f0f!2sPeople%20First%20Leadership%20Academy!5e0!3m2!1sen!2sin!4v1670872290548!5m2!1sen!2sin" title="Mentorslab" aria-label="Mentorslab" frameborder="0"></iframe>
+                                <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982235.7441715254!2d73.12128012499997!3d12.914013800000022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1529159bc605%3A0xb88570bcfc4d4f0f!2sPeople%20First%20Leadership%20Academy!5e0!3m2!1sen!2sin!4v1670872290548!5m2!1sen!2sin" title="Edumentorslab" aria-label="Edumentorslab" frameborder="0"></iframe>
                             </div>
                         </div>
                         <div class="col-lg-5">

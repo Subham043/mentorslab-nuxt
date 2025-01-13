@@ -13,7 +13,7 @@ export default {
     components: { EventHeaderComponent },
     head() {
         return {
-            title: "Mentorslab",
+            title: "Edumentorslab",
             link: [
                 { rel: "stylesheet", integrity: "sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp", href: "https://use.fontawesome.com/releases/v5.15.1/css/all.css", crossorigin: "anonymous" },
                 { rel: "stylesheet", href: "/css/event_bootstrap.css" },

@@ -87,7 +87,7 @@
             <div class="header-meta">
               <div class="header-login-join d-none d-lg-block">
                 <!-- <a class="login" to="#">Login</a> -->
-                <a class="btn join-btn" href="https://lms.edumentorslab.com" target="_blank">Courses
+                <a class="btn join-btn" href="https://lms.edumentorslab.com/login/index.php" target="_blank">Courses
                 </a>
               </div>
               <!-- Header Login Join End -->

@@ -4,7 +4,7 @@
       :style="`background-image: url('${image}');`">
       <h3 class="title">{{title}}</h3>
       <p>{{paragraph}}</p>
-      <a class="btn" href="https://lms.edumentorslab.com" target="_blank">{{linktext}}</a>
+      <a class="btn" href="https://lms.edumentorslab.com/login/index.php" target="_blank">{{linktext}}</a>
     </div>
   </div>
 </template>

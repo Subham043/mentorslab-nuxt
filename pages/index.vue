@@ -13,7 +13,7 @@
               <div class="instructor-content">
                 <h2 class="title">Learn Future Skills Now Online And Flexible Learning</h2>
                 <p>Coached & Trained over 50,000 people.</p>
-                <a class="btn" href="https://lms.edumentorslab.com" target="_blank">Explore Our Courses</a>
+                <a class="btn" href="https://lms.edumentorslab.com/login/index.php" target="_blank">Explore Our Courses</a>
               </div>
               <!-- Instructor Content End -->
             </div>
@@ -463,7 +463,7 @@
                 <h2 class="title">Get Certified, Get Ahead with Our Programs</h2>
                 <p>Learn at your pace using our App on LMS mode. We provide the tools and skills that
                   you need for your progress.</p>
-                <a class="btn" href="https://lms.edumentorslab.com" target="_blank">Try Now</a>
+                <a class="btn" href="https://lms.edumentorslab.com/login/index.php" target="_blank">Try Now</a>
               </div>
               <!-- Certificate-2 Content End -->
             </div>

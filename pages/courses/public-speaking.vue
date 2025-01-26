@@ -134,8 +134,8 @@ link="/instructor/varada-murthy"
                                         </li>
                                     </ul>
                                     <div class="price-box-btn">
-                                        <NuxtLink to="/auth/login" class="btn">Enroll
-                                            Now</NuxtLink>
+                                        <a class="btn" href="https://lms.edumentorslab.com/login/index.php" target="_blank">Enroll
+                                            Now</a>
                                     </div>
                                     <div class="price-box-social">
                                         <span class="share-title">Share:</span>

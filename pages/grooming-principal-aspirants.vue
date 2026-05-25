@@ -268,7 +268,8 @@
             <div>
               <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                 src="https://www.youtube.com/embed/eergmKh85Vk" title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             </div>
           </div>
@@ -517,7 +518,8 @@
                               <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                                 src="https://www.youtube.com/embed/FGhxDOlUztk" title="YouTube video player"
                                 frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                             </div>
                           </div>
@@ -532,7 +534,8 @@
                               <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                                 src="https://www.youtube.com/embed/8e0AZzr779E" title="YouTube video player"
                                 frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                             </div>
                           </div>
@@ -547,7 +550,8 @@
                               <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                                 src="https://www.youtube.com/embed/NGtNx1Y0o2U" title="YouTube video player"
                                 frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                             </div>
                           </div>
@@ -562,7 +566,8 @@
                               <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                                 src="https://www.youtube.com/embed/X3Hqo66VIaA" title="YouTube video player"
                                 frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                             </div>
                           </div>
@@ -577,7 +582,8 @@
                               <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                                 src="https://www.youtube.com/embed/2hNl214ewdE" title="YouTube video player"
                                 frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                             </div>
                           </div>
@@ -851,7 +857,8 @@
                     <div style="width: 100%">
                       <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                         src="https://www.youtube.com/embed/vIYLOgTxI4s" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                     </div>
                   </div>
@@ -865,7 +872,8 @@
                     <div style="width: 100%">
                       <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                         src="https://www.youtube.com/embed/C5IPkEb2Vo0" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                     </div>
                   </div>
@@ -879,7 +887,8 @@
                     <div style="width: 100%">
                       <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                         src="https://www.youtube.com/embed/8e0AZzr779E" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                     </div>
                   </div>
@@ -893,7 +902,8 @@
                     <div style="width: 100%">
                       <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                         src="https://www.youtube.com/embed/NGtNx1Y0o2U" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                     </div>
                   </div>
@@ -907,7 +917,8 @@
                     <div style="width: 100%">
                       <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                         src="https://www.youtube.com/embed/X3Hqo66VIaA" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                     </div>
                   </div>
@@ -921,7 +932,8 @@
                     <div style="width: 100%">
                       <iframe loading="lazy" style="width:100%;min-height:320px;border-radius: 10px;"
                         src="https://www.youtube.com/embed/2hNl214ewdE" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                     </div>
                   </div>

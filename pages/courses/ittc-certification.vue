@@ -45,12 +45,16 @@
             <button class="btn" @click="dialogFormVisible = true">Explore More</button>
           </div>
           <div class="col-md-6 col-sm-12">
-            <iframe src="https://www.youtube-nocookie.com/embed/NGtNx1Y0o2U" class="w-100 h-100"
-              frameborder="0"></iframe>
+            <iframe src="https://www.youtube.com/embed/NGtNx1Y0o2U" class="w-100 h-100"
+              frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
           </div>
           <div class="col-md-6 col-sm-12 mt-5">
-            <iframe src="https://www.youtube-nocookie.com/embed/2hNl214ewdE" class="w-100 h-100"
-              frameborder="0"></iframe>
+            <iframe src="https://www.youtube.com/embed/2hNl214ewdE" class="w-100 h-100"
+              frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
           </div>
           <div class="col-md-6 col-sm-12 mt-5">
             <p>Edumentorslab (formerly PFLA) believes that academic briliance alone does not guarantee success in

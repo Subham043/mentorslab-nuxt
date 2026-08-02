@@ -64,6 +64,7 @@ export default {
     '~/plugins/vuefullscreen.js',
     '~/plugins/publicApi.js',
     '~/plugins/privateApi.js',
+    '~/plugins/facultyLeadApi.js',
     '~/plugins/pagination.js',
     '~/plugins/countdown.js',
     '~/plugins/vue-slick-carousel.js',
